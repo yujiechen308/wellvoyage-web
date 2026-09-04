@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WellVoyage × Jade &amp; Qi — 跨境上线部署手册</title>
+<style>
+  :root{
+    --teal:#177e70;--teal-deep:#0e5a4e;--mint:#2aa08f;--gold:#c9a45c;--gold-l:#d9bd85;
+    --ink:#1e3b36;--muted:#5f7a74;--paper:#f8fbf9;--card:#fff;--line:#e2ece7;--red:#c0392b;--green:#1e8e5a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:15px;}
+  .wrap{max-width:880px;margin:0 auto;padding:40px 28px 80px;}
+  header.hero{background:linear-gradient(135deg,rgba(14,90,78,.92),rgba(42,160,143,.78));color:#f7fbf9;border-radius:20px;padding:44px 40px;margin-bottom:34px;}
+  header.hero h1{font-size:27px;letter-spacing:2px;margin-bottom:8px;}
+  header.hero p{color:#d7ece6;font-size:14.5px;max-width:700px;}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .badge-row span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:4px 14px;border-radius:999px;font-size:12.5px;}
+  h2{font-size:21px;color:var(--teal-deep);margin:38px 0 6px;display:flex;align-items:center;gap:10px;}
+  h2 .no{width:30px;height:30px;min-width:30px;border-radius:50%;background:var(--gold);color:#14312c;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;}
+  .sub{color:var(--muted);font-size:13.5px;margin-bottom:16px;}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:12px 0;box-shadow:0 4px 16px rgba(23,126,112,.05);}
+  .box h3{font-size:16px;color:var(--teal-deep);margin-bottom:10px;}
+  .box.gold{border-left:4px solid var(--gold);}
+  .box.teal{border-left:4px solid var(--teal);}
+  .box.red{border-left:4px solid var(--red);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:13.5px;}
+  th{background:var(--teal);color:#fff;padding:10px 12px;text-align:left;font-weight:600;}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .ok{color:var(--green);font-weight:700;}
+  .wait{color:var(--red);font-weight:700;}
+  code{background:#eef6f3;border:1px solid #d5e9e2;border-radius:5px;padding:1px 7px;font-size:12.5px;color:var(--teal-deep);font-family:Consolas,monospace;}
+  ol.steps li{margin:8px 0 8px 2px;}
+  ul.tick{list-style:none;}
+  ul.tick li{padding:5px 0 5px 26px;position:relative;}
+  ul.tick li::before{content:"✓";position:absolute;left:4px;color:var(--green);font-weight:700;}
+  .callout{background:#fdf6e7;border:1px solid #ecd9ae;border-radius:10px;padding:12px 16px;font-size:13px;color:#7a6234;margin:10px 0;}
+  .foot{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+  .pill{display:inline-block;background:#eef7f3;color:var(--teal-deep);border:1px solid #bfe3d8;border-radius:999px;padding:2px 12px;font-size:12px;margin-right:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>跨境上线部署手册</h1>
+  <p>WellVoyage 安途康悦 × Jade &amp; Qi —— 从静态原型到正式运营官网的完整路线。本文档按「注册顺序」编排：每完成一步，把对应信息告诉我，我来继续配置。</p>
+  <div class="badge-row">
+    <span>托管 Cloudflare Pages</span><span>域名 .com</span><span>支付 PayPal</span><span>询盘 Formspree（可选）</span><span>代码 Git 仓库</span>
+  </div>
+</header>
+
+<h2><span class="no">1</span>总览：你要注册 4 个账号</h2>
+<p class="sub">全部免费注册；除域名年费外无固定成本。注册时用企业邮箱（或先个人邮箱，后面可改）。</p>
+<div class="box teal">
+<table>
+<tr><th style="width:18%;">账号</th><th style="width:34%;">用途</th><th>需要你准备</th></tr>
+<tr><td><b>① Cloudflare</b></td><td>域名注册 + 网站托管 + DNS，一站搞定，全球 CDN</td><td>邮箱 + 密码（可微信/Google 登录）</td></tr>
+<tr><td><b>② GitHub</b></td><td>存放网站代码，改文件自动触发重新上线</td><td>邮箱 + 用户名 + 密码</td></tr>
+<tr><td><b>③ PayPal 商业账户</b></td><td>在线收款（信用卡 / Apple Pay / 全球买家）</td><td>公司营业执照（内地执照即可）+ 邮箱 + 收款银行卡</td></tr>
+<tr><td><b>④ Formspree（可选）</b></td><td>让网站表单直接投递到你邮箱（无需打开邮件客户端）</td><td>邮箱</td></tr>
+</table>
+</div>
+<div class="callout">⚠️ 每个平台的注册都可能要求手机验证码或邮箱验证——请准备好能收验证码的手机。</div>
+
+<h2><span class="no">2</span>域名：先买好你的 .com</h2>
+<p class="sub">我已完成可用性核查（RDAP 实时查询，2026-09-04）：</p>
+<div class="box">
+<table>
+<tr><th>候选域名</th><th style="width:120px;">状态</th><th>建议</th></tr>
+<tr><td>wellvoyagecare.com</td><td><span class="ok">✅ 可注册</span></td><td>主推 —— 保留 WellVoyage 品牌 + Care 医疗含义</td></tr>
+<tr><td>wellvoyagemed.com</td><td><span class="ok">✅ 可注册</span></td><td>备选 —— 更偏医疗（Med）</td></tr>
+<tr><td>wellvoyagehealth.com</td><td><span class="ok">✅ 可注册</span></td><td>备选 —— 较长</td></tr>
+<tr><td>jadeandqi.com</td><td><span class="ok">✅ 可注册</span></td><td>Jade &amp; Qi 子品牌若独立上线可用</td></tr>
+<tr><td>wellvoyage.com</td><td><span class="wait">❌ 已被注册</span></td><td>他人 2011 年持有至 2027，暂不考虑</td></tr>
+</table>
+</div>
+<ol class="steps">
+  <li>打开 <code>dash.cloudflare.com</code> → 注册（或用 Google 账号直接登录）。</li>
+  <li>进入控制台 → 左侧 <b>Domain Registration</b> → <b>Register Domain</b>。</li>
+  <li>搜索并购买 <b>wellvoyagecare.com</b>（Cloudflare 按成本价约 <b>$10.44/年</b>，无加价；也有 .com 隐私保护免费）。</li>
+  <li>购买后域名自动托管在 Cloudflare（免费），无需另设 DNS。</li>
+</ol>
+<div class="callout">如果你更习惯国内注册商（阿里云/腾讯云）也可以，但请把 DNS 解析托管到 Cloudflare（域名→修改 NS 为 Cloudflare 给的两条），便于和 Pages 托管联动。</div>
+<p><b>完成后告诉我：</b>「域名已注册好：wellvoyagecare.com」→ 我更新两个网站的 canonical / sitemap / 邮箱占位。</p>
+
+<h2><span class="no">3</span>代码仓库：GitHub</h2>
+<p class="sub">网站代码已整理为 Git 仓库并打好首次提交；你只需建一个「仓库」并让我把代码推上去。</p>
+<ol class="steps">
+  <li>打开 <code>github.com</code> 注册（用户名建议 <b>wellvoyage</b> 或你的公司名）。</li>
+  <li>右上角 <b>+</b> → <b>New repository</b> → 名称填 <code>wellvoyage-web</code> → 选 <b>Private</b>（代码不公开）→ Create。</li>
+  <li>创建后把仓库地址（形如 <code>https://github.com/你的用户名/wellvoyage-web.git</code>）发给我。</li>
+</ol>
+<div class="box gold"><h3>为什么要 Git？</h3><p>你的案例库更新方式是「改文件 + 一键更新」：以后你（或我）改好内容 → 提交到 GitHub → Cloudflare 自动把新版本推上线，全程约 1 分钟，零费用。这也是跨境业务可审计、可回滚的工程标准。</p></div>
+<p><b>完成后告诉我：</b>「GitHub 仓库已建好：xxx/wellvoyage-web」→ 我把两站代码推上去。</p>
+
+<h2><span class="no">4</span>托管：Cloudflare Pages 连接 GitHub</h2>
+<p class="sub">免费额度对这两个展示型网站完全够用（无限带宽静态托管）。</p>
+<ol class="steps">
+  <li>登录 Cloudflare → 左侧 <b>Workers &amp; Pages</b> → <b>Create</b> → <b>Pages</b> → <b>Connect to Git</b>。</li>
+  <li>按提示授权 GitHub（允许 Cloudflare 读取 <code>wellvoyage-web</code> 仓库）。</li>
+  <li>选择 <code>wellvoyage-web</code> 仓库 → 构建设置保持默认（<b>Build command 留空 / Build output 留空</b>，我们是纯静态）。</li>
+  <li>点 <b>Save and Deploy</b> → 首次部署完成后会得到一个 <code>xxx.pages.dev</code> 地址。</li>
+  <li>在 Pages 项目 → <b>Custom domains</b> → 添加 <code>wellvoyagecare.com</code>（Cloudflare 自动配 DNS/SSL）。</li>
+</ol>
+<div class="box teal"><h3>两个站点如何部署</h3><p>方案 A（推荐首年）：<b>一个仓库、两个子路径</b> —— 主站 <code>wellvoyagecare.com</code> 放公司页（company-profile），康养页放 <code>wellvoyagecare.com/wellness</code>（wellness-site 移入子目录即可）。省钱且统一。</p><p>方案 B（预算充足后）：再注册 <code>jadeandqi.com</code> 给 Jade &amp; Qi 独立品牌站，同一个 Cloudflare 账号再建一个 Pages 项目即可。</p></div>
+<p><b>完成后告诉我：</b>「网站已上线：https://wellvoyagecare.com」→ 我做全站真机验收（速度 / 图片 / 视频 / 移动端）。</p>
+
+<h2><span class="no">5</span>收款：PayPal 商业账户 + 支付链接</h2>
+<p class="sub">网站已内置 7 个「Book Now」预订按钮 + 每个按钮的配置槽位；你在 PayPal 后台创建「支付链接」，把链接粘贴到两页配置里即可完成接线。</p>
+<ol class="steps">
+  <li>打开 <code>paypal.com</code> → 注册 <b>商业账户</b>（Business），用内地营业执照实名 + 绑定对公或法人银行卡收人民币结算。</li>
+  <li>进入商家后台 → 顶部 <b>收款</b> → <b>支付链接 / Payment Links</b> → <b>创建链接</b>。</li>
+  <li>为每个套餐创建一条链接，金额建议用「可退定金」口径（例如 $500 / ¥），名称填套餐名：
+    <ul class="tick" style="margin-top:8px;">
+      <li>Essential Reset（定金）</li>
+      <li>TCM Wellness Retreat（定金）</li>
+      <li>Executive Health Screening（定金）</li>
+      <li>Hearing &amp; Balance Renewal（定金）</li>
+      <li>Longevity &amp; Vitality（定金）</li>
+    </ul>
+  </li>
+  <li>每条链接创建后复制形如 <code>https://www.paypal.com/ncp/payment/xxxx</code> 的地址，一并发给我。</li>
+</ol>
+<div class="box red"><h3>合规提醒（务必读）</h3><p>跨境 + 医疗属高风险行业：① 网站与收款用途建议表述为「医疗旅行协调服务 / 行程预订金」，避免在 PayPal 审核或风控时被认定为「医疗诊疗收费」；② 大额定制就医（胸外科/手术类）不建议走在线全款，仍以询盘 + 线下/电汇为主——页面已按此设计；③ 保留每笔交易的咨询记录与书面协议，便于审计。</p></div>
+<p><b>完成后告诉我：</b>「PayPal 链接已创建：6 条」→ 我把链接填入 <code>SITE_CONFIG.paypal</code>，全站按钮即变为真实支付。</p>
+
+<h2><span class="no">6</span>询盘直达邮箱（可选但推荐）：Formspree</h2>
+<p class="sub">现在两页表单「零配置可用」——提交时打开你的邮件客户端生成草稿。想让客户填完表单直接发到你邮箱（不弹邮件客户端），花 2 分钟注册 Formspree：</p>
+<ol class="steps">
+  <li>打开 <code>formspree.io</code> 注册 → New Form → 名称填 <code>Jade&amp;Qi Enquiry</code>。</li>
+  <li>把表单地址 <code>https://formspree.io/f/xxxx</code> 发给我 → 我填入两页的 <code>SITE_CONFIG.formEndpoint</code>。</li>
+</ol>
+
+<h2><span class="no">7</span>邮箱与占位信息（随部署同步替换）</h2>
+<ul class="tick">
+  <li>正式邮箱：建议用域名邮箱（Cloudflare 免费 Email Routing 可把 <code>hello@wellvoyagecare.com</code> 转发到你的常用邮箱，无需自建邮箱服务器）。</li>
+  <li>替换两页中的占位：<code>hi@wellvoyagecare.com</code> / <code>hello@jadeandqi.com</code> / WhatsApp 号码 / <code>wa.me/8613800000000</code> 链接。</li>
+</ul>
+
+<h2><span class="no">8</span>上线后日常运营快速参考</h2>
+<div class="box teal"><table>
+<tr><th style="width:26%;">想做什么</th><th>改哪里</th></tr>
+<tr><td>上/下架一个案例</td><td>公司页底部 <code>CASES</code> 数组：复制一条改字段 = 上架；<code>published:false</code> = 下架</td></tr>
+<tr><td>改套餐价格/文案</td><td>wellness-site/index.html 对应卡片（<code>$2,980</code> 等）</td></tr>
+<tr><td>换首页视频</td><td>两页 <code>media/brand-film.mp4</code> 覆盖同名文件即可（或改 <code>&lt;source&gt;</code> 路径 / 换 YouTube iframe）</td></tr>
+<tr><td>加一张图片</td><td>上传到 <code>images/</code>，HTML 里用相对路径引用</td></tr>
+<tr><td>发布新版本</td><td>GitHub 提交后 Cloudflare 自动上线（约 1 分钟）；不会操作就让我改，我改完直接推</td></tr>
+<tr><td>添加 Google 收录</td><td>注册 Search Console 验证域名，提交两页 sitemap.xml</td></tr>
+</table></div>
+
+<div class="callout">📌 下一轮建议补齐：<b>隐私政策 / 服务条款 / 退款政策</b> 三个页面（PayPal 与广告审核都要求），我可以一键生成三语（中/英/简）版本并挂到页脚。</div>
+
+<div class="foot">安途康悦 WellVoyage × Jade &amp; Qi · 跨境上线部署手册 v1.0 · 生成于 2026-09-04 · 由 AI 辅助整理，请按各平台最新界面为准</div>
+</div>
+</body>
+</html>

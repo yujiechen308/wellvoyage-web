@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安途康悦 WellVoyage × Jade &amp; Qi | 公司介绍 — Company Profile</title>
+<meta name="description" content="安途康悦 WellVoyage × Jade & Qi：连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。Where world-class care meets a journey well taken.">
+<!-- ★ SEO（部署后：若正式域名不是 wellvoyagecare.com，请把 canonical/OG 链接改成你的域名） -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://wellvoyagecare.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WellVoyage 安途康悦 × Jade & Qi">
+<meta property="og:title" content="WellVoyage 安途康悦 × Jade & Qi — 高端医疗康养旅行服务商">
+<meta property="og:description" content="连接世界患者与中国顶尖医疗资源——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。">
+<meta property="og:url" content="https://wellvoyagecare.com/">
+<meta property="og:image" content="https://wellvoyagecare.com/images/hero-city.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WellVoyage 安途康悦",
+  "alternateName": "Jade & Qi",
+  "description": "Premium medical & wellness travel service connecting international patients with China's leading medical specialists.",
+  "areaServed": "Worldwide",
+  "address": {"@type": "PostalAddress", "addressLocality": "Guangzhou", "addressCountry": "CN"},
+  "url": "https://wellvoyagecare.com/"
+}
+</script>
+<style>
+  :root{
+    --ink:#1e3b36;
+    --teal:#177e70;
+    --teal-deep:#0e5a4e;
+    --mint:#2aa08f;
+    --gold:#c9a45c;
+    --gold-light:#d9bd85;
+    --paper:#f8fbf9;
+    --card:#ffffff;
+    --muted:#5f7a74;
+    --line:#e2ece7;
+    --red-cn:#c0392b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Source Han Serif SC","Noto Serif SC","Songti SC",serif;background:var(--paper);color:var(--ink);line-height:1.75;}
+  .en{font-family:Georgia,"Times New Roman",serif;}
+  .container{max-width:1080px;margin:0 auto;padding:0 32px;}
+  section{padding:72px 0;}
+  h2{font-size:30px;color:var(--teal);letter-spacing:2px;margin-bottom:8px;}
+  h2 .en{display:block;font-size:15px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-style:italic;font-weight:400;margin-bottom:14px;}
+  .divider{width:64px;height:3px;background:var(--gold);margin:18px 0 36px;}
+  /* HERO */
+  .hero{background:linear-gradient(135deg,rgba(14,90,78,.88) 0%,rgba(23,126,112,.74) 60%,rgba(42,160,143,.55) 100%),url('images/hero-city.png') center/cover no-repeat;color:#f7fbf9;padding:96px 0 84px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(217,189,133,.35);}
+  .hero::before{content:"";position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(217,189,133,.45);}
+  .hero .brand-cn{font-size:52px;letter-spacing:10px;font-weight:700;}
+  .hero .brand-en{font-size:26px;letter-spacing:6px;color:var(--gold-light);margin-top:10px;}
+  .hero .brand-en .amp{color:#f0f7f4;font-size:20px;vertical-align:middle;margin:0 6px;}
+  .hero .brand-sub{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13.5px;color:#cfe5df;letter-spacing:1px;}
+  .hero .brand-sub b{color:#f7fbf9;font-weight:600;}
+  .hero .brand-sub .sep{color:rgba(217,189,133,.65);}
+  .hero .tagline{margin-top:26px;font-size:19px;max-width:640px;color:#edf6f2;}
+  .hero .tagline .en{display:block;font-size:15px;color:#c2dcd6;margin-top:8px;font-style:italic;}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px;}
+  .hero-badges span{border:1px solid rgba(217,189,133,.55);color:var(--gold-light);padding:7px 18px;border-radius:999px;font-size:14px;letter-spacing:1px;}
+  /* STATS */
+  .stats{background:var(--card);border-bottom:1px solid var(--line);}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 0;}
+  .stat{text-align:center;}
+  .stat .num{font-size:36px;color:var(--gold);font-weight:700;font-family:Georgia,serif;}
+  .stat .lab{font-size:14px;color:var(--muted);margin-top:4px;}
+  .stat .lab-en{font-size:11.5px;color:#94aca6;letter-spacing:.5px;}
+  /* CARDS */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:transform .2s, box-shadow .2s;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(15,76,78,.10);}
+  .card h3{font-size:19px;color:var(--teal);margin-bottom:10px;}
+  .card h3 .en{display:block;font-size:12.5px;color:var(--gold);letter-spacing:1px;font-weight:400;margin-top:2px;}
+  .card p{font-size:14.5px;color:#35504a;}
+  .card .en-text{font-size:13px;color:#7d938d;font-style:italic;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;}
+  .icon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--mint),var(--teal));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;color:#f7fbf9;}
+  /* IMAGE CARDS */
+  .card-img-wrap{height:150px;margin:-30px -28px 20px -28px;border-radius:14px 14px 0 0;overflow:hidden;position:relative;}
+  .card-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+  .card-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(14,90,78,.45) 100%);}
+  .card.has-img{padding-top:0;}
+  /* BANNERS */
+  .why-banner{height:220px;border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:center;padding:0 40px;margin-bottom:36px;}
+  .why-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,90,78,.88),rgba(23,126,112,.62));}
+  .why-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .why-banner p{position:relative;z-index:1;color:#f7fbf9;font-size:20px;letter-spacing:1px;max-width:640px;}
+  .why-banner .en{display:block;font-size:14px;color:var(--gold-light);font-style:italic;margin-top:8px;}
+  /* DOCTOR FEATURE — 清新浅色主卡 + 深色印章肖像 */
+  .doc-feature{background:linear-gradient(135deg,#eef8f4,#ffffff);border:1px solid #d5e9e2;color:var(--ink);border-radius:18px;padding:48px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;box-shadow:0 10px 36px rgba(23,126,112,.08);}
+  .doc-portrait{background:linear-gradient(160deg,rgba(14,90,78,.88),rgba(23,126,112,.82)),url('images/medicine-tech.png') center/cover no-repeat;border:1px solid rgba(217,189,133,.45);border-radius:14px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold-light);text-align:center;padding:24px;}
+  .doc-portrait .seal{font-size:64px;line-height:1;}
+  .doc-portrait .nm{font-size:26px;letter-spacing:4px;margin-top:14px;color:#f7fbf9;}
+  .doc-portrait .nm-en{font-size:13px;letter-spacing:2px;margin-top:4px;color:var(--gold-light);}
+  .doc-feature h3{font-size:24px;color:var(--teal-deep);letter-spacing:2px;}
+  .doc-feature .sub{color:#8a7340;font-size:14px;margin:6px 0 18px;letter-spacing:1px;}
+  .doc-feature ul{list-style:none;}
+  .doc-feature li{padding:8px 0 8px 26px;position:relative;font-size:14.5px;color:#35504a;border-bottom:1px dashed #d5e9e2;}
+  .doc-feature li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:10px;top:12px;}
+  .doc-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .doc-tags span{background:rgba(42,160,143,.10);border:1px solid rgba(42,160,143,.35);color:var(--teal-deep);font-size:12.5px;padding:5px 14px;border-radius:999px;}
+  .doc-grid .card{padding:26px 24px;}
+  .doc-mini-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px;}
+  .doc-mini-head h3{margin:0;}
+  .doc-mini-head .role{font-size:12px;color:var(--gold);letter-spacing:1px;}
+  /* TIMELINE */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step;}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 18px;text-align:center;position:relative;}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);display:block;font-family:Georgia,serif;font-size:24px;color:var(--gold);margin-bottom:8px;}
+  .step h4{font-size:16px;color:var(--teal);margin-bottom:6px;}
+  .step p{font-size:12.5px;color:var(--muted);}
+  .step .en{font-size:11px;color:#94aca6;font-style:italic;}
+  /* ADVANTAGES */
+  .adv{background:linear-gradient(180deg,#eef7f3,var(--paper));}
+  .adv-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(23,126,112,.07);}
+  .adv-table th{background:var(--teal);color:#f7fbf9;padding:14px 18px;font-size:15px;text-align:left;letter-spacing:1px;}
+  .adv-table td{padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top;}
+  .adv-table tr:last-child td{border-bottom:none;}
+  .adv-table td:first-child{font-weight:700;color:var(--teal);white-space:nowrap;}
+  /* VIDEO MODULE */
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:0 18px 48px rgba(23,126,112,.16);background:#0e5a4e;}
+  .video-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .video-fallback{position:absolute;inset:0;display:none;}
+  .video-fallback .kb{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;animation:kbzoom 9s ease-in-out infinite;}
+  .video-fallback .kb.active{opacity:1;}
+  @keyframes kbzoom{0%{transform:scale(1);}100%{transform:scale(1.08);}}
+  .video-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 34px;background:linear-gradient(to top,rgba(14,90,78,.78),transparent);z-index:2;color:#f7fbf9;font-size:17px;letter-spacing:1px;}
+  .video-cap .en{display:block;font-size:12.5px;color:var(--gold-light);font-style:italic;letter-spacing:2px;margin-top:4px;text-transform:uppercase;}
+  .video-note{font-size:12px;color:#94aca6;margin-top:12px;text-align:center;}
+  /* CASE LIBRARY */
+  .case-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+  .case-tab{border:1px solid #cfe5df;background:var(--card);color:var(--muted);padding:8px 20px;border-radius:999px;font-size:14px;cursor:pointer;letter-spacing:1px;transition:all .2s;}
+  .case-tab:hover{border-color:var(--mint);color:var(--teal-deep);}
+  .case-tab.active{background:var(--teal);border-color:var(--teal);color:#f7fbf9;}
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .case-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s, box-shadow .2s;display:flex;flex-direction:column;}
+  .case-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(23,126,112,.12);}
+  .case-img{height:150px;position:relative;overflow:hidden;}
+  .case-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .case-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(14,90,78,.42) 100%);}
+  .case-cat{position:absolute;top:12px;left:12px;z-index:2;background:rgba(23,126,112,.92);color:#f7fbf9;font-size:12px;letter-spacing:1px;padding:4px 12px;border-radius:999px;}
+  .case-body{padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;}
+  .case-body h3{font-size:17px;color:var(--teal-deep);margin-bottom:8px;}
+  .case-body p{font-size:13.5px;color:#35504a;}
+  .case-highlight{margin-top:10px;font-size:13px;color:var(--teal-deep);background:#eef7f3;border-left:3px solid var(--gold);padding:8px 12px;border-radius:0 8px 8px 0;}
+  .case-src{margin-top:auto;padding-top:12px;font-size:11.5px;color:#94aca6;border-top:1px dashed var(--line);}
+  .case-src b{color:#8a7340;font-weight:600;}
+  /* FOOTER */
+  footer{background:var(--teal-deep);color:#c8ddd7;padding:52px 0 36px;font-size:13px;}
+  footer .fn{font-size:22px;color:#f7fbf9;letter-spacing:6px;}
+  footer .fe{color:var(--gold-light);letter-spacing:3px;font-size:13px;margin-top:4px;}
+  .disclaimer{margin-top:28px;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:11.5px;color:#9dc0b8;line-height:1.8;}
+  @media(max-width:860px){
+    .grid-2,.grid-3,.grid-4,.flow,.stats-grid{grid-template-columns:1fr 1fr;}
+    .doc-feature{grid-template-columns:1fr;}
+    .case-grid{grid-template-columns:1fr;}
+    .hero .brand-cn{font-size:36px;letter-spacing:5px;}
+    .hero .brand-en{font-size:19px;letter-spacing:3px;}
+    .hero .brand-sub{flex-direction:column;gap:6px;}
+    .hero .brand-sub .sep{display:none;}
+  }
+  @media(max-width:520px){.grid-2,.grid-3,.grid-4,.flow,.stats-grid{grid-template-columns:1fr;}}
+  /* ---------- NAV（部署版） ---------- */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(248,251,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav-brand{font-size:18px;letter-spacing:3px;color:var(--teal-deep);text-decoration:none;font-weight:700;}
+  .nav-brand small{display:block;font-size:9.5px;letter-spacing:2px;color:var(--gold);font-weight:400;}
+  .nav-links{display:flex;gap:22px;list-style:none;font-size:13.5px;letter-spacing:1px;}
+  .nav-links a{color:var(--ink);text-decoration:none;}
+  .nav-links a:hover{color:var(--teal);}
+  .nav-cta{background:var(--teal);color:#fff;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:13px;letter-spacing:1px;}
+  .nav-cta:hover{background:var(--teal-deep);}
+  .nav-burger{display:none;background:none;border:none;font-size:22px;color:var(--teal-deep);cursor:pointer;}
+  /* ---------- BUTTONS（部署版） ---------- */
+  .btn{display:inline-block;border-radius:999px;padding:13px 30px;font-size:15px;letter-spacing:1px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit;}
+  .btn-gold{background:linear-gradient(135deg,#d9bd85,#c9a45c);color:#14312c;font-weight:600;}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,164,92,.35);}
+  .btn-ghost{border:1px solid rgba(247,251,249,.75);color:#f7fbf9;background:transparent;}
+  .btn-ghost:hover{background:rgba(247,251,249,.14);}
+  .btn-teal{background:var(--teal);color:#fff;}
+  .btn-teal:hover{background:var(--teal-deep);}
+  .btn-outline{border:1px solid var(--teal);color:var(--teal);background:transparent;}
+  .btn-outline:hover{background:#eef7f3;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px;}
+  /* ---------- CONTACT（部署版） ---------- */
+  .contact{background:linear-gradient(180deg,var(--paper),#eef7f3);}
+  .contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start;}
+  .contact-info h3{font-size:20px;color:var(--teal-deep);margin-bottom:10px;}
+  .contact-line{display:flex;gap:12px;align-items:flex-start;margin:12px 0;font-size:14.5px;color:#35504a;}
+  .contact-line .ico{width:38px;height:38px;min-width:38px;border-radius:10px;background:#e2f2ed;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .contact-line b{display:block;font-size:13.5px;color:var(--teal-deep);}
+  .contact-note{font-size:12px;color:#94aca6;margin-top:14px;line-height:1.9;}
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:0 10px 30px rgba(23,126,112,.08);}
+  .form-card h3{font-size:19px;color:var(--teal-deep);margin-bottom:4px;}
+  .form-card .sub{font-size:13px;color:var(--muted);margin-bottom:18px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .form-field{margin-bottom:14px;}
+  .form-field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:5px;letter-spacing:.5px;}
+  .form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid #d5e9e2;border-radius:9px;padding:11px 13px;font-size:14px;font-family:inherit;background:#fbfdfc;color:var(--ink);}
+  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--mint);box-shadow:0 0 0 3px rgba(42,160,143,.12);}
+  .form-msg{display:none;background:#eef7f3;border:1px solid #bfe3d8;color:var(--teal-deep);border-radius:9px;padding:12px 14px;font-size:13.5px;margin-bottom:14px;}
+  .form-msg.err{background:#fdf1f0;border-color:#ecc;color:#a33;}
+  /* CTA BAND */
+  .cta-band{margin-top:72px;border-radius:18px;overflow:hidden;position:relative;padding:54px 48px;text-align:center;color:#f7fbf9;background:linear-gradient(120deg,rgba(14,90,78,.92),rgba(42,160,143,.78)),url('images/fast-track.png') center/cover no-repeat;}
+  .cta-band h3{font-size:26px;letter-spacing:2px;}
+  .cta-band p{color:#d7ece6;margin:12px auto 24px;max-width:560px;font-size:15px;}
+  .cta-band .btn-gold{font-size:16px;padding:14px 36px;}
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .nav-burger{display:block;}
+    .nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#f8fbf9;padding:18px 32px;border-bottom:1px solid var(--line);gap:14px;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .cta-band{padding:40px 24px;}
+  }
+  /* ---------- 卡片内 CTA 行（部署版） ---------- */
+  .card-cta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;}
+  .card-cta .btn{padding:9px 18px;font-size:13px;}
+  .card-cta .btn-pay{background:linear-gradient(135deg,#003087,#0070ba);color:#fff;}
+  .card-cta .btn-pay:hover{box-shadow:0 8px 20px rgba(0,112,186,.35);}
+</style>
+</head>
+<body>
+
+<!-- ================= 导航（部署版） ================= -->
+<nav class="nav" id="top">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top">安途康悦<small class="en">WELLVOYAGE × JADE &amp; QI</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">关于我们</a></li>
+      <li><a href="#services">服务体系</a></li>
+      <li><a href="#programs">核心项目</a></li>
+      <li><a href="#experts">专家团队</a></li>
+      <li><a href="#cases">案例库</a></li>
+      <li><a href="#contact">联系我们</a></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="nav-cta" href="#contact">预约咨询</a>
+      <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container">
+    <div class="brand-cn">安途康悦</div>
+    <div class="brand-en en">WELLVOYAGE<span class="amp">×</span>JADE &amp; QI</div>
+    <div class="brand-sub">
+      <span><b>WellVoyage</b>&nbsp;· 医疗旅行主品牌 &nbsp;<span class="en" style="font-style:italic;">The Medical Travel Collection</span></span>
+      <span class="sep">｜</span>
+      <span><b>Jade &amp; Qi</b>&nbsp;· 高端康养系列 &nbsp;<span class="en" style="font-style:italic;">The Signature Wellness Line</span></span>
+    </div>
+    <div class="tagline">
+      连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。
+      <span class="en">Where world-class care meets a journey well taken. Connecting international patients with China's leading medical minds — paired with curated cultural journeys, luxury stays, and seamless, end-to-end service.</span>
+    </div>
+    <div class="hero-badges">
+      <span>名医直通 · Direct Access to Top Specialists</span>
+      <span>全程管家 · End-to-End Concierge</span>
+      <span>康养旅程 · Wellness &amp; Culture</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-gold">预约咨询 · 获取专属方案</a>
+      <a href="#cases" class="btn btn-ghost">查看真实案例</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><div class="num">13,000+</div><div class="lab">合作团队年手术量（台）</div><div class="lab-en">Surgeries / year by partner team</div></div>
+      <div class="stat"><div class="num">1/3–1/5</div><div class="lab">费用仅为欧美同水平项目</div><div class="lab-en">Cost vs. Western private care</div></div>
+      <div class="stat"><div class="num">40+</div><div class="lab">领衔专家临床经验（年）</div><div class="lab-en">Years of experience, lead expert</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="lab">多语种全程管家服务</div><div class="lab-en">Multilingual concierge, around the clock</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 品牌视频 ================= -->
+<section style="padding:56px 0 0;">
+  <div class="container">
+    <h2>一睹我们的世界<span class="en en">The WellVoyage Film</span></h2>
+    <div class="divider"></div>
+    <div class="video-frame" id="brandVideoFrame">
+      <!--
+        ▼▼ 如何更换视频 ▼▼
+        把 <source src="..."> 的地址换成你的视频文件（media/xxx.mp4）即可自动播放；
+        如需嵌入 YouTube：删除整个 <video> 标签，替换为
+        <iframe src="https://www.youtube.com/embed/你的视频ID" ...></iframe>
+        视频加载失败时会自动降级为图片轮播，不会出现空白。
+      -->
+      <video id="brandVideo" autoplay muted loop playsinline poster="images/hero-wellness.png">
+        <source src="media/brand-film.mp4" type="video/mp4">
+      </video>
+      <div class="video-fallback" id="videoFallback">
+        <div class="kb" style="background-image:url('images/hero-wellness.png');"></div>
+        <div class="kb" style="background-image:url('images/consult.png');"></div>
+        <div class="kb" style="background-image:url('images/culture-tea.png');"></div>
+      </div>
+      <div class="video-cap">顶尖医疗 × 东方康养 × 一段安心的旅程
+        <span class="en">World-Class Care · Eastern Wellness · A Journey Well Taken</span>
+      </div>
+    </div>
+    <p class="video-note">建议横屏 16:9 品牌短片，自动循环静音播放 / Looping muted brand film, 16:9 recommended.</p>
+  </div>
+</section>
+
+<!-- ================= 关于我们 ================= -->
+<section id="about">
+  <div class="container">
+    <h2>关于我们<span class="en en">About WellVoyage</span></h2>
+    <div class="divider"></div>
+    <div style="max-width:880px;margin:0 auto 40px;padding:28px 32px;background:var(--card);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;box-shadow:0 8px 24px rgba(15,76,78,.07);">
+      <div style="font-size:18.5px;color:var(--teal);line-height:2;letter-spacing:.5px;">连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。</div>
+      <div class="en" style="font-size:14.5px;color:var(--gold);font-style:italic;margin-top:12px;letter-spacing:.5px;">Where world-class care meets a journey well taken.</div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>公司简介<span class="en en">Company Overview</span></h3>
+        <p>安途康悦（WellVoyage）是一家立足中国、面向全球的高端医疗康养旅行服务商。我们以双品牌运营：<b>WellVoyage</b> 承载以顶尖名医为核心的临床就医安排、快速服务通道与全程管家服务；<b>Jade &amp; Qi（玉与气）</b>则代表我们的高端康养系列——甄选住宿、私人接待与深度中国文化之旅，以东方康养美学为每一次治疗之旅赋予从容与愉悦。让"来中国就医"成为一段安心、值得托付的旅程。</p>
+        <p class="en-text">WellVoyage is a China-based premium medical travel company serving international patients. We operate two complementary brands: <b>WellVoyage</b> — clinical journeys anchored by China's leading specialists, with priority access and end-to-end concierge; and <b>Jade &amp; Qi</b> — our signature wellness line of curated stays, private transfers, and immersive Chinese cultural journeys, infusing every trip with the aesthetics of Eastern well-being.</p>
+      </div>
+      <div class="card">
+        <h3>我们的使命<span class="en en">Our Mission</span></h3>
+        <p>让世界共享中国顶尖医疗资源。中国拥有全球最丰富的临床经验密度、先进的应用型技术与高效的医疗服务体系；我们以专业、合规、有温度的服务，把这些资源转化为国际患者触手可及的价值，并让每一次康复之旅都成为一次中国文化的美好相遇。</p>
+        <p class="en-text">To open China's world-class medical excellence to the world — pairing unmatched surgical experience and advanced techniques with hospitality worthy of the journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 服务体系 ================= -->
+<section style="padding-top:0;" id="services">
+  <div class="container">
+    <h2>服务体系<span class="en en">Our Service Portfolio</span></h2>
+    <div class="divider"></div>
+    <div class="grid-4">
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/consult.png" alt="名医医疗"></div>
+        <h3>名医医疗<span class="en en">Expert-Led Care</span></h3>
+        <p>直通中国顶级名医及其团队：优先预约、方案预审、病历翻译、多语种陪诊、国际部快速通道，全程由专家团队把关。</p>
+        <p class="en-text">Priority appointments with China's top specialists, medical record translation, bilingual accompaniment, and dedicated fast-track channels.</p>
+      </div>
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/hotel-suite.png" alt="甄选住宿"></div>
+        <h3>甄选住宿<span class="en en">Curated Stays</span></h3>
+        <p>医院周边高端协议酒店与康养度假酒店，支持特殊餐食（清真/素食/医疗餐）、无障碍房型与医疗设备进房。</p>
+        <p class="en-text">Handpicked luxury hotels near partner hospitals and wellness resorts — with dietary, accessibility, and medical-support options.</p>
+      </div>
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/chauffeur.png" alt="专车接待"></div>
+        <h3>专车接待<span class="en en">Private Transport</span></h3>
+        <p>双语司机专车接送机、全程随行管家、术后特殊转运安排，从落地那一刻起无需操心任何行程细节。</p>
+        <p class="en-text">Airport meet-and-greet, bilingual chauffeurs, dedicated concierge, and post-procedure transfer support — from touchdown to takeoff.</p>
+      </div>
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/culture-tea.png" alt="文化之旅"></div>
+        <h3>文化之旅<span class="en en">Cultural Journeys</span></h3>
+        <p>康复期定制中国文化体验：岭南风物、中医理疗、山水静养、茶道食养——由持牌旅行社合作交付，安全合规。</p>
+        <p class="en-text">Tailored recovery-friendly cultural experiences — Lingnan heritage, TCM wellness, scenic retreats — delivered with licensed travel partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 项目介绍 ================= -->
+<section class="adv" id="programs">
+  <div class="container">
+    <h2>核心项目<span class="en en">Signature Programs</span></h2>
+    <div class="divider"></div>
+    <div class="grid-3">
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/medicine-tech.png" alt="胸外科卓越计划"></div>
+        <h3>胸外科卓越计划<span class="en en">Thoracic Excellence Program（旗舰）</span></h3>
+        <p>以何建行教授团队的无管微创技术体系为核心，面向国际肺部疾病患者：单孔胸腔镜、自主呼吸麻醉、加速康复路径。由团队完成方案设计与手术交付，术后两天即可下床活动，康复期可衔接文化之旅。</p>
+        <p class="en-text">Our flagship program built around Prof. Jianxing He's tubeless minimally-invasive thoracic surgery — uniportal VATS under spontaneous breathing, with accelerated recovery and a cultural journey in convalescence.</p>
+      <div class="card-cta"><a class="btn btn-teal" href="#contact">预约专家评估 Enquire</a></div>
+      </div>
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/hearing.png" alt="听力健康"></div>
+        <h3>听力健康与平衡康复<span class="en en">Hearing &amp; Balance Care</span></h3>
+        <p>听觉植入（人工耳蜗）、耳畸形修复、眩晕与耳鸣管理、助听器验配——依托国内顶尖耳科专家团队，覆盖从儿童到老年的听力重建需求，配套家庭陪同行程。</p>
+        <p class="en-text">Cochlear implantation, ear reconstruction, vertigo &amp; tinnitus management, and hearing-aid fitting by China's leading ear specialists — with family-friendly itineraries.</p>
+      <div class="card-cta"><a class="btn btn-outline" href="#contact">预约评估 Enquire</a></div>
+      </div>
+      <div class="card has-img">
+        <div class="card-img-wrap"><img src="images/screening.png" alt="高管健检"></div>
+        <h3>高管健检与中医康养<span class="en en">Executive Screening &amp; TCM Wellness</span></h3>
+        <p>世界级设备的高管级健康筛查（当天出报告）、中医体质调理、药膳食养与静养行程。低门槛、高体验，是家庭与团体客户的理想入口项目。</p>
+        <p class="en-text">Executive-grade health screening with same-day results, personalized TCM programs, and restorative retreats — an ideal entry program for families and groups.</p>
+      <div class="card-cta"><a class="btn btn-outline" href="#contact">预约咨询 Enquire</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 专家团队 ================= -->
+<section id="experts">
+  <div class="container">
+    <h2>专家团队<span class="en en">Our Medical Experts</span></h2>
+    <div class="divider"></div>
+
+    <!-- 何建行 主推 -->
+    <div class="doc-feature">
+      <div class="doc-portrait">
+        <div class="seal">何</div>
+        <div class="nm">何建行</div>
+        <div class="nm-en en">Prof. Jianxing He, MD, PhD</div>
+      </div>
+      <div>
+        <h3>首席专家 · 胸外科</h3>
+        <div class="sub en">Chief Advisor — Thoracic Surgery ｜ 国家呼吸医学中心主任 · 广州呼吸健康研究院院长 · 欧洲科学院院士（2026）</div>
+        <ul>
+          <li>全球首创"无管（Tubeless）"微创胸外科技术体系：无气管插管、无胸腔引流管、无尿管，2011 年完成全球首例无管单孔胸腔镜肺癌根治术</li>
+          <li>团队年手术量 13,000+ 台、肺移植 110+ 台，经验密度全球领先；"无管"技术 2022 年入选哈佛大学医学教科书</li>
+          <li>发表国际论文 750+ 篇（H 指数 69），创办《Journal of Thoracic Disease》《Annals of Translational Medicine》两本 SCI 期刊</li>
+          <li>技术获英国皇家外科学院、爱丁堡皇家外科学院授权培训认证；梅奥诊所、麻省总医院等 600 余位国际医护曾来华进修交流</li>
+          <li>2025 年获评全国"最美医生"；国家科技进步奖、何梁何利奖获得者</li>
+          <li>2025 年 11 月，法国患者专程来华接受其主刀的无管手术，术后两日即可散步（南方+ 等媒体公开报道）</li>
+        </ul>
+        <div class="doc-tags">
+          <span>Tubeless VATS 全球首创</span><span>欧洲科学院院士</span><span>哈佛教科书收录</span><span>750+ 国际论文</span><span>法国患者来华主刀案例</span>
+        </div>
+        <p class="en-text" style="color:#7d938d;">Pioneer of tubeless minimally-invasive thoracic surgery (world-first tubeless uniportal lobectomy, 2011). His team performs 13,000+ procedures annually; the technique is featured in Harvard Medical School textbooks. Author of 750+ international publications; member of the Academia Europaea (2026). In Nov 2025, a French patient travelled to China for his personally performed tubeless resection — walking within two days (publicly reported).</p>
+      </div>
+    </div>
+
+    <div style="height:28px;"></div>
+
+    <!-- 其他专家 -->
+    <div class="grid-3 doc-grid">
+      <div class="card">
+        <div class="doc-mini-head"><h3>陈穗俊<span class="en en">Prof. Chen Suijun</span></h3><span class="role">耳外科 · 中山大学孙逸仙纪念医院副院长</span></div>
+        <p>主任医师、教授、博导。擅长耳廓再造（小耳畸形）、侧颅底肿瘤、人工耳蜗等听觉植入手术，团队开展 3D 外视镜联合术中听觉监测的人工耳蜗植入达国内领先水平。曾于美国明尼苏达大学、德国维尔茨堡大学研修。</p>
+        <p class="en-text">Leading ear surgeon specializing in auricular reconstruction, lateral skull-base surgery, and hearing implantation; fellowship-trained at the University of Minnesota and Universität Würzburg.</p>
+      </div>
+      <div class="card">
+        <div class="doc-mini-head"><h3>梁恒瑞<span class="en en">Dr. Liang Hengrui</span></h3><span class="role">胸外科 · 国家呼吸医学中心</span></div>
+        <p>何建行教授团队核心成员、"南山学者"特聘教授。首位完成美国 AATS、欧洲 ESTS、日本 JLCS 三大国际胸外科协会奖励"全满贯"的中国青年学者；AATS-杜克大学及 ESTS-苏黎世大学 Fellow；参编非插管胸外科手术国际专家共识 3 项。</p>
+        <p class="en-text">Core member of Prof. He's team; the first Chinese scholar to sweep the AATS, ESTS and JLCS international awards. AATS–Duke and ESTS–Zurich fellow; co-author of three international consensuses on non-intubated thoracic surgery.</p>
+      </div>
+      <div class="card">
+        <div class="doc-mini-head"><h3>王仙仁<span class="en en">Dr. Wang Xianren</span></h3><span class="role">耳内科 · 中山大学附属第一医院</span></div>
+        <p>副主任医师，美国南卡医科大学访学。专注眩晕诊治（梅尼埃病、耳石症）、突发性耳聋、耳鸣管理与助听器验配——中国少数同时持有耳科执业与国家助听器验配师双资质的医生，患者满意度长期 100%。</p>
+        <p class="en-text">Vertigo, sudden hearing loss, tinnitus and hearing-aid specialist; fellowship-trained at the Medical University of South Carolina — among the few Chinese physicians holding dual certification in otology and hearing-aid fitting.</p>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#94aca6;margin-top:16px;">注：以上专家信息均来自公开报道与官方渠道核实；宣传中我们始终采用"团队交付、专家把关"的合规表述。/ All expert credentials are drawn from publicly verifiable sources; our communications consistently use compliant "team-delivered, expert-supervised" language.</p>
+  </div>
+</section>
+
+<!-- ================= 案例库 ================= -->
+<section class="adv" id="cases">
+  <div class="container">
+    <h2>真实案例库<span class="en en">Patient Stories — Living Library</span></h2>
+    <div class="divider"></div>
+    <p style="max-width:760px;color:var(--muted);font-size:14.5px;margin-bottom:26px;">来自国际患者与访客的真实经历——每一条均标注来源（媒体报道 / 本人授权公开），持续更新。<span class="en" style="font-style:italic;color:#7d938d;">A living library of real international patient stories — each sourced from public media reports or authorized publication, updated regularly.</span></p>
+    <div class="case-tabs" id="caseTabs">
+      <button class="case-tab active" data-cat="all">全部 All</button>
+      <button class="case-tab" data-cat="thoracic">胸外科 Thoracic</button>
+      <button class="case-tab" data-cat="hearing">听力 Hearing</button>
+      <button class="case-tab" data-cat="wellness">康养健检 Wellness</button>
+    </div>
+    <div class="case-grid" id="caseGrid"><!-- 案例卡片由下方 CASES 数据自动渲染 --></div>
+    <p style="font-size:12px;color:#94aca6;margin-top:18px;">合规提示：案例仅作背景介绍，不构成疗效承诺；未公开报道且未获书面授权的案例不上架。/ Stories are illustrative, not a promise of outcome; unpublished or unauthorized cases are never listed.</p>
+  </div>
+</section>
+
+<!-- ================= 突出优势 ================= -->
+<section class="adv">
+  <div class="container">
+    <h2>为什么选择安途康悦<span class="en en">Why WellVoyage</span></h2>
+    <div class="divider"></div>
+    <div class="why-banner">
+      <img src="images/fast-track.png" alt="快速通道">
+      <p>从诊断到手术，以周计而非以月计。一名专属管家，全程打理诊疗之外的一切。
+      <span class="en">From diagnosis to surgery in weeks — not months. One dedicated concierge handles everything beyond the medicine.</span></p>
+    </div>
+    <table class="adv-table">
+      <tr><th style="width:22%;">优势维度</th><th style="width:39%;">我们提供的</th><th>对国际患者的意义</th></tr>
+      <tr>
+        <td>名医资源<br><span class="en" style="font-size:11.5px;color:var(--gold);">World-Class Specialists</span></td>
+        <td>以何建行教授为代表的中国顶级名医矩阵，覆盖胸外科、耳科、听力康复等领域；机构级合作通道，方案由专家团队亲自把关。</td>
+        <td>在欧美需排队数月的手术，在这里由全球经验密度最高的团队之一完成。/ Care delivered by teams whose case volume is unmatched worldwide.</td>
+      </tr>
+      <tr>
+        <td>技术领先<br><span class="en" style="font-size:11.5px;color:var(--gold);">Advanced Techniques</span></td>
+        <td>无管微创、单孔胸腔镜、3D 辅助听觉植入等国际前沿技术——多项为全球首创并写入国际教科书。</td>
+        <td>同等甚至更先进的术式，创伤更小、恢复更快。/ Frontier procedures — globally pioneered and textbook-recognized.</td>
+      </tr>
+      <tr>
+        <td>快速通道<br><span class="en" style="font-size:11.5px;color:var(--gold);">Priority Fast-Track</span></td>
+        <td>国际部绿色通道、优先预约与检查排期、病历预审与远程预诊，抵达即进入治疗流程。</td>
+        <td>以周计而非以月计：诊断到手术的时间被压缩至最短。/ From diagnosis to surgery in weeks — not months of waiting.</td>
+      </tr>
+      <tr>
+        <td>价值优势<br><span class="en" style="font-size:11.5px;color:var(--gold);">Exceptional Value</span></td>
+        <td>同代际技术与专家水准下，整体费用约为欧美私立医疗的 1/3–1/5，套餐透明报价。</td>
+        <td>以更少的花费获得顶尖专家的照护，并多收获一段文化旅程。/ Top-tier expertise at a fraction of Western private pricing.</td>
+      </tr>
+      <tr>
+        <td>全程管家<br><span class="en" style="font-size:11.5px;color:var(--gold);">End-to-End Concierge</span></td>
+        <td>签证指导、双语陪诊、专车接送、膳食安排、家属接待、术后随访——一名管家，全程负责。</td>
+        <td>患者与家属只需专注于康复，其余一切有人打理。/ One dedicated concierge handles everything beyond the medicine.</td>
+      </tr>
+      <tr>
+        <td>文化之旅<br><span class="en" style="font-size:11.5px;color:var(--gold);">Culture &amp; Recovery</span></td>
+        <td>康复期定制中国文化行程：中医理疗体验、岭南人文、山水静养、茶道食养，由持牌合作旅行社交付。</td>
+        <td>治疗与休养不再是冰冷的流程，而是一段值得铭记的东方之旅。/ Recovery becomes a memorable Eastern journey, not a clinical errand.</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 服务流程 ================= -->
+<section>
+  <div class="container">
+    <h2>服务流程<span class="en en">The WellVoyage Journey</span></h2>
+    <div class="divider"></div>
+    <div class="flow">
+      <div class="step"><h4>远程咨询</h4><span class="en">Consult</span><p>提交健康需求与病历，获得初步方案与报价</p></div>
+      <div class="step"><h4>方案定制</h4><span class="en">Design</span><p>专家团队预审方案，定制医疗+旅程计划</p></div>
+      <div class="step"><h4>安心抵达</h4><span class="en">Arrive</span><p>签证协助、专车接机、管家就位、入院安排</p></div>
+      <div class="step"><h4>治疗与焕新</h4><span class="en">Heal</span><p>快速通道完成诊疗，康复期展开文化之旅</p></div>
+      <div class="step"><h4>归国随访</h4><span class="en">Follow</span><p>翻译版病历报告、远程随访与复购关怀</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 咨询联系（部署版） ================= -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>联系我们 · 开启您的旅程<span class="en en">Start Your Journey</span></h2>
+    <div class="divider"></div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>与您的专属管家对话</h3>
+        <p style="font-size:14.5px;color:var(--muted);">无论是病情咨询、方案定制，还是合作洽谈，我们承诺一个工作日内回复（中 / 英 / 俄 / 阿拉伯语等）。</p>
+        <div style="height:14px;"></div>
+        <div class="contact-line"><div class="ico">✉</div><div><b>Email</b><span id="cfgEmail">hi@wellvoyagecare.com（部署时替换）</span></div></div>
+        <div class="contact-line"><div class="ico">💬</div><div><b>WhatsApp / Telegram</b><span id="cfgWA">+86 138 0000 0000（部署时替换）</span></div></div>
+        <div class="contact-line"><div class="ico">🏛</div><div><b>所在地</b><span>中国 · 广州</span></div></div>
+        <div class="contact-line"><div class="ico">🕑</div><div><b>响应时间</b><span>工作日 24 小时内回复</span></div></div>
+        <p class="contact-note">隐私承诺：您提交的信息仅用于本次咨询沟通，不会被用于营销或共享给第三方。提交即表示您同意我们的隐私政策。</p>
+      </div>
+      <div class="form-card">
+        <h3>预约咨询 / 获取方案</h3>
+        <div class="sub en">Tell us about your goals — a journey designer will reply within one working day.</div>
+        <div class="form-msg" id="formMsg"></div>
+        <form id="leadForm" novalidate>
+          <div class="form-row">
+            <div class="form-field"><label>您的姓名 / Full Name *</label><input name="name" type="text" required placeholder="Name"></div>
+            <div class="form-field"><label>国家 / Country</label><input name="country" type="text" placeholder="Country"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label>邮箱 / Email *</label><input name="email" type="email" required placeholder="you@email.com"></div>
+            <div class="form-field"><label>WhatsApp / 电话</label><input name="phone" type="text" placeholder="+00 000 0000"></div>
+          </div>
+          <div class="form-field"><label>感兴趣的方向 / I'm interested in</label>
+            <select name="interest">
+              <option value="">请选择 Please select</option>
+              <option>胸外科 / 肺部手术 Thoracic Surgery</option>
+              <option>听力健康 / 人工耳蜗 Hearing &amp; Implants</option>
+              <option>高管健检 Executive Screening</option>
+              <option>中医康养 / 康养旅程 TCM Wellness Retreat</option>
+              <option>机构合作 / Partnership</option>
+              <option>其他 Other</option>
+            </select>
+          </div>
+          <div class="form-field"><label>您的需求 / Message *</label><textarea name="message" rows="4" required placeholder="请简要描述健康状况、时间与预算 / Your health goals, timing &amp; budget…"></textarea></div>
+          <button class="btn btn-gold" type="submit" style="width:100%;">提交咨询 · Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="fn">安途康悦</div>
+    <div class="fe en">WELLVOYAGE × JADE &amp; QI ｜ Where World-Class Care Meets a Journey Well Taken</div>
+    <div style="margin-top:22px;">医疗康养旅行服务 ｜ 中英多语种服务 ｜ 中国·广州</div>
+    <div class="en" style="color:#9dc0b8;font-size:12px;margin-top:6px;">Premium Medical &amp; Wellness Travel ｜ Multilingual Service ｜ Guangzhou, China</div>
+    <div class="disclaimer">
+      免责声明：安途康悦为医疗服务协调与旅行服务机构，不直接提供医疗诊断与治疗服务；所有诊疗服务由持牌合作医疗机构及其专业团队提供并负责。本材料所涉专家信息均来自公开渠道，仅用于背景介绍，不构成任何疗效承诺或医疗建议。治疗结果因个体情况而异，请遵循主诊医生的专业意见。<br>
+      Disclaimer: WellVoyage is a medical-travel coordination and hospitality company; clinical services are delivered solely by licensed partner hospitals and their medical teams. Expert information herein is drawn from public sources for background purposes and does not constitute a promise of outcome or medical advice. Individual results vary — always follow the guidance of your treating physician.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   案例库数据（随时更新版）
+   ------------------------------------------------------------
+   ★ 如何新增案例：复制下面 { ... } 一整段，改字段即可，页面自动渲染。
+   ★ 如何下架案例：把 published 改为 false（保留数据，前台不显示）。
+   ★ 字段说明：
+     cat      分类：thoracic(胸外科) / hearing(听力) / wellness(康养健检)
+     flag     国旗 emoji；patient 患者署名（匿名可用"M 先生"等）
+     date     时间；img 配图路径（images/ 目录下）
+     source   来源标注：媒体报道名称或"本人授权"，务必真实
+   ============================================================ */
+const CASES = [
+  {
+    cat: "thoracic", flag: "🇫🇷", patient: "G 先生 · 36 岁 · 法国",
+    title: "跨国求医：5cm 纵隔肿瘤的无管微创手术",
+    date: "2025-11",
+    img: "images/medicine-tech.png",
+    summary: "法国患者专程飞抵广州，接受何建行教授主刀的全球首创『无管』微创手术——无气管插管、无胸腔引流管、无尿管。",
+    highlight: "术后两天即可下床散步，康复期衔接文化之旅。",
+    source: "南方+ 等媒体公开报道",
+    published: true
+  },
+  {
+    cat: "hearing", flag: "🇳🇬", patient: "M. · 17 岁 · 尼日利亚",
+    title: "从寂静到有声：跨越重洋的人工耳蜗植入",
+    date: "2025-11",
+    img: "images/hearing.png",
+    summary: "重度听障少年在本国无治疗机会，来华完成人工耳蜗植入手术，全程不足一小时，为该中心首例非洲青少年听障患者。",
+    highlight: "开机那一刻，母亲在旁落泪——声音的世界重新打开。",
+    source: "新快报等媒体公开报道",
+    published: true
+  },
+  {
+    cat: "wellness", flag: "🇬🇧", patient: "国际访客 · 英国等",
+    title: "一张 MRI 账单的对比：$70 vs $1,800",
+    date: "2024–2026",
+    img: "images/screening.png",
+    summary: "越来越多的国际访客在社交平台分享来华就医体验：胃镜、影像、口腔与康养项目，以欧美私立 1/3–1/5 的价格获得同等水准服务。",
+    highlight: "\"Thirteen days, one diagnosis, €4,000 saved.\"",
+    source: "TikTok / 国际媒体公开分享",
+    published: true
+  },
+  {
+    cat: "wellness", flag: "🌏", patient: "示例：待补充案例",
+    title: "【模板】高管健检 + 中医康养 7 日行程",
+    date: "",
+    img: "images/tcm.png",
+    summary: "此处为示范条目：复制本段修改为真实案例后，把 published 改为 true 即可上架（未获授权前前台不显示）。",
+    highlight: "示例字段：当天出报告 / 体质调理方案 / 康养行程。",
+    source: "需本人书面授权或媒体公开来源",
+    published: false
+  }
+];
+
+/* ---------- 渲染与筛选（以下无需改动） ---------- */
+(function(){
+  const grid = document.getElementById('caseGrid');
+  const tabs = document.querySelectorAll('.case-tab');
+  const CAT_LABEL = { thoracic:"胸外科 Thoracic", hearing:"听力 Hearing", wellness:"康养健检 Wellness" };
+
+  function render(cat){
+    grid.innerHTML = '';
+    CASES.filter(c => c.published && (cat==='all' || c.cat===cat)).forEach(c => {
+      const el = document.createElement('div');
+      el.className = 'case-card';
+      el.innerHTML = `
+        <div class="case-img">
+          <span class="case-cat">${CAT_LABEL[c.cat]||c.cat}</span>
+          <img src="${c.img}" alt="${c.title}">
+        </div>
+        <div class="case-body">
+          <h3>${c.flag} ${c.title}</h3>
+          <p><b style="color:var(--teal-deep);">${c.patient}</b>${c.date?' ｜ '+c.date:''}</p>
+          <p style="margin-top:6px;">${c.summary}</p>
+          <div class="case-highlight">✦ ${c.highlight}</div>
+          <div class="case-src">来源 Source：<b>${c.source}</b></div>
+        </div>`;
+      grid.appendChild(el);
+    });
+    if(!grid.children.length){
+      grid.innerHTML = '<p style="color:var(--muted);">该分类暂无已上架案例 / No published stories in this category yet.</p>';
+    }
+  }
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    render(t.dataset.cat);
+  }));
+  render('all');
+})();
+
+/* ---------- 视频模块：加载失败自动降级为图片轮播 ---------- */
+(function(){
+  const video = document.getElementById('brandVideo');
+  const fallback = document.getElementById('videoFallback');
+  if(!video) return;
+  let ok = false;
+  video.addEventListener('canplay', () => { ok = true; });
+  video.addEventListener('error', showFallback);
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if(!ok && (video.readyState === 0 || video.error)) showFallback();
+    }, 1200);
+  });
+  function showFallback(){
+    if(!fallback) return;
+    video.style.display = 'none';
+    fallback.style.display = 'block';
+    const slides = fallback.querySelectorAll('.kb');
+    slides[0].classList.add('active');
+    let i = 0;
+    setInterval(() => {
+      slides[i].classList.remove('active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('active');
+    }, 4500);
+  }
+})();
+</script>
+
+<script>
+/* ============================================================
+   ★★ 站点配置 —— 部署上线时只需修改这里的几项 ★★
+   ------------------------------------------------------------
+   domain        正式域名（决定 sitemap/canonical 的占位需一并改）
+   email         ★ 接收咨询的邮箱 —— 建议用域名邮箱，如 hi@wellvoyagecare.com
+   whatsapp      ★ 你的 WhatsApp 号码（国际格式去 +，如 8613800000000）
+   formEndpoint  ★ 可选升级：注册 formspree.io 后填 https://formspree.io/f/xxxx，
+                  表单即可直接投递到邮箱（客户无需打开邮件客户端）
+   ============================================================ */
+var SITE_CONFIG = {
+  domain:   "wellvoyagecare.com",
+  email:    "hi@wellvoyagecare.com",
+  whatsapp: "8613800000000",
+  formEndpoint: ""
+};
+(function(){
+  var burger=document.getElementById('navBurger'), nav=document.querySelector('.nav');
+  if(burger&&nav){ burger.addEventListener('click',function(){ nav.classList.toggle('open'); }); }
+
+  var form=document.getElementById('leadForm'), msg=document.getElementById('formMsg');
+  if(form){
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      var fd=new FormData(form);
+      var interest=fd.get('interest')||'未选择';
+      var body=['Name 姓名: '+fd.get('name'),'Country 国家: '+fd.get('country'),
+                'Email: '+fd.get('email'),'Phone/WA: '+fd.get('phone'),
+                'Interest 意向: '+interest,'','Message 内容:',''+fd.get('message')].join('\n');
+      if(SITE_CONFIG.formEndpoint){
+        fetch(SITE_CONFIG.formEndpoint,{method:'POST',headers:{'Accept':'application/json'},body:fd})
+          .then(function(r){ if(r.ok){ showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset(); } else { throw 0; } })
+          .catch(function(){ showMsg('提交失败，请改用右侧邮箱直接发送，或稍后再试。', true); });
+      } else {
+        var subject='[Website Enquiry] '+fd.get('name')+' — '+interest;
+        var href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+        showMsg('正在打开您的邮件客户端发送咨询…（如未发送成功，请直接写信至 '+SITE_CONFIG.email+'）');
+        setTimeout(function(){ window.location.href=href; }, 600);
+      }
+    });
+  }
+  function showMsg(t,isErr){
+    if(!msg) return;
+    msg.className='form-msg'+(isErr?' err':'');
+    msg.style.display='block';
+    msg.textContent=t;
+  }
+})();
+</script>
+
+</body>
+</html>
