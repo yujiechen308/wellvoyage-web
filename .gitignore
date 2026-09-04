@@ -1,0 +1,13 @@
+# 临时素材生成目录（不进部署仓库）
+_brand-img-gen/
+_brand-video/
+
+# 早期原型与资料（不进部署仓库）
+expert-profile/
+medbridge-china/
+
+# 记忆与系统文件
+.workbuddy/
+Thumbs.db
+.DS_Store
+*.log

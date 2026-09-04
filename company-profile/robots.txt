@@ -1,0 +1,5 @@
+# ★ 部署后若正式域名不是 wellvoyagecare.com，请把下面 Sitemap 一行改为你的域名。
+User-agent: *
+Allow: /
+
+Sitemap: https://wellvoyagecare.com/sitemap.xml

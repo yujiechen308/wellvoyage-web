@@ -1,0 +1,6 @@
+# ★ 部署后把域名改为你的正式域名（默认以 jadeandqi.com 为例；
+#   若 Jade & Qi 不单独注册域名，而是挂在主站子路径，请删除本站 sitemap 行。
+User-agent: *
+Allow: /
+
+Sitemap: https://jadeandqi.com/sitemap.xml
