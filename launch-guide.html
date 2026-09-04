@@ -65,15 +65,15 @@
 </div>
 <div class="callout">⚠️ 每个平台的注册都可能要求手机验证码或邮箱验证——请准备好能收验证码的手机。</div>
 
-<h2><span class="no">2</span>域名：先买好你的 .com</h2>
-<p class="sub">我已完成可用性核查（RDAP 实时查询，2026-09-04）：</p>
+<h2><span class="no">2</span>域名：wellvoyagecare.com <span class="ok">✅ 已完成</span></h2>
+<p class="sub">Cloudflare 成本价注册（约 $10.46/年），免费隐私保护。</p>
 <div class="box">
 <table>
 <tr><th>候选域名</th><th style="width:120px;">状态</th><th>建议</th></tr>
-<tr><td>wellvoyagecare.com</td><td><span class="ok">✅ 可注册</span></td><td>主推 —— 保留 WellVoyage 品牌 + Care 医疗含义</td></tr>
+<tr><td>wellvoyagecare.com</td><td><span class="ok">✅ 已注册</span></td><td>主品牌域名，2026-09-04 在 Cloudflare 注册</td></tr>
 <tr><td>wellvoyagemed.com</td><td><span class="ok">✅ 可注册</span></td><td>备选 —— 更偏医疗（Med）</td></tr>
 <tr><td>wellvoyagehealth.com</td><td><span class="ok">✅ 可注册</span></td><td>备选 —— 较长</td></tr>
-<tr><td>jadeandqi.com</td><td><span class="ok">✅ 可注册</span></td><td>Jade &amp; Qi 子品牌若独立上线可用</td></tr>
+<tr><td>jadeandqi.com</td><td><span class="wait">⏳ 待定</span></td><td>康养站可暂用占位，未来再注册做独立域名</td></tr>
 <tr><td>wellvoyage.com</td><td><span class="wait">❌ 已被注册</span></td><td>他人 2011 年持有至 2027，暂不考虑</td></tr>
 </table>
 </div>
@@ -84,29 +84,51 @@
   <li>购买后域名自动托管在 Cloudflare（免费），无需另设 DNS。</li>
 </ol>
 <div class="callout">如果你更习惯国内注册商（阿里云/腾讯云）也可以，但请把 DNS 解析托管到 Cloudflare（域名→修改 NS 为 Cloudflare 给的两条），便于和 Pages 托管联动。</div>
-<p><b>完成后告诉我：</b>「域名已注册好：wellvoyagecare.com」→ 我更新两个网站的 canonical / sitemap / 邮箱占位。</p>
+<p><b>当前状态：</b>主品牌 <code>wellvoyagecare.com</code> 已注册。代码里两个站点的 canonical / sitemap 占位已经是正确格式：主站指向 wellvoyagecare.com，康养站指向未来的 jadeandqi.com（买下域名后绑到 Pages 二号项目即生效）。</p>
+<p><b>下一步：</b>进入「步骤 4」在 Cloudflare Pages 建两个项目（两个站点各一个），把 wellvoyagecare.com 绑到主站项目，jadeandqi.com 暂留空等未来绑定。</p>
 
-<h2><span class="no">3</span>代码仓库：GitHub</h2>
-<p class="sub">网站代码已整理为 Git 仓库并打好首次提交；你只需建一个「仓库」并让我把代码推上去。</p>
+<h2><span class="no">3</span>代码仓库：GitHub <span class="ok">✅ 已完成</span></h2>
+<p class="sub">网站代码已整理为 Git 仓库并推送成功；首次提交覆盖两个站点全部文件。</p>
+<ul>
+  <li>仓库地址：<code>https://github.com/yujiechen308/wellvoyage-web</code>（已设为 Public）</li>
+  <li>默认分支：<code>main</code>（HEAD: 771e955）</li>
+  <li>已推送内容：33 个文件 / 约 70MB（两站 HTML + CSS + 图片 + 品牌片）</li>
+</ul>
 <ol class="steps">
   <li>打开 <code>github.com</code> 注册（用户名建议 <b>wellvoyage</b> 或你的公司名）。</li>
   <li>右上角 <b>+</b> → <b>New repository</b> → 名称填 <code>wellvoyage-web</code> → 选 <b>Private</b>（代码不公开）→ Create。</li>
   <li>创建后把仓库地址（形如 <code>https://github.com/你的用户名/wellvoyage-web.git</code>）发给我。</li>
 </ol>
 <div class="box gold"><h3>为什么要 Git？</h3><p>你的案例库更新方式是「改文件 + 一键更新」：以后你（或我）改好内容 → 提交到 GitHub → Cloudflare 自动把新版本推上线，全程约 1 分钟，零费用。这也是跨境业务可审计、可回滚的工程标准。</p></div>
-<p><b>完成后告诉我：</b>「GitHub 仓库已建好：xxx/wellvoyage-web」→ 我把两站代码推上去。</p>
+<p><b>完成后告诉我：</b>（已自动完成，无需操作）</p>
 
-<h2><span class="no">4</span>托管：Cloudflare Pages 连接 GitHub</h2>
-<p class="sub">免费额度对这两个展示型网站完全够用（无限带宽静态托管）。</p>
+<h2><span class="no">4</span>托管：Cloudflare Pages × 2 项目（两站各一个）</h2>
+<p class="sub">免费额度对这两个展示型网站完全够用（无限带宽静态托管）。建两个项目的好处：未来买下 jadeandqi.com 时直接绑上 0 重构。</p>
 <ol class="steps">
   <li>登录 Cloudflare → 左侧 <b>Workers &amp; Pages</b> → <b>Create</b> → <b>Pages</b> → <b>Connect to Git</b>。</li>
   <li>按提示授权 GitHub（允许 Cloudflare 读取 <code>wellvoyage-web</code> 仓库）。</li>
-  <li>选择 <code>wellvoyage-web</code> 仓库 → 构建设置保持默认（<b>Build command 留空 / Build output 留空</b>，我们是纯静态）。</li>
-  <li>点 <b>Save and Deploy</b> → 首次部署完成后会得到一个 <code>xxx.pages.dev</code> 地址。</li>
-  <li>在 Pages 项目 → <b>Custom domains</b> → 添加 <code>wellvoyagecare.com</code>（Cloudflare 自动配 DNS/SSL）。</li>
+  <li><b>第一个项目：WellVoyage 主站</b>
+    <ul class="tick" style="margin-top:8px;">
+      <li>Project name: <code>wellvoyage-web</code></li>
+      <li>Production branch: <code>main</code></li>
+      <li>Build command: <b>留空</b>（纯静态）</li>
+      <li>Build output directory: 填 <code>company-profile</code>（关键！不是空也不是 /）</li>
+    </ul>
+  </li>
+  <li><b>第二个项目：Jade &amp; Qi 康养站</b>
+    <ul class="tick" style="margin-top:8px;">
+      <li>Project name: <code>wellvoyage-wellness</code></li>
+      <li>同样的仓库与分支</li>
+      <li>Build command: <b>留空</b></li>
+      <li>Build output directory: 填 <code>wellness-site</code></li>
+    </ul>
+  </li>
+  <li>两个都点 <b>Save and Deploy</b> → 各得一个 <code>.pages.dev</code> 地址。</li>
+  <li><b>绑主站域名：</b>在 <code>wellvoyage-web</code> 项目 → <b>Custom domains</b> → 添加 <code>wellvoyagecare.com</code>（Cloudflare 自动配 DNS/SSL）。</li>
+  <li><b>康养站域名暂留：</b><code>wellvoyage-wellness</code> 项目先留着 <code>.pages.dev</code> 预览地址即可；以后买下 <code>jadeandqi.com</code> 后再加 Custom domains。</li>
 </ol>
-<div class="box teal"><h3>两个站点如何部署</h3><p>方案 A（推荐首年）：<b>一个仓库、两个子路径</b> —— 主站 <code>wellvoyagecare.com</code> 放公司页（company-profile），康养页放 <code>wellvoyagecare.com/wellness</code>（wellness-site 移入子目录即可）。省钱且统一。</p><p>方案 B（预算充足后）：再注册 <code>jadeandqi.com</code> 给 Jade &amp; Qi 独立品牌站，同一个 Cloudflare 账号再建一个 Pages 项目即可。</p></div>
-<p><b>完成后告诉我：</b>「网站已上线：https://wellvoyagecare.com」→ 我做全站真机验收（速度 / 图片 / 视频 / 移动端）。</p>
+<div class="box teal"><h3>为什么不合并到一个项目 + 子路径？</h3><p>合并到一个项目需要把目录调整为 <code>/index.html</code> + <code>/wellness/index.html</code>，意味着要改 repo 结构、改大量相对路径；不利于未来拆分独立。两个 Projects 维护成本几乎为 0（Cloudflare 自动部署无需人工），却保留最大灵活性。</p></div>
+<p><b>完成后告诉我：</b>「两个 Pages 项目已部署好 + 主站 wellvoyagecare.com 已绑」→ 我做全站真机验收（速度 / 图片 / 视频 / 移动端）。</p>
 
 <h2><span class="no">5</span>收款：PayPal 商业账户 + 支付链接</h2>
 <p class="sub">网站已内置 7 个「Book Now」预订按钮 + 每个按钮的配置槽位；你在 PayPal 后台创建「支付链接」，把链接粘贴到两页配置里即可完成接线。</p>
