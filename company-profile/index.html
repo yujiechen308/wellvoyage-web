@@ -116,6 +116,50 @@
   .step h4{font-size:16px;color:var(--teal);margin-bottom:6px;}
   .step p{font-size:12.5px;color:var(--muted);}
   .step .en{font-size:11px;color:#94aca6;font-style:italic;}
+  /* FLOW DETAILED (4 steps, click to expand CN/EN detail) */
+  .flow-detailed{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:fd;}
+  .step-detailed{background:var(--card);border:1px solid var(--line);border-radius:12px;position:relative;overflow:hidden;transition:box-shadow .25s, border-color .25s;}
+  .step-detailed:hover{border-color:var(--teal);box-shadow:0 6px 22px rgba(15,118,110,.10);}
+  .step-detailed summary{list-style:none;cursor:pointer;padding:24px 18px;text-align:center;}
+  .step-detailed summary::-webkit-details-marker{display:none;}
+  .step-detailed summary::before{counter-increment:fd;content:"0" counter(fd);display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);margin-bottom:10px;font-weight:400;letter-spacing:1px;}
+  .step-detailed summary .sd-icon{width:38px;height:38px;color:var(--teal);margin:0 auto 12px;display:block;}
+  .step-detailed summary h4{font-size:16px;color:var(--teal-deep);margin:0 0 4px;font-weight:700;}
+  .step-detailed summary .sd-en{font-size:10.5px;color:#94aca6;font-style:italic;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px;}
+  .step-detailed summary .sd-brief{font-size:12.5px;color:var(--muted);line-height:1.6;margin:0;}
+  .step-detailed summary .sd-toggle{display:inline-block;margin-top:12px;font-size:11px;color:var(--teal);letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+  .step-detailed summary .sd-toggle::after{content:" ↓";font-size:14px;}
+  .step-detailed[open] summary .sd-toggle::after{content:" ↑";}
+  .step-detailed .sd-detail{border-top:1px dashed var(--line);padding:20px 18px;background:linear-gradient(180deg,#fafcfb,#ffffff);}
+  .sd-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .sd-grid > div{padding:0 14px;}
+  .sd-grid > div:first-child{padding-left:0;border-right:1px dashed var(--line);}
+  .sd-grid > div:last-child{padding-right:0;}
+  .sd-lang-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--gold);margin-bottom:8px;}
+  .sd-label{display:block;font-size:10.5px;color:var(--teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin:10px 0 4px;}
+  .sd-detail ul{margin:0 0 6px;padding-left:16px;font-size:12.5px;color:var(--ink);line-height:1.7;}
+  .sd-detail ul li{margin-bottom:2px;}
+  .sd-detail p{margin:0 0 6px;font-size:12.5px;color:var(--muted);line-height:1.7;}
+  .sd-meta{display:inline-block;background:#e8f4f1;color:var(--teal-deep);font-size:10.5px;padding:2px 9px;border-radius:10px;font-weight:600;margin:6px 4px 0 0;}
+  /* FAQ (主站) */
+  .faq-list-cn{max-width:820px;margin:0 auto;display:grid;gap:12px;}
+  .faq-item-cn{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .faq-item-cn summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:15px;color:var(--teal-deep);display:flex;justify-content:space-between;gap:14px;align-items:center;}
+  .faq-item-cn summary::-webkit-details-marker{display:none;}
+  .faq-item-cn summary::after{content:"+";color:var(--gold);font-size:22px;font-weight:300;flex-shrink:0;}
+  .faq-item-cn[open] summary::after{content:"−";}
+  .faq-item-cn .faq-en{display:block;font-size:11px;color:#94aca6;font-style:italic;letter-spacing:.5px;margin-top:3px;font-weight:400;}
+  .faq-item-cn .faq-body{padding:0 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:13px;line-height:1.8;color:var(--ink);}
+  .faq-item-cn .faq-body strong{display:block;color:var(--teal);font-size:11px;letter-spacing:1.5px;margin-bottom:6px;font-weight:700;}
+  @media (max-width:900px){
+    .flow-detailed{grid-template-columns:1fr 1fr;}
+    .sd-grid{grid-template-columns:1fr;}
+    .sd-grid > div:first-child{border-right:none;border-bottom:1px dashed var(--line);padding-bottom:10px;margin-bottom:10px;padding-left:0;}
+    .faq-item-cn .faq-body{grid-template-columns:1fr;gap:14px;}
+  }
+  @media (max-width:560px){
+    .flow-detailed{grid-template-columns:1fr;}
+  }
   /* ADVANTAGES */
   .adv{background:linear-gradient(180deg,#eef7f3,var(--paper));}
   .adv-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(23,126,112,.07);}
@@ -524,17 +568,220 @@
   </div>
 </section>
 
-<!-- ================= 服务流程 ================= -->
-<section>
+<!-- ================= 服务流程（详细版 · 4 步） ================= -->
+<section style="background:linear-gradient(180deg,var(--paper),#eef7f3);" id="journey">
   <div class="container">
-    <h2>服务流程<span class="en en">The WellVoyage Journey</span></h2>
+    <h2>服务流程<span class="en">The WellVoyage Journey — Four Steps, In Full Detail</span></h2>
     <div class="divider"></div>
-    <div class="flow">
-      <div class="step"><h4>远程咨询</h4><span class="en">Consult</span><p>提交健康需求与病历，获得初步方案与报价</p></div>
-      <div class="step"><h4>方案定制</h4><span class="en">Design</span><p>专家团队预审方案，定制医疗+旅程计划</p></div>
-      <div class="step"><h4>安心抵达</h4><span class="en">Arrive</span><p>签证协助、专车接机、管家就位、入院安排</p></div>
-      <div class="step"><h4>治疗与焕新</h4><span class="en">Heal</span><p>快速通道完成诊疗，康复期展开文化之旅</p></div>
-      <div class="step"><h4>归国随访</h4><span class="en">Follow</span><p>翻译版病历报告、远程随访与复购关怀</p></div>
+    <p style="text-align:center;max-width:780px;margin:0 auto 32px;color:var(--muted);font-size:14px;line-height:1.85;">
+      从首次咨询到归国随访，四步全程由专属管家 1 对 1 陪同。<strong style="color:var(--teal-deep)">点击任意一步查看中英对照细节。</strong>
+      <span style="display:block;font-size:12px;font-style:italic;color:#94aca6;margin-top:6px;">Click any step to view bilingual details. A dedicated case manager stays with you throughout all four stages.</span>
+    </p>
+
+    <div class="flow-detailed">
+
+      <!-- Step 01 · 了解既往 -->
+      <details class="step-detailed">
+        <summary>
+          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h22l6 6v26a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><path d="M32 8v6h6"/><path d="M16 22h16M16 28h12M16 34h8"/><circle cx="13" cy="22" r="1.2" fill="currentColor"/><circle cx="13" cy="28" r="1.2" fill="currentColor"/><circle cx="13" cy="34" r="1.2" fill="currentColor"/></svg>
+          <h4>了解既往</h4>
+          <span class="sd-en">Case Intake</span>
+          <p class="sd-brief">收集病史与诉求，初步判断是否适合来华治疗，最快当天回应。</p>
+          <span class="sd-toggle">查看详情</span>
+        </summary>
+        <div class="sd-detail">
+          <div class="sd-grid">
+            <div>
+              <span class="sd-lang-tag">中文</span>
+              <span class="sd-label">我们做什么</span>
+              <ul><li>48 小时内匹配对应专科医生团队</li><li>评估既往治疗方案，识别加做检查项目</li><li>初步判断赴华治疗的可行性与大致路径</li></ul>
+              <span class="sd-label">您需提供</span>
+              <ul><li>诊断报告、影像光盘/DICOM 文件</li><li>既往治疗记录与用药清单</li><li>当前症状描述与本次就医诉求</li></ul>
+              <span class="sd-label">产出物</span>
+              <ul><li>《接收确认函》+ 初步可行性评估</li><li>如适合，列出「待补充资料」清单</li></ul>
+              <span class="sd-meta">48h 内首次回应</span><span class="sd-meta">完全免费</span>
+            </div>
+            <div>
+              <span class="sd-lang-tag">ENGLISH</span>
+              <span class="sd-label">What we do</span>
+              <p>We collect your medical history, imaging and treatment records, then match a specialist team within 48 hours and assess whether traveling to China for treatment is feasible.</p>
+              <span class="sd-label">You provide</span>
+              <ul><li>Diagnostic reports, imaging CD/DICOM</li><li>Treatment records &amp; medication list</li><li>Current symptoms &amp; goals</li></ul>
+              <span class="sd-label">Deliverables</span>
+              <ul><li>Written confirmation + preliminary assessment</li><li>"Missing items" checklist if applicable</li></ul>
+              <span class="sd-meta">48h first response</span><span class="sd-meta">Free of charge</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Step 02 · 定制方案 -->
+      <details class="step-detailed">
+        <summary>
+          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14h32M14 14v26M34 14v26M8 40h32"/><rect x="14" y="22" width="6" height="6"/><rect x="22" y="22" width="6" height="6"/><rect x="30" y="22" width="4" height="6"/><path d="M20 28h2M28 28h2M22 28h4"/><path d="M12 10l4 4M36 10l-4 4"/></svg>
+          <h4>定制方案</h4>
+          <span class="sd-en">Plan Design</span>
+          <p class="sd-brief">医学团队出具治疗方案，行程设计师出具旅行方案，合一交付。</p>
+          <span class="sd-toggle">查看详情</span>
+        </summary>
+        <div class="sd-detail">
+          <div class="sd-grid">
+            <div>
+              <span class="sd-lang-tag">中文</span>
+              <span class="sd-label">我们做什么</span>
+              <ul><li>何建行院士领衔的医学团队拟定治疗方案</li><li>行程设计师根据治疗节奏编排住宿与文化体验</li><li>医学 + 行程合一呈现，便于您与家人评估</li></ul>
+              <span class="sd-label">产出物</span>
+              <ul><li>《个性化治疗方案书》（含术式、医院、医生）</li><li>《行程与预算明细》（含签证、机票、住宿、餐食）</li><li>视频 / 书面与主诊医生的一次直接沟通</li></ul>
+              <span class="sd-label">您的决策</span>
+              <ul><li>方案可调整 1–2 次直到您完全确认</li><li>确认后进入档期预约，不收任何锁定费</li></ul>
+              <span class="sd-meta">5–10 工作日</span>
+            </div>
+            <div>
+              <span class="sd-lang-tag">ENGLISH</span>
+              <span class="sd-label">What we do</span>
+              <p>Our medical team (led by Prof. Jianxing He) drafts your treatment plan, and our journey designer builds a parallel itinerary. Both are delivered together as one combined document.</p>
+              <span class="sd-label">Plan contents</span>
+              <ul><li>Recommended procedure &amp; clinical rationale</li><li>Hospital, lead doctor, length of stay</li><li>Pre-op tests required in your home country</li><li>Recovery accommodation &amp; cultural experience</li><li>Total budget breakdown (no hidden fees)</li></ul>
+              <span class="sd-label">Modifications</span>
+              <p>You may request revisions 1–2 times at no charge before final approval.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Step 03 · 约定行程 -->
+      <details class="step-detailed">
+        <summary>
+          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="28" rx="2"/><path d="M8 20h32M14 12V8M34 12V8"/><path d="M16 28h6M16 32h10M28 28h4M28 32h6"/><circle cx="22" cy="30" r="1" fill="currentColor"/><circle cx="34" cy="30" r="1" fill="currentColor"/></svg>
+          <h4>约定行程</h4>
+          <span class="sd-en">Book &amp; Confirm</span>
+          <p class="sd-brief">锁定专家档期、医院床位、机票酒店、签证邀请函，全套一站完成。</p>
+          <span class="sd-toggle">查看详情</span>
+        </summary>
+        <div class="sd-detail">
+          <div class="sd-grid">
+            <div>
+              <span class="sd-lang-tag">中文</span>
+              <span class="sd-label">我们做什么</span>
+              <ul><li>直锁何建行 / 梁恒瑞团队主诊医生档期</li><li>预订医院床位、手术室、ICU 备用</li><li>预订国际机票 + 治疗期住宿（医院旁）</li><li>出具签证邀请函、协助办理医疗签证</li><li>安排接送机、安排 24h 中文管家</li></ul>
+              <span class="sd-label">您需配合</span>
+              <ul><li>护照扫描件、签证照片</li><li>支付首款（合同金额的 30%–50%）</li><li>确认主诊医生与手术日期</li></ul>
+              <span class="sd-meta">付款后 3 工作日内出邀请函</span>
+            </div>
+            <div>
+              <span class="sd-lang-tag">ENGLISH</span>
+              <span class="sd-label">What we do</span>
+              <p>Once you confirm the plan, we lock the specialist's OR slot, hospital bed, flights, hotel and issue your visa invitation letter — all handled by your dedicated case manager.</p>
+              <span class="sd-label">What's locked</span>
+              <ul><li>Surgeon &amp; anesthesiologist on calendar</li><li>Operating room + ICU contingency</li><li>Hospital-adjacent recovery apartment</li><li>Round-trip flights (flexible change policy)</li><li>Medical visa invitation letter</li></ul>
+              <span class="sd-label">Payment</span>
+              <p>30%–50% deposit to lock dates; balance due 7 days before arrival.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Step 04 · 治疗与照护 -->
+      <details class="step-detailed">
+        <summary>
+          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 8v10c0 10-7 16-14 18-7-2-14-8-14-18V14l14-8z"/><path d="M18 22l4 4 8-8"/><path d="M14 38c2 2 6 4 10 4s8-2 10-4"/></svg>
+          <h4>治疗与照护</h4>
+          <span class="sd-en">Care &amp; Recovery</span>
+          <p class="sd-brief">从下飞机到出院，再到归国随访，整段旅程有专属管家与翻译陪同。</p>
+          <span class="sd-toggle">查看详情</span>
+        </summary>
+        <div class="sd-detail">
+          <div class="sd-grid">
+            <div>
+              <span class="sd-lang-tag">中文</span>
+              <span class="sd-label">在院期间</span>
+              <ul><li>机场专车接送、医学陪同翻译</li><li>入院手续代办、术前检查陪同</li><li>每日管家查房、家属沟通简报</li></ul>
+              <span class="sd-label">康复期</span>
+              <ul><li>术后专属营养餐、康复理疗安排</li><li>VIP 文化体验（按体力定制）</li><li>出院小结中文 + 英文双语版</li></ul>
+              <span class="sd-label">归国后</span>
+              <ul><li>30 天免费远程随访</li><li>本地医生对接、必要时返华复查</li><li>健康档案永久归档，可随时调阅</li></ul>
+              <span class="sd-meta">中英翻译</span><span class="sd-meta">24h 管家</span>
+            </div>
+            <div>
+              <span class="sd-lang-tag">ENGLISH</span>
+              <span class="sd-label">In-hospital</span>
+              <ul><li>Airport pickup with medical escort</li><li>Admission, pre-op tests &amp; translation</li><li>Daily family briefings from case manager</li></ul>
+              <span class="sd-label">Recovery</span>
+              <ul><li>Customised nutrition &amp; physiotherapy</li><li>Optional cultural experiences tailored to stamina</li><li>Bilingual discharge summary</li></ul>
+              <span class="sd-label">After return</span>
+              <ul><li>30 days free tele-follow-up</li><li>Local doctor liaison &amp; return visits when needed</li><li>Lifetime medical record archive</li></ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 常见疑问 FAQ ================= -->
+<section style="background:var(--paper);" id="faq">
+  <div class="container">
+    <h2>常见疑问<span class="en">Frequently Asked Questions</span></h2>
+    <div class="divider"></div>
+    <div class="faq-list-cn">
+
+      <details class="faq-item-cn">
+        <summary>材料不齐全可以开始吗？<span class="faq-en">Can we start with incomplete records?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>可以。我们先评估已有资料，列出「待补充资料」清单；多数检查可在来华后入院前补做。越早开始沟通，越早拿到可行的方案与档期建议。</div>
+          <div><strong>English</strong>Yes. We assess what you already have, list any missing items, and most additional tests can be completed in China shortly after arrival. Starting earlier means getting a viable plan and earlier scheduling guidance.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>全程费用是多少？包含哪些项目？<span class="faq-en">What is the total cost and what does it include?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>《方案书》中逐项列出：医院治疗费、医生费、麻醉费、住院床位费、药品费、检查费、机票、住宿、接送、翻译、管家服务。无隐藏费用，不收加急费。</div>
+          <div><strong>English</strong>Your plan document itemises every cost: hospital, surgeon, anaesthesia, room, medication, tests, flights, accommodation, transfers, translation and case management. No hidden fees, no rush surcharges.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>可以指定某位专家主刀吗？<span class="faq-en">Can I request a specific lead surgeon?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>可以。何建行院士与梁恒瑞主任的档期直锁，需在 Step 02 方案阶段就确认。其他专家由我们根据您的病情匹配最合适的人选，并提供简历与学术背景。</div>
+          <div><strong>English</strong>Yes. Prof. Jianxing He and Dr. Hengrui Liang have priority calendar access — please confirm at the planning stage (Step 02). For other specialists, we match the most appropriate expert and share their full CV.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>签证怎么办？需要多长时间？<span class="faq-en">How do visas work and how long do they take?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>我们出具医疗签证邀请函 + 医院预约单，多数国家 5–10 个工作日出签；落地后可停留 30–90 天（视国籍）。我们同步准备邀请函英文版与使馆回函模板。</div>
+          <div><strong>English</strong>We issue the medical visa invitation letter and hospital booking confirmation. Most countries process in 5–10 working days; stays of 30–90 days are permitted depending on nationality.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>家属可以同行吗？<span class="faq-en">Can family members travel together?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>强烈推荐。我们为陪同家属单独安排住宿（医院旁或同栋）、签证同步办理，并安排文化体验行程（故宫导览、私家茶道等），让家人既照顾您，也拥有属于自己的旅程。</div>
+          <div><strong>English</strong>Highly encouraged. We arrange separate accommodation near the hospital, sync visa applications, and plan cultural experiences (private Forbidden City tour, tea ceremony, etc.) so your family enjoys their own journey too.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>治疗后多久可以坐飞机回国？<span class="faq-en">How soon can I fly home after treatment?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>视术式而定。微创手术通常 5–10 天，开放手术 14–21 天。主诊医生会在出院评估时书面确认「适航」，并出具适航证明供航司备案。</div>
+          <div><strong>English</strong>Depends on the procedure. Minimally invasive: typically 5–10 days. Open surgery: 14–21 days. Your surgeon issues a written "fit-to-fly" certificate at discharge for airline submission.</div>
+        </div>
+      </details>
+
+      <details class="faq-item-cn">
+        <summary>归国后还能联系到医生吗？<span class="faq-en">Can I still contact the doctor after returning home?</span></summary>
+        <div class="faq-body">
+          <div><strong>中文</strong>可以。30 天免费远程视频随访由主诊医生亲自进行；之后可通过专属管家转达，长期保留档案。必要时安排返华复查，全程一对一。</div>
+          <div><strong>English</strong>Yes. The first 30 days include free tele-consultation with your lead surgeon; thereafter your case manager relays messages indefinitely. Return visits can be arranged when needed.</div>
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
