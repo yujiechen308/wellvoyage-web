@@ -210,23 +210,32 @@
   .why-china-hero .big-vs span{background:rgba(255,255,255,.08);padding:6px 14px;border-radius:20px;font-size:13px;color:#f7fbf9;}
   .why-china-hero .big-vs span b{color:var(--gold-light);margin-right:4px;font-weight:700;}
   .why-china-hero .big-source{font-size:11.5px;color:rgba(255,255,255,.45);font-style:italic;margin-top:10px;}
-  .china-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-  .cn-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:26px 20px;transition:transform .25s, border-color .25s, background .25s;}
-  .cn-card:hover{transform:translateY(-3px);border-color:var(--gold-light);background:rgba(255,255,255,.08);}
-  .cn-card .cn-icon{width:36px;height:36px;color:var(--gold-light);margin-bottom:14px;}
-  .cn-card h3{font-size:18px;color:#f7fbf9;margin:0 0 4px;font-weight:600;}
-  .cn-card .cn-en{font-size:10.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:14px;display:block;}
-  .cn-card .cn-lead{font-size:12.5px;color:rgba(255,255,255,.85);line-height:1.6;margin:0 0 14px;min-height:36px;font-weight:500;}
-  .cn-card ul{margin:0;padding-left:16px;font-size:11.5px;color:rgba(255,255,255,.7);line-height:1.7;}
-  .cn-card ul li{margin-bottom:3px;}
-  .cn-card .cn-source{margin-top:14px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.18);font-size:10px;color:rgba(255,255,255,.4);font-style:italic;}
+  /* —— 横向大板版式 —— */
+  .china-rows{display:flex;flex-direction:column;gap:16px;}
+  .cn-row{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px 32px;transition:transform .25s, border-color .25s, background .25s;}
+  .cn-row:hover{transform:translateY(-3px);border-color:var(--gold-light);background:rgba(255,255,255,.08);}
+  .cn-row-num{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:1px solid rgba(255,255,255,.16);padding-right:28px;align-self:stretch;}
+  .cn-row-num .num{font-family:Georgia,serif;font-size:82px;font-weight:700;line-height:.88;color:var(--gold-light);letter-spacing:-2px;white-space:nowrap;}
+  .cn-row-num .unit{font-size:24px;color:var(--gold);font-weight:600;margin-left:3px;vertical-align:baseline;}
+  .cn-row-num .num-tag{font-size:12.5px;color:rgba(255,255,255,.72);margin-top:12px;font-weight:600;letter-spacing:.5px;}
+  .cn-row-body{display:flex;flex-direction:column;}
+  .cn-row-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
+  .cn-row-head .cn-icon{width:34px;height:34px;color:var(--gold-light);flex:none;}
+  .cn-row-head h3{font-size:23px;color:#f7fbf9;margin:0;font-weight:700;}
+  .cn-row-head .cn-en{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600;padding-bottom:3px;}
+  .cn-row .cn-lead{font-size:14.5px;color:rgba(255,255,255,.88);line-height:1.65;margin:0 0 14px;font-weight:500;}
+  .cn-row ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 28px;font-size:13.5px;color:rgba(255,255,255,.8);}
+  .cn-row ul li{position:relative;padding-left:22px;line-height:1.55;}
+  .cn-row ul li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--gold-light);opacity:.9;}
+  .cn-row ul li b{color:var(--gold-light);font-weight:700;}
+  .cn-row .cn-source{margin-top:16px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.18);font-size:11px;color:rgba(255,255,255,.46);font-style:italic;}
   .cn-quote{margin:48px auto 0;max-width:880px;text-align:center;padding:30px 36px;border-top:1px solid rgba(184,135,70,.3);border-bottom:1px solid rgba(184,135,70,.3);position:relative;}
   .cn-quote::before{content:"\201C";position:absolute;top:-6px;left:50%;transform:translateX(-50%);background:#0a4639;padding:0 14px;color:var(--gold-light);font-size:48px;font-family:Georgia,serif;line-height:1;}
   .cn-quote p{font-size:18px;color:#f7fbf9;line-height:1.7;font-style:italic;margin:0 0 12px;font-weight:400;}
   .cn-quote .qsrc{font-size:12px;color:var(--gold-light);letter-spacing:1.5px;font-weight:600;}
-  @media (max-width:1080px){.china-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:1080px){.cn-row{grid-template-columns:150px 1fr;} .cn-row-num .num{font-size:62px;}}
   @media (max-width:900px){.why-china-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .why-china-hero .big-num{font-size:88px;}}
-  @media (max-width:560px){.china-grid{grid-template-columns:1fr;}}
+  @media (max-width:760px){.cn-row{grid-template-columns:1fr;} .cn-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .cn-row-num .num-tag{margin-top:0;} .cn-row ul{grid-template-columns:1fr;}}
   /* PARTNER HOSPITALS (5 城 Tab 切换) */
   .partner-hospitals{background:var(--paper);}
   .city-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px;}
@@ -461,78 +470,112 @@
       </div>
     </div>
 
-    <!-- 5 张数据卡片 -->
-    <div class="china-grid">
+    <!-- 5 条横向大板：每项优势一个超大核心数字 -->
+    <div class="china-rows">
 
-      <div class="cn-card">
-        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-        <h3>效率</h3>
-        <span class="cn-en">Speed</span>
-        <p class="cn-lead">2024 年中国 101.5 亿次门诊量，平均住院仅 8.6 天。</p>
-        <ul>
-          <li>髋关节置换：<b>2–4 周</b>（美 3–6 月）</li>
-          <li>心脏手术：<b>1–3 周</b>（美 2–4 月）</li>
-          <li>癌症专家会诊：<b>3–7 天</b>（美 2–6 周）</li>
-          <li>IVF 周期：<b>1–2 周</b>（美 1–3 月）</li>
-        </ul>
-        <div class="cn-source">来源：国家卫健委 2025；Merritt Hawkins；NHS England</div>
+      <div class="cn-row">
+        <div class="cn-row-num">
+          <span class="num">8.6<span class="unit">天</span></span>
+          <div class="num-tag">中国平均住院日</div>
+        </div>
+        <div class="cn-row-body">
+          <div class="cn-row-head">
+            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
+            <h3>效率</h3><span class="cn-en">Speed</span>
+          </div>
+          <p class="cn-lead">2024 年中国 101.5 亿次门诊量，平均住院仅 8.6 天——就医节奏全球领先。</p>
+          <ul>
+            <li>髋关节置换：<b>2–4 周</b>（美 3–6 月）</li>
+            <li>心脏手术：<b>1–3 周</b>（美 2–4 月）</li>
+            <li>癌症专家会诊：<b>3–7 天</b>（美 2–6 周）</li>
+            <li>IVF 周期：<b>1–2 周</b>（美 1–3 月）</li>
+          </ul>
+          <div class="cn-source">来源：国家卫健委 2025；Merritt Hawkins；NHS England</div>
+        </div>
       </div>
 
-      <div class="cn-card">
-        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22l5 5 15-15"/><path d="M18 6l8 4v6c0 8-4 12-8 14-4-2-8-6-8-14v-6z"/></svg>
-        <h3>技术</h3>
-        <span class="cn-en">Technology</span>
-        <p class="cn-lead">全球临床经验最丰富的医生团队 + 世界前沿医疗设备。</p>
-        <ul>
-          <li>阜外医院 <b>14,000+ 例</b>心脏手术/年（全球第一）</li>
-          <li>顶级骨科医生 <b>200–500 例</b>置换/年（美 65）</li>
-          <li>5G 远程手术跨越 <b>3,000 公里</b></li>
-          <li>2024 年 <b>7,100+ 项</b>临床试验（超美）</li>
-          <li>CAR-T 疗法成本为西方 1/10</li>
-        </ul>
-        <div class="cn-source">来源：JAMA, The Lancet, NHC 2025</div>
+      <div class="cn-row">
+        <div class="cn-row-num">
+          <span class="num">14,000<span class="unit">+例</span></span>
+          <div class="num-tag">阜外医院 · 心脏手术/年</div>
+        </div>
+        <div class="cn-row-body">
+          <div class="cn-row-head">
+            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22l5 5 15-15"/><path d="M18 6l8 4v6c0 8-4 12-8 14-4-2-8-6-8-14v-6z"/></svg>
+            <h3>技术</h3><span class="cn-en">Technology</span>
+          </div>
+          <p class="cn-lead">全球临床经验最丰富的医生团队 + 世界前沿医疗设备，手术规模与科研双领先。</p>
+          <ul>
+            <li>顶级骨科医生 <b>200–500 例</b>置换/年（美 65）</li>
+            <li>5G 远程手术跨越 <b>3,000 公里</b></li>
+            <li>2024 年 <b>7,100+ 项</b>临床试验（超美）</li>
+            <li>CAR-T 疗法成本为西方 <b>1/10</b></li>
+          </ul>
+          <div class="cn-source">来源：JAMA, The Lancet, NHC 2025</div>
+        </div>
       </div>
 
-      <div class="cn-card">
-        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="14" r="8"/><path d="M6 32c2-6 7-9 12-9s10 3 12 9"/></svg>
-        <h3>质量</h3>
-        <span class="cn-en">Quality</span>
-        <p class="cn-lead">国际认证体系 + 持续质量改进，与发达国家并肩。</p>
-        <ul>
-          <li>1990–2016 医疗质量提升 <b>35.5 分</b></li>
-          <li><b>340+ 家</b>医院获 JCI 国际认证</li>
-          <li>2024 年预期寿命 <b>79 岁</b>，中高收入国家领先</li>
-          <li>中西医结合覆盖 98% 医疗机构</li>
-        </ul>
-        <div class="cn-source">来源：The Lancet, NHC 2025</div>
+      <div class="cn-row">
+        <div class="cn-row-num">
+          <span class="num">35.5<span class="unit">分</span></span>
+          <div class="num-tag">1990–2016 医疗质量提升</div>
+        </div>
+        <div class="cn-row-body">
+          <div class="cn-row-head">
+            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="14" r="8"/><path d="M6 32c2-6 7-9 12-9s10 3 12 9"/></svg>
+            <h3>质量</h3><span class="cn-en">Quality</span>
+          </div>
+          <p class="cn-lead">国际认证体系 + 持续质量改进，与发达国家并肩——北京 HAQ 91.5 超越美国。</p>
+          <ul>
+            <li><b>340+ 家</b>医院获 JCI 国际认证</li>
+            <li>2024 年预期寿命 <b>79 岁</b>，中高收入国家领先</li>
+            <li>中西医结合覆盖 <b>98%</b> 医疗机构</li>
+            <li>北京 HAQ 指数 <b>91.5</b> vs 美国 88.7</li>
+          </ul>
+          <div class="cn-source">来源：The Lancet, NHC 2025</div>
+        </div>
       </div>
 
-      <div class="cn-card">
-        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4v28M10 10h16M10 16h16M10 22h16M10 28h16"/></svg>
-        <h3>价格</h3>
-        <span class="cn-en">Price</span>
-        <p class="cn-lead">同等质量，节省 60–90%，公开透明无隐藏费。</p>
-        <ul>
-          <li>髋关节置换：美 $39K → 中 <b>$8–15K</b></li>
-          <li>心脏搭桥：美 $120K → 中 <b>$12–20K</b></li>
-          <li>CAR-T 疗法：中国 <b>1/10 西方价</b></li>
-          <li>住院日均：<b>¥9,870</b>（约 $1,428）</li>
-        </ul>
-        <div class="cn-source">来源：NHC 2025, 多中心比价</div>
+      <div class="cn-row">
+        <div class="cn-row-num">
+          <span class="num">60–90<span class="unit">%</span></span>
+          <div class="num-tag">同等质量 · 费用节省</div>
+        </div>
+        <div class="cn-row-body">
+          <div class="cn-row-head">
+            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4v28M10 10h16M10 16h16M10 22h16M10 28h16"/></svg>
+            <h3>价格</h3><span class="cn-en">Price</span>
+          </div>
+          <p class="cn-lead">同等质量，节省 60–90%，公开透明无隐藏费。</p>
+          <ul>
+            <li>髋关节置换：美 $39K → 中 <b>$8–15K</b></li>
+            <li>心脏搭桥：美 $120K → 中 <b>$12–20K</b></li>
+            <li>CAR-T 疗法：中国 <b>1/10 西方价</b></li>
+            <li>住院日均：<b>¥9,870</b>（约 $1,428）</li>
+          </ul>
+          <div class="cn-source">来源：NHC 2025, 多中心比价</div>
+        </div>
       </div>
 
-      <div class="cn-card">
-        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><path d="M4 18h28M18 4c5 5 5 23 0 28M18 4c-5 5-5 23 0 28"/></svg>
-        <h3>便利</h3>
-        <span class="cn-en">Access</span>
-        <p class="cn-lead">签证放宽 + 三甲医院国际部 + 多语种服务。</p>
-        <ul>
-          <li>海南 <b>30 天免签</b>（59 国）+ 博鳌乐城</li>
-          <li><b>240 小时</b>过境免签</li>
-          <li>三甲医院国际部，多语种陪同</li>
-          <li>M 字医疗签证全程协助</li>
-        </ul>
-        <div class="cn-source">来源：国家移民管理局 2025</div>
+      <div class="cn-row">
+        <div class="cn-row-num">
+          <span class="num">59<span class="unit">国</span></span>
+          <div class="num-tag">海南 30 天免签</div>
+        </div>
+        <div class="cn-row-body">
+          <div class="cn-row-head">
+            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><path d="M4 18h28M18 4c5 5 5 23 0 28M18 4c-5 5-5 23 0 28"/></svg>
+            <h3>便利</h3><span class="cn-en">Access</span>
+          </div>
+          <p class="cn-lead">签证放宽 + 三甲医院国际部 + 多语种服务，跨境就医无缝衔接。</p>
+          <ul>
+            <li>海南 <b>30 天免签</b>（59 国）+ 博鳌乐城</li>
+            <li><b>240 小时</b>过境免签</li>
+            <li>三甲医院国际部，多语种陪同</li>
+            <li>M 字医疗签证全程协助</li>
+          </ul>
+          <div class="cn-source">来源：国家移民管理局 2025</div>
+        </div>
       </div>
 
     </div>
