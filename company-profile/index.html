@@ -258,6 +258,22 @@
   .hospital-card .h-feat{font-size:12.5px;color:var(--muted);margin:0;padding-left:18px;line-height:1.75;}
   .hospital-card .h-feat li{margin-bottom:3px;}
   .hospital-card .h-feat b{color:var(--teal-deep);font-weight:600;}
+  /* China-Why + Hospital 英对照样式 */
+  .cn-en-block,.h-en-block{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.16);font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.6;font-style:italic;}
+  .cn-en-block .cn-en-lead,.h-en-block .h-en-spec{display:block;margin-bottom:6px;font-style:normal;color:#f7fbf9;font-weight:600;}
+  .cn-en-block ul,.h-en-block ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:5px 24px;font-style:normal;font-size:12px;color:rgba(255,255,255,.7);}
+  .cn-en-block ul li,.h-en-block ul li{padding-left:14px;position:relative;line-height:1.45;}
+  .cn-en-block ul li::before,.h-en-block ul li::before{content:"›";position:absolute;left:0;color:var(--gold-light);font-weight:700;}
+  .cn-en-block ul li b,.h-en-block ul li b{color:var(--gold-light);font-weight:700;font-style:normal;}
+  .h-en-block{background:#f5faf8;padding:10px 14px;border-radius:8px;border:1px solid var(--line);margin-top:14px;font-size:12px;color:var(--teal-deep);font-style:italic;}
+  .h-en-block .h-en-spec{display:inline-block;background:#eef7f3;color:var(--teal);font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600;margin-bottom:8px;letter-spacing:.5px;font-style:normal;}
+  .h-en-block ul{gap:3px 18px;color:#5a7270;font-size:11.5px;}
+  .h-en-block ul li{padding-left:14px;}
+  .h-en-block ul li::before{color:var(--teal);}
+  .h-en-block ul li b{color:var(--teal-deep);}
+  @media (max-width:1080px){.cn-en-block ul,.h-en-block ul{grid-template-columns:1fr;}}
+  @media (max-width:760px){.cn-en-block ul{grid-template-columns:1fr;}}
+  @media (max-width:900px){.hospital-card .h-en-block{font-size:11px;}}
   @media (max-width:900px){.hospital-grid{grid-template-columns:1fr;}}
   /* FOOTER */
   footer{background:var(--teal-deep);color:#c8ddd7;padding:52px 0 36px;font-size:13px;}
@@ -491,6 +507,15 @@
             <li>IVF 周期：<b>1–2 周</b>（美 1–3 月）</li>
           </ul>
           <div class="cn-source">来源：国家卫健委 2025；Merritt Hawkins；NHS England</div>
+          <div class="cn-en-block">
+            <span class="cn-en-lead">10.15B outpatient visits in 2024 · Avg. inpatient stay just 8.6 days — China schedules in days, not months.</span>
+            <ul>
+              <li>Hip replacement: <b>2–4 wk</b> (US 3–6 mo)</li>
+              <li>Cardiac surgery: <b>1–3 wk</b> (US 2–4 mo)</li>
+              <li>Cancer consult: <b>3–7 days</b> (US 2–6 wk)</li>
+              <li>IVF cycle: <b>1–2 wk</b> (US 1–3 mo)</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -512,6 +537,15 @@
             <li>CAR-T 疗法成本为西方 <b>1/10</b></li>
           </ul>
           <div class="cn-source">来源：JAMA, The Lancet, NHC 2025</div>
+          <div class="cn-en-block">
+            <span class="cn-en-lead">World's most experienced surgical teams + cutting-edge devices — unparalleled scale and research output.</span>
+            <ul>
+              <li>Top joint surgeons: <b>200–500</b> cases/yr (US 65)</li>
+              <li>5G remote surgery spanning <b>3,000 km</b></li>
+              <li><b>7,100+</b> clinical trials in 2024 (exceeded US)</li>
+              <li>CAR-T therapy at <b>1/10</b> Western cost</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -533,6 +567,15 @@
             <li>北京 HAQ 指数 <b>91.5</b> vs 美国 88.7</li>
           </ul>
           <div class="cn-source">来源：The Lancet, NHC 2025</div>
+          <div class="cn-en-block">
+            <span class="cn-en-lead">International accreditation + continuous quality improvement — standing shoulder to shoulder with developed nations.</span>
+            <ul>
+              <li><b>340+</b> hospitals JCI-accredited</li>
+              <li>2024 life expectancy <b>79 yrs</b> (top middle-high)</li>
+              <li>Western + TCM integrated at <b>98%</b> facilities</li>
+              <li>Beijing HAQ <b>91.5</b> vs US 88.7</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -554,6 +597,15 @@
             <li>住院日均：<b>¥9,870</b>（约 $1,428）</li>
           </ul>
           <div class="cn-source">来源：NHC 2025, 多中心比价</div>
+          <div class="cn-en-block">
+            <span class="cn-en-lead">Equal quality at 60–90% savings — transparent pricing, no hidden fees.</span>
+            <ul>
+              <li>Hip replacement: US <b>$39K</b> → CN <b>$8–15K</b></li>
+              <li>Cardiac bypass: US <b>$120K</b> → CN <b>$12–20K</b></li>
+              <li>CAR-T therapy: <b>1/10</b> Western price</li>
+              <li>Inpatient/day: <b>¥9,870</b> (~$1,428)</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -575,6 +627,15 @@
             <li>M 字医疗签证全程协助</li>
           </ul>
           <div class="cn-source">来源：国家移民管理局 2025</div>
+          <div class="cn-en-block">
+            <span class="cn-en-lead">Eased visas + tertiary international wards + multilingual support — seamless cross-border care.</span>
+            <ul>
+              <li>Hainan <b>30-day</b> visa-free (59 ctr.)</li>
+              <li><b>240-hour</b> transit visa-free</li>
+              <li>Multilingual VIP wards in tertiary hospitals</li>
+              <li>M-visa medical treatment support</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -961,7 +1022,9 @@
             <li>国家心血管病中心依托单位</li>
             <li>心外科、心内科、冠心病</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Cardiology · National Center for Cardiovascular Diseases</span><ul><li>World's largest cardiac center</li><li><b>14,000+</b> cardiac surgeries/year</li><li>Operating unit of National Center for CVDs</li><li>Cardiac surgery, cardiology, coronary disease</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">中国医学科学院北京协和医院</div>
           <div class="h-en">Peking Union Medical College Hospital (PUMCH)</div>
@@ -972,7 +1035,9 @@
             <li>疑难重症诊治中心</li>
             <li>国际部 VIP 服务</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · National #1 Tertiary</span><ul><li>Directly under National Health Commission</li><li><b>100+ years</b>, consecutively #1 in China</li><li>Center for difficult & critical cases</li><li>VIP international services</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">中国医学科学院肿瘤医院</div>
           <div class="h-en">National Cancer Center / Cancer Hospital, CAMS</div>
@@ -983,7 +1048,9 @@
             <li>肺癌、食管癌、乳腺癌全国领先</li>
             <li>国家肿瘤分子诊断平台</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Oncology · National Cancer Center</span><ul><li>Operating unit of National Cancer Center</li><li>One of Asia's largest oncology centers</li><li>National leader in lung, esophageal, breast cancer</li><li>National molecular diagnostics platform</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">北京大学人民医院</div>
           <div class="h-en">Peking University People's Hospital</div>
@@ -994,9 +1061,11 @@
             <li>肝胆外科国际领先</li>
             <li>何建行院士北京大学医学部临床合作单位</li>
           </ul>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Hematology, Orthopedics, Hepatobiliary</span><ul><li>Hematology Institute · National Clinical Research Center</li><li>Joint disease diagnosis & treatment center</li><li>World-leading hepatobiliary surgery</li><li>PKU clinical partner of Prof. Jianxing He</li></ul></div>
+        </div>
         </div>
       </div>
-    </div>
 
     <!-- 上海 -->
     <div class="city-panel" data-panel="shanghai">
@@ -1016,7 +1085,9 @@
             <li>何建行院士心胸外科合作单位</li>
             <li>综合排名全国前 5</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Cardiology, Liver Cancer, Respiratory</span><ul><li>National Clinical Research Center (Cardiology)</li><li><b>#1</b> in liver cancer treatment</li><li>Prof. He's cardiothoracic surgery partner</li><li>Top-5 comprehensive ranking nationally</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">上海交通大学医学院附属瑞金医院</div>
           <div class="h-en">Ruijin Hospital, SJTU</div>
@@ -1027,7 +1098,9 @@
             <li>微创外科国际领先</li>
             <li>国际患者接待经验丰富</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Hematology, Endocrinology, Burns</span><ul><li>National Clinical Research Center (Hematology)</li><li><b>#1</b> in burns & plastic surgery</li><li>World-leading minimally invasive surgery</li><li>Rich experience with international patients</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">复旦大学附属肿瘤医院</div>
           <div class="h-en">Fudan University Shanghai Cancer Center</div>
@@ -1038,7 +1111,9 @@
             <li><b>CAR-T 细胞免疫疗法</b>中国首批试点</li>
             <li>梁恒瑞教授肿瘤学顾问单位</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Oncology · National Oncology Flagship</span><ul><li>National Clinical Research Center (Oncology)</li><li>National leader in breast, lung, colorectal cancer</li><li>China's first <b>CAR-T</b> cell immunotherapy pilot</li><li>Dr. Hengrui Liang's oncology consulting unit</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">上海市质子重离子医院</div>
           <div class="h-en">Shanghai Proton and Heavy Ion Center</div>
@@ -1049,9 +1124,11 @@
             <li>无创精准放疗</li>
             <li>肺癌、肝癌、前列腺癌适应症广</li>
           </ul>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Oncology · Proton & Heavy Ion Radiotherapy</span><ul><li>China's first integrated <b>proton-heavy ion</b> center</li><li><b>3rd globally</b> with this technology</li><li>Non-invasive precision radiotherapy</li><li>Wide indications: lung, liver, prostate cancer</li></ul></div>
+        </div>
         </div>
       </div>
-    </div>
 
     <!-- 广州 -->
     <div class="city-panel" data-panel="guangzhou">
@@ -1071,7 +1148,9 @@
             <li>胸外科全国第一（复旦专科声誉榜）</li>
             <li>肺癌微创手术全球最丰富经验</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Respiratory · National Respiratory Medicine Center</span><ul><li>Prof. Jianxing He's home hospital</li><li>National Respiratory Center (Honorary Director: Prof. Zhong Nanshan)</li><li><b>#1</b> thoracic surgery (Fudan specialty ranking)</li><li>World's richest experience in lung cancer MIS</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">中山大学附属第一医院</div>
           <div class="h-en">The First Affiliated Hospital, Sun Yat-sen University</div>
@@ -1082,7 +1161,9 @@
             <li>器官移植全国领先</li>
             <li>国际医疗部服务成熟</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Top in South China</span><ul><li>National Clinical Research Center (Nephrology)</li><li><b>#1</b> comprehensive in South China</li><li>National leader in organ transplantation</li><li>Mature international medical services</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">中山大学肿瘤防治中心</div>
           <div class="h-en">Sun Yat-sen University Cancer Center</div>
@@ -1093,7 +1174,9 @@
             <li>华南癌症早筛旗舰</li>
             <li>多学科联合诊疗 (MDT) 标准化</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Oncology · Largest Cancer Center in South China</span><ul><li>National Clinical Research Center (Oncology)</li><li>World leader in NPC prevention & treatment</li><li>Flagship for early cancer screening in South China</li><li>Standardized MDT care</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">南方医科大学南方医院</div>
           <div class="h-en">Nanfang Hospital, Southern Medical University</div>
@@ -1104,9 +1187,11 @@
             <li>整形美容华南第一</li>
             <li>涉外医疗部成熟</li>
           </ul>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · GI, Neurology, Plastic Surgery</span><ul><li>National Clinical Research Center (GI Diseases)</li><li>South China Neurosurgery Center</li><li><b>#1</b> plastic surgery in South China</li><li>Mature international medical department</li></ul></div>
+        </div>
         </div>
       </div>
-    </div>
 
     <!-- 深圳 -->
     <div class="city-panel" data-panel="shenzhen">
@@ -1126,7 +1211,9 @@
             <li>采用香港医疗管理体系</li>
             <li>国际商业保险直付</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · HK-Shenzhen Flagship</span><ul><li>Demonstration hospital of HK-Shenzhen cooperation</li><li>Affiliate of HKU Medical School</li><li>Adopts Hong Kong medical management system</li><li>Direct billing with international insurance</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">中国医学科学院肿瘤医院深圳医院</div>
           <div class="h-en">Cancer Hospital, CAMS - Shenzhen</div>
@@ -1137,7 +1224,9 @@
             <li>原北京专家定期深圳出诊</li>
             <li>质子治疗规划中</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Oncology · National Cancer Center Branch</span><ul><li>National Cancer Center, Shenzhen branch</li><li>Only national oncology hospital in Shenzhen</li><li>Beijing specialists on regular Shenzhen rotation</li><li>Proton therapy in planning</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">北京大学深圳医院</div>
           <div class="h-en">Peking University Shenzhen Hospital</div>
@@ -1148,7 +1237,9 @@
             <li>港澳台及国际患者接待经验丰富</li>
             <li>体检与早筛中心国际化</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Smart Healthcare Demonstration</span><ul><li>PKU affiliate, smart-hospital benchmark</li><li>Pilot of <b>5G + AI</b> remote consultation</li><li>Rich experience with HK/Macau/Taiwan/international patients</li><li>International screening & check-up center</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">深圳市人民医院</div>
           <div class="h-en">Shenzhen People's Hospital</div>
@@ -1159,9 +1250,11 @@
             <li>肝胆外科、消化内科深圳领先</li>
             <li>面向港澳患者便捷</li>
           </ul>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Shenzhen's Largest Tertiary</span><ul><li>Affiliate of Jinan University</li><li>Earliest comprehensive tertiary in the SEZ</li><li>Leading hepatobiliary & GI medicine in Shenzhen</li><li>Convenient access for HK/Macau patients</li></ul></div>
+        </div>
         </div>
       </div>
-    </div>
 
     <!-- 成都 -->
     <div class="city-panel" data-panel="chengdu">
@@ -1181,7 +1274,9 @@
             <li>麻醉科、口腔医学全国第一</li>
             <li>何建行院士胸外科西部协作中心</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · #1 in Western China</span><ul><li><b>4</b> National Clinical Research Centers</li><li>Fudan ranking <b>#2</b> nationally (multi-year)</li><li><b>#1</b> anesthesiology & stomatology nationally</li><li>Prof. He's thoracic surgery western coordination center</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">四川省人民医院</div>
           <div class="h-en">Sichuan Provincial People's Hospital</div>
@@ -1192,7 +1287,9 @@
             <li>西部国际医疗中心合作单位</li>
             <li>康养与慢病管理特色</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Comprehensive · Sichuan Provincial Flagship</span><ul><li>Affiliate of UESTC</li><li>Sichuan Provincial Emergency Center</li><li>Partner of Western International Medical Center</li><li>Specialty in wellness & chronic disease management</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">成都中医药大学附属医院</div>
           <div class="h-en">Teaching Hospital of Chengdu University of TCM</div>
@@ -1203,7 +1300,9 @@
             <li>术后中医康复特色</li>
             <li>康养站行程优先对接</li>
           </ul>
-        </div>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Integrative Medicine · Rehabilitation & Wellness</span><ul><li>National TCM Clinical Research Base</li><li>Integrative medicine flagship</li><li>Post-surgery TCM rehabilitation specialty</li><li>Priority partner for wellness itineraries</li></ul></div>
+          </div>
         <div class="hospital-card">
           <div class="h-name">四川大学华西口腔医院</div>
           <div class="h-en">West China Hospital of Stomatology, Sichuan University</div>
@@ -1214,9 +1313,11 @@
             <li>种植、正畸、颌面外科全国第一</li>
             <li>国际患者服务成熟</li>
           </ul>
+                  
+          <div class="h-en-block"><span class="h-en-spec">Stomatology · National Dental Flagship</span><ul><li>Birthplace of modern Chinese stomatology</li><li>National Clinical Research Center (Oral Diseases)</li><li><b>#1</b> implants, orthodontics, maxillofacial surgery</li><li>Mature international patient services</li></ul></div>
+        </div>
         </div>
       </div>
-    </div>
 
   </div>
 </section>
