@@ -762,7 +762,13 @@ var SITE_CONFIG = {
           'Interest 意向': interest, 'Message 内容': fd.get('message')
         })
       })
-        .then(function(r){ if(r.ok){ showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset(); } else { throw 0; } })
+        .then(function(r){
+          return r.json().catch(function(){ return {}; }).then(function(j){
+            if(r.ok && (j.success === true || j.success === 'true')){
+              showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset();
+            } else { throw 0; }
+          });
+        })
         .catch(function(){
           var subject='[Website Enquiry] '+fd.get('name')+' — '+interest;
           var href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);

@@ -724,7 +724,13 @@ var SITE_CONFIG = {
           'Message': fd.get('message')
         })
       })
-        .then(function(r){ if(r.ok){ showMsg('Thank you! A journey designer will reply within one working day.'); form.reset(); } else { throw 0; } })
+        .then(function(r){
+          return r.json().catch(function(){ return {}; }).then(function(j){
+            if(r.ok && (j.success === true || j.success === 'true')){
+              showMsg('Thank you! A journey designer will reply within one working day.'); form.reset();
+            } else { throw 0; }
+          });
+        })
         .catch(function(){
           var href = 'mailto:' + SITE_CONFIG.email +
             '?subject=' + encodeURIComponent('[Jade & Qi Enquiry] ' + fd.get('name') + ' — ' + interest) +
