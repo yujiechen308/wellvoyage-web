@@ -212,11 +212,11 @@
   .why-china-hero .big-source{font-size:11.5px;color:rgba(255,255,255,.45);font-style:italic;margin-top:10px;}
   /* —— 横向大板版式 —— */
   .china-rows{display:flex;flex-direction:column;gap:16px;}
-  .cn-row{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px 32px;transition:transform .25s, border-color .25s, background .25s;}
+  .cn-row{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:24px 26px;transition:transform .25s, border-color .25s, background .25s;min-width:0;}
   .cn-row:hover{transform:translateY(-3px);border-color:var(--gold-light);background:rgba(255,255,255,.08);}
-  .cn-row-num{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:1px solid rgba(255,255,255,.16);padding-right:28px;align-self:stretch;}
-  .cn-row-num .num{font-family:Georgia,serif;font-size:82px;font-weight:700;line-height:.88;color:var(--gold-light);letter-spacing:-2px;white-space:nowrap;}
-  .cn-row-num .unit{font-size:24px;color:var(--gold);font-weight:600;margin-left:3px;vertical-align:baseline;}
+  .cn-row-num{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:1px solid rgba(255,255,255,.16);padding-right:20px;align-self:stretch;min-width:0;}
+  .cn-row-num .num{font-family:Georgia,serif;font-size:64px;font-weight:700;line-height:.9;color:var(--gold-light);letter-spacing:-2px;white-space:nowrap;max-width:100%;}
+  .cn-row-num .unit{font-size:22px;color:var(--gold);font-weight:600;margin-left:3px;vertical-align:baseline;}
   .cn-row-num .num-tag{font-size:12.5px;color:rgba(255,255,255,.72);margin-top:12px;font-weight:600;letter-spacing:.5px;}
   .cn-row-body{display:flex;flex-direction:column;}
   .cn-row-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
@@ -233,9 +233,9 @@
   .cn-quote::before{content:"\201C";position:absolute;top:-6px;left:50%;transform:translateX(-50%);background:#0a4639;padding:0 14px;color:var(--gold-light);font-size:48px;font-family:Georgia,serif;line-height:1;}
   .cn-quote p{font-size:18px;color:#f7fbf9;line-height:1.7;font-style:italic;margin:0 0 12px;font-weight:400;}
   .cn-quote .qsrc{font-size:12px;color:var(--gold-light);letter-spacing:1.5px;font-weight:600;}
-  @media (max-width:1080px){.cn-row{grid-template-columns:150px 1fr;} .cn-row-num .num{font-size:62px;}}
+  @media (max-width:1080px){.cn-row{grid-template-columns:180px 1fr;} .cn-row-num .num{font-size:50px;}}
   @media (max-width:900px){.why-china-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .why-china-hero .big-num{font-size:88px;}}
-  @media (max-width:760px){.cn-row{grid-template-columns:1fr;} .cn-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .cn-row-num .num-tag{margin-top:0;} .cn-row ul{grid-template-columns:1fr;}}
+  @media (max-width:760px){.cn-row{grid-template-columns:1fr;} .cn-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .cn-row-num .num{font-size:48px;line-height:1;} .cn-row-num .num-tag{margin-top:0;} .cn-row ul{grid-template-columns:1fr;}}
   /* PARTNER HOSPITALS (5 城 Tab 切换) */
   .partner-hospitals{background:var(--paper);}
   .city-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px;}

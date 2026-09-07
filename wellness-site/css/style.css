@@ -393,11 +393,11 @@ section { padding: 88px 0; }
 .wc-hero .wc-vs b { color: var(--gold-400); margin-right: 4px; }
 .wc-hero .wc-src { font-size: 11.5px; color: rgba(255,255,255,.45); font-style: italic; }
 .wc-rows { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
-.wc-row { display: grid; grid-template-columns: 185px 1fr; gap: 28px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 28px 32px; transition: all .25s; }
+.wc-row { display: grid; grid-template-columns: 225px 1fr; gap: 24px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 24px 26px; transition: all .25s; min-width: 0; }
 .wc-row:hover { transform: translateY(-3px); border-color: var(--gold-400); background: rgba(255,255,255,.07); }
-.wc-row-num { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-right: 1px solid rgba(255,255,255,.14); padding-right: 28px; align-self: stretch; }
-.wc-row-num .num { font-family: var(--serif); font-size: 80px; font-weight: 700; line-height: .88; color: var(--gold-400); letter-spacing: -2px; white-space: nowrap; }
-.wc-row-num .unit { font-size: 22px; color: var(--gold-400); font-weight: 600; margin-left: 3px; vertical-align: baseline; }
+.wc-row-num { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-right: 1px solid rgba(255,255,255,.14); padding-right: 20px; align-self: stretch; min-width: 0; }
+.wc-row-num .num { font-family: var(--serif); font-size: 62px; font-weight: 700; line-height: .9; color: var(--gold-400); letter-spacing: -2px; white-space: nowrap; max-width: 100%; }
+.wc-row-num .unit { font-size: 20px; color: var(--gold-400); font-weight: 600; margin-left: 3px; vertical-align: baseline; }
 .wc-row-num .num-tag { font-size: 12.5px; color: rgba(255,255,255,.72); margin-top: 12px; font-weight: 600; letter-spacing: .5px; }
 .wc-row-body { display: flex; flex-direction: column; }
 .wc-row-head { display: flex; align-items: center; gap: 13px; margin-bottom: 12px; }
@@ -414,9 +414,9 @@ section { padding: 88px 0; }
 .wc-quote::before { content: "\201C"; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); background: #061c19; padding: 0 14px; color: var(--gold-400); font-size: 48px; font-family: var(--serif); line-height: 1; }
 .wc-quote p { color: var(--white); font-size: 18px; line-height: 1.7; font-style: italic; margin: 0 0 12px; }
 .wc-quote .wc-qsrc { color: var(--gold-400); font-size: 12px; letter-spacing: 1.5px; font-weight: 600; }
-@media (max-width:1080px){.wc-row{grid-template-columns:150px 1fr;} .wc-row-num .num{font-size:60px;}}
+@media (max-width:1080px){.wc-row{grid-template-columns:175px 1fr;} .wc-row-num .num{font-size:50px;}}
 @media (max-width:900px){.wc-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .wc-hero .wc-num{font-size:80px;}}
-@media (max-width:760px){.wc-row{grid-template-columns:1fr;} .wc-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.14);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .wc-row-num .num-tag{margin-top:0;} .wc-row ul{grid-template-columns:1fr;}}
+@media (max-width:760px){.wc-row{grid-template-columns:1fr;} .wc-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.14);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .wc-row-num .num{font-size:46px;line-height:1;} .wc-row-num .num-tag{margin-top:0;} .wc-row ul{grid-template-columns:1fr;}}
 
 /* ---------- Partner Hospitals (compact) ---------- */
 .partner-hospitals { background: var(--paper); }
