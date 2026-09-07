@@ -195,6 +195,61 @@
   .case-highlight{margin-top:10px;font-size:13px;color:var(--teal-deep);background:#eef7f3;border-left:3px solid var(--gold);padding:8px 12px;border-radius:0 8px 8px 0;}
   .case-src{margin-top:auto;padding-top:12px;font-size:11.5px;color:#94aca6;border-top:1px dashed var(--line);}
   .case-src b{color:#8a7340;font-weight:600;}
+  /* WHY CHINA (大数字 + 5 张数据卡 + 引用) */
+  .why-china{background:linear-gradient(180deg,#0e5a4e 0%,#0a4639 100%);color:#d8e8e3;position:relative;overflow:hidden;}
+  .why-china::before{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(184,135,70,.18),transparent 70%);pointer-events:none;}
+  .why-china .sec-kicker{color:var(--gold-light);}
+  .why-china h2{color:#f7fbf9;}
+  .why-china .sec-head p{color:rgba(255,255,255,.65);}
+  .why-china-hero{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(184,135,70,.3);border-radius:18px;padding:40px 44px;margin:0 0 40px;position:relative;}
+  .why-china-hero .big-num{font-family:Georgia,serif;font-size:128px;font-weight:400;line-height:1;color:var(--gold-light);letter-spacing:-2px;}
+  .why-china-hero .big-num small{font-size:42px;color:var(--gold);font-weight:400;vertical-align:top;margin-left:6px;}
+  .why-china-hero .big-meta h3{font-size:22px;color:#f7fbf9;margin:0 0 10px;font-weight:600;}
+  .why-china-hero .big-meta p{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 14px;line-height:1.75;}
+  .why-china-hero .big-vs{display:inline-flex;gap:14px;margin:10px 0 12px;flex-wrap:wrap;}
+  .why-china-hero .big-vs span{background:rgba(255,255,255,.08);padding:6px 14px;border-radius:20px;font-size:13px;color:#f7fbf9;}
+  .why-china-hero .big-vs span b{color:var(--gold-light);margin-right:4px;font-weight:700;}
+  .why-china-hero .big-source{font-size:11.5px;color:rgba(255,255,255,.45);font-style:italic;margin-top:10px;}
+  .china-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .cn-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:26px 20px;transition:transform .25s, border-color .25s, background .25s;}
+  .cn-card:hover{transform:translateY(-3px);border-color:var(--gold-light);background:rgba(255,255,255,.08);}
+  .cn-card .cn-icon{width:36px;height:36px;color:var(--gold-light);margin-bottom:14px;}
+  .cn-card h3{font-size:18px;color:#f7fbf9;margin:0 0 4px;font-weight:600;}
+  .cn-card .cn-en{font-size:10.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:14px;display:block;}
+  .cn-card .cn-lead{font-size:12.5px;color:rgba(255,255,255,.85);line-height:1.6;margin:0 0 14px;min-height:36px;font-weight:500;}
+  .cn-card ul{margin:0;padding-left:16px;font-size:11.5px;color:rgba(255,255,255,.7);line-height:1.7;}
+  .cn-card ul li{margin-bottom:3px;}
+  .cn-card .cn-source{margin-top:14px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.18);font-size:10px;color:rgba(255,255,255,.4);font-style:italic;}
+  .cn-quote{margin:48px auto 0;max-width:880px;text-align:center;padding:30px 36px;border-top:1px solid rgba(184,135,70,.3);border-bottom:1px solid rgba(184,135,70,.3);position:relative;}
+  .cn-quote::before{content:"\201C";position:absolute;top:-6px;left:50%;transform:translateX(-50%);background:#0a4639;padding:0 14px;color:var(--gold-light);font-size:48px;font-family:Georgia,serif;line-height:1;}
+  .cn-quote p{font-size:18px;color:#f7fbf9;line-height:1.7;font-style:italic;margin:0 0 12px;font-weight:400;}
+  .cn-quote .qsrc{font-size:12px;color:var(--gold-light);letter-spacing:1.5px;font-weight:600;}
+  @media (max-width:1080px){.china-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:900px){.why-china-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .why-china-hero .big-num{font-size:88px;}}
+  @media (max-width:560px){.china-grid{grid-template-columns:1fr;}}
+  /* PARTNER HOSPITALS (5 城 Tab 切换) */
+  .partner-hospitals{background:var(--paper);}
+  .city-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px;}
+  .city-tab{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:10px 24px;border-radius:999px;font-size:14px;cursor:pointer;letter-spacing:1px;transition:all .2s;font-family:inherit;font-weight:500;}
+  .city-tab:hover{border-color:var(--teal);color:var(--teal-deep);}
+  .city-tab.active{background:var(--teal);border-color:var(--teal);color:#f7fbf9;box-shadow:0 4px 14px rgba(15,118,110,.2);}
+  .city-panel{display:none;animation:fadeIn .35s ease;}
+  .city-panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+  .city-panel-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .city-panel-head h3{font-size:24px;color:var(--teal-deep);margin:0;}
+  .city-panel-head .city-en{font-size:13px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+  .city-panel-head .city-tag{font-size:12px;color:var(--muted);background:#eef7f3;padding:4px 12px;border-radius:10px;}
+  .hospital-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .hospital-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;transition:all .25s;position:relative;}
+  .hospital-card:hover{border-color:var(--teal);box-shadow:0 8px 22px rgba(15,118,110,.10);transform:translateY(-2px);}
+  .hospital-card .h-name{font-size:16px;color:var(--teal-deep);font-weight:700;margin:0 0 4px;}
+  .hospital-card .h-en{font-size:11.5px;color:#94aca6;font-style:italic;letter-spacing:.5px;margin-bottom:10px;}
+  .hospital-card .h-spec{display:inline-block;background:#eef7f3;color:var(--teal);font-size:11.5px;padding:3px 10px;border-radius:4px;font-weight:600;margin-bottom:12px;letter-spacing:.5px;}
+  .hospital-card .h-feat{font-size:12.5px;color:var(--muted);margin:0;padding-left:18px;line-height:1.75;}
+  .hospital-card .h-feat li{margin-bottom:3px;}
+  .hospital-card .h-feat b{color:var(--teal-deep);font-weight:600;}
+  @media (max-width:900px){.hospital-grid{grid-template-columns:1fr;}}
   /* FOOTER */
   footer{background:var(--teal-deep);color:#c8ddd7;padding:52px 0 36px;font-size:13px;}
   footer .fn{font-size:22px;color:#f7fbf9;letter-spacing:6px;}
@@ -379,6 +434,115 @@
         <p class="en-text">To open China's world-class medical excellence to the world — pairing unmatched surgical experience and advanced techniques with hospitality worthy of the journey.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= 中国医疗优势 ================= -->
+<section class="why-china" id="why-china">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Why China for Medical Care</div>
+      <h2>全球医疗新选择 · 为什么是中国</h2>
+      <p>来自 <i>The Lancet</i>、<i>JAMA</i>、国家卫健委的权威数据，揭示一个被国际患者重新发现的事实。</p>
+    </div>
+
+    <!-- 顶部震撼大数字 -->
+    <div class="why-china-hero">
+      <div class="big-num">91.5<small>/100</small></div>
+      <div class="big-meta">
+        <h3>北京 · <i>The Lancet</i> 医疗质量与可及性指数（HAQ Index）</h3>
+        <p>该指数衡量 32 种可治疗疾病的死亡率与医疗可及性。北京以 91.5 分超越美国全国 88.7 分，1990 至 2016 年间中国整体提升 35.5 分——为全球最大绝对进步之一。</p>
+        <div class="big-vs">
+          <span><b>中国 北京</b>91.5</span>
+          <span><b>美国 全国</b>88.7</span>
+          <span><b>英国 全国</b>90.5</span>
+        </div>
+        <div class="big-source">数据来源：The Lancet, Global Burden of Disease Study 2016, 最新公开评估</div>
+      </div>
+    </div>
+
+    <!-- 5 张数据卡片 -->
+    <div class="china-grid">
+
+      <div class="cn-card">
+        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
+        <h3>效率</h3>
+        <span class="cn-en">Speed</span>
+        <p class="cn-lead">2024 年中国 101.5 亿次门诊量，平均住院仅 8.6 天。</p>
+        <ul>
+          <li>髋关节置换：<b>2–4 周</b>（美 3–6 月）</li>
+          <li>心脏手术：<b>1–3 周</b>（美 2–4 月）</li>
+          <li>癌症专家会诊：<b>3–7 天</b>（美 2–6 周）</li>
+          <li>IVF 周期：<b>1–2 周</b>（美 1–3 月）</li>
+        </ul>
+        <div class="cn-source">来源：国家卫健委 2025；Merritt Hawkins；NHS England</div>
+      </div>
+
+      <div class="cn-card">
+        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22l5 5 15-15"/><path d="M18 6l8 4v6c0 8-4 12-8 14-4-2-8-6-8-14v-6z"/></svg>
+        <h3>技术</h3>
+        <span class="cn-en">Technology</span>
+        <p class="cn-lead">全球临床经验最丰富的医生团队 + 世界前沿医疗设备。</p>
+        <ul>
+          <li>阜外医院 <b>14,000+ 例</b>心脏手术/年（全球第一）</li>
+          <li>顶级骨科医生 <b>200–500 例</b>置换/年（美 65）</li>
+          <li>5G 远程手术跨越 <b>3,000 公里</b></li>
+          <li>2024 年 <b>7,100+ 项</b>临床试验（超美）</li>
+          <li>CAR-T 疗法成本为西方 1/10</li>
+        </ul>
+        <div class="cn-source">来源：JAMA, The Lancet, NHC 2025</div>
+      </div>
+
+      <div class="cn-card">
+        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="14" r="8"/><path d="M6 32c2-6 7-9 12-9s10 3 12 9"/></svg>
+        <h3>质量</h3>
+        <span class="cn-en">Quality</span>
+        <p class="cn-lead">国际认证体系 + 持续质量改进，与发达国家并肩。</p>
+        <ul>
+          <li>1990–2016 医疗质量提升 <b>35.5 分</b></li>
+          <li><b>340+ 家</b>医院获 JCI 国际认证</li>
+          <li>2024 年预期寿命 <b>79 岁</b>，中高收入国家领先</li>
+          <li>中西医结合覆盖 98% 医疗机构</li>
+        </ul>
+        <div class="cn-source">来源：The Lancet, NHC 2025</div>
+      </div>
+
+      <div class="cn-card">
+        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4v28M10 10h16M10 16h16M10 22h16M10 28h16"/></svg>
+        <h3>价格</h3>
+        <span class="cn-en">Price</span>
+        <p class="cn-lead">同等质量，节省 60–90%，公开透明无隐藏费。</p>
+        <ul>
+          <li>髋关节置换：美 $39K → 中 <b>$8–15K</b></li>
+          <li>心脏搭桥：美 $120K → 中 <b>$12–20K</b></li>
+          <li>CAR-T 疗法：中国 <b>1/10 西方价</b></li>
+          <li>住院日均：<b>¥9,870</b>（约 $1,428）</li>
+        </ul>
+        <div class="cn-source">来源：NHC 2025, 多中心比价</div>
+      </div>
+
+      <div class="cn-card">
+        <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><path d="M4 18h28M18 4c5 5 5 23 0 28M18 4c-5 5-5 23 0 28"/></svg>
+        <h3>便利</h3>
+        <span class="cn-en">Access</span>
+        <p class="cn-lead">签证放宽 + 三甲医院国际部 + 多语种服务。</p>
+        <ul>
+          <li>海南 <b>30 天免签</b>（59 国）+ 博鳌乐城</li>
+          <li><b>240 小时</b>过境免签</li>
+          <li>三甲医院国际部，多语种陪同</li>
+          <li>M 字医疗签证全程协助</li>
+        </ul>
+        <div class="cn-source">来源：国家移民管理局 2025</div>
+      </div>
+
+    </div>
+
+    <!-- Lancet 引用块 -->
+    <div class="cn-quote">
+      <p>"China recorded one of the largest absolute gains in healthcare quality globally — a 35.5-point increase from 1990 to 2016."</p>
+      <div class="qsrc">— <i>The Lancet</i>, Global Burden of Disease Study · HAQ Index</div>
+    </div>
+
   </div>
 </section>
 
@@ -719,6 +883,301 @@
   </div>
 </section>
 
+<!-- ================= 合作医院（5 城 Tab） ================= -->
+<section class="partner-hospitals" id="hospitals">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Our Partner Hospitals</div>
+      <h2>合作医院网络</h2>
+      <p>覆盖五大医疗高地 · 全国顶级三甲医院 · 何建行 / 梁恒瑞团队的临床合作单位</p>
+    </div>
+
+    <div class="city-tabs">
+      <button class="city-tab active" data-city="beijing">北京</button>
+      <button class="city-tab" data-city="shanghai">上海</button>
+      <button class="city-tab" data-city="guangzhou">广州</button>
+      <button class="city-tab" data-city="shenzhen">深圳</button>
+      <button class="city-tab" data-city="chengdu">成都</button>
+    </div>
+
+    <!-- 北京 -->
+    <div class="city-panel active" data-panel="beijing">
+      <div class="city-panel-head">
+        <h3>北京</h3>
+        <span class="city-en">Beijing · National Capital</span>
+        <span class="city-tag">国家医学中心 · 顶级综合 + 专科</span>
+      </div>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <div class="h-name">中国医学科学院阜外医院</div>
+          <div class="h-en">Fuwai Hospital, CAMS · National Center for Cardiovascular Diseases</div>
+          <div class="h-spec">心血管病 · 国家心血管病中心</div>
+          <ul class="h-feat">
+            <li><b>全球最大</b>心脏中心</li>
+            <li><b>14,000+ 例</b>心脏手术/年</li>
+            <li>国家心血管病中心依托单位</li>
+            <li>心外科、心内科、冠心病</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">中国医学科学院北京协和医院</div>
+          <div class="h-en">Peking Union Medical College Hospital (PUMCH)</div>
+          <div class="h-spec">综合 · 中国顶级三甲 #1</div>
+          <ul class="h-feat">
+            <li>国家卫生健康委直属</li>
+            <li><b>100+ 年</b>历史，连续多年全国综合排名第一</li>
+            <li>疑难重症诊治中心</li>
+            <li>国际部 VIP 服务</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">中国医学科学院肿瘤医院</div>
+          <div class="h-en">National Cancer Center / Cancer Hospital, CAMS</div>
+          <div class="h-spec">肿瘤 · 国家癌症中心</div>
+          <ul class="h-feat">
+            <li>国家癌症中心依托单位</li>
+            <li>亚洲最大肿瘤防治中心之一</li>
+            <li>肺癌、食管癌、乳腺癌全国领先</li>
+            <li>国家肿瘤分子诊断平台</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">北京大学人民医院</div>
+          <div class="h-en">Peking University People's Hospital</div>
+          <div class="h-spec">综合 · 血液科、骨科、肝胆外科</div>
+          <ul class="h-feat">
+            <li>血液病研究所 · 国家临床医学研究中心</li>
+            <li>骨关节病诊疗中心</li>
+            <li>肝胆外科国际领先</li>
+            <li>何建行院士北京大学医学部临床合作单位</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 上海 -->
+    <div class="city-panel" data-panel="shanghai">
+      <div class="city-panel-head">
+        <h3>上海</h3>
+        <span class="city-en">Shanghai · International Medical Hub</span>
+        <span class="city-tag">国家医学中心 · 涉外医疗高地</span>
+      </div>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <div class="h-name">复旦大学附属中山医院</div>
+          <div class="h-en">Zhongshan Hospital, Fudan University</div>
+          <div class="h-spec">综合 · 心血管、肝癌、呼吸</div>
+          <ul class="h-feat">
+            <li>国家临床医学研究中心（心血管）</li>
+            <li>肝癌诊疗全国第一</li>
+            <li>何建行院士心胸外科合作单位</li>
+            <li>综合排名全国前 5</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">上海交通大学医学院附属瑞金医院</div>
+          <div class="h-en">Ruijin Hospital, SJTU</div>
+      <div class="h-spec">综合 · 血液、内分泌、烧伤</div>
+          <ul class="h-feat">
+            <li>国家临床医学研究中心（血液）</li>
+            <li>灼伤整形全国第一</li>
+            <li>微创外科国际领先</li>
+            <li>国际患者接待经验丰富</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">复旦大学附属肿瘤医院</div>
+          <div class="h-en">Fudan University Shanghai Cancer Center</div>
+          <div class="h-spec">肿瘤 · 全国肿瘤防治旗舰</div>
+          <ul class="h-feat">
+            <li>国家肿瘤临床医学研究中心</li>
+            <li>乳腺癌、肺癌、结直肠癌全国领先</li>
+            <li><b>CAR-T 细胞免疫疗法</b>中国首批试点</li>
+            <li>梁恒瑞教授肿瘤学顾问单位</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">上海市质子重离子医院</div>
+          <div class="h-en">Shanghai Proton and Heavy Ion Center</div>
+          <div class="h-spec">肿瘤 · 质子重离子放疗</div>
+          <ul class="h-feat">
+            <li>中国首家 <b>质子重离子一体化</b>治疗机构</li>
+            <li>全球第三家拥有此技术的医院</li>
+            <li>无创精准放疗</li>
+            <li>肺癌、肝癌、前列腺癌适应症广</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 广州 -->
+    <div class="city-panel" data-panel="guangzhou">
+      <div class="city-panel-head">
+        <h3>广州</h3>
+        <span class="city-en">Guangzhou · South China Medical Center</span>
+        <span class="city-tag">华南医疗高地 · 何建行团队主驻地</span>
+      </div>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <div class="h-name">广州医科大学附属第一医院</div>
+          <div class="h-en">The First Affiliated Hospital of Guangzhou Medical University</div>
+          <div class="h-spec">呼吸 · 国家呼吸医学中心</div>
+          <ul class="h-feat">
+            <li><b>何建行院士</b>所在医院</li>
+            <li>国家呼吸医学中心（钟南山院士任名誉主任）</li>
+            <li>胸外科全国第一（复旦专科声誉榜）</li>
+            <li>肺癌微创手术全球最丰富经验</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">中山大学附属第一医院</div>
+          <div class="h-en">The First Affiliated Hospital, Sun Yat-sen University</div>
+          <div class="h-spec">综合 · 华南综合实力最强</div>
+          <ul class="h-feat">
+            <li>国家临床医学研究中心（肾脏病）</li>
+            <li>综合排名华南区第一</li>
+            <li>器官移植全国领先</li>
+            <li>国际医疗部服务成熟</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">中山大学肿瘤防治中心</div>
+          <div class="h-en">Sun Yat-sen University Cancer Center</div>
+          <div class="h-spec">肿瘤 · 华南最大肿瘤专科</div>
+          <ul class="h-feat">
+            <li>国家肿瘤临床医学研究中心</li>
+            <li>鼻咽癌防治世界领先</li>
+            <li>华南癌症早筛旗舰</li>
+            <li>多学科联合诊疗 (MDT) 标准化</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">南方医科大学南方医院</div>
+          <div class="h-en">Nanfang Hospital, Southern Medical University</div>
+          <div class="h-spec">综合 · 消化、神经、整形</div>
+          <ul class="h-feat">
+            <li>国家临床医学研究中心（消化病）</li>
+            <li>华南神经外科中心</li>
+            <li>整形美容华南第一</li>
+            <li>涉外医疗部成熟</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 深圳 -->
+    <div class="city-panel" data-panel="shenzhen">
+      <div class="city-panel-head">
+        <h3>深圳</h3>
+        <span class="city-en">Shenzhen · Innovation &amp; Greater Bay</span>
+        <span class="city-tag">深港医疗协作 · 创新高地</span>
+      </div>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <div class="h-name">香港大学深圳医院</div>
+          <div class="h-en">The University of Hong Kong - Shenzhen Hospital</div>
+          <div class="h-spec">综合 · 深港合作旗舰</div>
+          <ul class="h-feat">
+            <li>深港合作示范医院</li>
+            <li>香港大学医学院附属</li>
+            <li>采用香港医疗管理体系</li>
+            <li>国际商业保险直付</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">中国医学科学院肿瘤医院深圳医院</div>
+          <div class="h-en">Cancer Hospital, CAMS - Shenzhen</div>
+          <div class="h-spec">肿瘤 · 国家级肿瘤分院</div>
+          <ul class="h-feat">
+            <li>国家癌症中心深圳分院</li>
+            <li>深圳唯一国家肿瘤专科医院</li>
+            <li>原北京专家定期深圳出诊</li>
+            <li>质子治疗规划中</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">北京大学深圳医院</div>
+          <div class="h-en">Peking University Shenzhen Hospital</div>
+          <div class="h-spec">综合 · 智慧医疗示范</div>
+          <ul class="h-feat">
+            <li>北京大学附属，智慧医院建设标杆</li>
+            <li>5G + AI 远程会诊试点</li>
+            <li>港澳台及国际患者接待经验丰富</li>
+            <li>体检与早筛中心国际化</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">深圳市人民医院</div>
+          <div class="h-en">Shenzhen People's Hospital</div>
+          <div class="h-spec">综合 · 深圳最大三甲</div>
+          <ul class="h-feat">
+            <li>暨南大学附属</li>
+            <li>深圳经济特区成立最早的综合性三甲</li>
+            <li>肝胆外科、消化内科深圳领先</li>
+            <li>面向港澳患者便捷</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 成都 -->
+    <div class="city-panel" data-panel="chengdu">
+      <div class="city-panel-head">
+        <h3>成都</h3>
+        <span class="city-en">Chengdu · Western China Medical Hub</span>
+        <span class="city-tag">西部综合第一 · 最佳康养城市</span>
+      </div>
+      <div class="hospital-grid">
+        <div class="hospital-card">
+          <div class="h-name">四川大学华西医院</div>
+          <div class="h-en">West China Hospital, Sichuan University</div>
+          <div class="h-spec">综合 · 西部综合实力第一</div>
+          <ul class="h-feat">
+            <li>国家临床医学研究中心（4 个）</li>
+            <li>复旦版医院综合排名 <b>全国第 2</b>（连续多年）</li>
+            <li>麻醉科、口腔医学全国第一</li>
+            <li>何建行院士胸外科西部协作中心</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">四川省人民医院</div>
+          <div class="h-en">Sichuan Provincial People's Hospital</div>
+          <div class="h-spec">综合 · 四川省医学龙头</div>
+          <ul class="h-feat">
+            <li>电子科技大学附属</li>
+            <li>四川省急救中心</li>
+            <li>西部国际医疗中心合作单位</li>
+            <li>康养与慢病管理特色</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">成都中医药大学附属医院</div>
+          <div class="h-en">Teaching Hospital of Chengdu University of TCM</div>
+          <div class="h-spec">中西医结合 · 康复康养</div>
+          <ul class="h-feat">
+            <li>国家中医临床研究基地</li>
+            <li>中西医结合旗舰</li>
+            <li>术后中医康复特色</li>
+            <li>康养站行程优先对接</li>
+          </ul>
+        </div>
+        <div class="hospital-card">
+          <div class="h-name">四川大学华西口腔医院</div>
+          <div class="h-en">West China Hospital of Stomatology, Sichuan University</div>
+          <div class="h-spec">口腔 · 全国口腔医学旗舰</div>
+          <ul class="h-feat">
+            <li>中国现代口腔医学发源地</li>
+            <li>国家口腔疾病临床医学研究中心</li>
+            <li>种植、正畸、颌面外科全国第一</li>
+            <li>国际患者服务成熟</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ================= 常见疑问 FAQ ================= -->
 <section style="background:var(--paper);" id="faq">
   <div class="container">
@@ -1031,6 +1490,18 @@ var SITE_CONFIG = {
     msg.textContent=t;
   }
 })();
+
+// Hospital city tab switcher
+document.querySelectorAll('.city-tab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    var city = tab.getAttribute('data-city');
+    document.querySelectorAll('.city-tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.city-panel').forEach(function(p){ p.classList.remove('active'); });
+    tab.classList.add('active');
+    var panel = document.querySelector('.city-panel[data-panel="' + city + '"]');
+    if(panel) panel.classList.add('active');
+  });
+});
 </script>
 
 </body>

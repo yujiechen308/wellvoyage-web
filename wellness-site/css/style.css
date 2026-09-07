@@ -377,6 +377,54 @@ section { padding: 88px 0; }
   .process-detailed-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Why China ---------- */
+.why-china { background: linear-gradient(180deg, #0a2e2a 0%, #061c19 100%); color: rgba(255,255,255,.85); position: relative; overflow: hidden; }
+.why-china::before { content: ""; position: absolute; top: -100px; right: -100px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(184,135,70,.18), transparent 70%); pointer-events: none; }
+.why-china .sec-kicker { color: var(--gold-400); }
+.why-china .sec-head h2 { color: var(--white); }
+.why-china .sec-head p { color: rgba(255,255,255,.65); }
+.wc-hero { display: grid; grid-template-columns: 1fr 1.5fr; gap: 44px; align-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(184,135,70,.3); border-radius: var(--radius); padding: 40px 44px; margin-bottom: 44px; }
+.wc-hero .wc-num { font-family: var(--serif); font-size: 120px; line-height: 1; color: var(--gold-400); font-weight: 400; letter-spacing: -2px; }
+.wc-hero .wc-num small { font-size: 38px; vertical-align: top; margin-left: 4px; }
+.wc-hero h3 { color: var(--white); font-size: 22px; margin: 0 0 10px; font-weight: 600; }
+.wc-hero p { color: rgba(255,255,255,.78); font-size: 14px; line-height: 1.75; margin: 0 0 14px; }
+.wc-hero .wc-vs { display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0 12px; }
+.wc-hero .wc-vs span { background: rgba(255,255,255,.08); padding: 6px 14px; border-radius: 20px; font-size: 13px; color: var(--white); }
+.wc-hero .wc-vs b { color: var(--gold-400); margin-right: 4px; }
+.wc-hero .wc-src { font-size: 11.5px; color: rgba(255,255,255,.45); font-style: italic; }
+.wc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; }
+.wc-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 26px 22px; transition: all .25s; }
+.wc-card:hover { transform: translateY(-3px); border-color: var(--gold-400); background: rgba(255,255,255,.07); }
+.wc-card .wc-icon { width: 32px; height: 32px; color: var(--gold-400); margin-bottom: 14px; }
+.wc-card h3 { color: var(--white); font-size: 18px; margin: 0 0 4px; }
+.wc-card .wc-en { font-size: 10.5px; letter-spacing: 2px; color: var(--gold-400); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 12px; }
+.wc-card p { color: rgba(255,255,255,.85); font-size: 12.5px; line-height: 1.65; margin: 0 0 14px; font-weight: 500; }
+.wc-card ul { margin: 0; padding-left: 16px; font-size: 11.5px; color: rgba(255,255,255,.7); line-height: 1.75; }
+.wc-card ul li { margin-bottom: 3px; }
+.wc-card ul b { color: var(--gold-400); font-weight: 600; }
+.wc-card .wc-src { margin-top: 14px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,.18); font-size: 10px; color: rgba(255,255,255,.4); font-style: italic; }
+.wc-quote { max-width: 880px; margin: 0 auto; text-align: center; padding: 32px 36px; border-top: 1px solid rgba(184,135,70,.3); border-bottom: 1px solid rgba(184,135,70,.3); position: relative; }
+.wc-quote::before { content: "\201C"; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); background: #061c19; padding: 0 14px; color: var(--gold-400); font-size: 48px; font-family: var(--serif); line-height: 1; }
+.wc-quote p { color: var(--white); font-size: 18px; line-height: 1.7; font-style: italic; margin: 0 0 12px; }
+.wc-quote .wc-qsrc { color: var(--gold-400); font-size: 12px; letter-spacing: 1.5px; font-weight: 600; }
+@media (max-width:1080px){.wc-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:900px){.wc-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .wc-hero .wc-num{font-size:80px;}}
+@media (max-width:560px){.wc-grid{grid-template-columns:1fr;}}
+
+/* ---------- Partner Hospitals (compact) ---------- */
+.partner-hospitals { background: var(--paper); }
+.partner-hospitals .ph-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.partner-hospitals .ph-city { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px; transition: all .25s; }
+.partner-hospitals .ph-city:hover { border-color: var(--gold-400); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.partner-hospitals .ph-city h3 { color: var(--ink-900); font-size: 18px; margin: 0 0 4px; }
+.partner-hospitals .ph-city .ph-en { font-size: 10.5px; letter-spacing: 1.5px; color: var(--gold-500); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 14px; }
+.partner-hospitals .ph-city ul { margin: 0; padding: 0; list-style: none; }
+.partner-hospitals .ph-city ul li { font-size: 12.5px; color: var(--ink-500); padding: 7px 0; border-bottom: 1px dashed var(--line); line-height: 1.5; }
+.partner-hospitals .ph-city ul li:last-child { border-bottom: none; }
+.partner-hospitals .ph-city ul li b { color: var(--ink-900); font-weight: 600; }
+@media (max-width:1080px){.partner-hospitals .ph-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.partner-hospitals .ph-grid{grid-template-columns:1fr;}}
+
 /* ---------- FAQ ---------- */
 .faq { background: var(--paper); }
 .faq-list { max-width: 780px; margin: 0 auto; }
