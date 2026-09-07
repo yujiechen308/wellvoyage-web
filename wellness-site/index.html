@@ -527,9 +527,8 @@
       <a href="https://wa.me/8613800000000" class="btn btn-ghost">Chat on WhatsApp</a>
     </div>
 
-    <!-- Enquiry form — works out of the box (opens a mail draft). For direct-to-inbox
-         submissions without opening the mail app, register at formspree.io and paste your
-         endpoint into SITE_CONFIG.formEndpoint at the bottom of this page. -->
+    <!-- Enquiry form — delivered straight to your inbox via FormSubmit (free, no signup).
+         If the network call fails, it automatically falls back to opening a mail draft. -->
     <div class="cta-form">
       <div class="f-msg" id="fMsg"></div>
       <form id="bookingForm" novalidate>
@@ -658,8 +657,8 @@ document.querySelectorAll('.faq-q').forEach(function(q) {
    ★★ SITE CONFIG — edit when you go live ★★
    ------------------------------------------------------------
    domain / email / whatsapp  注册后替换为你的真实信息（.com 域名、域名邮箱、WhatsApp）。
-   formEndpoint              可选升级：注册 formspree.io 后粘贴 https://formspree.io/f/xxxx，
-                             表单即可直达邮箱（无需客户打开邮件客户端）。
+   （表单投递：已接入 FormSubmit 免注册服务，提交直接送达上面的 email，
+     无需任何注册或配置；投递失败时自动降级为打开邮件草稿。）
    paypal                    登录 paypal.com 商家后台 → 收款 → 支付链接/按钮 → 创建链接，
                              复制形如 https://www.paypal.com/ncp/payment/xxxx 的地址粘贴到对应项，
                              页面上的 "Book Now" 按钮即自动变为真实 PayPal 在线支付。
@@ -668,7 +667,6 @@ var SITE_CONFIG = {
   domain:  "jadeandqi.com",
   email:   "hello@wellvoyagecare.com",
   whatsapp: "8613800000000",
-  formEndpoint: "",
   paypal: {
     essential: "",  // Essential Reset  $2,980  ← 粘贴 PayPal 支付链接
     tcm:       "",  // TCM Wellness Retreat $4,580
@@ -714,17 +712,26 @@ var SITE_CONFIG = {
                   'Email: '+fd.get('email'), 'WhatsApp/Tel: '+fd.get('phone'),
                   'Program: '+interest, 'Preferred time: '+fd.get('dates'),
                   '', 'Message:', ''+fd.get('message')].join('\n');
-      if(SITE_CONFIG.formEndpoint){
-        fetch(SITE_CONFIG.formEndpoint, {method:'POST', headers:{'Accept':'application/json'}, body:fd})
-          .then(function(r){ if(r.ok){ showMsg('Thank you! A journey designer will reply within one working day.'); form.reset(); } else { throw 0; } })
-          .catch(function(){ showMsg('Something went wrong — please email us directly at ' + SITE_CONFIG.email, true); });
-      } else {
-        var href = 'mailto:' + SITE_CONFIG.email +
-          '?subject=' + encodeURIComponent('[Jade & Qi Enquiry] ' + fd.get('name') + ' — ' + interest) +
-          '&body=' + encodeURIComponent(body);
-        showMsg('Opening your mail app to send… (if it does not open, write to ' + SITE_CONFIG.email + ')');
-        setTimeout(function(){ window.location.href = href; }, 600);
-      }
+      fetch('https://formsubmit.co/ajax/' + SITE_CONFIG.email, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({
+          _subject: '[Jade & Qi Enquiry] ' + fd.get('name') + ' — ' + interest,
+          _template: 'table',
+          'Name': fd.get('name'), 'Country': fd.get('country'),
+          'Email': fd.get('email'), 'WhatsApp/Tel': fd.get('phone'),
+          'Program': interest, 'Preferred time': fd.get('dates'),
+          'Message': fd.get('message')
+        })
+      })
+        .then(function(r){ if(r.ok){ showMsg('Thank you! A journey designer will reply within one working day.'); form.reset(); } else { throw 0; } })
+        .catch(function(){
+          var href = 'mailto:' + SITE_CONFIG.email +
+            '?subject=' + encodeURIComponent('[Jade & Qi Enquiry] ' + fd.get('name') + ' — ' + interest) +
+            '&body=' + encodeURIComponent(body);
+          showMsg('Something went wrong — opening your mail app instead. You can also write to ' + SITE_CONFIG.email);
+          setTimeout(function(){ window.location.href = href; }, 600);
+        });
     });
   }
   function showMsg(t, err){

@@ -729,14 +729,13 @@ const CASES = [
    domain        正式域名（决定 sitemap/canonical 的占位需一并改）
    email         ★ 接收咨询的邮箱 —— 建议用域名邮箱，如 hello@wellvoyagecare.com
    whatsapp      ★ 你的 WhatsApp 号码（国际格式去 +，如 8613800000000）
-   formEndpoint  ★ 可选升级：注册 formspree.io 后填 https://formspree.io/f/xxxx，
-                  表单即可直接投递到邮箱（客户无需打开邮件客户端）
+   （表单投递：已接入 FormSubmit 免注册服务，提交直接送达上面的 email，
+     无需任何注册或配置；投递失败时自动降级为打开邮件草稿。）
    ============================================================ */
 var SITE_CONFIG = {
   domain:   "wellvoyagecare.com",
   email:    "hello@wellvoyagecare.com",
-  whatsapp: "8613800000000",
-  formEndpoint: ""
+  whatsapp: "8613800000000"
 };
 (function(){
   var burger=document.getElementById('navBurger'), nav=document.querySelector('.nav');
@@ -752,16 +751,24 @@ var SITE_CONFIG = {
       var body=['Name 姓名: '+fd.get('name'),'Country 国家: '+fd.get('country'),
                 'Email: '+fd.get('email'),'Phone/WA: '+fd.get('phone'),
                 'Interest 意向: '+interest,'','Message 内容:',''+fd.get('message')].join('\n');
-      if(SITE_CONFIG.formEndpoint){
-        fetch(SITE_CONFIG.formEndpoint,{method:'POST',headers:{'Accept':'application/json'},body:fd})
-          .then(function(r){ if(r.ok){ showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset(); } else { throw 0; } })
-          .catch(function(){ showMsg('提交失败，请改用右侧邮箱直接发送，或稍后再试。', true); });
-      } else {
-        var subject='[Website Enquiry] '+fd.get('name')+' — '+interest;
-        var href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-        showMsg('正在打开您的邮件客户端发送咨询…（如未发送成功，请直接写信至 '+SITE_CONFIG.email+'）');
-        setTimeout(function(){ window.location.href=href; }, 600);
-      }
+      fetch('https://formsubmit.co/ajax/' + SITE_CONFIG.email, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({
+          _subject: '[Website Enquiry] ' + fd.get('name') + ' — ' + interest,
+          _template: 'table',
+          'Name 姓名': fd.get('name'), 'Country 国家': fd.get('country'),
+          'Email': fd.get('email'), 'Phone/WA': fd.get('phone'),
+          'Interest 意向': interest, 'Message 内容': fd.get('message')
+        })
+      })
+        .then(function(r){ if(r.ok){ showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset(); } else { throw 0; } })
+        .catch(function(){
+          var subject='[Website Enquiry] '+fd.get('name')+' — '+interest;
+          var href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+          showMsg('网络投递失败，正在打开您的邮件客户端发送…（如仍未发送，请直接写信至 '+SITE_CONFIG.email+'）');
+          setTimeout(function(){ window.location.href=href; }, 600);
+        });
     });
   }
   function showMsg(t,isErr){

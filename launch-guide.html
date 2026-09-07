@@ -149,12 +149,9 @@
 <div class="box red"><h3>合规提醒（务必读）</h3><p>跨境 + 医疗属高风险行业：① 网站与收款用途建议表述为「医疗旅行协调服务 / 行程预订金」，避免在 PayPal 审核或风控时被认定为「医疗诊疗收费」；② 大额定制就医（胸外科/手术类）不建议走在线全款，仍以询盘 + 线下/电汇为主——页面已按此设计；③ 保留每笔交易的咨询记录与书面协议，便于审计。</p></div>
 <p><b>完成后告诉我：</b>「PayPal 链接已创建：6 条」→ 我把链接填入 <code>SITE_CONFIG.paypal</code>，全站按钮即变为真实支付。</p>
 
-<h2><span class="no">6</span>询盘直达邮箱（可选但推荐）：Formspree</h2>
-<p class="sub">现在两页表单「零配置可用」——提交时打开你的邮件客户端生成草稿。想让客户填完表单直接发到你邮箱（不弹邮件客户端），花 2 分钟注册 Formspree：</p>
-<ol class="steps">
-  <li>打开 <code>formspree.io</code> 注册 → New Form → 名称填 <code>Jade&amp;Qi Enquiry</code>。</li>
-  <li>把表单地址 <code>https://formspree.io/f/xxxx</code> 发给我 → 我填入两页的 <code>SITE_CONFIG.formEndpoint</code>。</li>
-</ol>
+<h2><span class="no">6</span>询盘直达邮箱（已完成）：FormSubmit ✅</h2>
+<p class="sub">两页表单已接入 <b>FormSubmit</b>（免注册、免费）——客户填完表单直接投递到 <code>hello@wellvoyagecare.com</code>，不再弹出邮件客户端；投递失败时自动降级为打开邮件草稿，不丢询盘。</p>
+<div class="box teal"><p><b>唯一需要你做的一次性激活：</b>第一次有人提交表单时，FormSubmit 会给 <code>hello@wellvoyagecare.com</code> 发一封激活邮件 → 经 Cloudflare Email Routing 转发到你的 Gmail → 点里面的 Activate 按钮即永久生效（因此请先完成第 7 步的 Email Routing 配置）。</p></div>
 
 <h2><span class="no">7</span>邮箱与占位信息（随部署同步替换）</h2>
 <ul class="tick">
