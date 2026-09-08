@@ -1,421 +1,267 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>安途康悦 WellVoyage × Jade &amp; Qi | 公司介绍 — Company Profile</title>
-<meta name="description" content="安途康悦 WellVoyage × Jade & Qi：连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。Where world-class care meets a journey well taken.">
-<!-- ★ SEO（部署后：若正式域名不是 wellvoyagecare.com，请把 canonical/OG 链接改成你的域名） -->
+<title>WellVoyage — World-Class Treatment in China, Arranged End-to-End</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://wellvoyagecare.com/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="WellVoyage 安途康悦 × Jade & Qi">
-<meta property="og:title" content="WellVoyage 安途康悦 × Jade & Qi — 高端医疗康养旅行服务商">
-<meta property="og:description" content="连接世界患者与中国顶尖医疗资源——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。">
-<meta property="og:url" content="https://wellvoyagecare.com/">
-<meta property="og:image" content="https://wellvoyagecare.com/images/hero-city.png">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "WellVoyage 安途康悦",
-  "alternateName": "Jade & Qi",
-  "description": "Premium medical & wellness travel service connecting international patients with China's leading medical specialists.",
-  "areaServed": "Worldwide",
-  "address": {"@type": "PostalAddress", "addressLocality": "Guangzhou", "addressCountry": "CN"},
-  "url": "https://wellvoyagecare.com/"
-}
-</script>
 <style>
   :root{
-    --ink:#1e3b36;
-    --teal:#177e70;
-    --teal-deep:#0e5a4e;
-    --mint:#2aa08f;
-    --gold:#c9a45c;
-    --gold-light:#d9bd85;
-    --paper:#f8fbf9;
-    --card:#ffffff;
-    --muted:#5f7a74;
-    --line:#e2ece7;
-    --red-cn:#c0392b;
+    --acc-text:#1d4ed8; --acc:#c9a23d; --acc-light:#e9c86a; --acc-deep:#8a6a1a; --acc-pale:#f5e9c6;
+    --acc-t5:rgba(201,162,61,.05);
+    --acc-t12:rgba(201,162,61,.12);
+    --acc-t14:rgba(201,162,61,.14);
+    --acc-t16:rgba(201,162,61,.16);
+    --acc-t45:rgba(201,162,61,.45);
+    --acc-t50:rgba(201,162,61,.5);
+    --acc-t60:rgba(201,162,61,.6);
+    --accL-t35:rgba(233,200,106,.35);
+    --accL-t45:rgba(233,200,106,.45);
+    --accL-t50:rgba(233,200,106,.5);
+    --accL-t60:rgba(233,200,106,.6);
+    --deepA:#1c42c4; --deepB:#1d4ed8; --specialA:#16337f; --specialC:#1c42c4;
+    --on-deep:#e8d8ab; --em-c:#f0d98c; --btn-fg:#16337f;
+    --sh-soft:rgba(15,25,55,.10); --sh-strong:rgba(15,25,55,.28);
+    --ho1:rgba(26,63,174,.90); --ho2:rgba(26,63,174,.76); --ho3:rgba(29,78,216,.58);
+  }
+  :root{
+    --ink:#1e2a5e; --teal:var(--acc-text); --teal-deep:var(--acc-deep); --mint:var(--acc-light);
+    --gold:var(--acc); --gold-light:var(--acc-light); --paper:#f6faff; --card:#ffffff;
+    --muted:#5a6b99; --line:#e8f0fe; --red-cn:#c0392b;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:"Source Han Serif SC","Noto Serif SC","Songti SC",serif;background:var(--paper);color:var(--ink);line-height:1.75;}
-  .en{font-family:Georgia,"Times New Roman",serif;}
-  .container{max-width:1080px;margin:0 auto;padding:0 32px;}
-  section{padding:72px 0;}
-  h2{font-size:30px;color:var(--teal);letter-spacing:2px;margin-bottom:8px;}
-  h2 .en{display:block;font-size:15px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-style:italic;font-weight:400;margin-bottom:14px;}
-  .divider{width:64px;height:3px;background:var(--gold);margin:18px 0 36px;}
-  /* HERO */
-  .hero{background:linear-gradient(135deg,rgba(14,90,78,.88) 0%,rgba(23,126,112,.74) 60%,rgba(42,160,143,.55) 100%),url('images/hero-city.png') center/cover no-repeat;color:#f7fbf9;padding:96px 0 84px;position:relative;overflow:hidden;}
-  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(217,189,133,.35);}
-  .hero::before{content:"";position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(217,189,133,.45);}
-  .hero .brand-cn{font-size:52px;letter-spacing:10px;font-weight:700;}
-  .hero .brand-en{font-size:26px;letter-spacing:6px;color:var(--gold-light);margin-top:10px;}
-  .hero .brand-en .amp{color:#f0f7f4;font-size:20px;vertical-align:middle;margin:0 6px;}
-  .hero .brand-sub{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13.5px;color:#cfe5df;letter-spacing:1px;}
-  .hero .brand-sub b{color:#f7fbf9;font-weight:600;}
-  .hero .brand-sub .sep{color:rgba(217,189,133,.65);}
-  .hero .tagline{margin-top:26px;font-size:19px;max-width:640px;color:#edf6f2;}
-  .hero .tagline .en{display:block;font-size:15px;color:#c2dcd6;margin-top:8px;font-style:italic;}
-  .hero-badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px;}
-  .hero-badges span{border:1px solid rgba(217,189,133,.55);color:var(--gold-light);padding:7px 18px;border-radius:999px;font-size:14px;letter-spacing:1px;}
-  /* STATS */
-  .stats{background:var(--card);border-bottom:1px solid var(--line);}
-  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 0;}
-  .stat{text-align:center;}
-  .stat .num{font-size:36px;color:var(--gold);font-weight:700;font-family:Georgia,serif;}
-  .stat .lab{font-size:14px;color:var(--muted);margin-top:4px;}
-  .stat .lab-en{font-size:11.5px;color:#94aca6;letter-spacing:.5px;}
-  /* CARDS */
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:transform .2s, box-shadow .2s;}
-  .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(15,76,78,.10);}
-  .card h3{font-size:19px;color:var(--teal);margin-bottom:10px;}
-  .card h3 .en{display:block;font-size:12.5px;color:var(--gold);letter-spacing:1px;font-weight:400;margin-top:2px;}
-  .card p{font-size:14.5px;color:#35504a;}
-  .card .en-text{font-size:13px;color:#7d938d;font-style:italic;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;}
-  .icon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--mint),var(--teal));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;color:#f7fbf9;}
-  /* IMAGE CARDS */
-  .card-img-wrap{height:150px;margin:-30px -28px 20px -28px;border-radius:14px 14px 0 0;overflow:hidden;position:relative;}
-  .card-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-  .card-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(14,90,78,.45) 100%);}
-  .card.has-img{padding-top:0;}
-  /* BANNERS */
-  .why-banner{height:220px;border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:center;padding:0 40px;margin-bottom:36px;}
-  .why-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,90,78,.88),rgba(23,126,112,.62));}
-  .why-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
-  .why-banner p{position:relative;z-index:1;color:#f7fbf9;font-size:20px;letter-spacing:1px;max-width:640px;}
-  .why-banner .en{display:block;font-size:14px;color:var(--gold-light);font-style:italic;margin-top:8px;}
-  /* DOCTOR FEATURE — 清新浅色主卡 + 深色印章肖像 */
-  .doc-feature{background:linear-gradient(135deg,#eef8f4,#ffffff);border:1px solid #d5e9e2;color:var(--ink);border-radius:18px;padding:48px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;box-shadow:0 10px 36px rgba(23,126,112,.08);}
-  .doc-portrait{background:linear-gradient(160deg,rgba(14,90,78,.88),rgba(23,126,112,.82)),url('images/medicine-tech.png') center/cover no-repeat;border:1px solid rgba(217,189,133,.45);border-radius:14px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold-light);text-align:center;padding:24px;}
-  .doc-portrait .seal{font-size:64px;line-height:1;}
-  .doc-portrait .nm{font-size:26px;letter-spacing:4px;margin-top:14px;color:#f7fbf9;}
-  .doc-portrait .nm-en{font-size:13px;letter-spacing:2px;margin-top:4px;color:var(--gold-light);}
-  .doc-feature h3{font-size:24px;color:var(--teal-deep);letter-spacing:2px;}
-  .doc-feature .sub{color:#8a7340;font-size:14px;margin:6px 0 18px;letter-spacing:1px;}
-  .doc-feature ul{list-style:none;}
-  .doc-feature li{padding:8px 0 8px 26px;position:relative;font-size:14.5px;color:#35504a;border-bottom:1px dashed #d5e9e2;}
-  .doc-feature li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:10px;top:12px;}
-  .doc-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
-  .doc-tags span{background:rgba(42,160,143,.10);border:1px solid rgba(42,160,143,.35);color:var(--teal-deep);font-size:12.5px;padding:5px 14px;border-radius:999px;}
-  .doc-grid .card{padding:26px 24px;}
-  .doc-mini-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px;}
-  .doc-mini-head h3{margin:0;}
-  .doc-mini-head .role{font-size:12px;color:var(--gold);letter-spacing:1px;}
-  /* TIMELINE */
-  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step;}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 18px;text-align:center;position:relative;}
-  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);display:block;font-family:Georgia,serif;font-size:24px;color:var(--gold);margin-bottom:8px;}
-  .step h4{font-size:16px;color:var(--teal);margin-bottom:6px;}
-  .step p{font-size:12.5px;color:var(--muted);}
-  .step .en{font-size:11px;color:#94aca6;font-style:italic;}
-  /* FLOW DETAILED (4 steps, click to expand CN/EN detail) */
-  .flow-detailed{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:fd;}
-  .step-detailed{background:var(--card);border:1px solid var(--line);border-radius:12px;position:relative;overflow:hidden;transition:box-shadow .25s, border-color .25s;}
-  .step-detailed:hover{border-color:var(--teal);box-shadow:0 6px 22px rgba(15,118,110,.10);}
-  .step-detailed summary{list-style:none;cursor:pointer;padding:24px 18px;text-align:center;}
-  .step-detailed summary::-webkit-details-marker{display:none;}
-  .step-detailed summary::before{counter-increment:fd;content:"0" counter(fd);display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);margin-bottom:10px;font-weight:400;letter-spacing:1px;}
-  .step-detailed summary .sd-icon{width:38px;height:38px;color:var(--teal);margin:0 auto 12px;display:block;}
-  .step-detailed summary h4{font-size:16px;color:var(--teal-deep);margin:0 0 4px;font-weight:700;}
-  .step-detailed summary .sd-en{font-size:10.5px;color:#94aca6;font-style:italic;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px;}
-  .step-detailed summary .sd-brief{font-size:12.5px;color:var(--muted);line-height:1.6;margin:0;}
-  .step-detailed summary .sd-toggle{display:inline-block;margin-top:12px;font-size:11px;color:var(--teal);letter-spacing:1px;text-transform:uppercase;font-weight:600;}
-  .step-detailed summary .sd-toggle::after{content:" ↓";font-size:14px;}
-  .step-detailed[open] summary .sd-toggle::after{content:" ↑";}
-  .step-detailed .sd-detail{border-top:1px dashed var(--line);padding:20px 18px;background:linear-gradient(180deg,#fafcfb,#ffffff);}
-  .sd-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-  .sd-grid > div{padding:0 14px;}
-  .sd-grid > div:first-child{padding-left:0;border-right:1px dashed var(--line);}
-  .sd-grid > div:last-child{padding-right:0;}
-  .sd-lang-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--gold);margin-bottom:8px;}
-  .sd-label{display:block;font-size:10.5px;color:var(--teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin:10px 0 4px;}
-  .sd-detail ul{margin:0 0 6px;padding-left:16px;font-size:12.5px;color:var(--ink);line-height:1.7;}
-  .sd-detail ul li{margin-bottom:2px;}
-  .sd-detail p{margin:0 0 6px;font-size:12.5px;color:var(--muted);line-height:1.7;}
-  .sd-meta{display:inline-block;background:#e8f4f1;color:var(--teal-deep);font-size:10.5px;padding:2px 9px;border-radius:10px;font-weight:600;margin:6px 4px 0 0;}
-  /* FAQ (主站) */
-  .faq-list-cn{max-width:820px;margin:0 auto;display:grid;gap:12px;}
-  .faq-item-cn{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .faq-item-cn summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:15px;color:var(--teal-deep);display:flex;justify-content:space-between;gap:14px;align-items:center;}
-  .faq-item-cn summary::-webkit-details-marker{display:none;}
-  .faq-item-cn summary::after{content:"+";color:var(--gold);font-size:22px;font-weight:300;flex-shrink:0;}
-  .faq-item-cn[open] summary::after{content:"−";}
-  .faq-item-cn .faq-en{display:block;font-size:11px;color:#94aca6;font-style:italic;letter-spacing:.5px;margin-top:3px;font-weight:400;}
-  .faq-item-cn .faq-body{padding:0 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:13px;line-height:1.8;color:var(--ink);}
-  .faq-item-cn .faq-body strong{display:block;color:var(--teal);font-size:11px;letter-spacing:1.5px;margin-bottom:6px;font-weight:700;}
-  @media (max-width:900px){
-    .flow-detailed{grid-template-columns:1fr 1fr;}
-    .sd-grid{grid-template-columns:1fr;}
-    .sd-grid > div:first-child{border-right:none;border-bottom:1px dashed var(--line);padding-bottom:10px;margin-bottom:10px;padding-left:0;}
-    .faq-item-cn .faq-body{grid-template-columns:1fr;gap:14px;}
-  }
-  @media (max-width:560px){
-    .flow-detailed{grid-template-columns:1fr;}
-  }
-  /* ADVANTAGES */
-  .adv{background:linear-gradient(180deg,#eef7f3,var(--paper));}
-  .adv-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(23,126,112,.07);}
-  .adv-table th{background:var(--teal);color:#f7fbf9;padding:14px 18px;font-size:15px;text-align:left;letter-spacing:1px;}
-  .adv-table td{padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top;}
-  .adv-table tr:last-child td{border-bottom:none;}
-  .adv-table td:first-child{font-weight:700;color:var(--teal);white-space:nowrap;}
-  /* VIDEO MODULE */
-  .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:0 18px 48px rgba(23,126,112,.16);background:#0e5a4e;}
-  .video-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
-  .video-fallback{position:absolute;inset:0;display:none;}
-  .video-fallback .kb{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;animation:kbzoom 9s ease-in-out infinite;}
-  .video-fallback .kb.active{opacity:1;}
-  @keyframes kbzoom{0%{transform:scale(1);}100%{transform:scale(1.08);}}
-  .video-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 34px;background:linear-gradient(to top,rgba(14,90,78,.78),transparent);z-index:2;color:#f7fbf9;font-size:17px;letter-spacing:1px;}
-  .video-cap .en{display:block;font-size:12.5px;color:var(--gold-light);font-style:italic;letter-spacing:2px;margin-top:4px;text-transform:uppercase;}
-  .video-note{font-size:12px;color:#94aca6;margin-top:12px;text-align:center;}
-  /* CASE LIBRARY */
-  .case-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
-  .case-tab{border:1px solid #cfe5df;background:var(--card);color:var(--muted);padding:8px 20px;border-radius:999px;font-size:14px;cursor:pointer;letter-spacing:1px;transition:all .2s;}
-  .case-tab:hover{border-color:var(--mint);color:var(--teal-deep);}
-  .case-tab.active{background:var(--teal);border-color:var(--teal);color:#f7fbf9;}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .case-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s, box-shadow .2s;display:flex;flex-direction:column;}
-  .case-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(23,126,112,.12);}
-  .case-img{height:150px;position:relative;overflow:hidden;}
-  .case-img img{width:100%;height:100%;object-fit:cover;display:block;}
-  .case-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(14,90,78,.42) 100%);}
-  .case-cat{position:absolute;top:12px;left:12px;z-index:2;background:rgba(23,126,112,.92);color:#f7fbf9;font-size:12px;letter-spacing:1px;padding:4px 12px;border-radius:999px;}
-  .case-body{padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;}
-  .case-body h3{font-size:17px;color:var(--teal-deep);margin-bottom:8px;}
-  .case-body p{font-size:13.5px;color:#35504a;}
-  .case-highlight{margin-top:10px;font-size:13px;color:var(--teal-deep);background:#eef7f3;border-left:3px solid var(--gold);padding:8px 12px;border-radius:0 8px 8px 0;}
-  .case-src{margin-top:auto;padding-top:12px;font-size:11.5px;color:#94aca6;border-top:1px dashed var(--line);}
-  .case-src b{color:#8a7340;font-weight:600;}
-  /* WHY CHINA (大数字 + 5 张数据卡 + 引用) */
-  .why-china{background:linear-gradient(180deg,#0e5a4e 0%,#0a4639 100%);color:#d8e8e3;position:relative;overflow:hidden;}
-  .why-china::before{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(184,135,70,.18),transparent 70%);pointer-events:none;}
-  .why-china .sec-kicker{color:var(--gold-light);}
-  .why-china h2{color:#f7fbf9;}
-  .why-china .sec-head p{color:rgba(255,255,255,.65);}
-  .why-china .sec-head-cn{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:10px;letter-spacing:.5px;line-height:1.7;}
-  .why-china-hero{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(184,135,70,.3);border-radius:18px;padding:40px 44px;margin:0 0 40px;position:relative;}
-  .why-china-hero .big-num{font-family:Georgia,serif;font-size:128px;font-weight:400;line-height:1;color:var(--gold-light);letter-spacing:-2px;}
-  .why-china-hero .big-num small{font-size:42px;color:var(--gold);font-weight:400;vertical-align:top;margin-left:6px;}
-  .why-china-hero .big-meta h3{font-size:22px;color:#f7fbf9;margin:0 0 10px;font-weight:600;}
-  .why-china-hero .big-meta p{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 14px;line-height:1.75;}
-  .why-china-hero .big-vs{display:inline-flex;gap:14px;margin:10px 0 12px;flex-wrap:wrap;}
-  .why-china-hero .big-vs span{background:rgba(255,255,255,.08);padding:6px 14px;border-radius:20px;font-size:13px;color:#f7fbf9;}
-  .why-china-hero .big-vs span b{color:var(--gold-light);margin-right:4px;font-weight:700;}
-  .why-china-hero .big-source{font-size:11.5px;color:rgba(255,255,255,.45);font-style:italic;margin-top:10px;}
-  .why-china-hero .big-cn{font-size:11.5px;color:rgba(255,255,255,.42);margin-top:10px;line-height:1.75;border-top:1px dashed rgba(255,255,255,.14);padding-top:10px;}
-  /* —— 横向大板版式 —— */
-  .china-rows{display:flex;flex-direction:column;gap:16px;}
-  .cn-row{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:24px 26px;transition:transform .25s, border-color .25s, background .25s;min-width:0;}
-  .cn-row:hover{transform:translateY(-3px);border-color:var(--gold-light);background:rgba(255,255,255,.08);}
-  .cn-row-num{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:1px solid rgba(255,255,255,.16);padding-right:20px;align-self:stretch;min-width:0;}
-  .cn-row-num .num{font-family:Georgia,serif;font-size:64px;font-weight:700;line-height:.9;color:var(--gold-light);letter-spacing:-2px;white-space:nowrap;max-width:100%;}
-  .cn-row-num .unit{font-size:22px;color:var(--gold);font-weight:600;margin-left:3px;vertical-align:baseline;}
-  .cn-row-num .num-tag{font-size:12.5px;color:rgba(255,255,255,.72);margin-top:12px;font-weight:600;letter-spacing:.5px;}
-  .cn-row-body{display:flex;flex-direction:column;}
-  .cn-row-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
-  .cn-row-head .cn-icon{width:34px;height:34px;color:var(--gold-light);flex:none;}
-  .cn-row-head h3{font-size:23px;color:#f7fbf9;margin:0;font-weight:700;}
-  .cn-row-head .cn-en{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600;padding-bottom:3px;}
-  .cn-row-head .cn-en-cn{font-size:13px;color:rgba(255,255,255,.58);font-weight:500;margin-left:4px;letter-spacing:1px;}
-  .cn-row .cn-lead{font-size:14.5px;color:rgba(255,255,255,.88);line-height:1.65;margin:0 0 14px;font-weight:500;}
-  .cn-row .cn-zh-block{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.18);}
-  .cn-row .cn-zh-block .cn-zh-lead{font-size:13.5px;color:rgba(255,255,255,.62);line-height:1.65;margin:0 0 10px;font-weight:400;}
-  .cn-row .cn-zh-block ul{font-size:12.5px;color:rgba(255,255,255,.55);gap:6px 28px;}
-  .cn-row .cn-zh-block ul li::before{background:rgba(184,135,70,.45);opacity:.6;}
-  .cn-row .cn-zh-block ul li b{color:var(--gold);font-weight:600;}
-  .cn-row .cn-zh-block .cn-source{margin-top:10px;padding-top:8px;font-size:10.5px;}
-  .cn-row ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 28px;font-size:13.5px;color:rgba(255,255,255,.8);}
-  .cn-row ul li{position:relative;padding-left:22px;line-height:1.55;}
-  .cn-row ul li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--gold-light);opacity:.9;}
-  .cn-row ul li b{color:var(--gold-light);font-weight:700;}
-  .cn-row .cn-source{margin-top:16px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.18);font-size:11px;color:rgba(255,255,255,.46);font-style:italic;}
-  .cn-quote{margin:48px auto 0;max-width:880px;text-align:center;padding:30px 36px;border-top:1px solid rgba(184,135,70,.3);border-bottom:1px solid rgba(184,135,70,.3);position:relative;}
-  .cn-quote::before{content:"\201C";position:absolute;top:-6px;left:50%;transform:translateX(-50%);background:#0a4639;padding:0 14px;color:var(--gold-light);font-size:48px;font-family:Georgia,serif;line-height:1;}
-  .cn-quote p{font-size:18px;color:#f7fbf9;line-height:1.7;font-style:italic;margin:0 0 12px;font-weight:400;}
-  .cn-quote .qsrc{font-size:12px;color:var(--gold-light);letter-spacing:1.5px;font-weight:600;}
-  @media (max-width:1080px){.cn-row{grid-template-columns:180px 1fr;} .cn-row-num .num{font-size:50px;}}
-  @media (max-width:900px){.why-china-hero{grid-template-columns:1fr;padding:28px;gap:24px;} .why-china-hero .big-num{font-size:88px;}}
-  @media (max-width:760px){.cn-row{grid-template-columns:1fr;} .cn-row-num{border-right:none;padding-right:0;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);flex-direction:row;gap:16px;align-items:baseline;justify-content:flex-start;} .cn-row-num .num{font-size:48px;line-height:1;} .cn-row-num .num-tag{margin-top:0;} .cn-row ul{grid-template-columns:1fr;}}
-  /* PARTNER HOSPITALS (5 城 Tab 切换) */
-  .partner-hospitals{background:var(--paper);}
-  .partner-hospitals .sec-head-cn{font-size:12.5px;color:#94aca6;margin-top:10px;letter-spacing:.5px;line-height:1.7;}
-  .city-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px;}
-  .city-tab{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:10px 24px;border-radius:999px;font-size:14px;cursor:pointer;letter-spacing:1px;transition:all .2s;font-family:inherit;font-weight:500;}
-  .city-tab:hover{border-color:var(--teal);color:var(--teal-deep);}
-  .city-tab.active{background:var(--teal);border-color:var(--teal);color:#f7fbf9;box-shadow:0 4px 14px rgba(15,118,110,.2);}
-  .city-panel{display:none;animation:fadeIn .35s ease;}
-  .city-panel.active{display:block;}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-  .city-panel-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--line);}
-  .city-panel-head h3{font-size:24px;color:var(--teal-deep);margin:0;}
-  .city-panel-head .city-en{font-size:13px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:600;}
-  .city-panel-head .city-tag{font-size:12px;color:var(--muted);background:#eef7f3;padding:4px 12px;border-radius:10px;}
-  .hospital-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-  .hospital-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;transition:all .25s;position:relative;}
-  .hospital-card:hover{border-color:var(--teal);box-shadow:0 8px 22px rgba(15,118,110,.10);transform:translateY(-2px);}
-  .hospital-card .h-name{font-size:16px;color:var(--teal-deep);font-weight:700;margin:0 0 4px;}
-  .hospital-card .h-name-en{font-size:16px;color:var(--teal-deep);font-weight:700;margin:0 0 4px;}
-  .hospital-card .h-en{font-size:11.5px;color:#94aca6;font-style:italic;letter-spacing:.5px;margin-bottom:10px;}
-  .hospital-card .h-zh{font-size:12.5px;color:var(--muted);margin-bottom:8px;letter-spacing:.5px;}
-  .hospital-card .h-spec{display:inline-block;background:#eef7f3;color:var(--teal);font-size:11.5px;padding:3px 10px;border-radius:4px;font-weight:600;margin-bottom:12px;letter-spacing:.5px;}
-  .hospital-card .h-spec-en{display:inline-block;background:#eef7f3;color:var(--teal);font-size:11.5px;padding:3px 10px;border-radius:4px;font-weight:600;margin-bottom:12px;letter-spacing:.5px;}
-  .hospital-card .h-feat{font-size:12.5px;color:var(--muted);margin:0;padding-left:18px;line-height:1.75;}
-  .hospital-card .h-feat li{margin-bottom:3px;}
-  .hospital-card .h-feat b{color:var(--teal-deep);font-weight:600;}
-  .hospital-card .h-feat-en{font-size:13px;color:#3d5754;margin:0 0 14px;padding-left:20px;line-height:1.7;list-style:none;}
-  .hospital-card .h-feat-en li{margin-bottom:3px;position:relative;padding-left:14px;}
-  .hospital-card .h-feat-en li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--teal);}
-  .hospital-card .h-feat-en b{color:var(--teal-deep);font-weight:700;}
-  .hospital-card .h-zh-block{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:#7a8d8a;line-height:1.65;}
-  .hospital-card .h-zh-block .h-zh-spec{display:inline-block;background:#f5f5f0;color:#7a8d8a;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600;margin-bottom:8px;letter-spacing:.5px;}
-  .hospital-card .h-zh-block ul{margin:0;padding-left:18px;list-style:none;}
-  .hospital-card .h-zh-block ul li{position:relative;padding-left:14px;margin-bottom:2px;}
-  .hospital-card .h-zh-block ul li::before{content:"›";position:absolute;left:0;color:#94aca6;font-weight:700;}
-  .hospital-card .h-zh-block ul li b{color:var(--teal-deep);font-weight:600;}
-  /* China-Why + Hospital 英对照样式 */
-  .cn-en-block,.h-en-block{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.16);font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.6;font-style:italic;}
-  .cn-en-block .cn-en-lead,.h-en-block .h-en-spec{display:block;margin-bottom:6px;font-style:normal;color:#f7fbf9;font-weight:600;}
-  .cn-en-block ul,.h-en-block ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:5px 24px;font-style:normal;font-size:12px;color:rgba(255,255,255,.7);}
-  .cn-en-block ul li,.h-en-block ul li{padding-left:14px;position:relative;line-height:1.45;}
-  .cn-en-block ul li::before,.h-en-block ul li::before{content:"›";position:absolute;left:0;color:var(--gold-light);font-weight:700;}
-  .cn-en-block ul li b,.h-en-block ul li b{color:var(--gold-light);font-weight:700;font-style:normal;}
-  .h-en-block{background:#f5faf8;padding:10px 14px;border-radius:8px;border:1px solid var(--line);margin-top:14px;font-size:12px;color:var(--teal-deep);font-style:italic;}
-  .h-en-block .h-en-spec{display:inline-block;background:#eef7f3;color:var(--teal);font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600;margin-bottom:8px;letter-spacing:.5px;font-style:normal;}
-  .h-en-block ul{gap:3px 18px;color:#5a7270;font-size:11.5px;}
-  .h-en-block ul li{padding-left:14px;}
-  .h-en-block ul li::before{color:var(--teal);}
-  .h-en-block ul li b{color:var(--teal-deep);}
-  @media (max-width:1080px){.cn-en-block ul,.h-en-block ul{grid-template-columns:1fr;}}
-  @media (max-width:760px){.cn-en-block ul{grid-template-columns:1fr;}}
-  @media (max-width:900px){.hospital-card .h-en-block{font-size:11px;}}
-  @media (max-width:900px){.hospital-grid{grid-template-columns:1fr;}}
-  /* FOOTER */
-  footer{background:var(--teal-deep);color:#c8ddd7;padding:52px 0 36px;font-size:13px;}
-  footer .fn{font-size:22px;color:#f7fbf9;letter-spacing:6px;}
-  footer .fe{color:var(--gold-light);letter-spacing:3px;font-size:13px;margin-top:4px;}
-  .disclaimer{margin-top:28px;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:11.5px;color:#9dc0b8;line-height:1.8;}
-  @media(max-width:860px){
-    .grid-2,.grid-3,.grid-4,.flow,.stats-grid{grid-template-columns:1fr 1fr;}
-    .doc-feature{grid-template-columns:1fr;}
-    .case-grid{grid-template-columns:1fr;}
-    .hero .brand-cn{font-size:36px;letter-spacing:5px;}
-    .hero .brand-en{font-size:19px;letter-spacing:3px;}
-    .hero .brand-sub{flex-direction:column;gap:6px;}
-    .hero .brand-sub .sep{display:none;}
-  }
-  @media(max-width:520px){.grid-2,.grid-3,.grid-4,.flow,.stats-grid{grid-template-columns:1fr;}}
-  /* ---------- NAV（部署版） ---------- */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(248,251,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav-in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .nav-brand{font-size:18px;letter-spacing:3px;color:var(--teal-deep);text-decoration:none;font-weight:700;}
-  .nav-brand small{display:block;font-size:9.5px;letter-spacing:2px;color:var(--gold);font-weight:400;}
-  .nav-links{display:flex;gap:22px;list-style:none;font-size:13.5px;letter-spacing:1px;}
-  .nav-links a{color:var(--ink);text-decoration:none;}
+  body{font-family:Georgia,"Times New Roman","Noto Serif SC","Songti SC",serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:17px;}
+  .container{max-width:1140px;margin:0 auto;padding:0 32px;}
+  section{padding:84px 0;}
+  h2{font-size:44px;color:var(--teal);letter-spacing:1px;margin-bottom:10px;font-weight:700;}
+  .sec-kicker{font-size:15px;color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-style:italic;margin-bottom:14px;font-weight:700;}
+  .sec-sub{font-size:18.5px;color:#4a5a99;max-width:820px;line-height:1.8;}
+  .sec-cn{font-size:14px;color:#97a8d4;margin-top:14px;letter-spacing:.5px;border-top:1px dashed var(--line);padding-top:12px;max-width:820px;line-height:1.75;}
+  .divider{width:80px;height:4px;background:linear-gradient(90deg,var(--gold),var(--mint));margin:20px 0 34px;border-radius:2px;}
+
+  /* ===== demo note ===== */
+
+  /* ===== nav ===== */
+  .nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+  .nav-in{max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .nav-brand{font-size:20px;font-weight:700;color:var(--teal);letter-spacing:2px;text-decoration:none;}
+  .nav-brand small{display:block;font-size:9.5px;color:var(--gold);letter-spacing:2px;font-weight:400;font-style:italic;}
+  .nav-links{display:flex;gap:22px;list-style:none;flex-wrap:wrap;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;letter-spacing:.5px;}
   .nav-links a:hover{color:var(--teal);}
-  .nav-cta{background:var(--teal);color:#fff;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:13px;letter-spacing:1px;}
-  .nav-cta:hover{background:var(--teal-deep);}
-  .nav-burger{display:none;background:none;border:none;font-size:22px;color:var(--teal-deep);cursor:pointer;}
-  /* ---------- BUTTONS（部署版） ---------- */
-  .btn{display:inline-block;border-radius:999px;padding:13px 30px;font-size:15px;letter-spacing:1px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit;}
-  .btn-gold{background:linear-gradient(135deg,#d9bd85,#c9a45c);color:#14312c;font-weight:600;}
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,164,92,.35);}
-  .btn-ghost{border:1px solid rgba(247,251,249,.75);color:#f7fbf9;background:transparent;}
-  .btn-ghost:hover{background:rgba(247,251,249,.14);}
-  .btn-teal{background:var(--teal);color:#fff;}
-  .btn-teal:hover{background:var(--teal-deep);}
-  .btn-outline{border:1px solid var(--teal);color:var(--teal);background:transparent;}
-  .btn-outline:hover{background:#eef7f3;}
-  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px;}
-  /* ---------- CONTACT（部署版） ---------- */
-  .contact{background:linear-gradient(180deg,var(--paper),#eef7f3);}
-  .contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start;}
-  .contact-info h3{font-size:20px;color:var(--teal-deep);margin-bottom:10px;}
-  .contact-line{display:flex;gap:12px;align-items:flex-start;margin:12px 0;font-size:14.5px;color:#35504a;}
-  .contact-line .ico{width:38px;height:38px;min-width:38px;border-radius:10px;background:#e2f2ed;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;font-size:16px;}
-  .contact-line b{display:block;font-size:13.5px;color:var(--teal-deep);}
-  .contact-note{font-size:12px;color:#94aca6;margin-top:14px;line-height:1.9;}
-  .form-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:0 10px 30px rgba(23,126,112,.08);}
-  .form-card h3{font-size:19px;color:var(--teal-deep);margin-bottom:4px;}
-  .form-card .sub{font-size:13px;color:var(--muted);margin-bottom:18px;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  .form-field{margin-bottom:14px;}
-  .form-field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:5px;letter-spacing:.5px;}
-  .form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid #d5e9e2;border-radius:9px;padding:11px 13px;font-size:14px;font-family:inherit;background:#fbfdfc;color:var(--ink);}
-  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--mint);box-shadow:0 0 0 3px rgba(42,160,143,.12);}
-  .form-msg{display:none;background:#eef7f3;border:1px solid #bfe3d8;color:var(--teal-deep);border-radius:9px;padding:12px 14px;font-size:13.5px;margin-bottom:14px;}
-  .form-msg.err{background:#fdf1f0;border-color:#ecc;color:#a33;}
-  /* CTA BAND */
-  .cta-band{margin-top:72px;border-radius:18px;overflow:hidden;position:relative;padding:54px 48px;text-align:center;color:#f7fbf9;background:linear-gradient(120deg,rgba(14,90,78,.92),rgba(42,160,143,.78)),url('images/fast-track.png') center/cover no-repeat;}
-  .cta-band h3{font-size:26px;letter-spacing:2px;}
-  .cta-band p{color:#d7ece6;margin:12px auto 24px;max-width:560px;font-size:15px;}
-  .cta-band .btn-gold{font-size:16px;padding:14px 36px;}
-  @media(max-width:860px){
-    .nav-links{display:none;}
-    .nav-burger{display:block;}
-    .nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#f8fbf9;padding:18px 32px;border-bottom:1px solid var(--line);gap:14px;}
-    .contact-wrap{grid-template-columns:1fr;}
-    .form-row{grid-template-columns:1fr;}
-    .cta-band{padding:40px 24px;}
-  }
-  /* ---------- 卡片内 CTA 行（部署版） ---------- */
-  .card-cta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;}
-  .card-cta .btn{padding:9px 18px;font-size:13px;}
-  .card-cta .btn-pay{background:linear-gradient(135deg,#003087,#0070ba);color:#fff;}
-  .card-cta .btn-pay:hover{box-shadow:0 8px 20px rgba(0,112,186,.35);}
+  .nav-cta{background:var(--gold);color:var(--btn-fg);padding:9px 20px;border-radius:999px;font-size:13.5px;text-decoration:none;letter-spacing:1px;white-space:nowrap;}
+  @media(max-width:820px){.nav-links{display:none;}}
+
+  /* ===== hero ===== */
+  .hero{background:linear-gradient(135deg,var(--ho1) 0%,var(--ho2) 60%,var(--ho3) 100%),url('images/hero-city.png') center/cover no-repeat;color:#f7faff;padding:130px 0 110px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:460px;height:460px;border-radius:50%;border:1px solid var(--accL-t45);}
+  .hero-kicker{font-size:17px;font-weight:700;color:var(--gold-light);letter-spacing:4px;text-transform:uppercase;font-style:italic;}
+  .hero h1{font-size:64px;line-height:1.15;letter-spacing:.5px;margin:16px 0 18px;font-weight:700;max-width:820px;}
+  .hero h1 em{font-style:normal;color:var(--em-c);}
+  .hero .tagline{font-size:22px;max-width:780px;color:#eff5ff;line-height:1.8;}
+  .hero .tagline-cn{font-size:15px;color:rgba(255,255,255,.55);margin-top:10px;letter-spacing:.5px;}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;}
+  .hero-badges span{border:1px solid var(--accL-t60);background:var(--acc-t14);color:var(--gold-light);padding:10px 22px;border-radius:999px;font-size:16px;font-weight:700;letter-spacing:.5px;}
+  .hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn{padding:17px 36px;border-radius:999px;text-decoration:none;font-size:17px;font-weight:700;letter-spacing:1px;}
+  .btn-gold{background:var(--gold);color:var(--btn-fg);}
+  .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#f7faff;}
+
+  /* ===== stats ===== */
+  .stats{background:linear-gradient(180deg,var(--deepA),var(--deepB));}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:58px 0;}
+  .stat{text-align:center;}
+  .stat .num{font-size:60px;font-weight:700;background:linear-gradient(120deg,var(--acc-pale),var(--gold-light));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15;}
+  .stat .lab{font-size:15.5px;color:#dbeafe;margin-top:8px;line-height:1.6;}
+  .stat .lab-cn{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px;}
+  @media(max-width:760px){.stats-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ===== generic card ===== */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:860px){.grid-3{grid-template-columns:1fr;}}
+
+  /* ================= CAROUSEL ================= */
+  .carousel{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 36px var(--sh-soft);overflow:hidden;}
+  .car-window{overflow:hidden;}
+  .car-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1);}
+  .car-slide{min-width:100%;padding:48px 52px;}
+  .car-btn{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.97);color:var(--teal);font-size:24px;font-weight:700;cursor:pointer;z-index:5;transition:all .2s;box-shadow:0 4px 14px var(--sh-soft);}
+  .car-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+  .car-prev{left:14px;} .car-next{right:14px;}
+  .car-dots{display:flex;justify-content:center;gap:8px;padding:16px 0 20px;background:var(--card);}
+  .car-dot{width:12px;height:12px;border-radius:50%;background:#dbeafe;cursor:pointer;transition:all .25s;border:none;padding:0;}
+  .car-dot.on{background:var(--gold);width:34px;border-radius:999px;}
+  .car-progress{position:absolute;top:0;left:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--mint));width:0%;transition:width .1s linear;z-index:6;}
+
+  /* --- advantage slide layout (5 大优势) --- */
+  .adv-slide{display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:center;}
+  @media(max-width:860px){.adv-slide{grid-template-columns:1fr;gap:22px;}}
+  .adv-num{text-align:center;background:linear-gradient(160deg,var(--deepA),var(--deepB));border:1px solid var(--accL-t50);border-radius:18px;padding:40px 22px;box-shadow:0 14px 34px var(--sh-strong);}
+  .adv-num .n{font-size:84px;font-weight:700;background:linear-gradient(120deg,var(--acc-pale),var(--gold-light));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.05;}
+  .adv-num .u{font-size:22px;color:var(--on-deep);font-weight:400;margin-left:6px;}
+  .adv-num .t{font-size:14px;color:var(--gold-light);letter-spacing:2.5px;text-transform:uppercase;margin-top:12px;font-weight:700;}
+  .adv-body h3{font-size:34px;color:var(--teal);letter-spacing:1px;font-weight:700;}
+  .adv-body .cn-tag{font-size:16px;color:var(--gold);letter-spacing:3px;margin-left:12px;}
+  .adv-body p.lead{font-size:18.5px;color:#3a4a8a;margin-top:12px;max-width:660px;line-height:1.8;}
+  .adv-body ul{list-style:none;margin-top:16px;}
+  .adv-body li{padding:10px 0 10px 28px;position:relative;font-size:17px;color:#3a4a8a;border-bottom:1px dashed #eef4ff;}
+  .adv-body li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:12px;top:16px;}
+  .src{font-size:12.5px;color:#a0b4d8;margin-top:16px;letter-spacing:.5px;}
+  .adv-zh{margin-top:16px;border-top:1px dashed var(--line);padding-top:12px;}
+  .adv-zh p{font-size:14px;color:#93a5cc;line-height:1.8;}
+
+  /* --- specialty slide layout (8 大病种) --- */
+  .spec-slide{padding:0;}
+  .spec-head{display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,var(--acc-text),var(--acc-text));padding:32px 52px;color:#f7faff;border-bottom:3px solid var(--gold);}
+  .spec-icon{width:72px;height:72px;border-radius:16px;font-size:36px;background:rgba(255,255,255,.12);border:1px solid var(--accL-t45);display:flex;align-items:center;justify-content:center;font-size:28px;flex:none;}
+  .spec-head h3{font-size:32px;letter-spacing:1px;font-weight:700;}
+  .spec-head .spec-cn{font-size:16px;color:var(--gold-light);letter-spacing:4px;margin-top:4px;}
+  .spec-head .spec-star{margin-left:auto;background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#fff;font-size:14px;letter-spacing:2px;padding:9px 18px;border-radius:999px;white-space:nowrap;font-weight:700;box-shadow:0 6px 18px var(--acc-t50);}
+  .spec-body{padding:38px 52px 44px;}
+  .spec-lead{font-size:21px;color:var(--teal-deep);font-style:italic;margin-bottom:26px;font-weight:700;}
+  .spec-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:860px){.spec-cards{grid-template-columns:1fr;}}
+  .spec-card{background:linear-gradient(160deg,#f6faff,#fff);border:1px solid #e6efff;border-top:3px solid var(--mint);border-radius:14px;padding:26px;}
+  .spec-card .k{font-size:12.5px;color:var(--acc-deep);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;}
+  .spec-card .v{font-size:31px;font-weight:700;color:var(--teal-deep);margin-top:8px;line-height:1.22;}
+  .spec-card .d{font-size:14.5px;color:#4a5a99;margin-top:10px;line-height:1.7;}
+  .spec-card .d b{color:var(--ink);}
+  .spec-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:28px;font-size:15.5px;border:1px solid #e6efff;border-radius:12px;overflow:hidden;}
+  .spec-table th{background:var(--acc-t5);color:var(--acc-deep);text-align:left;padding:13px 16px;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid var(--teal);font-weight:700;}
+  .spec-table th:nth-child(2){background:var(--acc-text);color:#fff;}
+  .spec-table td{padding:14px 16px;border-bottom:1px solid #eef4ff;color:#3a4a8a;}
+  .spec-table td:nth-child(2){background:var(--acc-t12);font-weight:700;color:var(--acc-deep);font-size:16.5px;border-left:3px solid var(--mint);border-right:3px solid var(--mint);}
+  .spec-table tr:last-child td:nth-child(2){border-bottom-left-radius:0;background:var(--acc-t5);font-weight:400;font-size:14px;color:var(--muted);border-left:none;border-right:none;}
+  .spec-table td b{color:var(--acc-deep);}
+  .spec-table td:nth-child(2) b{color:var(--teal-deep);}
+  .spec-table .cn-col{color:#93a5cc;font-size:14px;}
+  .spec-hook{margin-top:28px;background:linear-gradient(90deg,var(--acc-t16),var(--acc-t5));border:1.5px dashed var(--acc-t60);border-radius:14px;padding:20px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .spec-hook .en{font-size:19px;color:var(--acc-deep);font-style:italic;font-weight:700;}
+  .spec-hook .cn{font-size:13.5px;color:var(--acc-deep);width:100%;}
+  .spec-hook a{margin-left:auto;background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#fff;text-decoration:none;font-size:15.5px;font-weight:700;padding:13px 28px;border-radius:999px;box-shadow:0 6px 18px var(--acc-t45);letter-spacing:1px;white-space:nowrap;}
+  .spec-hosp{margin-top:20px;font-size:14px;color:var(--muted);}
+  .spec-hosp b{color:var(--teal-deep);}
+
+  /* ===== hospitals strip ===== */
+  .hosp-strip{background:linear-gradient(135deg,#f2f7ff,#fff);border:1px solid #e6efff;border-left:5px solid var(--gold);border-radius:16px;padding:40px 44px;box-shadow:0 10px 30px var(--sh-soft);display:flex;align-items:center;gap:30px;flex-wrap:wrap;}
+  .hosp-strip .big{font-size:72px;font-weight:700;color:var(--teal);line-height:1;}
+  .hosp-strip .txt{flex:1;min-width:260px;}
+  .hosp-strip .txt p{font-size:17.5px;color:#3a4a8a;line-height:1.8;}
+  .hosp-strip .txt .cn{font-size:14px;color:#97a8d4;margin-top:8px;}
+
+  /* ===== doctors ===== */
+  .doc-card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:30px 28px;box-shadow:0 8px 26px var(--sh-soft);}
+  .doc-card .role{font-size:12.5px;color:var(--acc-deep);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;}
+  .doc-card h3{font-size:23px;color:var(--teal);margin:8px 0 4px;font-weight:700;}
+  .doc-card .title{font-size:14.5px;color:var(--muted);font-style:italic;}
+  .doc-card p{font-size:15px;color:#3a4a8a;margin-top:14px;line-height:1.75;}
+  .doc-anchors{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+  .doc-anchors span{font-size:13.5px;font-weight:700;padding:7px 16px;border-radius:999px;}
+  .anchor-time{background:var(--acc-t12);border:1px solid var(--acc-t45);color:var(--acc-deep);}
+  .anchor-cost{background:var(--acc-t12);border:1px solid var(--acc-t45);color:var(--acc-deep);}
+  .gold-bar{margin-top:34px;background:linear-gradient(90deg,var(--acc-text),var(--teal));color:#f7faff;border-radius:14px;padding:26px 38px;box-shadow:0 12px 30px var(--sh-strong);display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .gold-bar .en{font-size:20px;font-style:italic;font-weight:700;}
+  .gold-bar .cn{font-size:14px;color:rgba(255,255,255,.65);width:100%;}
+  .gold-bar a{margin-left:auto;background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#fff;text-decoration:none;padding:14px 32px;border-radius:999px;font-size:15.5px;font-weight:700;letter-spacing:1px;}
+
+  /* ===== who we are ===== */
+  .who{background:var(--card);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:28px 32px;box-shadow:0 8px 24px var(--sh-soft);max-width:880px;margin:0 auto 34px;}
+  .who .en{font-size:19px;color:var(--teal);line-height:1.85;}
+  .who .cn{font-size:14px;color:#93a5cc;margin-top:14px;line-height:1.8;}
+  .case-mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;}
+  .case-mini .flag{font-size:22px;}
+  .case-mini h4{font-size:18.5px;color:var(--teal);margin-top:10px;line-height:1.4;font-weight:700;}
+  .case-mini p{font-size:14.5px;color:var(--muted);margin-top:10px;line-height:1.7;}
+  .case-mini .cost{margin-top:16px;font-size:16px;font-weight:700;color:var(--acc-deep);border-top:1px dashed var(--acc-t50);padding-top:12px;font-style:italic;}
+
+  /* ===== flow ===== */
+  .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:step;}
+  @media(max-width:960px){.flow{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:640px){.flow{grid-template-columns:repeat(2,1fr);}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 16px;text-align:center;position:relative;}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);display:block;font-size:24px;color:var(--gold);margin-bottom:8px;font-weight:700;}
+  .step h4{font-size:16.5px;color:var(--teal);margin-bottom:6px;line-height:1.4;font-weight:700;}
+  .step p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+  /* ===== bonus (page tail) ===== */
+  .bonus{background:linear-gradient(135deg,#f2f7ff,#f8fbff);border-top:1px solid #e6efff;border-bottom:1px solid #e6efff;}
+  .bonus .grid-3{gap:18px;}
+  .bonus-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .bonus-card .img{height:130px;background-size:cover;background-position:center;}
+  .bonus-card .bd{padding:18px 20px;}
+  .bonus-card h4{font-size:18px;color:var(--teal);font-weight:700;}
+  .bonus-card p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.7;}
+  .bonus-link{display:block;text-align:center;margin-top:22px;font-size:13.5px;color:var(--teal);letter-spacing:1px;text-decoration:none;font-style:italic;}
+
+  /* ===== contact ===== */
+  .contact-cta{background:linear-gradient(135deg,var(--deepA),var(--deepB));color:#f7faff;border-radius:18px;padding:56px 48px;text-align:center;}
+  .contact-cta h2{color:#f7faff;font-size:44px;font-weight:700;}
+  .contact-cta .en-sub{font-size:19px;color:#dbeafe;margin-top:16px;font-style:italic;}
+  .contact-cta .cn-sub{font-size:14.5px;color:rgba(255,255,255,.6);margin-top:10px;}
+  .contact-cta .btn-gold{display:inline-block;margin-top:32px;background:linear-gradient(120deg,var(--gold),var(--gold-light));color:var(--btn-fg);padding:19px 48px;font-size:18px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:1.5px;box-shadow:0 10px 28px var(--acc-t50);}
+  .contact-cta .btn-ghost{display:inline-block;margin-top:14px;border:1px solid rgba(255,255,255,.4);color:#f7faff;padding:12px 32px;font-size:13.5px;border-radius:999px;text-decoration:none;margin-left:14px;}
+
+
+  /* ===== palette switcher ===== */
+
+  footer{background:var(--deepA);color:var(--on-deep);padding:36px 0;font-size:14px;text-align:center;letter-spacing:.5px;}
+  footer b{color:var(--acc-pale);}
+
+  /* ===== 8 大病种区: 深色背景，白卡浮起 ===== */
+  #specialties{background:linear-gradient(180deg,var(--specialA) 0%,var(--acc-text) 55%,var(--specialC) 100%);}
+  #specialties .sec-kicker{color:var(--gold-light);}
+  #specialties h2{color:#f7faff;}
+  #specialties .sec-sub{color:var(--on-deep);}
+  #specialties .sec-cn{color:rgba(255,255,255,.45);border-top-color:rgba(255,255,255,.15);}
+  #specialties .carousel{box-shadow:0 24px 64px rgba(0,0,0,.35);border:1px solid var(--accL-t35);}
+  #specialties .car-btn{background:var(--gold);color:#fff;border-color:var(--gold);width:58px;height:58px;font-size:26px;box-shadow:0 8px 24px rgba(0,0,0,.35);}
+  #specialties .car-btn:hover{background:var(--gold-light);color:#fff;}
+
+  /* ===== 5 大优势区: 淡渐变背景 ===== */
+  #advantages{background:linear-gradient(180deg,var(--paper),#f0f6ff);}
+  #advantages .carousel{box-shadow:0 18px 48px var(--sh-soft);}
+
+  /* ===== nav 放大 ===== */
+  .nav-links a{font-size:15.5px;font-weight:700;}
+  .nav-cta{font-size:15px;font-weight:700;padding:11px 24px;}
+  .nav-brand{font-size:22px;}
 </style>
 </head>
 <body>
 
-<!-- ================= 导航（部署版） ================= -->
-<nav class="nav" id="top">
+
+
+
+<nav class="nav">
   <div class="nav-in">
-    <a class="nav-brand" href="#top">安途康悦<small class="en">WELLVOYAGE × JADE &amp; QI</small></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">关于我们</a></li>
-      <li><a href="#services">服务体系</a></li>
-      <li><a href="#programs">核心项目</a></li>
-      <li><a href="#experts">专家团队</a></li>
-      <li><a href="#cases">案例库</a></li>
-      <li><a href="#contact">联系我们</a></li>
+    <a class="nav-brand" href="#top">WellVoyage<small>CHINA · MEDICAL EXCELLENCE</small></a>
+    <ul class="nav-links">
+      <li><a href="#advantages">Why China</a></li>
+      <li><a href="#specialties">8 Specialties</a></li>
+      <li><a href="#hospitals">Hospitals</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#about">About Us</a></li>
     </ul>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <a class="nav-cta" href="#contact">预约咨询</a>
-      <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
-    </div>
+    <a class="nav-cta" href="#contact">Ask About My Condition</a>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
-<header class="hero">
+<header class="hero" id="top">
   <div class="container">
-    <div class="brand-cn">安途康悦</div>
-    <div class="brand-en en">WELLVOYAGE<span class="amp">×</span>JADE &amp; QI</div>
-    <div class="brand-sub">
-      <span><b>WellVoyage</b>&nbsp;· 医疗旅行主品牌 &nbsp;<span class="en" style="font-style:italic;">The Medical Travel Collection</span></span>
-      <span class="sep">｜</span>
-      <span><b>Jade &amp; Qi</b>&nbsp;· 高端康养系列 &nbsp;<span class="en" style="font-style:italic;">The Signature Wellness Line</span></span>
-    </div>
-    <div class="tagline">
-      连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。
-      <span class="en">Where world-class care meets a journey well taken. Connecting international patients with China's leading medical minds — paired with curated cultural journeys, luxury stays, and seamless, end-to-end service.</span>
-    </div>
+    <div class="hero-kicker">A Medical Superpower You Didn't Know About</div>
+    <h1>China: The World's <em>Best-Kept Secret</em> in Medicine</h1>
+    <div class="tagline">Top-tier technology. The world's largest pool of clinical experience. One-third the cost. Across 8 major treatment areas, China is already world-leading — and we arrange it all, end to end.</div>
+    <div class="tagline-cn">顶尖技术 · 全球最大的临床经验池 · 三分之一的价格——在 8 大治疗领域，中国已是世界第一梯队，而我们为你全程安排。</div>
     <div class="hero-badges">
-      <span>名医直通 · Direct Access to Top Specialists</span>
-      <span>全程管家 · End-to-End Concierge</span>
-      <span>康养旅程 · Wellness &amp; Culture</span>
+      <span>🏥 8 World-Class Specialties</span>
+      <span>💰 1/3–1/5 the Cost</span>
+      <span>⏱ Waiting Times in Days</span>
+      <span>🤝 End-to-End Concierge</span>
     </div>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-gold">预约咨询 · 获取专属方案</a>
-      <a href="#cases" class="btn btn-ghost">查看真实案例</a>
+      <a href="#specialties" class="btn btn-gold">Explore China's Medical Strength →</a>
+      <a href="#contact" class="btn btn-ghost">Talk to Us</a>
     </div>
   </div>
 </header>
@@ -424,1399 +270,625 @@
 <div class="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat"><div class="num">13,000+</div><div class="lab">合作团队年手术量（台）</div><div class="lab-en">Surgeries / year by partner team</div></div>
-      <div class="stat"><div class="num">1/3–1/5</div><div class="lab">费用仅为欧美同水平项目</div><div class="lab-en">Cost vs. Western private care</div></div>
-      <div class="stat"><div class="num">40+</div><div class="lab">领衔专家临床经验（年）</div><div class="lab-en">Years of experience, lead expert</div></div>
-      <div class="stat"><div class="num">24/7</div><div class="lab">多语种全程管家服务</div><div class="lab-en">Multilingual concierge, around the clock</div></div>
+      <div class="stat"><div class="num">91.5</div><div class="lab">Beijing HAQ Index — ahead of the USA (88.7), <i>The Lancet</i></div><div class="lab-cn">北京医疗质量指数超越美国</div></div>
+      <div class="stat"><div class="num">1.01B</div><div class="lab">Outpatient visits in 2024 (NHC)</div><div class="lab-cn">2024 年全国门诊量</div></div>
+      <div class="stat"><div class="num">4,800万+</div><div class="lab">Surgeries performed per year — the world's largest experience pool</div><div class="lab-cn">年手术量，全球最大经验池</div></div>
+      <div class="stat"><div class="num">1/3–1/5</div><div class="lab">Treatment cost vs. Western private care</div><div class="lab-cn">费用仅为欧美 1/3–1/5</div></div>
     </div>
   </div>
 </div>
 
-<!-- ================= 品牌视频 ================= -->
-<section style="padding:56px 0 0;">
+<!-- ================= 5 大优势 轮播 ================= -->
+<section id="advantages">
   <div class="container">
-    <h2>一睹我们的世界<span class="en en">The WellVoyage Film</span></h2>
+    <div class="sec-kicker">Why China · Why Now</div>
+    <h2>Five Reasons the World Is Putting China First for Treatment</h2>
+    <p class="sec-sub">Authoritative data from <i>The Lancet</i>, <i>JAMA</i> and China's National Health Commission is changing how international patients choose where to receive care.</p>
+    <div class="sec-cn">世界正把中国放在首选治疗地——五个理由——《柳叶刀》《美国医学会杂志》与国家卫健委的权威数据，正在改变国际患者的就医决策。</div>
     <div class="divider"></div>
-    <div class="video-frame" id="brandVideoFrame">
-      <!--
-        ▼▼ 如何更换视频 ▼▼
-        把 <source src="..."> 的地址换成你的视频文件（media/xxx.mp4）即可自动播放；
-        如需嵌入 YouTube：删除整个 <video> 标签，替换为
-        <iframe src="https://www.youtube.com/embed/你的视频ID" ...></iframe>
-        视频加载失败时会自动降级为图片轮播，不会出现空白。
-      -->
-      <video id="brandVideo" autoplay muted loop playsinline poster="images/hero-wellness.png">
-        <source src="media/brand-film.mp4" type="video/mp4">
-      </video>
-      <div class="video-fallback" id="videoFallback">
-        <div class="kb" style="background-image:url('images/hero-wellness.png');"></div>
-        <div class="kb" style="background-image:url('images/consult.png');"></div>
-        <div class="kb" style="background-image:url('images/culture-tea.png');"></div>
+
+    <div class="carousel" id="carAdv">
+      <div class="car-progress"></div>
+      <div class="car-window">
+        <div class="car-track">
+
+          <!-- ADV 1 -->
+          <div class="car-slide">
+            <div class="adv-slide">
+              <div class="adv-num">
+                <div class="n">2–4<span class="u">wks</span></div>
+                <div class="t">Hip Replacement</div>
+              </div>
+              <div class="adv-body">
+                <h3>Efficiency<span class="cn-tag">效率</span></h3>
+                <p class="lead">China schedules in days, not months. No referral walls, no insurance pre-authorization loops.</p>
+                <ul>
+                  <li>Hip replacement: <b>2–4 weeks</b> (US: 3–6 months)</li>
+                  <li>Cardiac surgery: <b>1–3 weeks</b> (US: 2–4 months)</li>
+                  <li>Cancer specialist consult: <b>3–7 days</b> (US: 2–6 weeks)</li>
+                  <li>IVF cycle start: <b>1–2 weeks</b> (US: 1–3 months)</li>
+                </ul>
+                <div class="src">Source: NHC 2025 · Merritt Hawkins · NHS England</div>
+                <div class="adv-zh"><p>中国以"天"为单位安排治疗：髋关节置换 2–4 周、心脏手术 1–3 周、癌症专家会诊 3–7 天——远快于欧美的数月等待。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADV 2 -->
+          <div class="car-slide">
+            <div class="adv-slide">
+              <div class="adv-num">
+                <div class="n">4<span class="u">centers</span></div>
+                <div class="t">Proton / Heavy-Ion</div>
+              </div>
+              <div class="adv-body">
+                <h3>Technology<span class="cn-tag">技术</span></h3>
+                <p class="lead">World-leading experience density: China's busiest centers perform procedures that take a lifetime to accumulate elsewhere.</p>
+                <ul>
+                  <li><b>10+ CAR-T</b> products approved — among the most worldwide</li>
+                  <li><b>4 proton/heavy-ion</b> therapy centers, expanding</li>
+                  <li>Robotic surgery installed base: <b>#2 globally</b></li>
+                  <li>AI-assisted imaging diagnosis at <b>top-3 hospitals</b></li>
+                </ul>
+                <div class="src">Source: NMPA approvals 2025 · National Cancer Center</div>
+                <div class="adv-zh"><p>CAR-T 产品上市数全球领先、质子重离子中心 4 家、机器人手术装机量全球第二——先进技术应用密度世界前列。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADV 3 -->
+          <div class="car-slide">
+            <div class="adv-slide">
+              <div class="adv-num">
+                <div class="n">14,000<span class="u">+/yr</span></div>
+                <div class="t">Cardiac Surgeries</div>
+              </div>
+              <div class="adv-body">
+                <h3>Experience<span class="cn-tag">经验密度</span></h3>
+                <p class="lead">In medicine, volume is quality. A single Chinese flagship center often performs more procedures per year than an entire Western hospital network.</p>
+                <ul>
+                  <li>Fuwai Hospital: <b>14,000+ cardiac surgeries/year</b> — world #1</li>
+                  <li>Top GI endoscopy centers: <b>world's largest</b> procedure volume</li>
+                  <li>Chinese oncologists see more cases in a year than many peers see in a career</li>
+                </ul>
+                <div class="src">Source: Fuwai Hospital annual reports · NHC</div>
+                <div class="adv-zh"><p>医学中"量即质"：阜外医院年心脏手术 1.4 万台全球第一；头部内镜中心检查量全球最大；中国专家一年见到的病例，常超过国外同行一辈子的积累。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADV 4 -->
+          <div class="car-slide">
+            <div class="adv-slide">
+              <div class="adv-num">
+                <div class="n">60–70<span class="u">%</span></div>
+                <div class="t">Lower Cost</div>
+              </div>
+              <div class="adv-body">
+                <h3>Cost<span class="cn-tag">费用</span></h3>
+                <p class="lead">The same world-class treatment, at 1/3–1/5 of Western pricing — with transparent, locked-in quotes before you fly.</p>
+                <ul>
+                  <li>CAR-T therapy: <b>~$140–165K</b> in China vs <b>$373K+</b> in the US</li>
+                  <li>Joint replacement package: <b>~1/5</b> of US pricing</li>
+                  <li>Full treatment quotes issued <b>before departure</b> — no surprise bills</li>
+                </ul>
+                <div class="src">Source: hospital international-department price lists 2025</div>
+                <div class="adv-zh"><p>同等世界级治疗，费用仅为欧美 1/3–1/5；出发前锁定全程报价，绝无隐藏账单。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADV 5 -->
+          <div class="car-slide">
+            <div class="adv-slide">
+              <div class="adv-num">
+                <div class="n">3–7<span class="u">days</span></div>
+                <div class="t">to See a Specialist</div>
+              </div>
+              <div class="adv-body">
+                <h3>Access<span class="cn-tag">可及</span></h3>
+                <p class="lead">No GP referral gatekeeping. No months-long waitlists. Direct appointments with leading specialists — we arrange them for you.</p>
+                <ul>
+                  <li>Direct booking with <b>top-ranked specialists</b> — no gatekeepers</li>
+                  <li>Green-channel international patient units at every partner hospital</li>
+                  <li>Full medical record translation <b>before</b> you arrive</li>
+                  <li>One bilingual concierge, from first message to recovery</li>
+                </ul>
+                <div class="src">WellVoyage service standard</div>
+                <div class="adv-zh"><p>无家庭医生转诊墙、无漫长候补名单：通过我们直约顶尖专家 3–7 天，病历提前翻译，双语管家全程一对一。</p></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="video-cap">顶尖医疗 × 东方康养 × 一段安心的旅程
-        <span class="en">World-Class Care · Eastern Wellness · A Journey Well Taken</span>
-      </div>
+      <button class="car-btn car-prev" aria-label="Previous">‹</button>
+      <button class="car-btn car-next" aria-label="Next">›</button>
+      <div class="car-dots"></div>
     </div>
-    <p class="video-note">建议横屏 16:9 品牌短片，自动循环静音播放 / Looping muted brand film, 16:9 recommended.</p>
   </div>
 </section>
 
-<!-- ================= 关于我们 ================= -->
+<!-- ================= 8 大病种 轮播 ================= -->
+<section id="specialties" style="background:var(--paper);">
+  <div class="container">
+    <div class="sec-kicker">The Main Event · 8 Specialties</div>
+    <h2>Where China Leads: 8 Treatment Areas</h2>
+    <p class="sec-sub">One specialty at a time — the technology, the experience, and the cost, compared against the West. See for yourself why patients from 30+ countries now choose China.</p>
+    <div class="sec-cn">中国遥遥领先的 8 大治疗领域——逐个看技术、经验、费用与等待时间的国际对比。</div>
+    <div class="divider"></div>
+
+    <div class="carousel" id="carSpec">
+      <div class="car-progress"></div>
+      <div class="car-window">
+        <div class="car-track">
+
+          <!-- SPEC 1 · Cancer -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🧬</div>
+              <div>
+                <h3>Cancer Care</h3>
+                <div class="spec-cn">肿瘤治疗</div>
+              </div>
+              <div class="spec-star">★ FLAGSHIP</div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"The CAR-T capital of the world — with the clinical volume to prove it."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">10+ CAR-T products</div><div class="d">Among the most approved worldwide, plus <b>4 proton/heavy-ion centers</b> and 140+ targeted therapies.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">4.82M new cases/yr</div><div class="d">The world's largest cancer patient volume — top centers hold unmatched case density.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~$140–165K vs $373K+</div><div class="d">CAR-T in China at <b>60–70% less</b> than US pricing. Immuno + surgery bundles: ~1/3.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Specialist consult wait</td><td><b>3–7 days</b></td><td>2–6 weeks</td><td>2–8 weeks</td></tr>
+                <tr><td>Treatment start after diagnosis</td><td><b>1–2 weeks</b></td><td>4–10 weeks</td><td>4–12 weeks</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">中国专家会诊 3–7 天；确诊后 1–2 周即可开始治疗；CAR-T 费用约为美国 1/3。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>National Cancer Center (Beijing) · Fudan University Shanghai Cancer Center · Sun Yat-sen University Cancer Center (Guangzhou)</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排——直约、翻译、报价、康复跟踪。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 2 · Cardiac -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">❤️</div>
+              <div>
+                <h3>Cardiac Surgery</h3>
+                <div class="spec-cn">心脏外科</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Surgery in weeks, not months — at the world's highest-volume heart center."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">TAVI · Robotic CABG</div><div class="d">Minimally invasive valves, robotic bypass, and hybrid suites at flagship centers.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">14,000+ / year</div><div class="d">Fuwai Hospital — the <b>world's #1 cardiac surgery volume</b> for over a decade.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/4 of US</div><div class="d">CABG package in China vs. US private pricing; valves often <b>half</b> of Thai pricing.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Wait for bypass surgery</td><td><b>1–3 weeks</b></td><td>2–4 months</td><td>2–4 months</td></tr>
+                <tr><td>Post-op stay &amp; rehab</td><td><b>Included in package</b></td><td>Billed separately</td><td>Limited sessions</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">搭桥 1–3 周 vs 美 2–4 月；术后住院与康复打包报价，费用约为美国 1/4。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Fuwai Hospital (Beijing) · Zhongshan Hospital (Shanghai) · Guangdong Cardiovascular Institute</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 3 · Neurosurgery -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🧠</div>
+              <div>
+                <h3>Neurosurgery</h3>
+                <div class="spec-cn">神经外科</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Precision at world-class volume — tumors, aneurysms, and movement disorders."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">Awake craniotomy · DBS</div><div class="d">Intraoperative MRI, awake mapping for gliomas near eloquent cortex, DBS for Parkinson's.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">Top-3 global volume</div><div class="d">Beijing Tiantan Hospital performs more neurosurgeries yearly than most national totals.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/3–1/4 of US</div><div class="d">Tumor resection with imaging, ICU, and ward stay bundled transparently.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Neurosurgical consult</td><td><b>3–7 days</b></td><td>3–8 weeks</td><td>4–10 weeks</td></tr>
+                <tr><td>Surgery scheduling</td><td><b>1–2 weeks</b></td><td>4–12 weeks</td><td>6–16 weeks</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">天坛医院神外手术量全球前三；术中唤醒、DBS 等顶尖术式齐备，费用约为美国 1/3–1/4。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Beijing Tiantan Hospital · Huashan Hospital (Shanghai) · Sanbo Brain Hospital</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 4 · Orthopedics -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🦴</div>
+              <div>
+                <h3>Orthopedics</h3>
+                <div class="spec-cn">骨科与关节置换</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Joints restored in 2–4 weeks, walking out at a fraction of Western cost."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">Robotic-arm joint surgery</div><div class="d">MAKO-type robotic replacement, 3D-printed implants, same-day mobilization protocols.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">Millions of procedures</div><div class="d">Chinese joint-replacement volume has grown into the world's largest — surgeons peak early.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/5 of US</div><div class="d">Unilateral knee package: <b>~$12–18K all-in</b> vs $40–60K in the US.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Wait for joint replacement</td><td><b>2–4 weeks</b></td><td>3–6 months</td><td>6–18 months</td></tr>
+                <tr><td>Implant options</td><td><b>Global brands available</b></td><td>Insurance-limited</td><td>NHS-limited</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">机器人辅助关节置换、3D 打印植入体；等待 2–4 周，全程费用约 1.2–1.8 万美元，为美国 1/5。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Peking University People's Hospital · Shanghai Sixth People's Hospital · Nanfang Hospital</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 5 · Ophthalmology -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">👁️</div>
+              <div>
+                <h3>Ophthalmology</h3>
+                <div class="spec-cn">眼科</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Laser &amp; lens procedures at planetary scale — same-day discharge."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">SMILE · ICL · premium IOLs</div><div class="d">Full-surface laser suites, trifocal and light-adjustable lens implants.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">10M+ eye surgeries/yr</div><div class="d">Zhongshan Ophthalmic Center: the world's busiest eye hospital by a wide margin.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/3 of US</div><div class="d">Cataract with premium lens <b>~$3–5K</b> vs $9–15K in the US. LASIK from ~$1.5K.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Scheduling</td><td><b>Days</b></td><td>Weeks</td><td>Months (NHS)</td></tr>
+                <tr><td>Same-day discharge</td><td><b>Standard</b></td><td>Common</td><td>Common (private)</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">中山眼科中心手术量全球第一；白内障高端晶体全程约 3–5 千美元，为美国 1/3。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Zhongshan Ophthalmic Center (Guangzhou) · Beijing Tongren Hospital · Aier Eye Hospital Group</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 6 · IVF -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🤰</div>
+              <div>
+                <h3>IVF &amp; Fertility</h3>
+                <div class="spec-cn">辅助生殖</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Cycles in 1–2 weeks, no waitlists — success rates on par with the West."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">PGT-A · time-lapse IVF</div><div class="d">Full genetic screening, embryo time-lapse imaging, and mild-stimulation protocols.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">1M+ cycles/yr</div><div class="d">China runs the world's largest ART program — embryologists at peak proficiency.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/3 of US</div><div class="d">A full IVF cycle with meds: <b>~$5–8K</b> vs $15–25K in the US. PGT included options.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Cycle start wait</td><td><b>1–2 weeks</b></td><td>1–3 months</td><td>1–2 years (NHS)</td></tr>
+                <tr><td>Clinical pregnancy rate</td><td><b>On par</b></td><td>Comparable</td><td>Comparable</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">周期 1–2 周即可启动，成功率与欧美持平，单周期全程约 5–8 千美元，为美国 1/3。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Peking University Third Hospital · Shanghai Ji Ai Genetics · Reproductive Medicine Center of CITIC-Xiangya</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 7 · Gastro -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🔬</div>
+              <div>
+                <h3>Gastroenterology &amp; Endoscopy</h3>
+                <div class="spec-cn">消化与内镜</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Early screening at unmatched volume — cancers caught before they become cancers."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">AI-assisted endoscopy</div><div class="d">AI lesion detection flags early-stage GI cancers in real time during scope.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">World's #1 volume</div><div class="d">Chinese endoscopists perform tens of millions of procedures annually.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">~1/5 of US</div><div class="d">Gastroscopy + colonoscopy with sedation: <b>~$300–600</b> vs $2–5K in the US.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Screening appointment</td><td><b>Days</b></td><td>Weeks–months</td><td>Months (NHS)</td></tr>
+                <tr><td>Same-visit ESD/EMR resection</td><td><b>Available</b></td><td>Separate procedure</td><td>Separate procedure</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">胃肠镜检查+镇静约 300–600 美元，为美国 1/5；AI 辅助早癌检出，检查当日可完成切除。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Shanghai Renji Hospital · Xijing Hospital of Digestive Diseases · Beijing Friendship Hospital</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPEC 8 · TCM -->
+          <div class="car-slide spec-slide">
+            <div class="spec-head">
+              <div class="spec-icon">🌿</div>
+              <div>
+                <h3>TCM Integrative Medicine</h3>
+                <div class="spec-cn">中医整合治疗</div>
+              </div>
+            </div>
+            <div class="spec-body">
+              <p class="spec-lead">"Recovery support the Western world simply can't offer."</p>
+              <div class="spec-cards">
+                <div class="spec-card"><div class="k">Technology</div><div class="v">2,000+ years, refined</div><div class="d">Herbal pharmacopeia, acupuncture, tuina — integrated <b>alongside</b> Western treatment plans.</div></div>
+                <div class="spec-card"><div class="k">Experience</div><div class="v">3,000+ TCM hospitals</div><div class="d">A complete parallel healthcare system, from county level to national flagships.</div></div>
+                <div class="spec-card"><div class="k">Cost</div><div class="v">From ~$50/visit</div><div class="d">Consultations and herbal programs at a fraction of Western integrative clinics.</div></div>
+              </div>
+              <table class="spec-table">
+                <tr><th></th><th>China</th><th>USA</th><th>UK</th></tr>
+                <tr><td>Access to licensed TCM within hospital</td><td><b>Integrated wards</b></td><td>Private clinics only</td><td>Private clinics only</td></tr>
+                <tr><td>Oncology rehab + TCM co-management</td><td><b>Standard option</b></td><td>Rare</td><td>Rare</td></tr>
+                <tr><td class="cn-col">中文备注</td><td class="cn-col" colspan="3">肿瘤康复、慢病调理与西医同院共管——中国独有的整合路径，费用仅为欧美整合诊所零头。</td></tr>
+              </table>
+              <div class="spec-hosp">Representative hospitals: <b>Guang'anmen Hospital (Beijing) · Shuguang Hospital (Shanghai) · Guangdong Provincial TCM Hospital</b></div>
+              <div class="spec-hook">
+                <span class="en">Want this level of care? We arrange it — end to end.</span>
+                <span class="cn">想要这个水平的治疗？我们可以全程安排。</span>
+                <a href="#contact">Ask About My Condition</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="car-btn car-prev" aria-label="Previous">‹</button>
+      <button class="car-btn car-next" aria-label="Next">›</button>
+      <div class="car-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOSPITALS STRIP ================= -->
+<section id="hospitals" style="padding-top:0;">
+  <div class="container">
+    <div class="hosp-strip">
+      <div class="big">20</div>
+      <div class="txt">
+        <p><b style="color:var(--teal);">Partner hospitals in 5 major hubs.</b> Every hospital on our list ranks in China's national top-100 — Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu.</p>
+        <div class="cn">20 家合作医院遍布北京 · 上海 · 广州 · 深圳 · 成都，全部位于中国医院百强榜前列。</div>
+      </div>
+      <a class="nav-cta" href="#contact" style="text-decoration:none;">Get the Full Hospital List</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTORS (5%) ================= -->
+<section id="doctors" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sec-kicker">The 5% · The Doctors</div>
+    <h2>The Doctors Behind the Numbers</h2>
+    <p class="sec-sub">These are the names at the very top of their fields in China. <b>Through WellVoyage, you can book them directly</b> — faster than local patients, at a fraction of Western cost.</p>
+    <div class="sec-cn">通过 WellVoyage，你可以直接约到他们——比本国患者更快，费用比欧美更低。</div>
+    <div class="divider"></div>
+
+    <div class="grid-3">
+      <div class="doc-card">
+        <div class="role">Thoracic Oncology</div>
+        <h3>Chief Physician L.</h3>
+        <div class="title">National Cancer Center, Beijing</div>
+        <p>28 years in lung cancer surgery; leads one of the world's highest-volume thoracic oncology programs. Minimally invasive lobectomy series: 6,000+ cases.</p>
+        <div class="doc-anchors">
+          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
+          <span class="anchor-cost">💰 ~1/3–1/5 of US pricing</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="role">Cardiac Surgery</div>
+        <h3>Director W.</h3>
+        <div class="title">Fuwai Hospital, Beijing</div>
+        <p>20+ years of adult cardiac surgery at the world's #1-volume heart center. CABG, valve repair/replacement, TAVI — outcomes tracked in national registries.</p>
+        <div class="doc-anchors">
+          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
+          <span class="anchor-cost">💰 ~1/4 of US pricing</span>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="role">Neurosurgery</div>
+        <h3>Professor Z.</h3>
+        <div class="title">Beijing Tiantan Hospital</div>
+        <p>15+ years at a global top-3 neurosurgical center. Awake craniotomy for eloquent-cortex gliomas; 400+ skull-base procedures.</p>
+        <div class="doc-anchors">
+          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
+          <span class="anchor-cost">💰 ~1/3–1/4 of US pricing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-bar">
+      <span class="en">Not only better access — also lower cost than treating at home.</span>
+      <span class="cn">不但安排得更好，还比你在本国看病更便宜。</span>
+      <a href="#contact">Book a Doctor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHO WE ARE + CASES (5%) ================= -->
 <section id="about">
   <div class="container">
-    <h2>关于我们<span class="en en">About WellVoyage</span></h2>
+    <div class="sec-kicker">The Other 5% · Who Arranges All This</div>
+    <h2>One Pair of Trusted Hands</h2>
     <div class="divider"></div>
-    <div style="max-width:880px;margin:0 auto 40px;padding:28px 32px;background:var(--card);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;box-shadow:0 8px 24px rgba(15,76,78,.07);">
-      <div style="font-size:18.5px;color:var(--teal);line-height:2;letter-spacing:.5px;">连接世界患者与中国顶尖医疗资源的高端医疗康养旅行服务商——顶尖名医、先进技术、快速通道，与一场深度的中国文化之旅。</div>
-      <div class="en" style="font-size:14.5px;color:var(--gold);font-style:italic;margin-top:12px;letter-spacing:.5px;">Where world-class care meets a journey well taken.</div>
+
+    <div class="who">
+      <div class="en"><b>WellVoyage 安途康悦</b> — a China-based premium medical travel company serving international patients. One bilingual concierge team holds your hand from the first message to full recovery: medical-record translation, direct specialist appointments, transparent locked-in pricing, treatment coordination, and 30-day post-discharge follow-up.</div>
+      <div class="cn">从第一条留言到完全康复，一个双语管家团队全程托底：病历翻译 · 名医直约 · 报价透明锁定 · 治疗协调 · 出院后 30 天随访。</div>
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <h3>公司简介<span class="en en">Company Overview</span></h3>
-        <p>安途康悦（WellVoyage）是一家立足中国、面向全球的高端医疗康养旅行服务商。我们以双品牌运营：<b>WellVoyage</b> 承载以顶尖名医为核心的临床就医安排、快速服务通道与全程管家服务；<b>Jade &amp; Qi（玉与气）</b>则代表我们的高端康养系列——甄选住宿、私人接待与深度中国文化之旅，以东方康养美学为每一次治疗之旅赋予从容与愉悦。让"来中国就医"成为一段安心、值得托付的旅程。</p>
-        <p class="en-text">WellVoyage is a China-based premium medical travel company serving international patients. We operate two complementary brands: <b>WellVoyage</b> — clinical journeys anchored by China's leading specialists, with priority access and end-to-end concierge; and <b>Jade &amp; Qi</b> — our signature wellness line of curated stays, private transfers, and immersive Chinese cultural journeys, infusing every trip with the aesthetics of Eastern well-being.</p>
+
+    <div class="grid-3">
+      <div class="case-mini">
+        <div class="flag">🇮🇩</div>
+        <h4>A Father's Cancer, A Family's Hope</h4>
+        <p>Lung cancer IIIB, Jakarta. Immuno + surgery + TCM integrative recovery in Beijing — full journey 11 weeks.</p>
+        <div class="cost">Total: ~29% of his US quote</div>
       </div>
-      <div class="card">
-        <h3>我们的使命<span class="en en">Our Mission</span></h3>
-        <p>让世界共享中国顶尖医疗资源。中国拥有全球最丰富的临床经验密度、先进的应用型技术与高效的医疗服务体系；我们以专业、合规、有温度的服务，把这些资源转化为国际患者触手可及的价值，并让每一次康复之旅都成为一次中国文化的美好相遇。</p>
-        <p class="en-text">To open China's world-class medical excellence to the world — pairing unmatched surgical experience and advanced techniques with hospitality worthy of the journey.</p>
+      <div class="case-mini">
+        <div class="flag">🇸🇦</div>
+        <h4>From Riyadh, A Second Opinion</h4>
+        <p>HER2+ breast cancer. Treated in Shanghai after a 3-week turnaround from first inquiry to first infusion.</p>
+        <div class="cost">Total: ~31% of her UK quote</div>
+      </div>
+      <div class="case-mini">
+        <div class="flag">🇰🇿</div>
+        <h4>A Child's Leukemia Journey</h4>
+        <p>Pediatric ALL, Almaty. CAR-T therapy in Beijing for an 8-year-old — family housed near hospital throughout.</p>
+        <div class="cost">Total: ~25% of the German quote</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 中国医疗优势 ================= -->
-<section class="why-china" id="why-china">
+<!-- ================= FLOW ================= -->
+<section style="padding-top:0;">
   <div class="container">
-    <div class="sec-head">
-      <div class="sec-kicker">Why China for Medical Care</div>
-      <h2>A New Global Choice for Treatment</h2>
-      <p>Why China? The numbers speak for themselves — authoritative data from <i>The Lancet</i>, <i>JAMA</i> and China's National Health Commission is changing how international patients choose where to receive care.</p>
-      <div class="sec-head-cn">全球医疗新选择 · 为什么是中国 —— 《柳叶刀》《美国医学会杂志》与国家卫健委的权威数据，正让越来越多国际患者重新认识中国医疗</div>
-    </div>
-
-    <!-- 顶部震撼大数字 -->
-    <div class="why-china-hero">
-      <div class="big-num">91.5<small>/100</small></div>
-      <div class="big-meta">
-        <h3>Beijing, China · <i>The Lancet</i> HAQ Index</h3>
-        <p>The Healthcare Access &amp; Quality (HAQ) Index measures treatable mortality across 32 conditions. Beijing scores <b>91.5</b> — ahead of the United States at 88.7. From 1990 to 2016, China rose 35.5 points: one of the largest absolute gains ever recorded.</p>
-        <div class="big-vs">
-          <span><b>Beijing, CN</b>91.5</span>
-          <span><b>USA</b>88.7</span>
-          <span><b>UK</b>90.5</span>
-        </div>
-        <div class="big-cn">北京 · 《柳叶刀》医疗质量与可及性指数（HAQ）91.5 分，超越美国全国 88.7 分 —— 1990–2016 年中国整体提升 35.5 分，为全球最大绝对进步之一 · 数据来源：The Lancet GBD 2016</div>
-      </div>
-    </div>
-
-    <!-- 5 条横向大板：每项优势一个超大核心数字 -->
-    <div class="china-rows">
-
-      <div class="cn-row">
-        <div class="cn-row-num">
-          <span class="num">8.6<span class="unit">天</span></span>
-          <div class="num-tag">Avg. Hospital Stay</div>
-        </div>
-        <div class="cn-row-body">
-          <div class="cn-row-head">
-            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-            <h3>Speed</h3><span class="cn-en-cn">效率</span>
-          </div>
-          <p class="cn-lead">10.15B outpatient visits in 2024. China schedules in days, not months.</p>
-          <ul>
-            <li>Hip replacement: <b>2–4 wk</b> (US 3–6 mo)</li>
-            <li>Cardiac surgery: <b>1–3 wk</b> (US 2–4 mo)</li>
-            <li>Cancer consult: <b>3–7 days</b> (US 2–6 wk)</li>
-            <li>IVF cycle: <b>1–2 wk</b> (US 1–3 mo)</li>
-          </ul>
-          <div class="cn-source">Source: NHC 2025; Merritt Hawkins; NHS England</div>
-          <div class="cn-zh-block">
-            <p class="cn-zh-lead">2024 年中国 101.5 亿次门诊量，平均住院仅 8.6 天——就医节奏全球领先。</p>
-            <ul>
-              <li>髋关节置换：<b>2–4 周</b>（美 3–6 月）</li>
-            <li>心脏手术：<b>1–3 周</b>（美 2–4 月）</li>
-            <li>癌症专家会诊：<b>3–7 天</b>（美 2–6 周）</li>
-            <li>IVF 周期：<b>1–2 周</b>（美 1–3 月）</li>
-            </ul>
-            <div class="cn-source">来源：国家卫健委 2025；Merritt Hawkins；NHS England</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cn-row">
-        <div class="cn-row-num">
-          <span class="num">14,000+<span class="unit">例</span></span>
-          <div class="num-tag">Cardiac Surgeries / Year</div>
-        </div>
-        <div class="cn-row-body">
-          <div class="cn-row-head">
-            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-            <h3>Technology</h3><span class="cn-en-cn">技术</span>
-          </div>
-          <p class="cn-lead">World-leading experience density: the busiest centers perform procedures that take a lifetime to accumulate elsewhere.</p>
-          <ul>
-            <li>Da Vinci / robotic surgery: <b>110,000+</b>/yr</li>
-            <li>Targeted therapy share: <b>36%</b></li>
-            <li>Proton &amp; heavy-ion centers: <b>8+</b></li>
-            <li>CAR-T therapy: <b>1/10</b> Western price</li>
-          </ul>
-          <div class="cn-source">Source: JAMA, The Lancet, NHC 2025</div>
-          <div class="cn-zh-block">
-            <p class="cn-zh-lead">全球最繁忙的医疗中心积累下别人一辈子的临床量——经验密度即技术。</p>
-            <ul>
-              <li>达芬奇/机器人手术：<b>110,000+</b> 例/年</li>
-            <li>靶向治疗占比：<b>36%</b></li>
-            <li>质子重离子中心：<b>8+</b> 家</li>
-            <li>CAR-T 治疗：<b>西方 1/10</b> 价格</li>
-            </ul>
-            <div class="cn-source">来源：JAMA, The Lancet, NHC 2025</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cn-row">
-        <div class="cn-row-num">
-          <span class="num">35.5<small>万例/天</small></span>
-          <div class="num-tag">Outpatient Visits / Day</div>
-        </div>
-        <div class="cn-row-body">
-          <div class="cn-row-head">
-            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-            <h3>Quality</h3><span class="cn-en-cn">质量</span>
-          </div>
-          <p class="cn-lead">Outcomes benchmarked against HAQ, JAMA and NHC: China ranks top globally on treatable-cause mortality.</p>
-          <ul>
-            <li>HAQ Index: <b>91.5</b>/100 — Beijing 91.5 vs US 88.7</li>
-            <li>5-year cancer survival: <b>+10pp</b> over 10 yrs</li>
-            <li>IVF live birth rate: <b>≈ 50%</b> (Western 35%)</li>
-            <li>Joint replacement 10-yr survival: <b>96%+</b></li>
-          </ul>
-          <div class="cn-source">Source: The Lancet, NHC 2025</div>
-          <div class="cn-zh-block">
-            <p class="cn-zh-lead">可治疗死因死亡率与可及性指数（HAQ）：中国主要病种处于全球领先水平。</p>
-            <ul>
-              <li>HAQ 指数：<b>91.5</b>/100 — 北京 91.5 vs 美国 88.7</li>
-            <li>5 年癌症生存率：10 年 <b>+10pp</b></li>
-            <li>试管婴儿活产率：<b>≈ 50%</b>（西方 35%）</li>
-            <li>关节置换 10 年生存率：<b>96%+</b></li>
-            </ul>
-            <div class="cn-source">来源：The Lancet, NHC 2025</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cn-row">
-        <div class="cn-row-num">
-          <span class="num">60–90<small>%</small></span>
-          <div class="num-tag">Cost Savings</div>
-        </div>
-        <div class="cn-row-body">
-          <div class="cn-row-head">
-            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-            <h3>Price</h3><span class="cn-en-cn">价格</span>
-          </div>
-          <p class="cn-lead">Transparent, all-inclusive pricing — typically 60–90% lower than US private hospitals for equivalent quality.</p>
-          <ul>
-            <li>Cardiac bypass: <b>US $130k → CN $15k</b></li>
-            <li>IVF cycle: <b>US $20k → CN $3k</b></li>
-            <li>Hip replacement: <b>US $40k → CN $8k</b></li>
-            <li>CAR-T therapy: <b>US $1M → CN $100k</b></li>
-          </ul>
-          <div class="cn-source">Source: NHC 2025; multi-center pricing</div>
-          <div class="cn-zh-block">
-            <p class="cn-zh-lead">透明打包价，同等质量下普遍比美国私立医院低 60–90%。</p>
-            <ul>
-              <li>心脏搭桥：<b>美 $13 万 → 中 $1.5 万</b></li>
-            <li>试管周期：<b>美 $2 万 → 中 $3k</b></li>
-            <li>髋关节置换：<b>美 $4 万 → 中 $8k</b></li>
-            <li>CAR-T 治疗：<b>美 $100 万 → 中 $10 万</b></li>
-            </ul>
-            <div class="cn-source">来源：NHC 2025，多中心比价</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cn-row">
-        <div class="cn-row-num">
-          <span class="num">59<small>园</small></span>
-          <div class="num-tag">Visa-Free Countries</div>
-        </div>
-        <div class="cn-row-body">
-          <div class="cn-row-head">
-            <svg class="cn-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l4 8 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z"/></svg>
-            <h3>Access</h3><span class="cn-en-cn">便利</span>
-          </div>
-          <p class="cn-lead">59 countries enjoy visa-free entry — and most others receive visa-on-arrival within 48 hours.</p>
-          <ul>
-            <li>Visa-free: <b>59</b> countries</li>
-            <li>Visa-on-arrival: <b>30+</b> countries</li>
-            <li>Medical visa processing: <b>3–5</b> working days</li>
-            <li>Direct flights from <b>80+</b> cities</li>
-          </ul>
-          <div class="cn-source">Source: National Immigration Administration 2025</div>
-          <div class="cn-zh-block">
-            <p class="cn-zh-lead">59 国免签，多数其他国家 48 小时内可办理落地签。</p>
-            <ul>
-              <li>免签国家：<b>59</b> 国</li>
-            <li>落地签：<b>30+</b> 国</li>
-            <li>医疗签证办理：<b>3–5</b> 个工作日</li>
-            <li>直飞城市：<b>80+</b> 个</li>
-            </ul>
-            <div class="cn-source">来源：国家移民管理局 2025</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Lancet 引用块 -->
-    <div class="cn-quote">
-      <p>"China recorded one of the largest absolute gains in healthcare quality globally — a 35.5-point increase from 1990 to 2016."</p>
-      <div class="qsrc">— <i>The Lancet</i>, Global Burden of Disease Study · HAQ Index</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= 服务体系 ================= -->
-<section style="padding-top:0;" id="services">
-  <div class="container">
-    <h2>服务体系<span class="en en">Our Service Portfolio</span></h2>
+    <div class="sec-kicker">How It Works</div>
+    <h2>Six Steps, One Concierge</h2>
     <div class="divider"></div>
-    <div class="grid-4">
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/consult.png" alt="名医医疗"></div>
-        <h3>名医医疗<span class="en en">Expert-Led Care</span></h3>
-        <p>直通中国顶级名医及其团队：优先预约、方案预审、病历翻译、多语种陪诊、国际部快速通道，全程由专家团队把关。</p>
-        <p class="en-text">Priority appointments with China's top specialists, medical record translation, bilingual accompaniment, and dedicated fast-track channels.</p>
-      </div>
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/hotel-suite.png" alt="甄选住宿"></div>
-        <h3>甄选住宿<span class="en en">Curated Stays</span></h3>
-        <p>医院周边高端协议酒店与康养度假酒店，支持特殊餐食（清真/素食/医疗餐）、无障碍房型与医疗设备进房。</p>
-        <p class="en-text">Handpicked luxury hotels near partner hospitals and wellness resorts — with dietary, accessibility, and medical-support options.</p>
-      </div>
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/chauffeur.png" alt="专车接待"></div>
-        <h3>专车接待<span class="en en">Private Transport</span></h3>
-        <p>双语司机专车接送机、全程随行管家、术后特殊转运安排，从落地那一刻起无需操心任何行程细节。</p>
-        <p class="en-text">Airport meet-and-greet, bilingual chauffeurs, dedicated concierge, and post-procedure transfer support — from touchdown to takeoff.</p>
-      </div>
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/culture-tea.png" alt="文化之旅"></div>
-        <h3>文化之旅<span class="en en">Cultural Journeys</span></h3>
-        <p>康复期定制中国文化体验：岭南风物、中医理疗、山水静养、茶道食养——由持牌旅行社合作交付，安全合规。</p>
-        <p class="en-text">Tailored recovery-friendly cultural experiences — Lingnan heritage, TCM wellness, scenic retreats — delivered with licensed travel partners.</p>
-      </div>
+    <div class="flow">
+      <div class="step"><h4>Free Assessment</h4><p>Send your condition — get an honest answer within 48h.</p></div>
+      <div class="step"><h4>Visa &amp; Arrival</h4><p>We handle the invitation letters and transfers.</p></div>
+      <div class="step"><h4>Specialist Consult</h4><p>Direct appointment, records pre-translated.</p></div>
+      <div class="step"><h4>Treatment</h4><p>Locked-in transparent pricing, interpreter bedside.</p></div>
+      <div class="step"><h4>Discharge &amp; Follow-up</h4><p>Full records in your language, meds in hand.</p></div>
+      <div class="step"><h4>30-Day Recovery Tracking</h4><p>We still call after you fly home.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= 项目介绍 ================= -->
-<section class="adv" id="programs">
+<!-- ================= BONUS (tail) ================= -->
+<section class="bonus" style="padding:56px 0;">
   <div class="container">
-    <h2>核心项目<span class="en en">Signature Programs</span></h2>
+    <div class="sec-kicker">The Cherry on Top</div>
+    <h2>And While You're Here…</h2>
+    <p class="sec-sub">Curated stays, private transfers, and cultural journeys — included when you wish. Because recovery deserves a good trip too.</p>
+    <div class="sec-cn">顺便，把这段旅程也过好——甄选住宿、专车接送、文化之旅，需要即安排。康复值得一段好旅程。</div>
     <div class="divider"></div>
     <div class="grid-3">
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/medicine-tech.png" alt="胸外科卓越计划"></div>
-        <h3>胸外科卓越计划<span class="en en">Thoracic Excellence Program（旗舰）</span></h3>
-        <p>以何建行教授团队的无管微创技术体系为核心，面向国际肺部疾病患者：单孔胸腔镜、自主呼吸麻醉、加速康复路径。由团队完成方案设计与手术交付，术后两天即可下床活动，康复期可衔接文化之旅。</p>
-        <p class="en-text">Our flagship program built around Prof. Jianxing He's tubeless minimally-invasive thoracic surgery — uniportal VATS under spontaneous breathing, with accelerated recovery and a cultural journey in convalescence.</p>
-      <div class="card-cta"><a class="btn btn-teal" href="#contact">预约专家评估 Enquire</a></div>
+      <div class="bonus-card">
+        <div class="img" style="background-image:url('images/hotel-suite.png');"></div>
+        <div class="bd"><h4>Curated Stays</h4><p>Hand-picked hotels and serviced suites near your hospital, negotiated corporate rates.</p></div>
       </div>
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/hearing.png" alt="听力健康"></div>
-        <h3>听力健康与平衡康复<span class="en en">Hearing &amp; Balance Care</span></h3>
-        <p>听觉植入（人工耳蜗）、耳畸形修复、眩晕与耳鸣管理、助听器验配——依托国内顶尖耳科专家团队，覆盖从儿童到老年的听力重建需求，配套家庭陪同行程。</p>
-        <p class="en-text">Cochlear implantation, ear reconstruction, vertigo &amp; tinnitus management, and hearing-aid fitting by China's leading ear specialists — with family-friendly itineraries.</p>
-      <div class="card-cta"><a class="btn btn-outline" href="#contact">预约评估 Enquire</a></div>
+      <div class="bonus-card">
+        <div class="img" style="background-image:url('images/chauffeur.png');"></div>
+        <div class="bd"><h4>Private Transfers</h4><p>English-speaking chauffeurs, airport to hospital to hotel — one fixed price.</p></div>
       </div>
-      <div class="card has-img">
-        <div class="card-img-wrap"><img src="images/screening.png" alt="高管健检"></div>
-        <h3>高管健检与中医康养<span class="en en">Executive Screening &amp; TCM Wellness</span></h3>
-        <p>世界级设备的高管级健康筛查（当天出报告）、中医体质调理、药膳食养与静养行程。低门槛、高体验，是家庭与团体客户的理想入口项目。</p>
-        <p class="en-text">Executive-grade health screening with same-day results, personalized TCM programs, and restorative retreats — an ideal entry program for families and groups.</p>
-      <div class="card-cta"><a class="btn btn-outline" href="#contact">预约咨询 Enquire</a></div>
+      <div class="bonus-card">
+        <div class="img" style="background-image:url('images/culture-tea.png');"></div>
+        <div class="bd"><h4>Cultural Journeys</h4><p>Taiji mornings, tea ceremonies, the Great Wall — for family and for recovery days.</p></div>
       </div>
     </div>
+    <a class="bonus-link" href="https://wellvoyage-wellness.pages.dev" target="_blank">Explore the full Wellness Collection → wellvoyage-wellness.pages.dev</a>
   </div>
 </section>
 
-<!-- ================= 专家团队 ================= -->
-<section id="experts">
+<!-- ================= CONTACT ================= -->
+<section id="contact" style="padding-top:0;">
   <div class="container">
-    <h2>专家团队<span class="en en">Our Medical Experts</span></h2>
-    <div class="divider"></div>
-
-    <!-- 何建行 主推 -->
-    <div class="doc-feature">
-      <div class="doc-portrait">
-        <div class="seal">何</div>
-        <div class="nm">何建行</div>
-        <div class="nm-en en">Prof. Jianxing He, MD, PhD</div>
-      </div>
-      <div>
-        <h3>首席专家 · 胸外科</h3>
-        <div class="sub en">Chief Advisor — Thoracic Surgery ｜ 国家呼吸医学中心主任 · 广州呼吸健康研究院院长 · 欧洲科学院院士（2026）</div>
-        <ul>
-          <li>全球首创"无管（Tubeless）"微创胸外科技术体系：无气管插管、无胸腔引流管、无尿管，2011 年完成全球首例无管单孔胸腔镜肺癌根治术</li>
-          <li>团队年手术量 13,000+ 台、肺移植 110+ 台，经验密度全球领先；"无管"技术 2022 年入选哈佛大学医学教科书</li>
-          <li>发表国际论文 750+ 篇（H 指数 69），创办《Journal of Thoracic Disease》《Annals of Translational Medicine》两本 SCI 期刊</li>
-          <li>技术获英国皇家外科学院、爱丁堡皇家外科学院授权培训认证；梅奥诊所、麻省总医院等 600 余位国际医护曾来华进修交流</li>
-          <li>2025 年获评全国"最美医生"；国家科技进步奖、何梁何利奖获得者</li>
-          <li>2025 年 11 月，法国患者专程来华接受其主刀的无管手术，术后两日即可散步（南方+ 等媒体公开报道）</li>
-        </ul>
-        <div class="doc-tags">
-          <span>Tubeless VATS 全球首创</span><span>欧洲科学院院士</span><span>哈佛教科书收录</span><span>750+ 国际论文</span><span>法国患者来华主刀案例</span>
-        </div>
-        <p class="en-text" style="color:#7d938d;">Pioneer of tubeless minimally-invasive thoracic surgery (world-first tubeless uniportal lobectomy, 2011). His team performs 13,000+ procedures annually; the technique is featured in Harvard Medical School textbooks. Author of 750+ international publications; member of the Academia Europaea (2026). In Nov 2025, a French patient travelled to China for his personally performed tubeless resection — walking within two days (publicly reported).</p>
-      </div>
-    </div>
-
-    <div style="height:28px;"></div>
-
-    <!-- 梁恒瑞 -->
-    <div class="doc-feature">
-      <div class="doc-portrait">
-        <div class="seal">梁</div>
-        <div class="nm">梁恒瑞</div>
-        <div class="nm-en en">Dr. Liang Hengrui</div>
-      </div>
-      <div>
-        <h3>核心专家 · 胸外科</h3>
-        <div class="sub en">Specialist — Thoracic Surgery ｜ 何建行教授无管微创团队核心成员 · "南山学者"特聘教授 · 国家呼吸医学中心</div>
-        <ul>
-          <li>首位完成美国 AATS、欧洲 ESTS、日本 JLCS 三大国际胸外科协会奖励"全满贯"的中国青年学者</li>
-          <li>AATS-杜克大学及 ESTS-苏黎世大学 Fellow，专注胸外科微创手术与 AI 辅助诊疗</li>
-          <li>参编非插管胸外科手术国际专家共识 3 项，以第一作者发表国际论文 70+ 篇</li>
-        </ul>
-        <div class="doc-tags">
-          <span>AATS/ESTS/JLCS 满贯</span><span>杜克 & 苏黎世 Fellow</span><span>70+ 一作国际论文</span><span>AI 辅助诊疗</span>
-        </div>
-        <p class="en-text" style="color:#7d938d;">Core member of Prof. He's tubeless team and the first Chinese scholar to sweep the AATS, ESTS and JLCS international awards. AATS–Duke and ESTS–Zurich fellow; co-author of three international consensuses on non-intubated thoracic surgery; 70+ first-author publications.</p>
-      </div>
-    </div>
-    <p style="font-size:12px;color:#94aca6;margin-top:16px;">注：以上专家信息均来自公开报道与官方渠道核实；宣传中我们始终采用"团队交付、专家把关"的合规表述。/ All expert credentials are drawn from publicly verifiable sources; our communications consistently use compliant "team-delivered, expert-supervised" language.</p>
-  </div>
-</section>
-
-<!-- ================= 案例库 ================= -->
-<section class="adv" id="cases">
-  <div class="container">
-    <h2>真实案例库<span class="en en">Patient Stories — Living Library</span></h2>
-    <div class="divider"></div>
-    <p style="max-width:760px;color:var(--muted);font-size:14.5px;margin-bottom:26px;">来自国际患者与访客的真实经历——每一条均标注来源（媒体报道 / 本人授权公开），持续更新。<span class="en" style="font-style:italic;color:#7d938d;">A living library of real international patient stories — each sourced from public media reports or authorized publication, updated regularly.</span></p>
-    <div class="case-tabs" id="caseTabs">
-      <button class="case-tab active" data-cat="all">全部 All</button>
-      <button class="case-tab" data-cat="thoracic">胸外科 Thoracic</button>
-      <button class="case-tab" data-cat="hearing">听力 Hearing</button>
-      <button class="case-tab" data-cat="wellness">康养健检 Wellness</button>
-    </div>
-    <div class="case-grid" id="caseGrid"><!-- 案例卡片由下方 CASES 数据自动渲染 --></div>
-    <p style="font-size:12px;color:#94aca6;margin-top:18px;">合规提示：案例仅作背景介绍，不构成疗效承诺；未公开报道且未获书面授权的案例不上架。/ Stories are illustrative, not a promise of outcome; unpublished or unauthorized cases are never listed.</p>
-  </div>
-</section>
-
-<!-- ================= 突出优势 ================= -->
-<section class="adv">
-  <div class="container">
-    <h2>为什么选择安途康悦<span class="en en">Why WellVoyage</span></h2>
-    <div class="divider"></div>
-    <div class="why-banner">
-      <img src="images/fast-track.png" alt="快速通道">
-      <p>从诊断到手术，以周计而非以月计。一名专属管家，全程打理诊疗之外的一切。
-      <span class="en">From diagnosis to surgery in weeks — not months. One dedicated concierge handles everything beyond the medicine.</span></p>
-    </div>
-    <table class="adv-table">
-      <tr><th style="width:22%;">优势维度</th><th style="width:39%;">我们提供的</th><th>对国际患者的意义</th></tr>
-      <tr>
-        <td>名医资源<br><span class="en" style="font-size:11.5px;color:var(--gold);">World-Class Specialists</span></td>
-        <td>以何建行教授为代表的中国顶级名医矩阵，覆盖胸外科、耳科、听力康复等领域；机构级合作通道，方案由专家团队亲自把关。</td>
-        <td>在欧美需排队数月的手术，在这里由全球经验密度最高的团队之一完成。/ Care delivered by teams whose case volume is unmatched worldwide.</td>
-      </tr>
-      <tr>
-        <td>技术领先<br><span class="en" style="font-size:11.5px;color:var(--gold);">Advanced Techniques</span></td>
-        <td>无管微创、单孔胸腔镜、3D 辅助听觉植入等国际前沿技术——多项为全球首创并写入国际教科书。</td>
-        <td>同等甚至更先进的术式，创伤更小、恢复更快。/ Frontier procedures — globally pioneered and textbook-recognized.</td>
-      </tr>
-      <tr>
-        <td>快速通道<br><span class="en" style="font-size:11.5px;color:var(--gold);">Priority Fast-Track</span></td>
-        <td>国际部绿色通道、优先预约与检查排期、病历预审与远程预诊，抵达即进入治疗流程。</td>
-        <td>以周计而非以月计：诊断到手术的时间被压缩至最短。/ From diagnosis to surgery in weeks — not months of waiting.</td>
-      </tr>
-      <tr>
-        <td>价值优势<br><span class="en" style="font-size:11.5px;color:var(--gold);">Exceptional Value</span></td>
-        <td>同代际技术与专家水准下，整体费用约为欧美私立医疗的 1/3–1/5，套餐透明报价。</td>
-        <td>以更少的花费获得顶尖专家的照护，并多收获一段文化旅程。/ Top-tier expertise at a fraction of Western private pricing.</td>
-      </tr>
-      <tr>
-        <td>全程管家<br><span class="en" style="font-size:11.5px;color:var(--gold);">End-to-End Concierge</span></td>
-        <td>签证指导、双语陪诊、专车接送、膳食安排、家属接待、术后随访——一名管家，全程负责。</td>
-        <td>患者与家属只需专注于康复，其余一切有人打理。/ One dedicated concierge handles everything beyond the medicine.</td>
-      </tr>
-      <tr>
-        <td>文化之旅<br><span class="en" style="font-size:11.5px;color:var(--gold);">Culture &amp; Recovery</span></td>
-        <td>康复期定制中国文化行程：中医理疗体验、岭南人文、山水静养、茶道食养，由持牌合作旅行社交付。</td>
-        <td>治疗与休养不再是冰冷的流程，而是一段值得铭记的东方之旅。/ Recovery becomes a memorable Eastern journey, not a clinical errand.</td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-<!-- ================= 服务流程（详细版 · 4 步） ================= -->
-<section style="background:linear-gradient(180deg,var(--paper),#eef7f3);" id="journey">
-  <div class="container">
-    <h2>服务流程<span class="en">The WellVoyage Journey — Four Steps, In Full Detail</span></h2>
-    <div class="divider"></div>
-    <p style="text-align:center;max-width:780px;margin:0 auto 32px;color:var(--muted);font-size:14px;line-height:1.85;">
-      从首次咨询到归国随访，四步全程由专属管家 1 对 1 陪同。<strong style="color:var(--teal-deep)">点击任意一步查看中英对照细节。</strong>
-      <span style="display:block;font-size:12px;font-style:italic;color:#94aca6;margin-top:6px;">Click any step to view bilingual details. A dedicated case manager stays with you throughout all four stages.</span>
-    </p>
-
-    <div class="flow-detailed">
-
-      <!-- Step 01 · 了解既往 -->
-      <details class="step-detailed">
-        <summary>
-          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h22l6 6v26a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><path d="M32 8v6h6"/><path d="M16 22h16M16 28h12M16 34h8"/><circle cx="13" cy="22" r="1.2" fill="currentColor"/><circle cx="13" cy="28" r="1.2" fill="currentColor"/><circle cx="13" cy="34" r="1.2" fill="currentColor"/></svg>
-          <h4>了解既往</h4>
-          <span class="sd-en">Case Intake</span>
-          <p class="sd-brief">收集病史与诉求，初步判断是否适合来华治疗，最快当天回应。</p>
-          <span class="sd-toggle">查看详情</span>
-        </summary>
-        <div class="sd-detail">
-          <div class="sd-grid">
-            <div>
-              <span class="sd-lang-tag">中文</span>
-              <span class="sd-label">我们做什么</span>
-              <ul><li>48 小时内匹配对应专科医生团队</li><li>评估既往治疗方案，识别加做检查项目</li><li>初步判断赴华治疗的可行性与大致路径</li></ul>
-              <span class="sd-label">您需提供</span>
-              <ul><li>诊断报告、影像光盘/DICOM 文件</li><li>既往治疗记录与用药清单</li><li>当前症状描述与本次就医诉求</li></ul>
-              <span class="sd-label">产出物</span>
-              <ul><li>《接收确认函》+ 初步可行性评估</li><li>如适合，列出「待补充资料」清单</li></ul>
-              <span class="sd-meta">48h 内首次回应</span><span class="sd-meta">完全免费</span>
-            </div>
-            <div>
-              <span class="sd-lang-tag">ENGLISH</span>
-              <span class="sd-label">What we do</span>
-              <p>We collect your medical history, imaging and treatment records, then match a specialist team within 48 hours and assess whether traveling to China for treatment is feasible.</p>
-              <span class="sd-label">You provide</span>
-              <ul><li>Diagnostic reports, imaging CD/DICOM</li><li>Treatment records &amp; medication list</li><li>Current symptoms &amp; goals</li></ul>
-              <span class="sd-label">Deliverables</span>
-              <ul><li>Written confirmation + preliminary assessment</li><li>"Missing items" checklist if applicable</li></ul>
-              <span class="sd-meta">48h first response</span><span class="sd-meta">Free of charge</span>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <!-- Step 02 · 定制方案 -->
-      <details class="step-detailed">
-        <summary>
-          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14h32M14 14v26M34 14v26M8 40h32"/><rect x="14" y="22" width="6" height="6"/><rect x="22" y="22" width="6" height="6"/><rect x="30" y="22" width="4" height="6"/><path d="M20 28h2M28 28h2M22 28h4"/><path d="M12 10l4 4M36 10l-4 4"/></svg>
-          <h4>定制方案</h4>
-          <span class="sd-en">Plan Design</span>
-          <p class="sd-brief">医学团队出具治疗方案，行程设计师出具旅行方案，合一交付。</p>
-          <span class="sd-toggle">查看详情</span>
-        </summary>
-        <div class="sd-detail">
-          <div class="sd-grid">
-            <div>
-              <span class="sd-lang-tag">中文</span>
-              <span class="sd-label">我们做什么</span>
-              <ul><li>何建行院士领衔的医学团队拟定治疗方案</li><li>行程设计师根据治疗节奏编排住宿与文化体验</li><li>医学 + 行程合一呈现，便于您与家人评估</li></ul>
-              <span class="sd-label">产出物</span>
-              <ul><li>《个性化治疗方案书》（含术式、医院、医生）</li><li>《行程与预算明细》（含签证、机票、住宿、餐食）</li><li>视频 / 书面与主诊医生的一次直接沟通</li></ul>
-              <span class="sd-label">您的决策</span>
-              <ul><li>方案可调整 1–2 次直到您完全确认</li><li>确认后进入档期预约，不收任何锁定费</li></ul>
-              <span class="sd-meta">5–10 工作日</span>
-            </div>
-            <div>
-              <span class="sd-lang-tag">ENGLISH</span>
-              <span class="sd-label">What we do</span>
-              <p>Our medical team (led by Prof. Jianxing He) drafts your treatment plan, and our journey designer builds a parallel itinerary. Both are delivered together as one combined document.</p>
-              <span class="sd-label">Plan contents</span>
-              <ul><li>Recommended procedure &amp; clinical rationale</li><li>Hospital, lead doctor, length of stay</li><li>Pre-op tests required in your home country</li><li>Recovery accommodation &amp; cultural experience</li><li>Total budget breakdown (no hidden fees)</li></ul>
-              <span class="sd-label">Modifications</span>
-              <p>You may request revisions 1–2 times at no charge before final approval.</p>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <!-- Step 03 · 约定行程 -->
-      <details class="step-detailed">
-        <summary>
-          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="28" rx="2"/><path d="M8 20h32M14 12V8M34 12V8"/><path d="M16 28h6M16 32h10M28 28h4M28 32h6"/><circle cx="22" cy="30" r="1" fill="currentColor"/><circle cx="34" cy="30" r="1" fill="currentColor"/></svg>
-          <h4>约定行程</h4>
-          <span class="sd-en">Book &amp; Confirm</span>
-          <p class="sd-brief">锁定专家档期、医院床位、机票酒店、签证邀请函，全套一站完成。</p>
-          <span class="sd-toggle">查看详情</span>
-        </summary>
-        <div class="sd-detail">
-          <div class="sd-grid">
-            <div>
-              <span class="sd-lang-tag">中文</span>
-              <span class="sd-label">我们做什么</span>
-              <ul><li>直锁何建行 / 梁恒瑞团队主诊医生档期</li><li>预订医院床位、手术室、ICU 备用</li><li>预订国际机票 + 治疗期住宿（医院旁）</li><li>出具签证邀请函、协助办理医疗签证</li><li>安排接送机、安排 24h 中文管家</li></ul>
-              <span class="sd-label">您需配合</span>
-              <ul><li>护照扫描件、签证照片</li><li>支付首款（合同金额的 30%–50%）</li><li>确认主诊医生与手术日期</li></ul>
-              <span class="sd-meta">付款后 3 工作日内出邀请函</span>
-            </div>
-            <div>
-              <span class="sd-lang-tag">ENGLISH</span>
-              <span class="sd-label">What we do</span>
-              <p>Once you confirm the plan, we lock the specialist's OR slot, hospital bed, flights, hotel and issue your visa invitation letter — all handled by your dedicated case manager.</p>
-              <span class="sd-label">What's locked</span>
-              <ul><li>Surgeon &amp; anesthesiologist on calendar</li><li>Operating room + ICU contingency</li><li>Hospital-adjacent recovery apartment</li><li>Round-trip flights (flexible change policy)</li><li>Medical visa invitation letter</li></ul>
-              <span class="sd-label">Payment</span>
-              <p>30%–50% deposit to lock dates; balance due 7 days before arrival.</p>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <!-- Step 04 · 治疗与照护 -->
-      <details class="step-detailed">
-        <summary>
-          <svg class="sd-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 8v10c0 10-7 16-14 18-7-2-14-8-14-18V14l14-8z"/><path d="M18 22l4 4 8-8"/><path d="M14 38c2 2 6 4 10 4s8-2 10-4"/></svg>
-          <h4>治疗与照护</h4>
-          <span class="sd-en">Care &amp; Recovery</span>
-          <p class="sd-brief">从下飞机到出院，再到归国随访，整段旅程有专属管家与翻译陪同。</p>
-          <span class="sd-toggle">查看详情</span>
-        </summary>
-        <div class="sd-detail">
-          <div class="sd-grid">
-            <div>
-              <span class="sd-lang-tag">中文</span>
-              <span class="sd-label">在院期间</span>
-              <ul><li>机场专车接送、医学陪同翻译</li><li>入院手续代办、术前检查陪同</li><li>每日管家查房、家属沟通简报</li></ul>
-              <span class="sd-label">康复期</span>
-              <ul><li>术后专属营养餐、康复理疗安排</li><li>VIP 文化体验（按体力定制）</li><li>出院小结中文 + 英文双语版</li></ul>
-              <span class="sd-label">归国后</span>
-              <ul><li>30 天免费远程随访</li><li>本地医生对接、必要时返华复查</li><li>健康档案永久归档，可随时调阅</li></ul>
-              <span class="sd-meta">中英翻译</span><span class="sd-meta">24h 管家</span>
-            </div>
-            <div>
-              <span class="sd-lang-tag">ENGLISH</span>
-              <span class="sd-label">In-hospital</span>
-              <ul><li>Airport pickup with medical escort</li><li>Admission, pre-op tests &amp; translation</li><li>Daily family briefings from case manager</li></ul>
-              <span class="sd-label">Recovery</span>
-              <ul><li>Customised nutrition &amp; physiotherapy</li><li>Optional cultural experiences tailored to stamina</li><li>Bilingual discharge summary</li></ul>
-              <span class="sd-label">After return</span>
-              <ul><li>30 days free tele-follow-up</li><li>Local doctor liaison &amp; return visits when needed</li><li>Lifetime medical record archive</li></ul>
-            </div>
-          </div>
-        </div>
-      </details>
-
+    <div class="contact-cta">
+      <h2>Ask About Your Condition</h2>
+      <div class="en-sub">Tell us the diagnosis. Within 48 hours, you'll know whether China can help — and exactly what it costs.</div>
+      <div class="cn-sub">按病种免费评估——告诉我们诊断结果，48 小时内你会知道中国能不能帮到你，以及确切费用。</div>
+      <a class="btn-gold" href="mailto:hello@wellvoyagecare.com">Get My Free Assessment</a>
+      <a class="btn-ghost" href="#specialties">Re-explore the 8 Specialties</a>
     </div>
   </div>
 </section>
 
-<!-- ================= 合作医院（5 城 Tab） ================= -->
-<section class="partner-hospitals" id="hospitals">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-kicker">Our Partner Hospitals</div>
-      <h2>A Partner Hospital in Every Major Hub</h2>
-      <p>Top-tier accredited hospitals across Beijing, Shanghai, Guangzhou, Shenzhen and Chengdu — the clinical home bases and referral network of our specialists, including Prof. He Jianxing's thoracic team.</p>
-      <div class="sec-head-cn">合作医院网络 · 覆盖五大医疗高地（北京 / 上海 / 广州 / 深圳 / 成都）· 全国顶级三甲医院 · 何建行院士团队的临床合作单位</div>
-    </div>
-
-    <div class="city-tabs">
-      <button class="city-tab active" data-city="beijing">Beijing</button>
-      <button class="city-tab" data-city="shanghai">Shanghai</button>
-      <button class="city-tab" data-city="guangzhou">Guangzhou</button>
-      <button class="city-tab" data-city="shenzhen">Shenzhen</button>
-      <button class="city-tab" data-city="chengdu">Chengdu</button>
-    </div>
-
-    <!-- 北京 -->
-    <div class="city-panel active" data-panel="beijing">
-      <div class="city-panel-head">
-        <h3>Beijing</h3>
-        <span class="city-en">China's Capital</span>
-        <span class="city-tag">北京 · 国家医学中心 · 顶级综合 + 专科</span>
-      </div>
-      <div class="hospital-grid">
-        <div class="hospital-card">
-          <h4 class="h-name-en">Fuwai Hospital, CAMS · National Center for Cardiovascular Diseases</h4>
-          <div class="h-zh">中国医学科学院阜外医院</div>
-          <div class="h-spec-en">Cardiology · National Center for Cardiovascular Diseases</div>
-          <ul class="h-feat-en">
-            <li>World's largest cardiac center</li>
-            <li><b>14,000+</b> cardiac surgeries/year</li>
-            <li>Operating unit of National Center for CVDs</li>
-            <li>Cardiac surgery, cardiology, coronary disease</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">心血管病 · 国家心血管病中心</span>
-            <ul>
-              <li><b>全球最大</b>心脏中心</li>
-              <li><b>14,000+ 例</b>心脏手术/年</li>
-              <li>国家心血管病中心依托单位</li>
-              <li>心外科、心内科、冠心病</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Peking Union Medical College Hospital (PUMCH)</h4>
-          <div class="h-zh">中国医学科学院北京协和医院</div>
-          <div class="h-spec-en">Comprehensive · National #1 Tertiary</div>
-          <ul class="h-feat-en">
-            <li>Directly under National Health Commission</li>
-            <li><b>100+ years</b>, consecutively #1 in China</li>
-            <li>Center for difficult & critical cases</li>
-            <li>VIP international services</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 中国顶级三甲 #1</span>
-            <ul>
-              <li>国家卫生健康委直属</li>
-              <li><b>100+ 年</b>历史，连续多年全国综合排名第一</li>
-              <li>疑难重症诊治中心</li>
-              <li>国际部 VIP 服务</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">National Cancer Center / Cancer Hospital, CAMS</h4>
-          <div class="h-zh">中国医学科学院肿瘤医院</div>
-          <div class="h-spec-en">Oncology · National Cancer Center</div>
-          <ul class="h-feat-en">
-            <li>Operating unit of National Cancer Center</li>
-            <li>One of Asia's largest oncology centers</li>
-            <li>National leader in lung, esophageal, breast cancer</li>
-            <li>National molecular diagnostics platform</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">肿瘤 · 国家癌症中心</span>
-            <ul>
-              <li>国家癌症中心依托单位</li>
-              <li>亚洲最大肿瘤防治中心之一</li>
-              <li>肺癌、食管癌、乳腺癌全国领先</li>
-              <li>国家肿瘤分子诊断平台</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Peking University People's Hospital</h4>
-          <div class="h-zh">北京大学人民医院</div>
-          <div class="h-spec-en">Comprehensive · Hematology, Orthopedics, Hepatobiliary</div>
-          <ul class="h-feat-en">
-            <li>Hematology Institute · National Clinical Research Center</li>
-            <li>Joint disease diagnosis & treatment center</li>
-            <li>World-leading hepatobiliary surgery</li>
-            <li>PKU clinical partner of Prof. Jianxing He</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 血液科、骨科、肝胆外科</span>
-            <ul>
-              <li>血液病研究所 · 国家临床医学研究中心</li>
-              <li>骨关节病诊疗中心</li>
-              <li>肝胆外科国际领先</li>
-              <li>何建行院士北京大学医学部临床合作单位</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <!-- 上海 -->
-    <div class="city-panel" data-panel="shanghai">
-      <div class="city-panel-head">
-        <h3>Shanghai</h3>
-        <span class="city-en">International Medical Hub</span>
-        <span class="city-tag">上海 · 国家医学中心 · 涉外医疗高地</span>
-      </div>
-      <div class="hospital-grid">
-        <div class="hospital-card">
-          <h4 class="h-name-en">Zhongshan Hospital, Fudan University</h4>
-          <div class="h-zh">复旦大学附属中山医院</div>
-          <div class="h-spec-en">Comprehensive · Cardiology, Liver Cancer, Respiratory</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (Cardiology)</li>
-            <li><b>#1</b> in liver cancer treatment</li>
-            <li>Prof. He's cardiothoracic surgery partner</li>
-            <li>Top-5 comprehensive ranking nationally</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 心血管、肝癌、呼吸</span>
-            <ul>
-              <li>国家临床医学研究中心（心血管）</li>
-              <li>肝癌诊疗全国第一</li>
-              <li>何建行院士心胸外科合作单位</li>
-              <li>综合排名全国前 5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Ruijin Hospital, SJTU</h4>
-          <div class="h-zh">上海交通大学医学院附属瑞金医院</div>
-          <div class="h-spec-en">Comprehensive · Hematology, Endocrinology, Burns</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (Hematology)</li>
-            <li><b>#1</b> in burns & plastic surgery</li>
-            <li>World-leading minimally invasive surgery</li>
-            <li>Rich experience with international patients</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 血液、内分泌、烧伤</span>
-            <ul>
-              <li>国家临床医学研究中心（血液）</li>
-              <li>灼伤整形全国第一</li>
-              <li>微创外科国际领先</li>
-              <li>国际患者接待经验丰富</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Fudan University Shanghai Cancer Center</h4>
-          <div class="h-zh">复旦大学附属肿瘤医院</div>
-          <div class="h-spec-en">Oncology · National Oncology Flagship</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (Oncology)</li>
-            <li>National leader in breast, lung, colorectal cancer</li>
-            <li>China's first <b>CAR-T</b> cell immunotherapy pilot</li>
-            <li>Dr. Hengrui Liang's oncology consulting unit</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">肿瘤 · 全国肿瘤防治旗舰</span>
-            <ul>
-              <li>国家肿瘤临床医学研究中心</li>
-              <li>乳腺癌、肺癌、结直肠癌全国领先</li>
-              <li><b>CAR-T 细胞免疫疗法</b>中国首批试点</li>
-              <li>梁恒瑞教授肿瘤学顾问单位</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Shanghai Proton and Heavy Ion Center</h4>
-          <div class="h-zh">上海市质子重离子医院</div>
-          <div class="h-spec-en">Oncology · Proton & Heavy Ion Radiotherapy</div>
-          <ul class="h-feat-en">
-            <li>China's first integrated <b>proton-heavy ion</b> center</li>
-            <li><b>3rd globally</b> with this technology</li>
-            <li>Non-invasive precision radiotherapy</li>
-            <li>Wide indications: lung, liver, prostate cancer</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">肿瘤 · 质子重离子放疗</span>
-            <ul>
-              <li>中国首家 <b>质子重离子一体化</b>治疗机构</li>
-              <li>全球第三家拥有此技术的医院</li>
-              <li>无创精准放疗</li>
-              <li>肺癌、肝癌、前列腺癌适应症广</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <!-- 广州 -->
-    <div class="city-panel" data-panel="guangzhou">
-      <div class="city-panel-head">
-        <h3>Guangzhou</h3>
-        <span class="city-en">South China's Medical Center</span>
-        <span class="city-tag">广州 · 何建行院士团队主驻地 · 华南医疗高地</span>
-      </div>
-      <div class="hospital-grid">
-        <div class="hospital-card">
-          <h4 class="h-name-en">The First Affiliated Hospital of Guangzhou Medical University</h4>
-          <div class="h-zh">广州医科大学附属第一医院</div>
-          <div class="h-spec-en">Respiratory · National Respiratory Medicine Center</div>
-          <ul class="h-feat-en">
-            <li>Prof. Jianxing He's home hospital</li>
-            <li>National Respiratory Center (Honorary Director: Prof. Zhong Nanshan)</li>
-            <li><b>#1</b> thoracic surgery (Fudan specialty ranking)</li>
-            <li>World's richest experience in lung cancer MIS</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">呼吸 · 国家呼吸医学中心</span>
-            <ul>
-              <li><b>何建行院士</b>所在医院</li>
-              <li>国家呼吸医学中心（钟南山院士任名誉主任）</li>
-              <li>胸外科全国第一（复旦专科声誉榜）</li>
-              <li>肺癌微创手术全球最丰富经验</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">The First Affiliated Hospital, Sun Yat-sen University</h4>
-          <div class="h-zh">中山大学附属第一医院</div>
-          <div class="h-spec-en">Comprehensive · Top in South China</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (Nephrology)</li>
-            <li><b>#1</b> comprehensive in South China</li>
-            <li>National leader in organ transplantation</li>
-            <li>Mature international medical services</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 华南综合实力最强</span>
-            <ul>
-              <li>国家临床医学研究中心（肾脏病）</li>
-              <li>综合排名华南区第一</li>
-              <li>器官移植全国领先</li>
-              <li>国际医疗部服务成熟</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Sun Yat-sen University Cancer Center</h4>
-          <div class="h-zh">中山大学肿瘤防治中心</div>
-          <div class="h-spec-en">Oncology · Largest Cancer Center in South China</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (Oncology)</li>
-            <li>World leader in NPC prevention & treatment</li>
-            <li>Flagship for early cancer screening in South China</li>
-            <li>Standardized MDT care</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">肿瘤 · 华南最大肿瘤专科</span>
-            <ul>
-              <li>国家肿瘤临床医学研究中心</li>
-              <li>鼻咽癌防治世界领先</li>
-              <li>华南癌症早筛旗舰</li>
-              <li>多学科联合诊疗 (MDT) 标准化</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Nanfang Hospital, Southern Medical University</h4>
-          <div class="h-zh">南方医科大学南方医院</div>
-          <div class="h-spec-en">Comprehensive · GI, Neurology, Plastic Surgery</div>
-          <ul class="h-feat-en">
-            <li>National Clinical Research Center (GI Diseases)</li>
-            <li>South China Neurosurgery Center</li>
-            <li><b>#1</b> plastic surgery in South China</li>
-            <li>Mature international medical department</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 消化、神经、整形</span>
-            <ul>
-              <li>国家临床医学研究中心（消化病）</li>
-              <li>华南神经外科中心</li>
-              <li>整形美容华南第一</li>
-              <li>涉外医疗部成熟</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <!-- 深圳 -->
-    <div class="city-panel" data-panel="shenzhen">
-      <div class="city-panel-head">
-        <h3>Shenzhen</h3>
-        <span class="city-en">Innovation &amp; the Greater Bay</span>
-        <span class="city-tag">深圳 · 深港医疗协作 · 创新高地</span>
-      </div>
-      <div class="hospital-grid">
-        <div class="hospital-card">
-          <h4 class="h-name-en">The University of Hong Kong - Shenzhen Hospital</h4>
-          <div class="h-zh">香港大学深圳医院</div>
-          <div class="h-spec-en">Comprehensive · HK-Shenzhen Flagship</div>
-          <ul class="h-feat-en">
-            <li>Demonstration hospital of HK-Shenzhen cooperation</li>
-            <li>Affiliate of HKU Medical School</li>
-            <li>Adopts Hong Kong medical management system</li>
-            <li>Direct billing with international insurance</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 深港合作旗舰</span>
-            <ul>
-              <li>深港合作示范医院</li>
-              <li>香港大学医学院附属</li>
-              <li>采用香港医疗管理体系</li>
-              <li>国际商业保险直付</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Cancer Hospital, CAMS - Shenzhen</h4>
-          <div class="h-zh">中国医学科学院肿瘤医院深圳医院</div>
-          <div class="h-spec-en">Oncology · National Cancer Center Branch</div>
-          <ul class="h-feat-en">
-            <li>National Cancer Center, Shenzhen branch</li>
-            <li>Only national oncology hospital in Shenzhen</li>
-            <li>Beijing specialists on regular Shenzhen rotation</li>
-            <li>Proton therapy in planning</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">肿瘤 · 国家级肿瘤分院</span>
-            <ul>
-              <li>国家癌症中心深圳分院</li>
-              <li>深圳唯一国家肿瘤专科医院</li>
-              <li>原北京专家定期深圳出诊</li>
-              <li>质子治疗规划中</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Peking University Shenzhen Hospital</h4>
-          <div class="h-zh">北京大学深圳医院</div>
-          <div class="h-spec-en">Comprehensive · Smart Healthcare Demonstration</div>
-          <ul class="h-feat-en">
-            <li>PKU affiliate, smart-hospital benchmark</li>
-            <li>Pilot of <b>5G + AI</b> remote consultation</li>
-            <li>Rich experience with HK/Macau/Taiwan/international patients</li>
-            <li>International screening & check-up center</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 智慧医疗示范</span>
-            <ul>
-              <li>北京大学附属，智慧医院建设标杆</li>
-              <li>5G + AI 远程会诊试点</li>
-              <li>港澳台及国际患者接待经验丰富</li>
-              <li>体检与早筛中心国际化</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Shenzhen People's Hospital</h4>
-          <div class="h-zh">深圳市人民医院</div>
-          <div class="h-spec-en">Comprehensive · Shenzhen's Largest Tertiary</div>
-          <ul class="h-feat-en">
-            <li>Affiliate of Jinan University</li>
-            <li>Earliest comprehensive tertiary in the SEZ</li>
-            <li>Leading hepatobiliary & GI medicine in Shenzhen</li>
-            <li>Convenient access for HK/Macau patients</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 深圳最大三甲</span>
-            <ul>
-              <li>暨南大学附属</li>
-              <li>深圳经济特区成立最早的综合性三甲</li>
-              <li>肝胆外科、消化内科深圳领先</li>
-              <li>面向港澳患者便捷</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <!-- 成都 -->
-    <div class="city-panel" data-panel="chengdu">
-      <div class="city-panel-head">
-        <h3>Chengdu</h3>
-        <span class="city-en">Western China's Medical Hub</span>
-        <span class="city-tag">成都 · 西部综合第一 · 最佳康养城市</span>
-      </div>
-      <div class="hospital-grid">
-        <div class="hospital-card">
-          <h4 class="h-name-en">West China Hospital, Sichuan University</h4>
-          <div class="h-zh">四川大学华西医院</div>
-          <div class="h-spec-en">Comprehensive · #1 in Western China</div>
-          <ul class="h-feat-en">
-            <li><b>4</b> National Clinical Research Centers</li>
-            <li>Fudan ranking <b>#2</b> nationally (multi-year)</li>
-            <li><b>#1</b> anesthesiology & stomatology nationally</li>
-            <li>Prof. He's thoracic surgery western coordination center</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 西部综合实力第一</span>
-            <ul>
-              <li>国家临床医学研究中心（4 个）</li>
-              <li>复旦版医院综合排名 <b>全国第 2</b>（连续多年）</li>
-              <li>麻醉科、口腔医学全国第一</li>
-              <li>何建行院士胸外科西部协作中心</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Sichuan Provincial People's Hospital</h4>
-          <div class="h-zh">四川省人民医院</div>
-          <div class="h-spec-en">Comprehensive · Sichuan Provincial Flagship</div>
-          <ul class="h-feat-en">
-            <li>Affiliate of UESTC</li>
-            <li>Sichuan Provincial Emergency Center</li>
-            <li>Partner of Western International Medical Center</li>
-            <li>Specialty in wellness & chronic disease management</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">综合 · 四川省医学龙头</span>
-            <ul>
-              <li>电子科技大学附属</li>
-              <li>四川省急救中心</li>
-              <li>西部国际医疗中心合作单位</li>
-              <li>康养与慢病管理特色</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">Teaching Hospital of Chengdu University of TCM</h4>
-          <div class="h-zh">成都中医药大学附属医院</div>
-          <div class="h-spec-en">Integrative Medicine · Rehabilitation & Wellness</div>
-          <ul class="h-feat-en">
-            <li>National TCM Clinical Research Base</li>
-            <li>Integrative medicine flagship</li>
-            <li>Post-surgery TCM rehabilitation specialty</li>
-            <li>Priority partner for wellness itineraries</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">中西医结合 · 康复康养</span>
-            <ul>
-              <li>国家中医临床研究基地</li>
-              <li>中西医结合旗舰</li>
-              <li>术后中医康复特色</li>
-              <li>康养站行程优先对接</li>
-            </ul>
-          </div>
-        </div>
-        <div class="hospital-card">
-          <h4 class="h-name-en">West China Hospital of Stomatology, Sichuan University</h4>
-          <div class="h-zh">四川大学华西口腔医院</div>
-          <div class="h-spec-en">Stomatology · National Dental Flagship</div>
-          <ul class="h-feat-en">
-            <li>Birthplace of modern Chinese stomatology</li>
-            <li>National Clinical Research Center (Oral Diseases)</li>
-            <li><b>#1</b> implants, orthodontics, maxillofacial surgery</li>
-            <li>Mature international patient services</li>
-          </ul>
-          <div class="h-zh-block">
-            <span class="h-zh-spec">口腔 · 全国口腔医学旗舰</span>
-            <ul>
-              <li>中国现代口腔医学发源地</li>
-              <li>国家口腔疾病临床医学研究中心</li>
-              <li>种植、正畸、颌面外科全国第一</li>
-              <li>国际患者服务成熟</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-      </div>
-
-  </div>
-</section>
-
-<!-- ================= 常见疑问 FAQ ================= -->
-<section style="background:var(--paper);" id="faq">
-  <div class="container">
-    <h2>常见疑问<span class="en">Frequently Asked Questions</span></h2>
-    <div class="divider"></div>
-    <div class="faq-list-cn">
-
-      <details class="faq-item-cn">
-        <summary>材料不齐全可以开始吗？<span class="faq-en">Can we start with incomplete records?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>可以。我们先评估已有资料，列出「待补充资料」清单；多数检查可在来华后入院前补做。越早开始沟通，越早拿到可行的方案与档期建议。</div>
-          <div><strong>English</strong>Yes. We assess what you already have, list any missing items, and most additional tests can be completed in China shortly after arrival. Starting earlier means getting a viable plan and earlier scheduling guidance.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>全程费用是多少？包含哪些项目？<span class="faq-en">What is the total cost and what does it include?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>《方案书》中逐项列出：医院治疗费、医生费、麻醉费、住院床位费、药品费、检查费、机票、住宿、接送、翻译、管家服务。无隐藏费用，不收加急费。</div>
-          <div><strong>English</strong>Your plan document itemises every cost: hospital, surgeon, anaesthesia, room, medication, tests, flights, accommodation, transfers, translation and case management. No hidden fees, no rush surcharges.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>可以指定某位专家主刀吗？<span class="faq-en">Can I request a specific lead surgeon?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>可以。何建行院士与梁恒瑞主任的档期直锁，需在 Step 02 方案阶段就确认。其他专家由我们根据您的病情匹配最合适的人选，并提供简历与学术背景。</div>
-          <div><strong>English</strong>Yes. Prof. Jianxing He and Dr. Hengrui Liang have priority calendar access — please confirm at the planning stage (Step 02). For other specialists, we match the most appropriate expert and share their full CV.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>签证怎么办？需要多长时间？<span class="faq-en">How do visas work and how long do they take?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>我们出具医疗签证邀请函 + 医院预约单，多数国家 5–10 个工作日出签；落地后可停留 30–90 天（视国籍）。我们同步准备邀请函英文版与使馆回函模板。</div>
-          <div><strong>English</strong>We issue the medical visa invitation letter and hospital booking confirmation. Most countries process in 5–10 working days; stays of 30–90 days are permitted depending on nationality.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>家属可以同行吗？<span class="faq-en">Can family members travel together?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>强烈推荐。我们为陪同家属单独安排住宿（医院旁或同栋）、签证同步办理，并安排文化体验行程（故宫导览、私家茶道等），让家人既照顾您，也拥有属于自己的旅程。</div>
-          <div><strong>English</strong>Highly encouraged. We arrange separate accommodation near the hospital, sync visa applications, and plan cultural experiences (private Forbidden City tour, tea ceremony, etc.) so your family enjoys their own journey too.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>治疗后多久可以坐飞机回国？<span class="faq-en">How soon can I fly home after treatment?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>视术式而定。微创手术通常 5–10 天，开放手术 14–21 天。主诊医生会在出院评估时书面确认「适航」，并出具适航证明供航司备案。</div>
-          <div><strong>English</strong>Depends on the procedure. Minimally invasive: typically 5–10 days. Open surgery: 14–21 days. Your surgeon issues a written "fit-to-fly" certificate at discharge for airline submission.</div>
-        </div>
-      </details>
-
-      <details class="faq-item-cn">
-        <summary>归国后还能联系到医生吗？<span class="faq-en">Can I still contact the doctor after returning home?</span></summary>
-        <div class="faq-body">
-          <div><strong>中文</strong>可以。30 天免费远程视频随访由主诊医生亲自进行；之后可通过专属管家转达，长期保留档案。必要时安排返华复查，全程一对一。</div>
-          <div><strong>English</strong>Yes. The first 30 days include free tele-consultation with your lead surgeon; thereafter your case manager relays messages indefinitely. Return visits can be arranged when needed.</div>
-        </div>
-      </details>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= 咨询联系（部署版） ================= -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>联系我们 · 开启您的旅程<span class="en en">Start Your Journey</span></h2>
-    <div class="divider"></div>
-    <div class="contact-wrap">
-      <div class="contact-info">
-        <h3>与您的专属管家对话</h3>
-        <p style="font-size:14.5px;color:var(--muted);">无论是病情咨询、方案定制，还是合作洽谈，我们承诺一个工作日内回复（中 / 英 / 俄 / 阿拉伯语等）。</p>
-        <div style="height:14px;"></div>
-        <div class="contact-line"><div class="ico">✉</div><div><b>Email</b><span id="cfgEmail">hello@wellvoyagecare.com</span></div></div>
-        <div class="contact-line"><div class="ico">💬</div><div><b>WhatsApp / Telegram</b><span id="cfgWA">+86 186 2088 4609</span></div></div>
-        <div class="contact-line"><div class="ico">🏛</div><div><b>所在地</b><span>中国 · 广州</span></div></div>
-        <div class="contact-line"><div class="ico">🕑</div><div><b>响应时间</b><span>工作日 24 小时内回复</span></div></div>
-        <p class="contact-note">隐私承诺：您提交的信息仅用于本次咨询沟通，不会被用于营销或共享给第三方。提交即表示您同意我们的隐私政策。</p>
-      </div>
-      <div class="form-card">
-        <h3>预约咨询 / 获取方案</h3>
-        <div class="sub en">Tell us about your goals — a journey designer will reply within one working day.</div>
-        <div class="form-msg" id="formMsg"></div>
-        <form id="leadForm" novalidate>
-          <div class="form-row">
-            <div class="form-field"><label>您的姓名 / Full Name *</label><input name="name" type="text" required placeholder="Name"></div>
-            <div class="form-field"><label>国家 / Country</label><input name="country" type="text" placeholder="Country"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label>邮箱 / Email *</label><input name="email" type="email" required placeholder="you@email.com"></div>
-            <div class="form-field"><label>WhatsApp / 电话</label><input name="phone" type="text" placeholder="+00 000 0000"></div>
-          </div>
-          <div class="form-field"><label>感兴趣的方向 / I'm interested in</label>
-            <select name="interest">
-              <option value="">请选择 Please select</option>
-              <option>胸外科 / 肺部手术 Thoracic Surgery</option>
-              <option>听力健康 / 人工耳蜗 Hearing &amp; Implants</option>
-              <option>高管健检 Executive Screening</option>
-              <option>中医康养 / 康养旅程 TCM Wellness Retreat</option>
-              <option>机构合作 / Partnership</option>
-              <option>其他 Other</option>
-            </select>
-          </div>
-          <div class="form-field"><label>您的需求 / Message *</label><textarea name="message" rows="4" required placeholder="请简要描述健康状况、时间与预算 / Your health goals, timing &amp; budget…"></textarea></div>
-          <button class="btn btn-gold" type="submit" style="width:100%;">提交咨询 · Send Enquiry</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="container">
-    <div class="fn">安途康悦</div>
-    <div class="fe en">WELLVOYAGE × JADE &amp; QI ｜ Where World-Class Care Meets a Journey Well Taken</div>
-    <div style="margin-top:22px;">医疗康养旅行服务 ｜ 中英多语种服务 ｜ 中国·广州</div>
-    <div class="en" style="color:#9dc0b8;font-size:12px;margin-top:6px;">Premium Medical &amp; Wellness Travel ｜ Multilingual Service ｜ Guangzhou, China</div>
-    <div class="disclaimer">
-      免责声明：安途康悦为医疗服务协调与旅行服务机构，不直接提供医疗诊断与治疗服务；所有诊疗服务由持牌合作医疗机构及其专业团队提供并负责。本材料所涉专家信息均来自公开渠道，仅用于背景介绍，不构成任何疗效承诺或医疗建议。治疗结果因个体情况而异，请遵循主诊医生的专业意见。<br>
-      Disclaimer: WellVoyage is a medical-travel coordination and hospitality company; clinical services are delivered solely by licensed partner hospitals and their medical teams. Expert information herein is drawn from public sources for background purposes and does not constitute a promise of outcome or medical advice. Individual results vary — always follow the guidance of your treating physician.
-    </div>
-  </div>
+  <b>WellVoyage 安途康悦 × Jade &amp; Qi</b> — Connecting world patients with China's medical excellence.<br>
+  © 2026 WellVoyage · Arranging world-class treatment in China · English-first site for international patients
 </footer>
 
 <script>
-/* ============================================================
-   案例库数据（随时更新版）
-   ------------------------------------------------------------
-   ★ 如何新增案例：复制下面 { ... } 一整段，改字段即可，页面自动渲染。
-   ★ 如何下架案例：把 published 改为 false（保留数据，前台不显示）。
-   ★ 字段说明：
-     cat      分类：thoracic(胸外科) / hearing(听力) / wellness(康养健检)
-     flag     国旗 emoji；patient 患者署名（匿名可用"M 先生"等）
-     date     时间；img 配图路径（images/ 目录下）
-     source   来源标注：媒体报道名称或"本人授权"，务必真实
-   ============================================================ */
-const CASES = [
-  {
-    cat: "thoracic", flag: "🇫🇷", patient: "G 先生 · 36 岁 · 法国",
-    title: "跨国求医：5cm 纵隔肿瘤的无管微创手术",
-    date: "2025-11",
-    img: "images/medicine-tech.png",
-    summary: "法国患者专程飞抵广州，接受何建行教授主刀的全球首创『无管』微创手术——无气管插管、无胸腔引流管、无尿管。",
-    highlight: "术后两天即可下床散步，康复期衔接文化之旅。",
-    source: "南方+ 等媒体公开报道",
-    published: true
-  },
-  {
-    cat: "hearing", flag: "🇳🇬", patient: "M. · 17 岁 · 尼日利亚",
-    title: "从寂静到有声：跨越重洋的人工耳蜗植入",
-    date: "2025-11",
-    img: "images/hearing.png",
-    summary: "重度听障少年在本国无治疗机会，来华完成人工耳蜗植入手术，全程不足一小时，为该中心首例非洲青少年听障患者。",
-    highlight: "开机那一刻，母亲在旁落泪——声音的世界重新打开。",
-    source: "新快报等媒体公开报道",
-    published: true
-  },
-  {
-    cat: "wellness", flag: "🇬🇧", patient: "国际访客 · 英国等",
-    title: "一张 MRI 账单的对比：$70 vs $1,800",
-    date: "2024–2026",
-    img: "images/screening.png",
-    summary: "越来越多的国际访客在社交平台分享来华就医体验：胃镜、影像、口腔与康养项目，以欧美私立 1/3–1/5 的价格获得同等水准服务。",
-    highlight: "\"Thirteen days, one diagnosis, €4,000 saved.\"",
-    source: "TikTok / 国际媒体公开分享",
-    published: true
-  },
-  {
-    cat: "wellness", flag: "🌏", patient: "示例：待补充案例",
-    title: "【模板】高管健检 + 中医康养 7 日行程",
-    date: "",
-    img: "images/tcm.png",
-    summary: "此处为示范条目：复制本段修改为真实案例后，把 published 改为 true 即可上架（未获授权前前台不显示）。",
-    highlight: "示例字段：当天出报告 / 体质调理方案 / 康养行程。",
-    source: "需本人书面授权或媒体公开来源",
-    published: false
-  }
-];
-
-/* ---------- 渲染与筛选（以下无需改动） ---------- */
-(function(){
-  const grid = document.getElementById('caseGrid');
-  const tabs = document.querySelectorAll('.case-tab');
-  const CAT_LABEL = { thoracic:"胸外科 Thoracic", hearing:"听力 Hearing", wellness:"康养健检 Wellness" };
-
-  function render(cat){
-    grid.innerHTML = '';
-    CASES.filter(c => c.published && (cat==='all' || c.cat===cat)).forEach(c => {
-      const el = document.createElement('div');
-      el.className = 'case-card';
-      el.innerHTML = `
-        <div class="case-img">
-          <span class="case-cat">${CAT_LABEL[c.cat]||c.cat}</span>
-          <img src="${c.img}" alt="${c.title}">
-        </div>
-        <div class="case-body">
-          <h3>${c.flag} ${c.title}</h3>
-          <p><b style="color:var(--teal-deep);">${c.patient}</b>${c.date?' ｜ '+c.date:''}</p>
-          <p style="margin-top:6px;">${c.summary}</p>
-          <div class="case-highlight">✦ ${c.highlight}</div>
-          <div class="case-src">来源 Source：<b>${c.source}</b></div>
-        </div>`;
-      grid.appendChild(el);
-    });
-    if(!grid.children.length){
-      grid.innerHTML = '<p style="color:var(--muted);">该分类暂无已上架案例 / No published stories in this category yet.</p>';
-    }
-  }
-  tabs.forEach(t => t.addEventListener('click', () => {
-    tabs.forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    render(t.dataset.cat);
-  }));
-  render('all');
-})();
-
-/* ---------- 视频模块：加载失败自动降级为图片轮播 ---------- */
-(function(){
-  const video = document.getElementById('brandVideo');
-  const fallback = document.getElementById('videoFallback');
-  if(!video) return;
-  let ok = false;
-  video.addEventListener('canplay', () => { ok = true; });
-  video.addEventListener('error', showFallback);
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      if(!ok && (video.readyState === 0 || video.error)) showFallback();
-    }, 1200);
+function makeCarousel(rootId, interval){
+  const root=document.getElementById(rootId);
+  const track=root.querySelector('.car-track');
+  const slides=root.querySelectorAll('.car-slide');
+  const dotsBox=root.querySelector('.car-dots');
+  const prev=root.querySelector('.car-prev');
+  const next=root.querySelector('.car-next');
+  const bar=root.querySelector('.car-progress');
+  let idx=0, timer=null, tick=null, paused=false;
+  slides.forEach((_,i)=>{
+    const d=document.createElement('button');
+    d.className='car-dot'+(i===0?' on':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.addEventListener('click',()=>{go(i);reset();});
+    dotsBox.appendChild(d);
   });
-  function showFallback(){
-    if(!fallback) return;
-    video.style.display = 'none';
-    fallback.style.display = 'block';
-    const slides = fallback.querySelectorAll('.kb');
-    slides[0].classList.add('active');
-    let i = 0;
-    setInterval(() => {
-      slides[i].classList.remove('active');
-      i = (i + 1) % slides.length;
-      slides[i].classList.add('active');
-    }, 4500);
+  const dots=dotsBox.querySelectorAll('.car-dot');
+  function go(i){
+    idx=(i+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    dots.forEach((d,k)=>d.classList.toggle('on',k===idx));
   }
-})();
+  function reset(){
+    clearInterval(timer);clearInterval(tick);
+    if(paused)return;
+    let elapsed=0;
+    bar.style.width='0%';
+    tick=setInterval(()=>{elapsed+=50;bar.style.width=Math.min(100,elapsed/interval*100)+'%';},50);
+    timer=setInterval(()=>{go(idx+1);reset();},interval);
+  }
+  prev.addEventListener('click',()=>{go(idx-1);reset();});
+  next.addEventListener('click',()=>{go(idx+1);reset();});
+  root.addEventListener('mouseenter',()=>{paused=true;clearInterval(timer);clearInterval(tick);bar.style.width='0%';});
+  root.addEventListener('mouseleave',()=>{paused=false;go(idx);reset();});
+  // touch swipe
+  let sx=null;
+  root.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
+  root.addEventListener('touchend',e=>{
+    if(sx===null)return;
+    const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>40){go(idx+(dx<0?1:-1));reset();}
+    sx=null;
+  },{passive:true});
+  reset();
+}
+makeCarousel('carAdv',7000);
+makeCarousel('carSpec',9000);
 </script>
-
-<script>
-/* ============================================================
-   ★★ 站点配置 —— 部署上线时只需修改这里的几项 ★★
-   ------------------------------------------------------------
-   domain        正式域名（决定 sitemap/canonical 的占位需一并改）
-   email         ★ 接收咨询的邮箱 —— 建议用域名邮箱，如 hello@wellvoyagecare.com
-   whatsapp      ★ 你的 WhatsApp 号码（国际格式去 +，当前已设 8618620884609）
-   （表单投递：已接入 FormSubmit 免注册服务，提交直接送达上面的 email，
-     无需任何注册或配置；投递失败时自动降级为打开邮件草稿。）
-   ============================================================ */
-var SITE_CONFIG = {
-  domain:   "wellvoyagecare.com",
-  email:    "hello@wellvoyagecare.com",
-  whatsapp: "8618620884609"
-};
-(function(){
-  var burger=document.getElementById('navBurger'), nav=document.querySelector('.nav');
-  if(burger&&nav){ burger.addEventListener('click',function(){ nav.classList.toggle('open'); }); }
-
-  var form=document.getElementById('leadForm'), msg=document.getElementById('formMsg');
-  if(form){
-    form.addEventListener('submit', function(ev){
-      ev.preventDefault();
-      if(!form.checkValidity()){ form.reportValidity(); return; }
-      var fd=new FormData(form);
-      var interest=fd.get('interest')||'未选择';
-      var body=['Name 姓名: '+fd.get('name'),'Country 国家: '+fd.get('country'),
-                'Email: '+fd.get('email'),'Phone/WA: '+fd.get('phone'),
-                'Interest 意向: '+interest,'','Message 内容:',''+fd.get('message')].join('\n');
-      fetch('https://formsubmit.co/ajax/' + SITE_CONFIG.email, {
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body: JSON.stringify({
-          _subject: '[Website Enquiry] ' + fd.get('name') + ' — ' + interest,
-          _template: 'table',
-          'Name 姓名': fd.get('name'), 'Country 国家': fd.get('country'),
-          'Email': fd.get('email'), 'Phone/WA': fd.get('phone'),
-          'Interest 意向': interest, 'Message 内容': fd.get('message')
-        })
-      })
-        .then(function(r){
-          return r.json().catch(function(){ return {}; }).then(function(j){
-            if(r.ok && (j.success === true || j.success === 'true')){
-              showMsg('提交成功！我们将在 1 个工作日内回复。'); form.reset();
-            } else { throw 0; }
-          });
-        })
-        .catch(function(){
-          var subject='[Website Enquiry] '+fd.get('name')+' — '+interest;
-          var href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-          showMsg('网络投递失败，正在打开您的邮件客户端发送…（如仍未发送，请直接写信至 '+SITE_CONFIG.email+'）');
-          setTimeout(function(){ window.location.href=href; }, 600);
-        });
-    });
-  }
-  function showMsg(t,isErr){
-    if(!msg) return;
-    msg.className='form-msg'+(isErr?' err':'');
-    msg.style.display='block';
-    msg.textContent=t;
-  }
-})();
-
-// Hospital city tab switcher
-document.querySelectorAll('.city-tab').forEach(function(tab){
-  tab.addEventListener('click', function(){
-    var city = tab.getAttribute('data-city');
-    document.querySelectorAll('.city-tab').forEach(function(t){ t.classList.remove('active'); });
-    document.querySelectorAll('.city-panel').forEach(function(p){ p.classList.remove('active'); });
-    tab.classList.add('active');
-    var panel = document.querySelector('.city-panel[data-panel="' + city + '"]');
-    if(panel) panel.classList.add('active');
-  });
-});
-</script>
-
 </body>
 </html>
