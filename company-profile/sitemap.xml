@@ -3,8 +3,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wellvoyagecare.com/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://wellvoyagecare.com/articles/article-1-subxiphoid-thymectomy-myasthenia-gravis.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellvoyagecare.com/articles/article-2-subxiphoid-vs-transsternal-vs-robotic-thymectomy.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellvoyagecare.com/articles/article-3-subxiphoid-thymectomy-recovery-timeline.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
