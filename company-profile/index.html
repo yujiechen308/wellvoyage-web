@@ -43,14 +43,15 @@
 
   /* ===== nav ===== */
   .nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
-  .nav-in{max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .nav-in{max-width:1140px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
   .nav-brand{font-size:20px;font-weight:700;color:var(--teal);letter-spacing:2px;text-decoration:none;}
   .nav-brand small{display:block;font-size:9.5px;color:var(--gold);letter-spacing:2px;font-weight:400;font-style:italic;}
-  .nav-links{display:flex;gap:22px;list-style:none;flex-wrap:wrap;}
-  .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;letter-spacing:.5px;}
+  .nav-links{display:flex;gap:17px;list-style:none;flex-wrap:nowrap;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;letter-spacing:.5px;white-space:nowrap;}
+  .nav-links li{flex:0 0 auto;}
   .nav-links a:hover{color:var(--teal);}
   .nav-cta{background:var(--gold);color:var(--btn-fg);padding:9px 20px;border-radius:999px;font-size:13.5px;text-decoration:none;letter-spacing:1px;white-space:nowrap;}
-  @media(max-width:820px){.nav-links{display:none;}}
+  @media(max-width:1040px){.nav-links{display:none;}}
   @media(max-width:600px){
     .nav-in{padding:12px 16px;gap:10px;}
     .nav-brand{font-size:17px;letter-spacing:1px;}
@@ -81,6 +82,13 @@
   .stat .lab{font-size:15.5px;color:#dbeafe;margin-top:8px;line-height:1.6;}
   .stat .lab-cn{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px;}
   @media(max-width:760px){.stats-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){
+    .container{padding:0 20px;}
+    .stats-grid{gap:18px;padding:40px 0;}
+    .stat .num{font-size:38px;}
+    .stat .lab{font-size:13px;line-height:1.5;}
+    .stat .lab-cn{font-size:11.5px;}
+  }
 
   /* ===== generic card ===== */
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -190,13 +198,47 @@
   .hosp-strip .txt p{font-size:17.5px;color:#3a4a8a;line-height:1.8;}
   .hosp-strip .txt .cn{font-size:14px;color:#97a8d4;margin-top:8px;}
 
+  .hosp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;}
+  @media(max-width:1100px){.hosp-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:820px){.hosp-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.hosp-grid{grid-template-columns:1fr;}}
+  .hosp-tile{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;box-shadow:0 4px 14px var(--sh-soft);transition:transform .2s,box-shadow .2s;}
+  .hosp-tile:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--sh-soft);}
+  .hosp-tile .hosp-rank{font-size:11px;letter-spacing:1.5px;color:var(--acc-deep);font-weight:700;text-transform:uppercase;}
+  .hosp-tile .hosp-rank b{color:var(--acc-text);font-size:12px;}
+  .hosp-tile .hosp-name{font-size:14.5px;color:var(--teal);font-weight:700;margin-top:6px;line-height:1.35;}
+  .hosp-tile .hosp-loc{font-size:12px;color:var(--muted);font-style:italic;margin-top:3px;}
+  .hosp-tile .hosp-spec{font-size:12.5px;color:#3a4a8a;margin-top:8px;line-height:1.55;border-top:1px dashed var(--acc-t30);padding-top:8px;}
+  .hosp-source{margin-top:18px;font-size:12px;color:var(--muted);font-style:italic;text-align:center;}
+
   /* ===== doctors ===== */
-  .doc-card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:30px 28px;box-shadow:0 8px 26px var(--sh-soft);}
+  .doc-card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:30px 28px;box-shadow:0 8px 26px var(--sh-soft);display:flex;flex-direction:column;}
   .doc-card .role{font-size:12.5px;color:var(--acc-deep);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;}
   .doc-card h3{font-size:23px;color:var(--teal);margin:8px 0 4px;font-weight:700;}
+  .doc-card .cn-name{font-weight:600;color:var(--acc-text);font-size:20px;letter-spacing:1px;margin:0 2px;}
   .doc-card .title{font-size:14.5px;color:var(--muted);font-style:italic;}
   .doc-card p{font-size:15px;color:#3a4a8a;margin-top:14px;line-height:1.75;}
-  .doc-anchors{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+  .doc-card .doc-bio{font-size:14px;line-height:1.78;}
+  .doc-card.doc-star{position:relative;background:linear-gradient(135deg, var(--card) 0%, #fffbf2 100%);border-top:4px solid var(--gold);box-shadow:0 12px 34px var(--sh-soft);}
+  .doc-card.doc-star::before{content:"★ Featured";position:absolute;top:-12px;right:18px;background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:12px;box-shadow:0 4px 12px rgba(201,162,61,.35);}
+  .doc-top .grid-3{gap:22px;}
+
+  .doc-more-wrap{margin-top:48px;padding-top:34px;border-top:1px dashed var(--acc-t50);}
+  .doc-more-h{margin-bottom:18px;}
+  .doc-more-h b{display:block;font-size:18px;color:var(--teal);font-weight:700;margin-bottom:4px;}
+  .doc-more-h span{font-size:13px;color:var(--muted);}
+  .doc-more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;}
+  @media(max-width:1100px){.doc-more-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:640px){.doc-more-grid{grid-template-columns:1fr;}}
+  .doc-mini{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc-light);border-radius:10px;padding:14px 16px;box-shadow:0 4px 14px var(--sh-soft);transition:transform .2s,box-shadow .2s;}
+  .doc-mini:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--sh-soft);}
+  .doc-mini .dm-spec{font-size:11px;letter-spacing:1.5px;color:var(--acc-deep);font-weight:700;text-transform:uppercase;}
+  .doc-mini .dm-name{font-size:16px;color:var(--teal);font-weight:700;margin-top:6px;line-height:1.35;}
+  .doc-mini .dm-name .cn-name{font-size:14px;color:var(--acc-text);font-weight:600;}
+  .doc-mini .dm-aff{font-size:12px;color:var(--muted);font-style:italic;margin-top:3px;}
+  .doc-mini .dm-bio{font-size:12.5px;color:#3a4a8a;margin-top:8px;line-height:1.6;}
+  .doc-disclaimer{margin-top:24px;font-size:12.5px;color:var(--muted);line-height:1.7;background:#f8f7f1;border-left:3px solid var(--gold);padding:12px 16px;border-radius:6px;font-style:italic;}
+  .doc-anchors{display:flex;gap:10px;margin-top:auto;padding-top:16px;flex-wrap:wrap;}
   .doc-anchors span{font-size:13.5px;font-weight:700;padding:7px 16px;border-radius:999px;}
   .anchor-time{background:var(--acc-t12);border:1px solid var(--acc-t45);color:var(--acc-deep);}
   .anchor-cost{background:var(--acc-t12);border:1px solid var(--acc-t45);color:var(--acc-deep);}
@@ -211,9 +253,11 @@
   .who .cn{font-size:14px;color:#93a5cc;margin-top:14px;line-height:1.8;}
   .case-mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;}
   .case-mini .flag{font-size:22px;}
+  .case-mini .case-tag{display:inline-block;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--acc-deep);background:var(--acc-t12);border:1px solid var(--acc-t45);border-radius:999px;padding:4px 12px;}
   .case-mini h4{font-size:18.5px;color:var(--teal);margin-top:10px;line-height:1.4;font-weight:700;}
   .case-mini p{font-size:14.5px;color:var(--muted);margin-top:10px;line-height:1.7;}
   .case-mini .cost{margin-top:16px;font-size:16px;font-weight:700;color:var(--acc-deep);border-top:1px dashed var(--acc-t50);padding-top:12px;font-style:italic;}
+  .case-mini .case-src{margin-top:8px;font-size:11.5px;color:var(--muted);font-style:italic;opacity:.85;}
 
   /* ===== flow ===== */
   .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:step;}
@@ -262,10 +306,12 @@
   #advantages{background:linear-gradient(180deg,var(--paper),#f0f6ff);}
   #advantages .carousel{box-shadow:0 18px 48px var(--sh-soft);}
 
-  /* ===== nav 放大 ===== */
-  .nav-links a{font-size:15.5px;font-weight:700;}
-  .nav-cta{font-size:15px;font-weight:700;padding:11px 24px;}
-  .nav-brand{font-size:22px;}
+  /* ===== nav 放大（仅桌面，避免覆盖移动端媒体查询） ===== */
+  @media(min-width:601px){
+    .nav-links a{font-size:15.5px;font-weight:700;}
+    .nav-cta{font-size:15px;font-weight:700;padding:11px 24px;}
+    .nav-brand{font-size:22px;}
+  }
 </style>
 </head>
 <body>
@@ -804,62 +850,253 @@
 <section id="hospitals" style="padding-top:0;">
   <div class="container">
     <div class="hosp-strip">
-      <div class="big">20</div>
+      <div class="big">20+</div>
       <div class="txt">
-        <p><b style="color:var(--teal);">Partner hospitals in 5 major hubs.</b> Every hospital on our list ranks in China's national top-100 — Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu.</p>
-        <div class="cn">20 家合作医院遍布北京 · 上海 · 广州 · 深圳 · 成都，全部位于中国医院百强榜前列。</div>
+        <p><b style="color:var(--teal);">Representative tertiary hospitals, ranked across China's top specialties.</b> Every hospital below holds a national top-10 position in the Fudan-affiliated reputation ranking for its field — the same ranking used by Chinese doctors themselves.</p>
+        <div class="cn">20+ 家头部三甲医院，按复旦版《中国医院专科声誉排行榜》筛选，每家都在其专科领域位列全国前十——与中国医生同行使用的榜单一致。</div>
       </div>
-      <a class="nav-cta" href="#contact" style="text-decoration:none;">Get the Full Hospital List</a>
+      <a class="nav-cta" href="#contact" style="text-decoration:none;">Get Matched to the Right Hospital</a>
     </div>
+
+    <div class="hosp-grid">
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#1</b></div>
+        <div class="hosp-name">National Cancer Center / CICAMS</div>
+        <div class="hosp-loc">Beijing</div>
+        <div class="hosp-spec">Thoracic Oncology · Lung &amp; Esophageal Cancer · 11 years consecutive #1</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#2</b></div>
+        <div class="hosp-name">Shanghai Pulmonary Hospital</div>
+        <div class="hosp-loc">Shanghai · Tongji University</div>
+        <div class="hosp-spec">Thoracic Surgery · Single-port VATS · World's largest volume</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#3</b></div>
+        <div class="hosp-name">Shanghai Chest Hospital</div>
+        <div class="hosp-loc">Shanghai · SJTU</div>
+        <div class="hosp-spec">Thoracic Surgery · Da Vinci robotics · Tracheal reconstruction</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">National Center · <b>NRMCC</b></div>
+        <div class="hosp-name">Guangzhou Medical Univ. First Affiliated Hospital</div>
+        <div class="hosp-loc">Guangzhou</div>
+        <div class="hosp-spec">National Respiratory Medical Center · Tubeless VATS · Heart-Lung Transplant</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#1 Cardiology</b></div>
+        <div class="hosp-name">Fuwai Hospital</div>
+        <div class="hosp-loc">Beijing · CAMS</div>
+        <div class="hosp-spec">Cardiac Surgery · 14,000+ open-heart ops/year · World's #1 volume</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#1 Neuro</b></div>
+        <div class="hosp-name">Beijing Tiantan Hospital</div>
+        <div class="hosp-loc">Beijing · Capital Medical Univ.</div>
+        <div class="hosp-spec">Neurosurgery · Awake craniotomy · DBS · Top-3 global volume</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>Top-3</b></div>
+        <div class="hosp-name">Fudan University Zhongshan Hospital</div>
+        <div class="hosp-loc">Shanghai · Fudan Univ.</div>
+        <div class="hosp-spec">Thoracic Surgery · Anatomic segmentectomy · Esophageal CA · Cardiac</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">National Center</div>
+        <div class="hosp-name">Peking Union Medical College Hospital</div>
+        <div class="hosp-loc">Beijing · CAMS</div>
+        <div class="hosp-spec">Thymoma &amp; MG · Complex thoracic · Rare-disease referral center</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>#4</b></div>
+        <div class="hosp-name">West China Hospital</div>
+        <div class="hosp-loc">Chengdu · Sichuan Univ.</div>
+        <div class="hosp-spec">Thoracic Surgery · "Huaxi Method" VATS · Lung Transplant · Robotic</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>Top-5</b></div>
+        <div class="hosp-name">Sun Yat-sen University Cancer Center</div>
+        <div class="hosp-loc">Guangzhou · SYSU</div>
+        <div class="hosp-spec">Oncology · Precision radiotherapy · Immuno + targeted therapy</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">Fudan Rank · <b>Top-5</b></div>
+        <div class="hosp-name">Zhongshan Ophthalmic Center</div>
+        <div class="hosp-loc">Guangzhou · SYSU</div>
+        <div class="hosp-spec">Ophthalmology · Cataract · Corneal transplant · Top-3 nationally</div>
+      </div>
+
+      <div class="hosp-tile">
+        <div class="hosp-rank">National Referral</div>
+        <div class="hosp-name">Shanghai Ruijin Hospital</div>
+        <div class="hosp-loc">Shanghai · SJTU</div>
+        <div class="hosp-spec">Da Vinci thoracic · Subxiphoid thymectomy · Hematology · Endocrine</div>
+      </div>
+
+    </div>
+
+    <p class="hosp-source">Rankings cited: 复旦大学医院管理研究所《中国医院专科声誉排行榜》(2024-2025) · National Health Commission clinical key-specialty list · 复旦版每年 11 月发布最新年度榜单。</p>
   </div>
 </section>
 
-<!-- ================= DOCTORS (5%) ================= -->
+<!-- ================= DOCTORS / TOP EXPERTS (5%) ================= -->
 <section id="doctors" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="container">
-    <div class="sec-kicker">The 5% · The Doctors</div>
-    <h2>The Doctors Behind the Numbers</h2>
-    <p class="sec-sub">These are the names at the very top of their fields in China. <b>Through WellVoyage, you can book them directly</b> — faster than local patients, at a fraction of Western cost.</p>
-    <div class="sec-cn">通过 WellVoyage，你可以直接约到他们——比本国患者更快，费用比欧美更低。</div>
+    <div class="sec-kicker">The 5% · China's Leading Specialists</div>
+    <h2>China's Top Thoracic Surgery Experts</h2>
+    <p class="sec-sub">A look at the independent leaders shaping thoracic surgery in China today — drawn from the national reputation ranking and international society fellowships. <b>WellVoyage can help international patients access their expertise</b> through verified medical-coordination channels.</p>
+    <div class="sec-cn">这些是当前在中国胸外科领域最受认可的独立学科带头人——选自复旦版专科声誉排行榜与多个国际学会 Fellow 名录。<b>通过 WellVoyage 协调网络，国际患者可便捷获得其专家面诊与手术安排</b>。</div>
     <div class="divider"></div>
 
-    <div class="grid-3">
-      <div class="doc-card">
-        <div class="role">Thoracic Oncology</div>
-        <h3>Chief Physician L.</h3>
-        <div class="title">National Cancer Center, Beijing</div>
-        <p>28 years in lung cancer surgery; leads one of the world's highest-volume thoracic oncology programs. Minimally invasive lobectomy series: 6,000+ cases.</p>
+    <div class="grid-3 doc-top">
+
+      <div class="doc-card doc-star">
+        <div class="role">Featured · Thoracic Surgery · Tubeless VATS</div>
+        <h3>Prof. <span class="cn-name">何建行</span> He Jianxing</h3>
+        <div class="title">Guangzhou Medical University First Affiliated Hospital · National Respiratory Medical Center</div>
+        <p class="doc-bio">Director of Thoracic Surgery &amp; Chair of Oncology. <b>Inventor of the global-first tubeless (non-intubated) thoracoscopic technique</b> and the world's first naked-eye 3D surgical display. Led the team that completed China's first full VATS lobectomy (2009), first non-intubated thoracic surgery (2011), and 238 heart-lung &amp; lung transplants to date. 280+ papers in <i>NEJM / Lancet / JAMA / BMJ / Nat Med / JCO</i>; FACS &amp; FRCS fellow; State Council special allowance; National May 1st Labour Medal (2021).</p>
         <div class="doc-anchors">
-          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
-          <span class="anchor-cost">💰 ~1/3–1/5 of US pricing</span>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="role">Cardiac Surgery</div>
-        <h3>Director W.</h3>
-        <div class="title">Fuwai Hospital, Beijing</div>
-        <p>20+ years of adult cardiac surgery at the world's #1-volume heart center. CABG, valve repair/replacement, TAVI — outcomes tracked in national registries.</p>
-        <div class="doc-anchors">
-          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
-          <span class="anchor-cost">💰 ~1/4 of US pricing</span>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="role">Neurosurgery</div>
-        <h3>Professor Z.</h3>
-        <div class="title">Beijing Tiantan Hospital</div>
-        <p>15+ years at a global top-3 neurosurgical center. Awake craniotomy for eloquent-cortex gliomas; 400+ skull-base procedures.</p>
-        <div class="doc-anchors">
-          <span class="anchor-time">⏱ Direct appointment: 3–7 days</span>
+          <span class="anchor-time">⏱ Direct consult: 3–7 days</span>
           <span class="anchor-cost">💰 ~1/3–1/4 of US pricing</span>
         </div>
       </div>
+
+      <div class="doc-card">
+        <div class="role">Thoracic Oncology · National Cancer Center</div>
+        <h3>Prof. <span class="cn-name">高树庚</span> Gao Shugeng</h3>
+        <div class="title">National Cancer Center / CICAMS, Beijing · Chair of Thoracic Surgery</div>
+        <p class="doc-bio">30+ years in thoracic oncology. <b>Pioneer of "big-data department management"</b> and the international-first anatomic partial lobectomy. 100+ live-broadcast single-port thoracoscopic procedures. Led 13th &amp; 14th Five-Year multi-center trials; State Council special allowance; ranked <b>#1 in pulmonary surgery</b> at CICAMS — a national referral center receiving the most complex lung-cancer cases in China.</p>
+        <div class="doc-anchors">
+          <span class="anchor-time">⏱ Direct consult: 3–7 days</span>
+          <span class="anchor-cost">💰 ~1/3–1/5 of US pricing</span>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="role">Thymoma &amp; Myasthenia Gravis · Complex Thoracic</div>
+        <h3>Prof. <span class="cn-name">李单青</span> Li Shanqing</h3>
+        <div class="title">Peking Union Medical College Hospital · Chair of Thoracic Surgery</div>
+        <p class="doc-bio">Director of Thoracic Surgery since 2007; State Council special allowance; Chief Scientist of national key R&amp;D programs. <b>National referral authority on thymoma and myasthenia gravis</b>, plus complex thoracic surgery including chest-wall tumour resection with reconstruction and giant mediastinal tumour with great-vessel replacement. Mastery of Da Vinci robotic and fluorescence VATS. 100+ peer-reviewed publications.</p>
+        <div class="doc-anchors">
+          <span class="anchor-time">⏱ Direct consult: 3–7 days</span>
+          <span class="anchor-cost">💰 ~1/3–1/4 of US pricing</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="doc-more-wrap">
+      <div class="doc-more-h">
+        <b>Other notable specialists across our 8 treatment areas</b>
+        <span>Selected from Fudan-affiliated rankings and international society memberships — independent experts, not WellVoyage staff or partners.</span>
+      </div>
+
+      <div class="doc-more-grid">
+
+        <div class="doc-mini">
+          <div class="dm-spec">Thoracic · Anatomic Segmentectomy</div>
+          <div class="dm-name">Prof. <span class="cn-name">王群</span> Wang Qun</div>
+          <div class="dm-aff">Fudan University Zhongshan Hospital</div>
+          <div class="dm-bio">Chair of Thoracic Surgery. National leader in <b>anatomic segmentectomy and synchronous multi-primary lung-cancer bilateral VATS</b>. 200+ peer-reviewed papers; ERAS-integrated pathways.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Thoracic · VATS &amp; Lung Transplant</div>
+          <div class="dm-name">Prof. <span class="cn-name">姜格宁</span> Jiang Gening</div>
+          <div class="dm-aff">Shanghai Pulmonary Hospital</div>
+          <div class="dm-bio">Vice-Chair, Chinese Medical Association Thoracic Surgery Branch. National authority on <b>lung transplantation and complex airway reconstruction</b>. 30+ years of single-port VATS.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Thoracic · "Huaxi Method" VATS</div>
+          <div class="dm-name">Prof. <span class="cn-name">刘伦旭</span> Liu Lunxu</div>
+          <div class="dm-aff">West China Hospital, Sichuan Univ.</div>
+          <div class="dm-bio">Vice-Chair, Chinese Medical Association Thoracic Surgery Branch. Inventor of the internationally-recognised <b>"Huaxi Method" single-direction VATS lobectomy</b>; pioneered robotic thoracic surgery in SW China.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Thoracic · Subxiphoid Thymectomy</div>
+          <div class="dm-name">Dr. <span class="cn-name">韩丁培</span> Han Dingpei</div>
+          <div class="dm-aff">Shanghai Ruijin Hospital, SJTU</div>
+          <div class="dm-bio">Deputy Chief, Thoracic Surgery. Specialist in <b>subxiphoid extended thymectomy for myasthenia gravis</b> and single-port VATS pulmonary segmentectomy; published comparative outcomes on subxiphoid vs transsternal approaches.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Thoracic · Uniportal Double-Sleeve</div>
+          <div class="dm-name">Prof. <span class="cn-name">李晨光</span> Li Chenguang</div>
+          <div class="dm-aff">Tianjin Medical Univ. Cancer Institute</div>
+          <div class="dm-bio">Pioneering single-port VATS <b>double-sleeve (bronchial + pulmonary artery) resection</b> for central lung cancer — preserving the lung where pneumonectomy was once the only option. Multiple peer-reviewed case series.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Cardiac Surgery · World #1 Volume</div>
+          <div class="dm-name">Prof. <span class="cn-name">胡盛寿</span> Hu Shengshou</div>
+          <div class="dm-aff">Fuwai Hospital, Beijing · CAMS</div>
+          <div class="dm-bio">Academician of the Chinese Academy of Engineering; President of Fuwai Hospital. Leads the <b>world's highest-volume cardiac surgery program</b> (14,000+ open-heart cases/year). Pioneer of domestic valve and assist-device technology.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Neurosurgery · Skull Base &amp; Awake Craniotomy</div>
+          <div class="dm-name">Prof. <span class="cn-name">张俊廷</span> Zhang Junting</div>
+          <div class="dm-aff">Beijing Tiantan Hospital, Capital Medical Univ.</div>
+          <div class="dm-bio">Director of Skull-Base Surgery. Among the highest-volume <b>skull-base tumour and acoustic-neuroma surgeons</b> in China; expert in awake craniotomy for eloquent-cortex gliomas. National referral authority.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Orthopedics · Robotic Joint Replacement</div>
+          <div class="dm-name">Prof. <span class="cn-name">王坤正</span> Wang Kunzheng</div>
+          <div class="dm-aff">Xi'an Jiaotong University Second Affiliated Hospital</div>
+          <div class="dm-bio">National leader in <b>robotic-arm-assisted hip &amp; knee replacement</b> and 3D-printed custom implants. Former Chair of the Chinese Orthopaedic Association's Joint Surgery Branch.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Ophthalmology · Cornea &amp; Cataract</div>
+          <div class="dm-name">Prof. <span class="cn-name">刘奕志</span> Liu Yizhi</div>
+          <div class="dm-aff">Zhongshan Ophthalmic Center, SYSU</div>
+          <div class="dm-bio">Academician of the Chinese Academy of Engineering. Pioneer of <b>laser cataract surgery and limbal stem-cell transplantation</b>; led the team completing the world's first successful cultivated corneal endothelial transplantation.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Reproductive Medicine · IVF &amp; PGT</div>
+          <div class="dm-name">Prof. <span class="cn-name">乔杰</span> Qiao Jie</div>
+          <div class="dm-aff">Peking University Third Hospital</div>
+          <div class="dm-bio">Academician of the Chinese Academy of Engineering; former President of PKU Third Hospital. China's most-published authority on <b>preimplantation genetic testing (PGT) and recurrent miscarriage</b>. WHO adviser on ART.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Oncology · CAR-T &amp; Precision Therapy</div>
+          <div class="dm-name">Prof. <span class="cn-name">高博</span> Gao Bo (Bobby)</div>
+          <div class="dm-aff">Beijing GoBroad Boren Hospital</div>
+          <div class="dm-bio">National authority on <b>hematologic malignancies and CAR-T cell therapy</b>; treated one of the largest CAR-T series in China with outcomes on par with leading US centres at a fraction of the cost.</div>
+        </div>
+
+        <div class="doc-mini">
+          <div class="dm-spec">Digestive · ESD &amp; Complex Endoscopy</div>
+          <div class="dm-name">Prof. <span class="cn-name">周平红</span> Zhou Pinghong</div>
+          <div class="dm-aff">Zhongshan Hospital, Fudan University</div>
+          <div class="dm-bio">Vice-Chair of Zhongshan Endoscopy Center. World-renowned for <b>endoscopic submucosal dissection (ESD) and POEM</b>; trained endoscopists from 30+ countries; published in <i>Gastroenterology</i> &amp; <i>Gut</i>.</div>
+        </div>
+
+      </div>
+
+      <p class="doc-disclaimer"><b>Independent experts, not partners.</b> All clinicians listed above are independent medical professionals at their respective institutions. WellVoyage does not employ, contract, or officially partner with these doctors; their inclusion on this page is informational only. Access to their expertise is arranged case-by-case through verified medical-coordination channels, subject to each hospital's intake policy and the patient's clinical eligibility.</p>
     </div>
 
     <div class="gold-bar">
-      <span class="en">Not only better access — also lower cost than treating at home.</span>
-      <span class="cn">不但安排得更好，还比你在本国看病更便宜。</span>
-      <a href="#contact">Book a Doctor</a>
+      <span class="en">Want to be matched with the right specialist for your condition?</span>
+      <span class="cn">想让我们按病情匹配合适的顶尖专家？</span>
+      <a href="#contact">Get a Specialist Match</a>
     </div>
   </div>
 </section>
@@ -878,22 +1115,25 @@
 
     <div class="grid-3">
       <div class="case-mini">
-        <div class="flag">🇮🇩</div>
-        <h4>A Father's Cancer, A Family's Hope</h4>
-        <p>Lung cancer IIIB, Jakarta. Immuno + surgery + TCM integrative recovery in Beijing — full journey 11 weeks.</p>
-        <div class="cost">Total: ~29% of his US quote</div>
+        <div class="case-tag">Zhejiang · Subxiphoid Thymectomy</div>
+        <h4>MG + Thymic Hyperplasia · Subxiphoid Thymectomy</h4>
+        <p>65-year-old male with AChR-antibody-positive myasthenia gravis (ocular type) and marked thymic enlargement. Underwent <b>subxiphoid extended thymectomy</b> via 3-port VATS at a major Zhejiang academic hospital. Day 1: walking, eating normally. Day 2: discharged home. Ptosis significantly improved post-op.</p>
+        <div class="cost">Typical China cost: ~20–25% of a US thymectomy quote</div>
+        <div class="case-src">Clinical detail from a published Zhejiang University case report (anonymised). Cost is an indicative typical range, not this patient's bill.</div>
       </div>
       <div class="case-mini">
-        <div class="flag">🇸🇦</div>
-        <h4>From Riyadh, A Second Opinion</h4>
-        <p>HER2+ breast cancer. Treated in Shanghai after a 3-week turnaround from first inquiry to first infusion.</p>
-        <div class="cost">Total: ~31% of her UK quote</div>
+        <div class="case-tag">Suzhou · Uniportal Double-Sleeve</div>
+        <h4>Central Lung Cancer · Single-Port Double-Sleeve</h4>
+        <p>70-year-old male from Sichuan with <b>central squamous-cell carcinoma occluding the left upper-lobe bronchus</b>. A 4-hour single-port VATS procedure combined sleeve resection of the bronchus with pulmonary-artery angioplasty and systematic lymph-node dissection. Discharged day 5 with the affected lung preserved.</p>
+        <div class="cost">Typical China cost: ~18–25% of a US sleeve-lobectomy quote</div>
+        <div class="case-src">Clinical detail from a published Soochow University case report (anonymised). Cost is an indicative typical range, not this patient's bill.</div>
       </div>
       <div class="case-mini">
-        <div class="flag">🇰🇿</div>
-        <h4>A Child's Leukemia Journey</h4>
-        <p>Pediatric ALL, Almaty. CAR-T therapy in Beijing for an 8-year-old — family housed near hospital throughout.</p>
-        <div class="cost">Total: ~25% of the German quote</div>
+        <div class="case-tag">Shanghai · Anesthesia-Sparing Bilateral VATS</div>
+        <h4>Bilateral Lung Nodules · One-Anesthesia Bilateral VATS</h4>
+        <p>Middle-aged patient with <b>synchronous multi-primary lung cancer</b> (bilateral mixed GGO + solid nodules). One anesthesia, one hospital stay: 3D-VATS right upper lobe anatomic <b>segmentectomy (S2)</b> with ICG fluorescence and left lower lobe wedge resection. Median operative time ~150 min, blood loss 30 mL, chest tube removed day 2, discharged day 4.</p>
+        <div class="cost">Typical China cost: ~25–30% of a US bilateral lung-sparing quote</div>
+        <div class="case-src">Clinical detail from a published Fudan Zhongshan Hospital case series (anonymised). Cost is an indicative typical range, not this patient's bill.</div>
       </div>
     </div>
   </div>

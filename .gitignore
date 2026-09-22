@@ -11,3 +11,8 @@ medbridge-china/
 Thumbs.db
 .DS_Store
 *.log
+
+# 本地备份与草稿预览（不进部署仓库，避免误上线）
+*.bak
+*-test.html
+company-profile/preview-*.html
