@@ -16,3 +16,5 @@ Thumbs.db
 *.bak
 *-test.html
 company-profile/preview-*.html
+company-profile/shots/
+company-profile/articles/.bak/
