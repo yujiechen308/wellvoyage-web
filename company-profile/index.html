@@ -97,37 +97,44 @@
 
   /* ================= ELECTIVE CARE (new) ================= */
   #elective{background:linear-gradient(180deg,#ffffff 0%,#fbfdff 70%,var(--paper) 100%);border-bottom:1px solid var(--line);}
-  .elective-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  @media(max-width:1000px){.elective-grid{grid-template-columns:1fr;}}
-  .el-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:30px 28px 26px;box-shadow:0 8px 26px var(--sh-soft);display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s,transform .25s;}
-  .el-card:hover{box-shadow:0 18px 44px var(--sh-soft);transform:translateY(-3px);}
+  /* ===== elective bands: portrait film + copy ===== */
+  .el-bands{display:flex;flex-direction:column;gap:26px;}
+  .el-band{display:grid;grid-template-columns:318px 1fr;gap:40px;align-items:center;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:30px 34px;box-shadow:0 8px 26px var(--sh-soft);transition:box-shadow .25s,transform .25s;}
+  .el-band:hover{box-shadow:0 18px 44px var(--sh-soft);transform:translateY(-3px);}
+  .el-band--wide{grid-template-columns:520px 1fr;gap:36px;}
+  .el-media{position:relative;margin:0;}
+  .el-media video{display:block;width:100%;background:#0d1a4a;border-radius:12px;box-shadow:0 10px 26px var(--sh-soft);}
+  .el-media--portrait video{aspect-ratio:9/16;}
+  .el-media--land video{aspect-ratio:16/9;}
+  .el-media-cap{margin-top:11px;font-size:13px;color:var(--muted);line-height:1.65;}
+  .el-media-cap b{display:block;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--acc-deep);font-weight:700;margin-bottom:5px;}
+  .el-body{display:flex;flex-direction:column;align-items:flex-start;}
   .el-badge{align-self:flex-start;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--acc-deep);background:var(--acc-pale);padding:5px 13px;border-radius:999px;margin-bottom:15px;white-space:nowrap;}
-  .el-card h3{font-size:25px;line-height:1.3;color:var(--teal);margin-bottom:7px;font-weight:700;}
+  .el-band h3{font-size:27px;line-height:1.28;color:var(--teal);margin-bottom:7px;font-weight:700;}
   .el-cn{font-size:14.5px;color:#8fa2d6;letter-spacing:1.5px;margin-bottom:16px;}
   .el-for{font-size:15.5px;color:var(--muted);margin-bottom:16px;line-height:1.75;}
   .el-for b{color:var(--ink);}
-  @media(min-width:1001px){ .el-card h3{min-height:100px;} .el-for{min-height:114px;} }
   .el-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
   .el-chips span{font-size:13px;font-weight:700;color:var(--acc-deep);background:var(--acc-t12);border:1px solid var(--acc-t45);border-radius:999px;padding:6px 13px;white-space:nowrap;}
-  .el-why{font-size:15.5px;color:#4a5a99;line-height:1.75;border-top:1px dashed var(--line);padding-top:14px;margin-top:auto;}
+  .el-why{width:100%;font-size:15.5px;color:#4a5a99;line-height:1.75;border-top:1px dashed var(--line);padding-top:14px;}
   .el-why b{color:var(--teal);}
   .el-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
   .el-links a{font-size:14.5px;font-weight:700;text-decoration:none;border-radius:999px;padding:12px 22px;letter-spacing:.5px;}
   .el-links .el-main{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:var(--btn-fg);box-shadow:0 6px 16px var(--acc-t45);}
   .el-links .el-alt{border:1.5px solid var(--acc-t45);color:var(--acc-deep);background:var(--acc-t5);}
 
-  /* ===== elective film band (03 · Thymoma / MG) ===== */
-  .el-film{margin-top:26px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:30px 30px 28px;box-shadow:0 8px 26px var(--sh-soft);}
-  .el-film-k{display:inline-block;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--acc-deep);background:var(--acc-pale);padding:5px 13px;border-radius:999px;margin-bottom:14px;}
-  .el-film h3{font-size:26px;color:var(--teal);font-weight:700;line-height:1.35;margin-bottom:10px;max-width:880px;}
-  .el-film p{font-size:15.5px;color:var(--muted);line-height:1.75;max-width:860px;}
-  .el-film-cn{font-size:14px;color:#97a8d4;margin-top:10px;max-width:860px;line-height:1.7;}
-  .el-film-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;}
-  @media(max-width:1000px){.el-film-grid{grid-template-columns:1fr;}}
-  .el-film-item{margin:0;}
-  .el-film-item video{display:block;width:100%;aspect-ratio:16/9;background:#0d1a4a;border-radius:12px;box-shadow:0 6px 18px var(--sh-soft);}
-  .el-film-item figcaption{margin-top:12px;font-size:14.5px;color:var(--muted);line-height:1.65;}
-  .el-film-item figcaption b{display:block;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--acc-deep);margin-bottom:5px;}
+  @media(max-width:1100px){
+    .el-band--wide{grid-template-columns:1fr;gap:22px;}
+    .el-band--wide .el-media{max-width:620px;margin:0 auto;}
+    .el-band--wide .el-media-cap{text-align:center;}
+  }
+  @media(max-width:1000px){
+    .el-band,.el-band--wide{grid-template-columns:1fr;gap:20px;padding:24px 20px;}
+    .el-media{width:100%;max-width:340px;margin:0 auto;}
+    .el-media--land{max-width:620px;}
+    .el-band h3{font-size:23px;}
+    .el-media-cap{text-align:center;}
+  }
 
   .dd-strip{margin-top:32px;background:linear-gradient(135deg,var(--deepA),var(--deepB));border-radius:16px;padding:30px 34px;box-shadow:0 14px 36px var(--sh-strong);}
   .dd-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
@@ -384,76 +391,73 @@
   <div class="container">
     <div class="sec-kicker">Elective Care · Where Choice Matters</div>
     <h2>Conditions Worth Travelling to China For</h2>
-    <p class="sec-sub">Some conditions can be planned, not rushed — and that is exactly when choice matters most. In these procedures China combines the world's largest surgical volume, techniques that are not yet routine elsewhere, and a fraction of Western cost. Each one is scheduled and arranged end to end.</p>
-    <div class="sec-cn">可择期治疗的疾病——不必仓促决定，才更该挑最好的方案。以下三类手术，中国以全球最大手术量、领先术式与更低费用，把选择权交回给你；全程由我们安排。</div>
+    <p class="sec-sub">Some conditions can be planned, not rushed — and that is exactly when choice matters most. In these procedures China combines the world's largest surgical volume, techniques that are not yet routine elsewhere, and a fraction of Western cost. Each one is arranged end to end, and each has a short film beside it.</p>
+    <div class="sec-cn">可择期治疗的疾病——不必仓促决定，才更该挑最好的方案。以下三类手术，中国以全球最大手术量、领先术式与更低费用，把选择权交回给你；全程由我们安排，每类术式配一段短片。</div>
     <div class="divider"></div>
 
-    <div class="elective-grid">
+    <div class="el-bands">
 
-      <article class="el-card">
-        <div class="el-badge">01 · Early Lung Cancer</div>
-        <h3>Complex Anatomical Segmentectomy &amp; Subsegmentectomy</h3>
-        <div class="el-cn">复杂解剖性肺段 / 亚肺段切除</div>
-        <p class="el-for"><b>Best for:</b> multiple ground-glass nodules and early-stage lung cancer — where the goal is curative resection <b>and</b> keeping the lung you have.</p>
-        <div class="el-chips"><span>3 cm single port</span><span>3–5 day stay</span><span>1–3 mo back to work</span></div>
-        <p class="el-why">Nodules that elsewhere are removed across separate operations are often cleared in <b>one</b> thoracoscopic sitting — 3D-CTBA mapping plans every segment before the first cut, so more lung is spared.</p>
-        <div class="el-links">
-          <a class="el-main" href="#contact">Ask About This Procedure</a>
+      <article class="el-band">
+        <figure class="el-media el-media--portrait">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-01-segmentectomy.jpg">
+            <source src="media/elective-01-segmentectomy.mp4" type="video/mp4">
+          </video>
+          <figcaption class="el-media-cap"><b>Film · 0:49</b>3 cm is the whole incision. Single-port thoracoscopic segmentectomy — about twenty minutes at the operating table, then back to normal life.</figcaption>
+        </figure>
+        <div class="el-body">
+          <div class="el-badge">01 · Early Lung Cancer</div>
+          <h3>Complex Anatomical Segmentectomy &amp; Subsegmentectomy</h3>
+          <div class="el-cn">复杂解剖性肺段 / 亚肺段切除</div>
+          <p class="el-for"><b>Best for:</b> multiple ground-glass nodules and early-stage lung cancer — where the goal is curative resection <b>and</b> keeping the lung you have.</p>
+          <div class="el-chips"><span>3 cm single port</span><span>3–5 day stay</span><span>1–3 mo back to work</span></div>
+          <p class="el-why">Nodules that elsewhere are removed across separate operations are often cleared in <b>one</b> thoracoscopic sitting — 3D-CTBA mapping plans every segment before the first cut, so more lung is spared.</p>
+          <div class="el-links">
+            <a class="el-main" href="#contact">Ask About This Procedure</a>
+          </div>
         </div>
       </article>
 
-      <article class="el-card">
-        <div class="el-badge">02 · Central Lung Cancer</div>
-        <h3>Uniportal Double Sleeve Resection</h3>
-        <div class="el-cn">单孔支气管 + 肺动脉双袖式成形切除</div>
-        <p class="el-for"><b>Best for:</b> central tumours involving the bronchus and/or the pulmonary artery — the cases that elsewhere usually end in <b>removal of the whole lung</b>.</p>
-        <div class="el-chips"><span>3–4 cm single port</span><span>Lung preserved</span><span>60–80% function</span></div>
-        <p class="el-why">The difference is one of <b>access</b>: where many centres still open a 20–30 cm chest and take the whole lung, Chinese teams perform the sleeve reconstruction <b>through a keyhole</b>.</p>
-        <div class="el-links">
-          <a class="el-main" href="#contact">Ask About This Procedure</a>
+      <article class="el-band el-band--wide">
+        <figure class="el-media el-media--land">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-02-sleeve-resection.jpg">
+            <source src="media/elective-02-sleeve-resection.mp4" type="video/mp4">
+          </video>
+          <figcaption class="el-media-cap"><b>Film · 1:22</b>"Inoperable" is often a verdict on the incision, not the tumour. A 72-year-old patient from Mongolia, reconstructed through a single port at the First Affiliated Hospital of Guangzhou Medical University.</figcaption>
+        </figure>
+        <div class="el-body">
+          <div class="el-badge">02 · Central Lung Cancer</div>
+          <h3>Uniportal Double Sleeve Resection</h3>
+          <div class="el-cn">单孔支气管 + 肺动脉双袖式成形切除</div>
+          <p class="el-for"><b>Best for:</b> central tumours involving the bronchus and/or the pulmonary artery — the cases that elsewhere usually end in <b>removal of the whole lung</b>.</p>
+          <div class="el-chips"><span>3–4 cm single port</span><span>Lung preserved</span><span>60–80% function</span></div>
+          <p class="el-why">The difference is one of <b>access</b>: where many centres still open a 20–30 cm chest and take the whole lung, Chinese teams perform the sleeve reconstruction <b>through a keyhole</b>.</p>
+          <div class="el-links">
+            <a class="el-main" href="#contact">Ask About This Procedure</a>
+          </div>
         </div>
       </article>
 
-      <article class="el-card">
-        <div class="el-badge">03 · Thymoma / MG</div>
-        <h3>Subxiphoid Extended Thymectomy</h3>
-        <div class="el-cn">剑突下胸腺扩大切除</div>
-        <p class="el-for"><b>Best for:</b> thymoma and generalised myasthenia gravis — including AChR-antibody-positive MG with no detectable tumour.</p>
-        <div class="el-chips"><span>No chest incision</span><span>Nerves untouched</span><span>24 h discharge</span></div>
-        <p class="el-why">No rib spreading and no port between the ribs — the intercostal nerves are never divided, which is why published comparisons show <b>less pain and faster recovery</b>.</p>
-        <div class="el-links">
-          <a class="el-main" href="articles/article-1-subxiphoid-thymectomy-myasthenia-gravis">Read the Full Patient Guide</a>
-          <a class="el-alt" href="#mg-films">Watch the 3-Part Story</a>
+      <article class="el-band">
+        <figure class="el-media el-media--portrait">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-03-thymectomy.jpg">
+            <source src="media/elective-03-thymectomy.mp4" type="video/mp4">
+          </video>
+          <figcaption class="el-media-cap"><b>Film · 0:47</b>Myasthenia gravis and thymoma — subxiphoid thoracoscopic thymectomy. Discharge within 24–48 hours; in published series about 70% of MG patients reduce or stop medication.</figcaption>
+        </figure>
+        <div class="el-body">
+          <div class="el-badge">03 · Thymoma / MG</div>
+          <h3>Subxiphoid Extended Thymectomy</h3>
+          <div class="el-cn">剑突下胸腺扩大切除</div>
+          <p class="el-for"><b>Best for:</b> thymoma and generalised myasthenia gravis — including AChR-antibody-positive MG with no detectable tumour.</p>
+          <div class="el-chips"><span>No chest incision</span><span>Nerves untouched</span><span>24 h discharge</span></div>
+          <p class="el-why">No rib spreading and no port between the ribs — the intercostal nerves are never divided, which is why published comparisons show <b>less pain and faster recovery</b>.</p>
+          <div class="el-links">
+            <a class="el-main" href="articles/article-1-subxiphoid-thymectomy-myasthenia-gravis">Read the Full Patient Guide</a>
+            <a class="el-alt" href="#contact">Ask About This Procedure</a>
+          </div>
         </div>
       </article>
 
-    </div>
-
-    <div class="el-film" id="mg-films">
-      <div class="el-film-k">03 · Thymoma / MG · Watch the Story</div>
-      <h3>Living with myasthenia gravis — and what thymectomy actually changes</h3>
-      <p>Three short films for patients weighing surgery: what MG really feels like day to day, why the thymus is involved at all, and — in plain language — what a subxiphoid thymectomy does. Each film stands on its own.</p>
-      <div class="el-film-cn">三段短片：MG 患者的真实处境 → 免疫系统为什么会"攻击自己" → 剑突下胸腺切除到底做了什么。可按顺序看，也可单独看。</div>
-      <div class="el-film-grid">
-        <figure class="el-film-item">
-          <video controls playsinline preload="metadata" poster="media/poster-elective-p1-hook-30s.jpg">
-            <source src="media/elective-p1-hook-30s.mp4" type="video/mp4">
-          </video>
-          <figcaption><b>Part 1 · 30s</b>700,000+ people live with MG — and most are told the fatigue is something else.</figcaption>
-        </figure>
-        <figure class="el-film-item">
-          <video controls playsinline preload="metadata" poster="media/poster-elective-p2-mg-dilemma-60s.jpg">
-            <source src="media/elective-p2-mg-dilemma-60s.mp4" type="video/mp4">
-          </video>
-          <figcaption><b>Part 2 · 60s</b>One patient's day: drooping eyelids, weakness at the table — and the question of whether it is her fault.</figcaption>
-        </figure>
-        <figure class="el-film-item">
-          <video controls playsinline preload="metadata" poster="media/poster-elective-p3-thymectomy-90s.jpg">
-            <source src="media/elective-p3-thymectomy-90s.mp4" type="video/mp4">
-          </video>
-          <figcaption><b>Part 3 · 90s</b>What the thymus does, why it misfires — and the three surgical routes, including the one that spares the chest wall.</figcaption>
-        </figure>
-      </div>
     </div>
 
     <div class="dd-strip">
