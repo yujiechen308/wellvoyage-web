@@ -116,6 +116,19 @@
   .el-links .el-main{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:var(--btn-fg);box-shadow:0 6px 16px var(--acc-t45);}
   .el-links .el-alt{border:1.5px solid var(--acc-t45);color:var(--acc-deep);background:var(--acc-t5);}
 
+  /* ===== elective film band (03 · Thymoma / MG) ===== */
+  .el-film{margin-top:26px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:30px 30px 28px;box-shadow:0 8px 26px var(--sh-soft);}
+  .el-film-k{display:inline-block;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--acc-deep);background:var(--acc-pale);padding:5px 13px;border-radius:999px;margin-bottom:14px;}
+  .el-film h3{font-size:26px;color:var(--teal);font-weight:700;line-height:1.35;margin-bottom:10px;max-width:880px;}
+  .el-film p{font-size:15.5px;color:var(--muted);line-height:1.75;max-width:860px;}
+  .el-film-cn{font-size:14px;color:#97a8d4;margin-top:10px;max-width:860px;line-height:1.7;}
+  .el-film-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;}
+  @media(max-width:1000px){.el-film-grid{grid-template-columns:1fr;}}
+  .el-film-item{margin:0;}
+  .el-film-item video{display:block;width:100%;aspect-ratio:16/9;background:#0d1a4a;border-radius:12px;box-shadow:0 6px 18px var(--sh-soft);}
+  .el-film-item figcaption{margin-top:12px;font-size:14.5px;color:var(--muted);line-height:1.65;}
+  .el-film-item figcaption b{display:block;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--acc-deep);margin-bottom:5px;}
+
   .dd-strip{margin-top:32px;background:linear-gradient(135deg,var(--deepA),var(--deepB));border-radius:16px;padding:30px 34px;box-shadow:0 14px 36px var(--sh-strong);}
   .dd-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
   .dd-h b{font-size:21px;color:#fff;letter-spacing:.5px;}
@@ -410,10 +423,37 @@
         <p class="el-why">No rib spreading and no port between the ribs — the intercostal nerves are never divided, which is why published comparisons show <b>less pain and faster recovery</b>.</p>
         <div class="el-links">
           <a class="el-main" href="articles/article-1-subxiphoid-thymectomy-myasthenia-gravis">Read the Full Patient Guide</a>
-          <a class="el-alt" href="#contact">Ask About My Case</a>
+          <a class="el-alt" href="#mg-films">Watch the 3-Part Story</a>
         </div>
       </article>
 
+    </div>
+
+    <div class="el-film" id="mg-films">
+      <div class="el-film-k">03 · Thymoma / MG · Watch the Story</div>
+      <h3>Living with myasthenia gravis — and what thymectomy actually changes</h3>
+      <p>Three short films for patients weighing surgery: what MG really feels like day to day, why the thymus is involved at all, and — in plain language — what a subxiphoid thymectomy does. Each film stands on its own.</p>
+      <div class="el-film-cn">三段短片：MG 患者的真实处境 → 免疫系统为什么会"攻击自己" → 剑突下胸腺切除到底做了什么。可按顺序看，也可单独看。</div>
+      <div class="el-film-grid">
+        <figure class="el-film-item">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-p1-hook-30s.jpg">
+            <source src="media/elective-p1-hook-30s.mp4" type="video/mp4">
+          </video>
+          <figcaption><b>Part 1 · 30s</b>700,000+ people live with MG — and most are told the fatigue is something else.</figcaption>
+        </figure>
+        <figure class="el-film-item">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-p2-mg-dilemma-60s.jpg">
+            <source src="media/elective-p2-mg-dilemma-60s.mp4" type="video/mp4">
+          </video>
+          <figcaption><b>Part 2 · 60s</b>One patient's day: drooping eyelids, weakness at the table — and the question of whether it is her fault.</figcaption>
+        </figure>
+        <figure class="el-film-item">
+          <video controls playsinline preload="metadata" poster="media/poster-elective-p3-thymectomy-90s.jpg">
+            <source src="media/elective-p3-thymectomy-90s.mp4" type="video/mp4">
+          </video>
+          <figcaption><b>Part 3 · 90s</b>What the thymus does, why it misfires — and the three surgical routes, including the one that spares the chest wall.</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="dd-strip">
