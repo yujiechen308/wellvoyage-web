@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WellVoyage — World-Class Treatment in China, Arranged End-to-End</title>
+<meta name="description" content="WellVoyage 安途康悦 is a China-based medical-travel concierge for international patients. Eight leading specialties, independent top specialists, locked-in transparent pricing, full bilingual support — from first message to 30-day follow-up.">
+<meta property="og:title" content="WellVoyage — World-Class Treatment in China, Arranged End-to-End">
+<meta property="og:description" content="Eight leading specialties in China, arranged end to end. Bilingual concierge, transparent pricing, independent experts, 30-day follow-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wellvoyagecare.com/">
+<meta property="og:image" content="https://wellvoyagecare.com/images/hero-city.png">
+<meta property="og:site_name" content="WellVoyage">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WellVoyage — World-Class Treatment in China, Arranged End-to-End">
+<meta name="twitter:description" content="Eight leading specialties in China, arranged end to end. Bilingual concierge, transparent pricing, independent experts, 30-day follow-up.">
+<meta name="twitter:image" content="https://wellvoyagecare.com/images/hero-city.png">
+<link rel="canonical" href="https://wellvoyagecare.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root{
@@ -46,12 +58,12 @@
   .nav-in{max-width:1140px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
   .nav-brand{font-size:20px;font-weight:700;color:var(--teal);letter-spacing:2px;text-decoration:none;}
   .nav-brand small{display:block;font-size:9.5px;color:var(--gold);letter-spacing:2px;font-weight:400;font-style:italic;}
-  .nav-links{display:flex;gap:17px;list-style:none;flex-wrap:nowrap;}
+  .nav-links{display:flex;gap:13px;list-style:none;flex-wrap:nowrap;}
   .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;letter-spacing:.5px;white-space:nowrap;}
   .nav-links li{flex:0 0 auto;}
   .nav-links a:hover{color:var(--teal);}
   .nav-cta{background:var(--gold);color:var(--btn-fg);padding:9px 20px;border-radius:999px;font-size:13.5px;text-decoration:none;letter-spacing:1px;white-space:nowrap;}
-  @media(max-width:1040px){.nav-links{display:none;}}
+  @media(max-width:1100px){.nav-links{display:none;}}
   @media(max-width:600px){
     .nav-in{padding:12px 16px;gap:10px;}
     .nav-brand{font-size:17px;letter-spacing:1px;}
@@ -73,6 +85,30 @@
   .btn{padding:17px 36px;border-radius:999px;text-decoration:none;font-size:17px;font-weight:700;letter-spacing:1px;}
   .btn-gold{background:var(--gold);color:var(--btn-fg);}
   .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#f7faff;}
+
+  /* ===== edge · 30 leading conditions ===== */
+  .edge-filter{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 28px;}
+  .edge-filter button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font:inherit;font-size:13.5px;color:var(--ink);cursor:pointer;transition:all .2s;}
+  .edge-filter button.on{background:var(--acc-text);color:#fff;border-color:var(--acc-text);}
+  .edge-filter button:hover:not(.on){border-color:var(--acc-text);color:var(--acc-text);}
+  .edge-filter button .ct{font-size:11px;color:var(--muted);margin-left:6px;}
+  .edge-filter button.on .ct{color:rgba(255,255,255,.7);}
+  .edge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .edge-card{border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;background:#fff;position:relative;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;}
+  .edge-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px var(--sh-soft);}
+  .edge-tag{display:inline-block;font-size:11px;letter-spacing:1px;color:var(--acc-text);background:var(--acc-t12);padding:4px 10px;border-radius:999px;margin-bottom:12px;font-weight:700;align-self:flex-start;}
+  .edge-card h3{font-size:18px;color:var(--ink);margin:2px 0 4px;line-height:1.35;font-weight:700;}
+  .edge-card h3 small{display:block;font-size:12px;color:var(--muted);font-weight:400;letter-spacing:.4px;margin-top:3px;font-style:italic;}
+  .edge-why{font-size:14.5px;color:#3a4a7a;line-height:1.65;margin:10px 0 12px;}
+  .edge-data{font-size:13.5px;color:var(--acc-text);font-weight:700;line-height:1.55;border-top:1px dashed var(--line);padding-top:10px;margin-top:auto;}
+  .edge-data small{display:block;color:var(--muted);font-weight:400;margin-top:3px;font-size:11.5px;letter-spacing:.2px;}
+  a.edge-card{text-decoration:none;color:inherit;}
+  .edge-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--acc-text);letter-spacing:.3px;transition:letter-spacing .25s;}
+  .edge-card:hover .edge-more{letter-spacing:1px;}
+  .edge-cite{text-align:center;margin-top:34px;font-size:14px;color:var(--muted);}
+  @media(max-width:1180px){.edge-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:980px){.edge-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.edge-grid{grid-template-columns:1fr;}}
 
   /* ===== stats ===== */
   .stats{background:linear-gradient(180deg,var(--deepA),var(--deepB));}
@@ -328,10 +364,13 @@
 
   /* ===== nav 放大（仅桌面，避免覆盖移动端媒体查询） ===== */
   @media(min-width:601px){
-    .nav-links a{font-size:15.5px;font-weight:700;}
-    .nav-cta{font-size:15px;font-weight:700;padding:11px 24px;}
+    .nav-links a{font-size:15px;font-weight:700;}
+    .nav-cta{font-size:14.5px;font-weight:700;padding:11px 20px;}
     .nav-brand{font-size:22px;}
   }
+
+  /* ===== anchor offset for sticky nav ===== */
+  section[id],header[id],div[id]{scroll-margin-top:78px;}
 </style>
 </head>
 <body>
@@ -344,8 +383,8 @@
     <a class="nav-brand" href="#top">WellVoyage<small>CHINA · MEDICAL EXCELLENCE</small></a>
     <ul class="nav-links">
       <li><a href="#advantages">Why China</a></li>
+      <li><a href="#edge">China Leads</a></li>
       <li><a href="#elective">Elective Care</a></li>
-      <li><a href="#specialties">8 Specialties</a></li>
       <li><a href="#hospitals">Hospitals</a></li>
       <li><a href="#doctors">Doctors</a></li>
       <li><a href="#about">About Us</a></li>
@@ -368,7 +407,7 @@
       <span>🤝 End-to-End Concierge</span>
     </div>
     <div class="hero-actions">
-      <a href="#specialties" class="btn btn-gold">Explore China's Medical Strength →</a>
+      <a href="#edge" class="btn btn-gold">See Where China Leads →</a>
       <a href="#contact" class="btn btn-ghost">Talk to Us</a>
     </div>
   </div>
@@ -385,6 +424,251 @@
     </div>
   </div>
 </div>
+
+<!-- ================= WHERE CHINA LEADS · 30 CONDITIONS ================= -->
+<section id="edge">
+  <div class="container">
+    <div class="sec-kicker">Where China Leads · 30 Conditions &amp; Procedures</div>
+    <h2>Why People Fly to China — by Condition</h2>
+    <p class="sec-sub">Eight specialties, thirty conditions where China is now the world's most concentrated experience pool, the largest-volume center, or the technique's birthplace. Each card gives one reason and one data point — no hospital name, because the strength comes from the country as a whole, not any single site.</p>
+    <p class="sec-cn">八个专科，三十个治疗方向 —— 全球经验最集中、规模最大、或术式发源地的领域。每张卡只讲「为什么是中国」和「一个数据点」；医院名不出现，因为实力来自整个国家，不是某一家。</p>
+
+    <div class="edge-filter" id="edgeFilter">
+      <button data-filter="all" class="on">All · 全部 <span class="ct">30</span></button>
+      <button data-filter="Thoracic">Thoracic · 胸外科 <span class="ct">6</span></button>
+      <button data-filter="Cardiac">Cardiac · 心外科 <span class="ct">4</span></button>
+      <button data-filter="Neuro">Neuro · 神经外科 <span class="ct">4</span></button>
+      <button data-filter="Ortho">Ortho · 骨科 <span class="ct">3</span></button>
+      <button data-filter="Onco">Oncology · 肿瘤 <span class="ct">4</span></button>
+      <button data-filter="Eye">Eye · 眼科 <span class="ct">4</span></button>
+      <button data-filter="Repro">Reproductive · 生殖医学 <span class="ct">3</span></button>
+      <button data-filter="GI">GI · 消化内科 <span class="ct">2</span></button>
+    </div>
+
+    <div class="edge-grid" id="edgeGrid">
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-anatomic-segmentectomy">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>Anatomic Pulmonary Segmentectomy<small>解剖性肺段切除</small></h3>
+        <p class="edge-why">3D-CTBA reconstruction plus real-time ICG fluorescence turned segmentectomy into a routine operation — with the world's most concentrated experience pool.</p>
+        <div class="edge-data">Over 100,000 segmentectomies a year — ~30% of all lung surgery in China.<small>Source: Chinese Society of Thoracic Surgeons · NHC</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-uniportal-vats-lobectomy">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>Uniportal VATS Lobectomy<small>单孔胸腔镜肺叶切除</small></h3>
+        <p class="edge-why">The world's largest single-center uniportal series was built in China; the technique is day-to-day routine at major thoracic centres.</p>
+        <div class="edge-data">20,000+ single-port cases at one centre; most published uniportal experience is Chinese.<small>Source: Annals of Translational Medicine, 2022</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-sleeve-lobectomy">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>Sleeve Lobectomy<small>袖式肺叶切除</small></h3>
+        <p class="edge-why">Central tumours once meant losing a whole lung — Chinese teams pioneered the lung-preserving sleeve resection at scale.</p>
+        <div class="edge-data">Published mortality under 2%; even single-port sleeve resection is routine.<small>Source: Published Chinese sleeve-resection series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-subxiphoid-thymectomy">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>Subxiphoid Thymectomy<small>剑突下胸腺切除</small></h3>
+        <p class="edge-why">The thymus removed through one 3 cm incision below the breastbone — no rib spreading, no chest drains through the side.</p>
+        <div class="edge-data">The world's largest subxiphoid thymectomy experience.<small>Source: Published Chinese subxiphoid series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-3d-ctba-navigation">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>3D-CTBA-Guided Lung Resection<small>三维支气管血管重建导航手术</small></h3>
+        <p class="edge-why">Your lung's vessel tree is rebuilt in 3D before surgery — the planning workflow Chinese radiology and thoracic teams industrialised.</p>
+        <div class="edge-data">Enables complex subsegmentectomies most centres simply do not offer.<small>Source: Chinese 3D-CTBA literature</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Thoracic" href="articles/condition-neoadjuvant-immunotherapy-mis">
+        <span class="edge-tag">Thoracic Surgery</span>
+        <h3>Neoadjuvant Immunotherapy + Minimally Invasive Surgery<small>新辅助免疫+微创手术</small></h3>
+        <p class="edge-why">Shrink the tumour first, then operate through one small port — a pathway Chinese trials helped define, made affordable by domestic PD-1 agents.</p>
+        <div class="edge-data">Domestic PD-1 cycles at ~US$2,000–5,000 — a fraction of Western prices.<small>Source: Chinese neoadjuvant immunotherapy trials</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Cardiac" href="articles/condition-sun-procedure">
+        <span class="edge-tag">Cardiac Surgery</span>
+        <h3>Sun's Procedure (Total Aortic Arch Replacement)<small>孙氏手术（全主动脉弓置换）</small></h3>
+        <p class="edge-why">Invented in Beijing for the deadliest surgical emergency — acute Type A aortic dissection — and now taught worldwide.</p>
+        <div class="edge-data">Hundreds of dissection repairs per year at single Chinese aortic centres.<small>Source: Published Chinese aortic series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Cardiac" href="articles/condition-minimally-invasive-mitral">
+        <span class="edge-tag">Cardiac Surgery</span>
+        <h3>Minimally Invasive Mitral Valve Repair<small>微创二尖瓣成形</small></h3>
+        <p class="edge-why">Your own valve repaired — not replaced — through a 5 cm right-chest incision, keeping your breastbone and your tissue.</p>
+        <div class="edge-data">Repair rates above 90% for degenerative disease in published high-volume Chinese series.<small>Source: Chinese mitral repair series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Cardiac" href="articles/condition-tavr">
+        <span class="edge-tag">Cardiac Surgery</span>
+        <h3>TAVR (Transcatheter Aortic Valve Replacement)<small>经导管主动脉瓣置换</small></h3>
+        <p class="edge-why">Domestic valve designs engineered for heavily calcified bicuspid anatomy — with case volumes now among the world's largest.</p>
+        <div class="edge-data">US$30,000–45,000 all-in; wait lists measured in days.<small>Source: Chinese TAVR registries</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Cardiac" href="articles/condition-heart-transplant">
+        <span class="edge-tag">Cardiac Surgery</span>
+        <h3>Heart Transplantation<small>心脏移植</small></h3>
+        <p class="edge-why">Licensed, high-volume transplant centres with published survival at or above international benchmarks — and shorter waits than many home queues.</p>
+        <div class="edge-data">1-year survival above 90% in major published Chinese series.<small>Source: Chinese transplant centre publications</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Neuro" href="articles/condition-brainstem-glioma">
+        <span class="edge-tag">Neurosurgery</span>
+        <h3>Brainstem Glioma Surgery<small>脑干胶质瘤手术</small></h3>
+        <p class="edge-why">The brainstem is where Chinese neurosurgery earned its world reputation — safe-entry-zone surgery for tumours others call inoperable.</p>
+        <div class="edge-data">The largest published brainstem glioma surgical series.<small>Source: Chinese brainstem surgery literature</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Neuro" href="articles/condition-aneurysm-coiling">
+        <span class="edge-tag">Neurosurgery</span>
+        <h3>Intracranial Aneurysm Embolization<small>颅内动脉瘤栓塞</small></h3>
+        <p class="edge-why">Enormous annual aneurysm caseloads — wide-necked, giant and blood-blister aneurysms that smaller programmes refer out.</p>
+        <div class="edge-data">Published occlusion rates matching international registries, at a fraction of the cost.<small>Source: Chinese interventional neuroradiology series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Neuro" href="articles/condition-dbs-parkinsons">
+        <span class="edge-tag">Neurosurgery</span>
+        <h3>Deep Brain Stimulation for Parkinson's Disease<small>脑深部电刺激（DBS）治疗帕金森病</small></h3>
+        <p class="edge-why">Among the world's largest DBS programmes; domestic pulse generators halve the hardware cost without changing the surgical standard.</p>
+        <div class="edge-data">US$35,000–60,000 all-in with domestic devices; remote programming available.<small>Source: Chinese movement-disorder programmes</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Neuro" href="articles/condition-awake-craniotomy">
+        <span class="edge-tag">Neurosurgery</span>
+        <h3>Awake Craniotomy with Function Mapping<small>唤醒麻醉功能区手术</small></h3>
+        <p class="edge-why">Tumours in language and motor areas removed while you talk and move on the table — weekly routine at Chinese mapping centres.</p>
+        <div class="edge-data">Permanent-deficit rates in the low single digits for eloquent-cortex tumours.<small>Source: Chinese awake-mapping series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Ortho" href="articles/condition-joint-replacement">
+        <span class="edge-tag">Orthopaedics</span>
+        <h3>Total Knee & Hip Replacement (TKA / THA)<small>人工膝/髋关节置换</small></h3>
+        <p class="edge-why">Among the world's largest arthroplasty volumes, with imported and domestic implants and waits measured in days.</p>
+        <div class="edge-data">US$8,000–15,000 per joint all-in.<small>Source: Chinese joint-registry data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Ortho" href="articles/condition-peld">
+        <span class="edge-tag">Orthopaedics</span>
+        <h3>Percutaneous Endoscopic Lumbar Discectomy (PELD)<small>椎间孔镜髓核摘除</small></h3>
+        <p class="edge-why">A herniated disc removed through a 7 mm scope under local anaesthesia — awake on the table, walking the same evening.</p>
+        <div class="edge-data">The largest published percutaneous endoscopic discectomy series.<small>Source: Chinese PELD series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Ortho" href="articles/condition-3d-printed-prosthesis">
+        <span class="edge-tag">Orthopaedics</span>
+        <h3>3D-Printed Custom Tumour Prostheses<small>3D打印定制骨肿瘤假体</small></h3>
+        <p class="edge-why">Custom titanium bones printed for your anatomy — pioneered and scaled in China for limb salvage after bone tumours.</p>
+        <div class="edge-data">Limb salvage replaces amputation in most osteosarcoma cases at major centres.<small>Source: Chinese printed-implant series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Onco" href="articles/condition-hcc-multimodal">
+        <span class="edge-tag">Oncology</span>
+        <h3>Hepatocellular Carcinoma Multimodal Therapy<small>肝癌综合治疗</small></h3>
+        <p class="edge-why">Half the world's liver cancer is treated here — every modality sequenced by one multidisciplinary team under one roof.</p>
+        <div class="edge-data">Chinese-led trials defined the modern immunotherapy standard for advanced HCC.<small>Source: Chinese HCC literature</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Onco" href="articles/condition-d2-gastrectomy">
+        <span class="edge-tag">Oncology</span>
+        <h3>D2 Gastrectomy for Gastric Cancer<small>胃癌 D2 根治术</small></h3>
+        <p class="edge-why">East Asia wrote the book on D2 gastrectomy; Chinese centres run the largest laparoscopic and robotic series.</p>
+        <div class="edge-data">Laparoscopic D2 morbidity figures Western series spent twenty years chasing.<small>Source: Chinese gastric cancer trials</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Onco" href="articles/condition-npc-imrt">
+        <span class="edge-tag">Oncology</span>
+        <h3>IMRT for Nasopharyngeal Carcinoma<small>鼻咽癌调强放疗</small></h3>
+        <p class="edge-why">Nasopharyngeal cancer is common in southern China — so the radiotherapy that cures it was perfected there, parotid-sparing included.</p>
+        <div class="edge-data">5-year overall survival above 80% at leading Guangzhou centres.<small>Source: Radiotherapy and Oncology, 2020</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Onco" href="articles/condition-car-t">
+        <span class="edge-tag">Oncology</span>
+        <h3>CAR-T Cell Therapy<small>CAR-T 细胞免疫治疗</small></h3>
+        <p class="edge-why">Multiple domestically approved CAR-T products and one of the world's largest trial portfolios — at a tenth of US list prices.</p>
+        <div class="edge-data">US$45,000–85,000 versus US$370,000–530,000 abroad.<small>Source: NMPA approvals since 2021</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Eye" href="articles/condition-corneal-transplant">
+        <span class="edge-tag">Ophthalmology</span>
+        <h3>Corneal Transplantation (PK / DMEK / DALK)<small>角膜移植</small></h3>
+        <p class="edge-why">An eye-bank network covering 31 provinces means matched donor tissue in weeks, not years.</p>
+        <div class="edge-data">10,000+ transplants a year; 5-year graft clarity above 75%.<small>Source: Chinese Ophthalmological Society data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Eye" href="articles/condition-complex-cataract">
+        <span class="edge-tag">Ophthalmology</span>
+        <h3>Complex Cataract Surgery<small>复杂白内障手术</small></h3>
+        <p class="edge-why">Four million cataract operations a year — every anatomical variant of a difficult lens is routine case mix.</p>
+        <div class="edge-data">US$1,500–4,000 per eye, premium lenses included in the range.<small>Source: Chinese cataract registry data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Eye" href="articles/condition-vitrectomy">
+        <span class="edge-tag">Ophthalmology</span>
+        <h3>Vitreoretinal Surgery (Vitrectomy)<small>玻璃体切割术</small></h3>
+        <p class="edge-why">The world's largest diabetic and highly myopic populations built the world's deepest retinal surgery experience.</p>
+        <div class="edge-data">300,000+ vitrectomies a year; PDR visual improvement above 80%.<small>Source: Chinese retina-section data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Eye" href="articles/condition-smile">
+        <span class="edge-tag">Ophthalmology</span>
+        <h3>SMILE Laser Vision Correction<small>全飞秒激光近视手术</small></h3>
+        <p class="edge-why">The world's largest SMILE market — over five million procedures, with certified centres in every major city.</p>
+        <div class="edge-data">US$1,500–2,800 per eye; complications below 0.1%.<small>Source: Chinese refractive-surgery data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Repro" href="articles/condition-ivf">
+        <span class="edge-tag">Reproductive Medicine</span>
+        <h3>IVF — In Vitro Fertilisation<small>试管婴儿（体外受精）</small></h3>
+        <p class="edge-why">Over one million assisted-reproduction cycles a year across ~600 licensed centres — the world's largest programme.</p>
+        <div class="edge-data">Live-birth rates near 45–50% for under-35s; US$4,000–8,000 per cycle.<small>Source: CSRM registry data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Repro" href="articles/condition-pgt">
+        <span class="edge-tag">Reproductive Medicine</span>
+        <h3>PGT — Preimplantation Genetic Testing<small>第三代试管（胚胎植入前遗传学检测）</small></h3>
+        <p class="edge-why">Licensed, large-scale genetic testing of embryos — including PGT-M probes for rare familial mutations.</p>
+        <div class="edge-data">US$1,500–3,000 on top of an IVF cycle.<small>Source: Chinese PGT programme data</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="Repro" href="articles/condition-egg-freezing">
+        <span class="edge-tag">Reproductive Medicine</span>
+        <h3>Oocyte Cryopreservation (Egg Freezing)<small>卵子冷冻</small></h3>
+        <p class="edge-why">Vitrification experience scaled by China's enormous IVF programmes — post-warm survival above 90%.</p>
+        <div class="edge-data">US$3,000–5,000 per cycle versus US$10,000–20,000 in the US.<small>Source: Chinese vitrification series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="GI" href="articles/condition-ercp">
+        <span class="edge-tag">Gastroenterology</span>
+        <h3>ERCP — Endoscopic Retrograde Cholangiopancreatography<small>ERCP 胆胰内镜诊疗</small></h3>
+        <p class="edge-why">Complex bile-duct stones and strictures treated through a scope, by endoscopists who do them daily.</p>
+        <div class="edge-data">US$4,000–8,000 per therapeutic session; success above 90% for difficult stones.<small>Source: Chinese ERCP series</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+      <a class="edge-card" data-tag="GI" href="articles/condition-esd">
+        <span class="edge-tag">Gastroenterology</span>
+        <h3>ESD — Endoscopic Submucosal Dissection<small>内镜黏膜下剥离术（ESD）</small></h3>
+        <p class="edge-why">Early GI cancers removed whole through a scope — no surgery, organ preserved — at enormous Chinese case volume.</p>
+        <div class="edge-data">En-bloc resection above 90% in published series.<small>Source: Chinese ESD literature</small></div>
+        <span class="edge-more">Read the patient guide &rarr;</span>
+      </a>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    <p class="edge-cite">Data points from The Lancet, NEJM, JTCVS, JAMA Ophthalmology, Fertility &amp; Sterility, Movement Disorders, Radiotherapy and Oncology, plus the Chinese Medical Association specialty societies. Last updated September 2026.</p>
+  </div>
+</section>
 
 <!-- ================= 可择期治疗疾病（新增板块） ================= -->
 <section id="elective">
@@ -1292,6 +1576,26 @@ function makeCarousel(rootId, interval){
 }
 makeCarousel('carAdv',7000);
 makeCarousel('carSpec',9000);
+
+/* ===== #edge filter (Where China Leads) ===== */
+(function(){
+  const buttons=document.querySelectorAll('#edgeFilter button');
+  const cards=document.querySelectorAll('#edgeGrid .edge-card');
+  if(!buttons.length||!cards.length)return;
+  buttons.forEach(b=>{
+    b.addEventListener('click',()=>{
+      buttons.forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      const f=b.dataset.filter;
+      cards.forEach(c=>{
+        c.style.display=(f==='all'||c.dataset.tag===f)?'':'none';
+      });
+      if(window.innerWidth<820){
+        document.getElementById('edge').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
