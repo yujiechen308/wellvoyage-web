@@ -1,5 +1,28 @@
-# ★ 部署后若正式域名不是 wellvoyagecare.com，请把下面 Sitemap 一行改为你的域名。
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://wellvoyagecare.com/sitemap.xml
+
+# AI 爬虫（如要收录到 LLM 索引可保留；如不希望可单独屏蔽）
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# 屏蔽常见无用爬虫，节省带宽
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
