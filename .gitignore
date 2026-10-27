@@ -20,3 +20,6 @@ company-profile/preview-*.html
 company-profile/shots/
 company-profile/articles/.bak/
 _shots/
+
+# 本地归档（已清理文件的压缩包，仅本地留存）
+_archive/
