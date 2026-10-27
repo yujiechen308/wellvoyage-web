@@ -70,6 +70,206 @@ h2 .cnt{font-size:14px;color:var(--gold);font-weight:400;letter-spacing:1px;marg
 footer{border-top:1px solid var(--line);padding:34px 24px;text-align:center;font-size:13px;color:var(--muted);background:#fff;}
 footer a{color:var(--primary);text-decoration:none;}
 @media(max-width:640px){.top h1{font-size:28px;}.wrap{padding:34px 18px 60px;}.toc{font-size:13.5px;line-height:1.9;}table.fact th{width:42%;padding:11px 10px;font-size:12.5px;}table.fact td{padding:11px 10px;font-size:13.5px;}}
+
+/* === Floating contact dock (WellVoyage 2026-10-10) === */
+.floating-contact{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:12px;}
+.floating-contact a{position:relative;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 22px rgba(15,28,80,.28),0 1px 3px rgba(0,0,0,.18);transition:transform .18s,box-shadow .18s;}
+.floating-contact a:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 10px 28px rgba(15,28,80,.38),0 2px 4px rgba(0,0,0,.22);}
+.floating-contact a:active{transform:translateY(-1px) scale(.98);}
+.floating-contact .fc-wa{background:#25D366;color:#fff;}
+.floating-contact .fc-mail{background:linear-gradient(135deg,#e9c86a 0%,#c9a23d 100%);color:#1e2a5e;}
+.floating-contact svg{width:28px;height:28px;display:block;}
+.floating-contact .fc-label{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:#1e2a5e;color:#fff;padding:7px 13px;border-radius:6px;font-size:12.5px;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;font-family:Georgia,serif;letter-spacing:.2px;}
+.floating-contact .fc-label::after{content:"";position:absolute;left:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-left-color:#1e2a5e;}
+.floating-contact a:hover .fc-label,.floating-contact a:focus .fc-label{opacity:1;}
+@media(max-width:600px){.floating-contact{right:12px;bottom:12px;gap:10px;}.floating-contact a{width:52px;height:52px;}.floating-contact svg{width:25px;height:25px;}.floating-contact .fc-label{display:none;}}
+@media(prefers-reduced-motion:reduce){.floating-contact a{transition:none;}}
+
+
+/* === enhanced CTA channels pills (2026-10-10) === */
+.cta p.channels{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px auto 0;max-width:620px;}
+.cta p.channels a{display:inline-flex !important;align-items:center;gap:9px;text-decoration:none !important;border-radius:999px;padding:13px 26px;font-weight:700;font-size:15.5px;letter-spacing:.2px;transition:all .2s;color:#fff !important;border-bottom:none !important;}
+.cta p.channels a b{font-weight:800;}
+.cta p.channels a.ch-wa{background:#25D366;box-shadow:0 4px 14px rgba(37,211,102,.3);}
+.cta p.channels a.ch-wa:hover{background:#1ebe5b;transform:translateY(-2px);box-shadow:0 6px 18px rgba(37,211,102,.45);}
+.cta p.channels a.ch-mail{background:linear-gradient(135deg,#e9c86a 0%,#c9a23d 100%);color:#1e2a5e !important;box-shadow:0 4px 14px rgba(201,162,61,.3);}
+.cta p.channels a.ch-mail:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(201,162,61,.45);}
+.cta p.channels a svg{width:18px;height:18px;display:inline-block;}
+.cta p.channels::before,.cta p.channels::after{display:none;}
+@media(max-width:600px){.cta p.channels a{flex:1 1 100%;justify-content:center;}}
+
+
+/* === dock + pill mobile refinement (2026-10-10b) === */
+@media(max-width:600px){
+  .floating-contact{right:12px;bottom:12px;flex-direction:row;gap:8px;align-items:center;}
+  .floating-contact a{width:48px;height:48px;box-shadow:0 5px 16px rgba(15,28,80,.26),0 1px 3px rgba(0,0,0,.16);}
+  .floating-contact svg{width:23px;height:23px;}
+  .floating-contact .fc-label{display:none;}
+  footer{padding-bottom:78px !important;}
+  .contact-cta .contact-channels{margin-top:28px;padding-top:20px;}
+  .contact-cta .contact-channels a{display:flex;width:100%;min-width:0;margin:7px 0;padding:12px 16px;font-size:14px;gap:8px;letter-spacing:0;}
+  .contact-cta .contact-channels a svg{width:17px;height:17px;}
+  .cta p.channels{margin-top:18px;gap:9px;}
+  .cta p.channels a{font-size:14px;padding:12px 16px;gap:8px;}
+  .cta p.channels a svg{width:16px;height:16px;}
+}
+@media(max-width:400px){
+  .contact-cta .contact-channels a{font-size:13px;padding:11px 12px;}
+  .cta p.channels a{font-size:13px;padding:11px 12px;}
+}
+/* [MOBILE-READING-LAYER] */
+/* ===== WellVoyage · Mobile Reading Layer ============================
+   流式字号 + 行高分层 + 移动端重排。
+   注入于样式表末尾 → 后置于所有既有规则，同权重覆盖生效。
+   ================================================================== */
+
+/* ---------- 0. 全局防溢出（保守：不动 svg 图标尺寸） ---------- */
+img,video{max-width:100%;height:auto;}
+/* 只在单词过长（长邮箱/长链接）时才断行，不用 word-break 以免英文词中折断 */
+a,span,div,p,li,td,th,h1,h2,h3,h4{overflow-wrap:break-word;}
+
+/* ---------- 1. 平板/大手机 820px：行高先分层（最关键） ---------- */
+@media (max-width:820px){
+  /* 大字号配小行高：消除"字又大行距又松"的元凶 */
+  h1,h2{line-height:1.16!important;letter-spacing:0!important;}
+  h3,h4{line-height:1.26!important;}
+  /* 正文保持舒适阅读行距 */
+  p,li,.sec-sub,.lead,.en,.tagline{line-height:1.72!important;}
+}
+
+/* ---------- 2. 手机 600px：流式字号 ---------- */
+@media (max-width:600px){
+  /* --- 标题族：随视口连续变化，360→30px / 600→44px 平滑过渡 --- */
+  h1{font-size:clamp(27px,5.9vw,40px)!important;}
+  h2{font-size:clamp(23px,5.2vw,32px)!important;}
+  h3{font-size:clamp(19px,4.4vw,26px)!important;}
+  h4{font-size:clamp(16.5px,3.9vw,20px)!important;}
+  /* --- 正文：16px 起步是移动端可读底线 --- */
+  p,li{font-size:16px!important;line-height:1.72!important;}
+  .sec-sub,.lead,.en{font-size:16px!important;line-height:1.7!important;}
+  .sec-kicker{font-size:12px!important;letter-spacing:2.2px!important;line-height:1.5!important;}
+  /* --- 卡片/版块内边距压缩 --- */
+  .sec,.section{padding-top:52px!important;padding-bottom:52px!important;}
+  .container{padding:0 20px!important;}
+}
+
+/* ---------- 3. 小屏 400px：只收标题，正文守 16px 可读底线 ---------- */
+@media (max-width:400px){
+  h1{font-size:clamp(25px,7vw,31px)!important;}
+  h2{font-size:clamp(21px,6vw,25px)!important;}
+  h3{font-size:clamp(18px,5.2vw,22px)!important;}
+  .sec-kicker{font-size:11px!important;letter-spacing:1.8px!important;}
+  /* 品牌副标题：360px 下会被挤成两行，收紧字距保持单行 */
+  .nav-brand small{font-size:7.5px!important;letter-spacing:.6px!important;white-space:nowrap;}
+}
+
+/* ---------- 4. 网格防撑破：1fr 的最小值是内容宽度，长单词会 blowout ----------
+   实测 600px 时 .edge-grid 两列算出 410px+281px = 709，撑破 545 容器（+129px 横溢）。
+   minmax(0,1fr) 让列可被压缩到 0 以下，彻底消除。 */
+@media (max-width:1180px){
+  .edge-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+}
+@media (max-width:980px){
+  .edge-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media (max-width:560px){
+  .edge-grid{grid-template-columns:minmax(0,1fr)!important;}
+}
+@media (max-width:820px){
+  .edge-grid>*,.stats-grid>*,.spec-grid>*,.hosp-grid>*{min-width:0;}
+}
+
+/* ---------- 5. 触摸目标 >= 44px（拇指友好） ----------
+   注意：首页联系区的两个按钮是 class="btn-gold" / "btn-ghost"，**没有 .btn**，
+   只写 .btn 会漏掉它们（实测 "Get My Free Assessment" 被挤成两行）。 */
+@media (max-width:820px){
+  .btn,.btn-gold,.btn-ghost,.nav-cta,.ch-wa,.ch-mail{
+    min-height:46px;
+    display:inline-flex;align-items:center;justify-content:center;
+    white-space:nowrap;
+    padding-top:12px!important;padding-bottom:12px!important;
+  }
+}
+@media (max-width:600px){
+  /* 窄屏下按钮文字优先单行：收字距、缩内边距，仍留 22px 安全内缩 */
+  .btn-gold,.btn-ghost,.contact-cta .btn-gold,.contact-cta .btn-ghost,.cta .btn-gold,.cta .btn-ghost{
+    letter-spacing:0!important;
+    padding-left:22px!important;padding-right:22px!important;
+  }
+  .contact-cta .btn-gold,.cta .btn-gold{font-size:15px!important;}
+}
+
+/* ---------- 6. 尊重无障碍：动效可关 ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+}
+/* [/MOBILE-READING-LAYER] */
+/* [SUB-MOBILE] */
+/* ===== 内页（疾病页 / 文章页）移动端重排 ======================== */
+@media (max-width:820px){
+  /* 顶部品牌行：副标题在手机上单独一行，压小 */
+  .top .brand,.site-header .brand{font-size:22px!important;line-height:1.22!important;}
+  .top .brand small,.site-header .brand-sub{
+    font-size:9.5px!important;letter-spacing:1.4px!important;line-height:1.4!important;
+    display:block;margin-top:3px;
+  }
+  /* 内页首屏留白：保留横向 padding，否则品牌行会顶到屏幕边缘 */
+  .top{padding:clamp(26px,6vw,40px) 18px clamp(22px,5vw,34px)!important;}
+  .kicker{font-size:12px!important;letter-spacing:2px!important;line-height:1.5!important;}
+  .top .cn{font-size:15px!important;margin-top:6px!important;}
+  .top .meta{font-size:13.5px!important;}
+  .top .back,.breadcrumb{font-size:13px!important;}
+
+  /* 表格：手机上允许横向滚动，不撑破视口。
+     不要加 white-space:nowrap —— 实测会把单元格文字切在半截（"…blastocyst trans…"），
+     表格撑到 1085px，用户得滑很久。让文字换行，表格自然收窄。 */
+  table.fact,table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table.fact th,table.fact td{font-size:13.5px!important;padding:8px 10px!important;}
+
+  /* 三列"方案对比表"→ 每行变成一张卡（手机上看 3 列并排必然挤成竖条）
+     用 :has() 精确命中 3 列表，2 列的键值费用表保持原样。
+     实测全站 60 个表：30 个 3 列对比 + 30 个 2 列费用，结构完全统一。 */
+  table.fact:has(tr > th:nth-child(3)){
+    display:block!important;overflow:visible!important;
+    border:0!important;background:none!important;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr:first-child{display:none!important;}
+  table.fact:has(tr > th:nth-child(3)) tr{
+    display:block!important;background:#fff;
+    border:1px solid var(--line,#e3e8f2);border-radius:12px;
+    padding:14px 16px!important;margin:0 0 12px!important;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr > th,
+  table.fact:has(tr > th:nth-child(3)) tr > td{
+    display:block!important;width:auto!important;
+    border:0!important;padding:0!important;text-align:left!important;
+    /* 必须清底色：原 th 有 background:#eef4ff，卡片里会残留一条淡蓝色带 */
+    background:none!important;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr > th{
+    font-size:15.5px!important;font-weight:700!important;
+    color:var(--teal,#1d4ed8);line-height:1.35!important;margin-bottom:4px;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr > td{
+    font-size:14px!important;line-height:1.62!important;margin-top:9px;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr > td::before{
+    display:block;font-size:10.5px;letter-spacing:1.1px;text-transform:uppercase;
+    color:#8b95a8;font-weight:700;margin-bottom:2px;
+  }
+  table.fact:has(tr > th:nth-child(3)) tr > td:nth-child(2)::before{content:"Best suited for";}
+  table.fact:has(tr > th:nth-child(3)) tr > td:nth-child(3)::before{content:"What it means in practice";}
+
+  /* 目录 TOC：竖排更易点 */
+  .toc{font-size:14px!important;line-height:1.9!important;}
+  .toc a{display:inline-block;padding:5px 0;}
+}
+@media (max-width:600px){
+  .top h1{font-size:clamp(25px,6.2vw,30px)!important;line-height:1.2!important;}
+  /* 保留上下留白，正文别直接贴着深色首屏 */
+  .wrap{padding:24px 20px 56px!important;}
+}
+/* [/SUB-MOBILE] */
 </style>
 </head>
 <body>
@@ -158,10 +358,22 @@ footer a{color:var(--primary);text-decoration:none;}
     <h2>Considering Oocyte Cryopreservation (Egg Freezing) in China?</h2>
     <p>WellVoyage translates your records, obtains independent specialist opinions, and locks a transparent written quote — before you book a flight.</p>
     <a href="../#contact">Start with a Free Case Review &rarr;</a>
-    <p class="channels">Or reach us directly — <a href="https://wa.me/8618620884609" target="_blank" rel="noopener">WhatsApp +86 186 2088 4609</a> &middot; <a href="mailto:hello@wellvoyagecare.com">hello@wellvoyagecare.com</a></p>
+    <p class="channels"><a class="ch-wa" href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.1 3C9 3 3.3 8.7 3.3 15.8c0 2.3.6 4.5 1.7 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.2 1.6h.1c7.1 0 12.8-5.7 12.8-12.8S23.2 3 16.1 3zm0 23.4h-.1c-1.9 0-3.8-.5-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.6 4.6-10.2 10.3-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.6-4.6 10.6-9.6 10.6zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.7 2.6.8 3.6.6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/></svg><b>WhatsApp</b> +86 186 2088 4609</a><a class="ch-mail" href="mailto:hello@wellvoyagecare.com"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg><b>Email</b> hello@wellvoyagecare.com</a></p>
   </div>
   <div class="legal"><strong>Medical disclaimer:</strong> WellVoyage is a medical-travel coordination service, not a medical provider. This guide is general information, not medical advice; treatment decisions rest with your treating physicians. Patient stories are drawn from publicly reported, anonymised material and do not promise any individual outcome. Cost figures are reference ranges; the binding price is your written quote. Hospitals and doctors named on this site are independent third parties, not our partners. In an emergency, contact your local emergency services immediately.</div>
 </div>
-<footer>&copy; 2026 WellVoyage &middot; <a href="https://wellvoyagecare.com/">wellvoyagecare.com</a> &middot; <a href="https://wa.me/8618620884609" target="_blank" rel="noopener">WhatsApp +86 186 2088 4609</a> &middot; <a href="mailto:hello@wellvoyagecare.com">hello@wellvoyagecare.com</a> &middot; Medical coordination service &middot; <a href="../#edge">Where China Leads</a></footer>
+<footer>&copy; 2026 WellVoyage &middot; <a href="https://wellvoyagecare.com/">wellvoyagecare.com</a> &middot; <a href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener">WhatsApp +86 186 2088 4609</a> &middot; <a href="mailto:hello@wellvoyagecare.com">hello@wellvoyagecare.com</a> &middot; Medical coordination service &middot; <a href="health-checkup-china">Health Checkups in China</a> &middot; <a href="../#edge">Where China Leads</a></footer>
+<!-- Floating contact dock -->
+<div class="floating-contact" aria-label="Quick contact with WellVoyage">
+  <a class="fc-wa" href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.1 3C9 3 3.3 8.7 3.3 15.8c0 2.3.6 4.5 1.7 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.2 1.6h.1c7.1 0 12.8-5.7 12.8-12.8S23.2 3 16.1 3zm0 23.4h-.1c-1.9 0-3.8-.5-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.6 4.6-10.2 10.3-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.6-4.6 10.6-9.6 10.6zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.7 2.6.8 3.6.6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/></svg>
+    <span class="fc-label">WhatsApp · 中文 / English</span>
+  </a>
+  <a class="fc-mail" href="mailto:hello@wellvoyagecare.com" aria-label="Email WellVoyage">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg>
+    <span class="fc-label">Email · reply within 24h</span>
+  </a>
+</div>
+
 </body>
 </html>

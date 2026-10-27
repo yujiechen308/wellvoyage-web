@@ -466,6 +466,209 @@
 
   /* ===== anchor offset for sticky nav ===== */
   section[id],header[id],div[id]{scroll-margin-top:78px;}
+
+/* === Floating contact dock (WellVoyage 2026-10-10) === */
+.floating-contact{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:12px;}
+.floating-contact a{position:relative;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 22px rgba(15,28,80,.28),0 1px 3px rgba(0,0,0,.18);transition:transform .18s,box-shadow .18s;}
+.floating-contact a:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 10px 28px rgba(15,28,80,.38),0 2px 4px rgba(0,0,0,.22);}
+.floating-contact a:active{transform:translateY(-1px) scale(.98);}
+.floating-contact .fc-wa{background:#25D366;color:#fff;}
+.floating-contact .fc-mail{background:linear-gradient(135deg,#e9c86a 0%,#c9a23d 100%);color:#1e2a5e;}
+.floating-contact svg{width:28px;height:28px;display:block;}
+.floating-contact .fc-label{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:#1e2a5e;color:#fff;padding:7px 13px;border-radius:6px;font-size:12.5px;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;font-family:Georgia,serif;letter-spacing:.2px;}
+.floating-contact .fc-label::after{content:"";position:absolute;left:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-left-color:#1e2a5e;}
+.floating-contact a:hover .fc-label,.floating-contact a:focus .fc-label{opacity:1;}
+@media(max-width:600px){.floating-contact{right:12px;bottom:12px;gap:10px;}.floating-contact a{width:52px;height:52px;}.floating-contact svg{width:25px;height:25px;}.floating-contact .fc-label{display:none;}}
+@media(prefers-reduced-motion:reduce){.floating-contact a{transition:none;}}
+
+
+/* === nav WhatsApp + Email pair (WellVoyage 2026-10-10) === */
+.nav-cta-pair{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;}
+.nav-cta{background:var(--gold);color:var(--btn-fg);padding:9px 18px;border-radius:999px;font-size:13.5px;text-decoration:none;letter-spacing:.5px;white-space:nowrap;font-weight:700;display:inline-block;}
+.nav-cta:hover{background:#d4ae4a;color:var(--btn-fg);}
+.nav-cta-mail{background:transparent;color:var(--ink);width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s;}
+.nav-cta-mail:hover{background:var(--gold);color:var(--btn-fg);}
+.nav-cta-mail svg{width:17px;height:17px;display:block;}
+@media(max-width:1100px){.nav-cta{padding:8px 14px;font-size:12px;}.nav-cta-mail{width:34px;height:34px;}.nav-cta-mail svg{width:15px;height:15px;}}
+@media(min-width:1101px){.nav-cta{font-size:14.5px;font-weight:700;padding:10px 20px;}.nav-cta-mail{width:40px;height:40px;}.nav-cta-mail svg{width:18px;height:18px;}}
+
+
+/* === enhanced contact-channels pills (2026-10-10) === */
+.contact-cta .contact-channels{margin-top:38px;padding-top:28px;border-top:1px solid rgba(255,255,255,.22);font-size:15.5px;letter-spacing:.3px;}
+.contact-cta .contact-channels .ch-label{display:block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:16px;font-weight:600;}
+.contact-cta .contact-channels a{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border:none;border-radius:999px;padding:15px 32px;margin:6px 10px;font-weight:700;font-size:16px;letter-spacing:.3px;transition:all .2s;min-width:220px;justify-content:center;}
+.contact-cta .contact-channels a b{font-weight:800;letter-spacing:.5px;}
+.contact-cta .contact-channels a.fc-pill-wa{background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.35);}
+.contact-cta .contact-channels a.fc-pill-wa:hover{background:#1ebe5b;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5);}
+.contact-cta .contact-channels a.fc-pill-mail{background:linear-gradient(135deg,#e9c86a 0%,#c9a23d 100%);color:#1e2a5e;box-shadow:0 4px 16px rgba(201,162,61,.35);}
+.contact-cta .contact-channels a.fc-pill-mail:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,162,61,.5);}
+.contact-cta .contact-channels a svg{width:20px;height:20px;display:inline-block;}
+@media(max-width:600px){.contact-cta .contact-channels a{display:flex;width:100%;margin:8px 0;min-width:0;padding:14px 20px;font-size:15px;}}
+
+
+/* === index footer contact line (2026-10-10) === */
+footer .fc-line{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:rgba(255,255,255,.78);}
+footer .fc-line a{color:#fff;text-decoration:none;margin:0 6px;display:inline-flex;align-items:center;gap:5px;}
+footer .fc-line a:hover{color:var(--gold-light);text-decoration:underline;}
+footer .fc-line svg{width:14px;height:14px;display:inline-block;vertical-align:-2px;}
+
+
+/* === dock + pill mobile refinement (2026-10-10b) === */
+@media(max-width:600px){
+  .floating-contact{right:12px;bottom:12px;flex-direction:row;gap:8px;align-items:center;}
+  .floating-contact a{width:48px;height:48px;box-shadow:0 5px 16px rgba(15,28,80,.26),0 1px 3px rgba(0,0,0,.16);}
+  .floating-contact svg{width:23px;height:23px;}
+  .floating-contact .fc-label{display:none;}
+  footer{padding-bottom:78px !important;}
+  .contact-cta .contact-channels{margin-top:28px;padding-top:20px;}
+  .contact-cta .contact-channels a{display:flex;width:100%;min-width:0;margin:7px 0;padding:12px 16px;font-size:14px;gap:8px;letter-spacing:0;}
+  .contact-cta .contact-channels a svg{width:17px;height:17px;}
+  .cta p.channels{margin-top:18px;gap:9px;}
+  .cta p.channels a{font-size:14px;padding:12px 16px;gap:8px;}
+  .cta p.channels a svg{width:16px;height:16px;}
+}
+@media(max-width:400px){
+  .contact-cta .contact-channels a{font-size:13px;padding:11px 12px;}
+  .cta p.channels a{font-size:13px;padding:11px 12px;}
+}
+/* [MOBILE-READING-LAYER] */
+/* ===== WellVoyage · Mobile Reading Layer ============================
+   流式字号 + 行高分层 + 移动端重排。
+   注入于样式表末尾 → 后置于所有既有规则，同权重覆盖生效。
+   ================================================================== */
+
+/* ---------- 0. 全局防溢出（保守：不动 svg 图标尺寸） ---------- */
+img,video{max-width:100%;height:auto;}
+/* 只在单词过长（长邮箱/长链接）时才断行，不用 word-break 以免英文词中折断 */
+a,span,div,p,li,td,th,h1,h2,h3,h4{overflow-wrap:break-word;}
+
+/* ---------- 1. 平板/大手机 820px：行高先分层（最关键） ---------- */
+@media (max-width:820px){
+  /* 大字号配小行高：消除"字又大行距又松"的元凶 */
+  h1,h2{line-height:1.16!important;letter-spacing:0!important;}
+  h3,h4{line-height:1.26!important;}
+  /* 正文保持舒适阅读行距 */
+  p,li,.sec-sub,.lead,.en,.tagline{line-height:1.72!important;}
+}
+
+/* ---------- 2. 手机 600px：流式字号 ---------- */
+@media (max-width:600px){
+  /* --- 标题族：随视口连续变化，360→30px / 600→44px 平滑过渡 --- */
+  h1{font-size:clamp(27px,5.9vw,40px)!important;}
+  h2{font-size:clamp(23px,5.2vw,32px)!important;}
+  h3{font-size:clamp(19px,4.4vw,26px)!important;}
+  h4{font-size:clamp(16.5px,3.9vw,20px)!important;}
+  /* --- 正文：16px 起步是移动端可读底线 --- */
+  p,li{font-size:16px!important;line-height:1.72!important;}
+  .sec-sub,.lead,.en{font-size:16px!important;line-height:1.7!important;}
+  .sec-kicker{font-size:12px!important;letter-spacing:2.2px!important;line-height:1.5!important;}
+  /* --- 卡片/版块内边距压缩 --- */
+  .sec,.section{padding-top:52px!important;padding-bottom:52px!important;}
+  .container{padding:0 20px!important;}
+}
+
+/* ---------- 3. 小屏 400px：只收标题，正文守 16px 可读底线 ---------- */
+@media (max-width:400px){
+  h1{font-size:clamp(25px,7vw,31px)!important;}
+  h2{font-size:clamp(21px,6vw,25px)!important;}
+  h3{font-size:clamp(18px,5.2vw,22px)!important;}
+  .sec-kicker{font-size:11px!important;letter-spacing:1.8px!important;}
+  /* 品牌副标题：360px 下会被挤成两行，收紧字距保持单行 */
+  .nav-brand small{font-size:7.5px!important;letter-spacing:.6px!important;white-space:nowrap;}
+}
+
+/* ---------- 4. 网格防撑破：1fr 的最小值是内容宽度，长单词会 blowout ----------
+   实测 600px 时 .edge-grid 两列算出 410px+281px = 709，撑破 545 容器（+129px 横溢）。
+   minmax(0,1fr) 让列可被压缩到 0 以下，彻底消除。 */
+@media (max-width:1180px){
+  .edge-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+}
+@media (max-width:980px){
+  .edge-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media (max-width:560px){
+  .edge-grid{grid-template-columns:minmax(0,1fr)!important;}
+}
+@media (max-width:820px){
+  .edge-grid>*,.stats-grid>*,.spec-grid>*,.hosp-grid>*{min-width:0;}
+}
+
+/* ---------- 5. 触摸目标 >= 44px（拇指友好） ----------
+   注意：首页联系区的两个按钮是 class="btn-gold" / "btn-ghost"，**没有 .btn**，
+   只写 .btn 会漏掉它们（实测 "Get My Free Assessment" 被挤成两行）。 */
+@media (max-width:820px){
+  .btn,.btn-gold,.btn-ghost,.nav-cta,.ch-wa,.ch-mail{
+    min-height:46px;
+    display:inline-flex;align-items:center;justify-content:center;
+    white-space:nowrap;
+    padding-top:12px!important;padding-bottom:12px!important;
+  }
+}
+@media (max-width:600px){
+  /* 窄屏下按钮文字优先单行：收字距、缩内边距，仍留 22px 安全内缩 */
+  .btn-gold,.btn-ghost,.contact-cta .btn-gold,.contact-cta .btn-ghost,.cta .btn-gold,.cta .btn-ghost{
+    letter-spacing:0!important;
+    padding-left:22px!important;padding-right:22px!important;
+  }
+  .contact-cta .btn-gold,.cta .btn-gold{font-size:15px!important;}
+}
+
+/* ---------- 6. 尊重无障碍：动效可关 ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+}
+/* [/MOBILE-READING-LAYER] */
+/* [HOME-MOBILE] */
+/* ===== 首页首屏：手机优先重排 ================================== */
+@media (max-width:820px){
+  .hero{padding:92px 0 56px!important;}
+  .hero h1{
+    font-size:clamp(30px,5.6vw,44px)!important;
+    line-height:1.14!important;
+    letter-spacing:.2px!important;
+    margin:12px 0 14px!important;
+  }
+  .hero-kicker{font-size:11px!important;letter-spacing:2px!important;line-height:1.5!important;}
+  .hero .tagline{font-size:15.5px!important;line-height:1.62!important;}
+  .hero .tagline-cn{font-size:12.5px!important;line-height:1.6!important;margin-top:8px!important;}
+
+  /* 徽章 / 按钮保持原横排（平板）——全宽堆叠只在真正的手机屏触发，见下方 600 断点 */
+  .hero-badges{margin-top:22px!important;}
+  .hero-actions{margin-top:24px!important;}
+
+  /* 数字型大字：流式降级 */
+  .adv-num .n{font-size:clamp(40px,9.2vw,62px)!important;line-height:1.05!important;}
+  .hosp-strip .big{font-size:clamp(34px,7.6vw,54px)!important;line-height:1.05!important;}
+  .spec-card .v{font-size:clamp(20px,4.1vw,27px)!important;line-height:1.22!important;}
+  .spec-head h3{font-size:clamp(23px,4.3vw,29px)!important;line-height:1.2!important;}
+  .adv-body h3{font-size:clamp(23px,4.3vw,29px)!important;line-height:1.2!important;}
+  .spec-lead{font-size:17px!important;line-height:1.6!important;}
+  .stat .num{font-size:clamp(30px,7.4vw,38px)!important;line-height:1.1!important;}
+  /* 统计区：768 平板下 4 列太挤（原断点在 760），提前到 820 变 2 列 */
+  .stats-grid{grid-template-columns:1fr 1fr!important;}
+
+  /* 医生/联系区英文段落：手机上别再 19px / 1.85 行高 */
+  .doc-cta .en,.cta .en,.contact-cta .en{font-size:16px!important;line-height:1.68!important;}
+  .doc-card h3,.hosp-strip h3{font-size:clamp(18px,4vw,22px)!important;line-height:1.25!important;}
+}
+
+/* 手机专用重排（<=600px 才全宽/两列，平板上保持原有横排） */
+@media (max-width:600px){
+  /* 徽章：两列网格，避免 4 个药丸乱换行 */
+  .hero-badges{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important;}
+  .hero-badges span{
+    font-size:12px!important;padding:8px 10px!important;text-align:center;
+    letter-spacing:0!important;line-height:1.3!important;
+  }
+  /* 按钮：全宽堆叠，不换行 */
+  .hero-actions{display:flex!important;flex-direction:column;gap:10px!important;}
+  .hero-actions .btn{
+    width:100%!important;min-height:48px!important;
+    font-size:15.5px!important;white-space:nowrap!important;
+    display:flex!important;align-items:center;justify-content:center;
+  }
+}
+/* [/HOME-MOBILE] */
 </style>
 </head>
 <body>
@@ -484,7 +687,7 @@
       <li><a href="#doctors">Doctors</a></li>
       <li><a href="#about">About Us</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Ask About My Condition</a>
+    <span class="nav-cta-pair"><a class="nav-cta" href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener">WhatsApp Us</a><a class="nav-cta-mail" href="mailto:hello@wellvoyagecare.com" aria-label="Email WellVoyage" title="Email · reply within 24h"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg></a></span>
   </div>
 </nav>
 
@@ -752,6 +955,8 @@
         <span class="edge-more">Read the patient guide &rarr;</span>
       </a>
     </div>
+
+    
 
     
 
@@ -1621,9 +1826,9 @@
       <a class="btn-gold" href="mailto:hello@wellvoyagecare.com">Get My Free Assessment</a>
       <a class="btn-ghost" href="#specialties">Re-explore the 8 Specialties</a>
       <div class="contact-channels">
-        <span class="ch-label">Or reach us directly &middot; 也可直接联系我们</span>
-        <a href="https://wa.me/8618620884609" target="_blank" rel="noopener"><b>WhatsApp</b> +86 186 2088 4609</a>
-        <a href="mailto:hello@wellvoyagecare.com"><b>Email</b> hello@wellvoyagecare.com</a>
+        <span class="ch-label">Or reach us directly · 也可直接联系我们</span>
+        <a class="fc-pill-wa" href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.1 3C9 3 3.3 8.7 3.3 15.8c0 2.3.6 4.5 1.7 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.2 1.6h.1c7.1 0 12.8-5.7 12.8-12.8S23.2 3 16.1 3zm0 23.4h-.1c-1.9 0-3.8-.5-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.6 4.6-10.2 10.3-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.6-4.6 10.6-9.6 10.6zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.7 2.6.8 3.6.6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/></svg><b>WhatsApp</b> +86 186 2088 4609</a>
+        <a class="fc-pill-mail" href="mailto:hello@wellvoyagecare.com"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg><b>Email</b> hello@wellvoyagecare.com</a>
       </div>
     </div>
   </div>
@@ -1650,7 +1855,9 @@
 <footer>
   <b>WellVoyage 安途康悦 × Jade &amp; Qi</b> — Connecting world patients with China's medical excellence.<br>
   © 2026 WellVoyage · Arranging world-class treatment in China · English-first site for international patients<br>
-  <a href="#disclaimer" style="color:var(--muted);text-decoration:underline;">Medical &amp; Service Disclaimer 免责声明</a> · Coordination service, not a medical provider — full statement above.
+  <a href="#disclaimer" style="color:#c9d6f4;text-decoration:underline;">Medical &amp; Service Disclaimer 免责声明</a> · Coordination service, not a medical provider — full statement above.<br>
+  <a href="articles/health-checkup-china" style="color:#e9c86a;text-decoration:underline;">Health Checkups in China 体检套餐</a> · Preventive screening, quoted on request.
+  <div class="fc-line">Reach us directly &middot; 直接联系我们: <a href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.1 3C9 3 3.3 8.7 3.3 15.8c0 2.3.6 4.5 1.7 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.2 1.6h.1c7.1 0 12.8-5.7 12.8-12.8S23.2 3 16.1 3zm0 23.4h-.1c-1.9 0-3.8-.5-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.6 4.6-10.2 10.3-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.6-4.6 10.6-9.6 10.6zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.7 2.6.8 3.6.6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/></svg> WhatsApp +86 186 2088 4609</a> · <a href="mailto:hello@wellvoyagecare.com"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg> hello@wellvoyagecare.com</a></div>
 </footer>
 
 <script>
@@ -1722,5 +1929,17 @@ makeCarousel('carSpec',9000);
   });
 })();
 </script>
+<!-- Floating contact dock -->
+<div class="floating-contact" aria-label="Quick contact with WellVoyage">
+  <a class="fc-wa" href="https://wa.me/8618620884609?text=Hi%2C%20I%27d%20like%20a%20free%20case%20review%20from%20WellVoyage%20%28wellvoyagecare.com%29." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.1 3C9 3 3.3 8.7 3.3 15.8c0 2.3.6 4.5 1.7 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.2 1.6h.1c7.1 0 12.8-5.7 12.8-12.8S23.2 3 16.1 3zm0 23.4h-.1c-1.9 0-3.8-.5-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.6 4.6-10.2 10.3-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.6-4.6 10.6-9.6 10.6zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.7 2.6.8 3.6.6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/></svg>
+    <span class="fc-label">WhatsApp · 中文 / English</span>
+  </a>
+  <a class="fc-mail" href="mailto:hello@wellvoyagecare.com" aria-label="Email WellVoyage">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M5 7h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm11 9.4L7.2 9h17.6L16 16.4zM5 11.1V23h22V11.1l-7.7 5.9a2 2 0 0 1-2.4 0L5 11.1z"/></svg>
+    <span class="fc-label">Email · reply within 24h</span>
+  </a>
+</div>
+
 </body>
 </html>
